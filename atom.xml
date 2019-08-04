@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ripmr.github.io</id>
     <title>HU ANIME</title>
-    <updated>2019-08-04T12:46:23.075Z</updated>
+    <updated>2019-08-04T14:03:31.336Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ripmr.github.io"/>
     <link rel="self" href="https://ripmr.github.io/atom.xml"/>
@@ -11,11 +11,23 @@
     <icon>https://ripmr.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, HU ANIME</rights>
     <entry>
+        <title type="html"><![CDATA[[Anime]原创CG动画《药》]]></title>
+        <id>https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-yao</id>
+        <link href="https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-yao">
+        </link>
+        <updated>2015-11-17T04:08:49.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://ripmr.github.io/post-images/1564927102434.jpg" alt="">
+一个关于书的故事，历时两个半月，采用3ds max, VUE, AE等制作
+制作比较仓促，依然存在诸多不足，欢迎大家多提意见。</p>
+<p>视频传送门：<a href="http://www.bilibili.com/video/av3235010/">戳我</a></p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Hello World!]]></title>
         <id>https://ripmr.github.io/post/hello-world</id>
         <link href="https://ripmr.github.io/post/hello-world">
         </link>
-        <updated>2018-08-15T00:15:00.000Z</updated>
+        <updated>2014-08-15T00:15:00.000Z</updated>
         <content type="html"><![CDATA[<p>新的小窝，欢迎进来坐坐。</p>
 ]]></content>
     </entry>
