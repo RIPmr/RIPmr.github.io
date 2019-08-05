@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ripmr.github.io</id>
     <title>HU ANIME</title>
-    <updated>2019-08-05T03:46:12.687Z</updated>
+    <updated>2019-08-05T03:50:06.459Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ripmr.github.io"/>
     <link rel="self" href="https://ripmr.github.io/atom.xml"/>
@@ -27,7 +27,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[Anime]原创泡面番《小呆&小萌》]]></title>
+        <title type="html"><![CDATA[[Anime]泡面番《小呆&小萌》]]></title>
         <id>https://ripmr.github.io/post/anime-pao-mian-fan-xiao-ai-and-xiao-meng</id>
         <link href="https://ripmr.github.io/post/anime-pao-mian-fan-xiao-ai-and-xiao-meng">
         </link>
