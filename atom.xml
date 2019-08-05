@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ripmr.github.io</id>
     <title>HU ANIME</title>
-    <updated>2019-08-05T00:27:34.015Z</updated>
+    <updated>2019-08-05T03:06:08.249Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ripmr.github.io"/>
     <link rel="self" href="https://ripmr.github.io/atom.xml"/>
@@ -11,105 +11,293 @@
     <icon>https://ripmr.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, HU ANIME</rights>
     <entry>
-        <title type="html"><![CDATA[[Anime]原创CG动画《VirtualReality》]]></title>
-        <id>https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-virtualreality</id>
-        <link href="https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-virtualreality">
+        <title type="html"><![CDATA[[Anime]《ProjectEvo》-Trailer]]></title>
+        <id>https://ripmr.github.io/post/animeprojectevo-trailer</id>
+        <link href="https://ripmr.github.io/post/animeprojectevo-trailer">
         </link>
-        <updated>2016-11-14T06:47:09.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>正片传送门：
+        <updated>2019-08-05T02:34:51.000Z</updated>
+        <content type="html"><![CDATA[<p>原创动画《ProjectEvo》测试片段</p>
+<pre><code>Trailer link
 </code></pre>
-<p><a href="http://www.bilibili.com/video/av7095596/">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
-<pre><code>剧照：
+<p><a href="https://www.bilibili.com/video/av58001135">[Bilibili_Trailer]</a></p>
+<pre><code>剧照
 </code></pre>
-<p><img src="https://ripmr.github.io/post-images/1564962565171.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564962578289.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564962585393.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564962591061.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564962594282.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564962597137.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564962602353.png" alt=""></p>
-<pre><code>简介：
-</code></pre>
-<p>实验性质更重的一部作品，首次采用游戏引擎实时渲染动画，遇到不少问题，但也学习了很多。相比传统走渲染器的渲染流程渲染速度大概是1frame/1800s，采用当下流行的PBR流程走引擎实时渲染，速度可以达到30frame/1s</p>
-<pre><code>制作过程中一些对unity editor的定制化扩展：
-</code></pre>
-<p>程序化建模工具(Auto Corridor Builder)：<br>
-<img src="https://ripmr.github.io/post-images/1564962628188.gif" alt=""></p>
-<p>捏脸(Random Character generator)：<br>
-<img src="https://ripmr.github.io/post-images/1564962667326.gif" alt=""></p>
+<p><img src="https://ripmr.github.io/post-images/1564972630912.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564972639320.jpg" alt=""></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[Anime]原创CG动画《极东之夜》]]></title>
-        <id>https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-ji-dong-zhi-ye</id>
-        <link href="https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-ji-dong-zhi-ye">
+        <title type="html"><![CDATA[[Anime]原创泡面番《小呆&小萌》]]></title>
+        <id>https://ripmr.github.io/post/anime-pao-mian-fan-xiao-ai-and-xiao-meng</id>
+        <link href="https://ripmr.github.io/post/anime-pao-mian-fan-xiao-ai-and-xiao-meng">
         </link>
-        <updated>2016-05-15T01:35:27.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>正片传送门：
+        <updated>2019-08-05T02:22:21.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://ripmr.github.io/post-images/1564972006093.jpg" alt=""><br>
+试着做一部泡面番，分享温暖的小故事，不定期更新</p>
+<pre><code>剧集列表（持续更新)
 </code></pre>
-<p><a href="http://www.bilibili.com/video/av5511777/">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
-<pre><code>简介：
+<p><a href="https://www.bilibili.com/video/av45606600">[00-程序员小呆]</a><br>
+<a href="https://www.bilibili.com/video/av47677330">[01-花匠小萌]</a><br>
+<a href="https://www.bilibili.com/video/av49067162">[02-喵喵喵？]</a><br>
+<a href="https://www.bilibili.com/video/av53630545">[03-Where is my cat?]</a></p>
+<pre><code>剧照
 </code></pre>
-<p><img src="https://ripmr.github.io/post-images/1564963090187.jpg" alt=""><br>
-作品历时五个月完成，主要采用3ds Max制作，ZBrush 精雕&amp;贴图绘制，AE后期。<br>
-自制一套面部表情控制系统，主要应用 ReactionManager 和 AttributeHolder 以及maxScript。</p>
-<p><img src="https://ripmr.github.io/post-images/1564963138699.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564963148453.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564963157530.jpg" alt=""></p>
-<pre><code>MentalRay SSS material 皮肤材质测试：
-</code></pre>
-<p><img src="https://ripmr.github.io/post-images/1564963173755.jpg" alt=""></p>
-<pre><code>整体基调为法国中世纪风格，原画：
-</code></pre>
-<p><img src="https://ripmr.github.io/post-images/1564963183534.jpg" alt=""></p>
-<p>今年评委组十分专业，全程技术，自己不太了解或者只是略懂的东西答辩就别拿出来说了，评委会一路问到底...最重要的是，老师们都是真的懂动画，懂游戏的，交流起来很轻松，很愉快，不需要有所顾虑。<br>
-今年闭幕式有幸上台展示，同学们的提问都一针见血，也见识了其他很多很好的作品，大家的实力每年都在提高。志愿者们也都很辛苦，很负责，表示感谢！也感谢其他给过我们帮助的人!</p>
-<pre><code>剧照：
-</code></pre>
-<p><img src="https://ripmr.github.io/post-images/1564963374564.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564963384250.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564963387807.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564963390704.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564963394642.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564963397927.jpg" alt=""></p>
-<pre><code>最后分享下用到的一个max script脚本：
-</code></pre>
-<p><img src="https://ripmr.github.io/post-images/1564963248520.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564963251954.jpg" alt=""><br>
-它可以将选中的骨骼从根骨骼开始设置为弹性骨骼并创建约束目标</p>
-<pre><code>rollout MSB &quot;makeStretchyBones&quot;( button btn1 &quot;makeStretchyBones&quot; pos:[7,14] width:148 height:272 toolTip:&quot;&quot; on btn1 pressed  do(  pts=#() for x in selection do (  pt=point size:0.4 centermarker:false axistripod:false cross:false box:true wireColor:[200,0,0]  pt.transform=x.transform  append pts pt ) for i = 1 to (selection.count) do (  b=selection[i]  posCon=position_constraint()  lookAtCon=lookAt_constraint()  b.pos.controller=posCon  posCon.appendTarget pts[i] 100  if i &lt; selection.count then  (   b.rotation.controller=lookAtCon   lookAtCon.appendTarget pts[i+1] 100   lookAtCon.lookat_vector_length=0   lookAtCon.upnode_world=false   lookAtCon.pickUpNode=pts[i]  ) )
-))createDialog MSB 150 275
-</code></pre>
-<div align=center><img src="https://ripmr.github.io/post-images/1564964217648.jpg"/></div>  
-<div align=center>——我们都应该感谢为热爱的一切拼命努力的自己</div>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Anime]原创CG动画《药》]]></title>
-        <id>https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-yao</id>
-        <link href="https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-yao">
-        </link>
-        <updated>2015-11-17T04:08:49.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>正片传送门：
-</code></pre>
-<p><a href="http://www.bilibili.com/video/av3235010/">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
-<pre><code>剧照：
-</code></pre>
-<p><img src="https://ripmr.github.io/post-images/1564927102434.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564960445526.jpg" alt=""><br>
-<img src="https://ripmr.github.io/post-images/1564960453001.jpg" alt=""></p>
-<pre><code>简介：
-</code></pre>
-<p>一个关于书的故事，历时两个半月，采用3ds max, VUE, AE等制作<br>
-制作比较仓促，依然存在诸多不足，欢迎大家多提意见。</p>
+<p><img src="https://ripmr.github.io/post-images/1564972107111.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564972083993.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564972091063.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564972094658.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564972165233.jpg" alt=""></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Hello World!]]></title>
-        <id>https://ripmr.github.io/post/hello-world</id>
-        <link href="https://ripmr.github.io/post/hello-world">
+        <title type="html"><![CDATA[[Tool]SplineMesher for Unity3D]]></title>
+        <id>https://ripmr.github.io/post/toolsplinemesher-for-unity3d</id>
+        <link href="https://ripmr.github.io/post/toolsplinemesher-for-unity3d">
         </link>
-        <updated>2014-08-15T00:15:00.000Z</updated>
-        <content type="html"><![CDATA[<p>新的小窝，欢迎进来坐坐。</p>
+        <updated>2019-06-13T02:04:21.000Z</updated>
+        <content type="html"><![CDATA[<p>HuAnime第二款自制Unity3D插件SplineMesher上架啦！
+现在你可以像在3ds Max中一样在U3D中交互式创建样条曲线并生成程序化管道模型</p>
+<pre><code>Asset Store传送门
+</code></pre>
+<p><a href="http://u3d.as/1yiU">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
+<pre><code>视频
+</code></pre>
+<p><a href="https://www.bilibili.com/video/av57999372">[Bilibili_安装使用教程]</a></p>
+<pre><code>简介
+</code></pre>
+<p><strong>程序化样条线网格工具</strong> - 程序化样条线工具，支持可编辑样条线并基于样条线生成管道网格.</p>
+<p><strong>兼容性:</strong></p>
+<blockquote>
+<p>支持所有平台与所有渲染管线.</p>
+</blockquote>
+<p><strong>工具亮点:</strong></p>
+<blockquote>
+<p>在样条线顶点十分稀疏的情况下依然能够生成正确的顶点位置。保持每一段管道网格的粗细一致;<br>
+能够自动校正锐利转角处的管道网格顶点位置;<br>
+支持三种不同的UV展开方式，能够从容应对各种情况下的贴图拉伸问题;<br>
+支持使用自定义曲线调节管道每一节的粗细.</p>
+</blockquote>
+<p><strong>其他特性:</strong></p>
+<blockquote>
+<p>简单易用: 拖拽脚本到空物体即可使用;<br>
+可手动或通过代码编辑/生成样条线/网格，编辑器模式下与游戏模式下都可实时编辑;<br>
+现已支持两种类型的可编辑样条线 (折线类型与贝塞尔曲线类型), 将来将持续加入更多类型;<br>
+数学库单独封装，您可在本插件之外方便调用;<br>
+提供所有源码，您可自行查看与修改.</p>
+</blockquote>
+<pre><code>效果图
+</code></pre>
+<p><img src="https://ripmr.github.io/post-images/1564970889852.PNG" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970908514.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970922411.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970926657.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970931483.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970935361.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970938987.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970941911.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970949879.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970953087.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970955665.png" alt="">
+<img src="https://ripmr.github.io/post-images/1564970967519.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970969783.png" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Anime]原创CG动画《肉包子》]]></title>
+        <id>https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-rou-bao-zi</id>
+        <link href="https://ripmr.github.io/post/animeyuan-chuang-cg-dong-hua-rou-bao-zi">
+        </link>
+        <updated>2019-04-29T04:30:17.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>正片传送门
+</code></pre>
+<p><a href="https://www.bilibili.com/video/av50760741">[Bilibili_补档]</a>
+<a href="https://youtu.be/cToaO63eGiQ">[Youtube]</a></p>
+<pre><code>简介
+</code></pre>
+<p>人总是遭遇挫折<br>
+就想离家<br>
+去远行</p>
+<p>人生就像肉包子打狗<br>
+更多的时候<br>
+包子在地上滚了两圈<br>
+无狗问津</p>
+<p>但请你再坚持坚持<br>
+回头还是要捡起来包子<br>
+继续积极地生活</p>
+<pre><code>剧照
+</code></pre>
+<p><img src="https://ripmr.github.io/post-images/1564971570690.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564971575225.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564971577592.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564971579861.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564971582363.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564971584545.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564971586484.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564971595168.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564971597927.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564971600917.jpg" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Static]IOR 1.33]]></title>
+        <id>https://ripmr.github.io/post/staticior-133</id>
+        <link href="https://ripmr.github.io/post/staticior-133">
+        </link>
+        <updated>2019-04-08T11:33:19.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>CG静帧，人像练习
+</code></pre>
+<p><img src="https://ripmr.github.io/post-images/1564974063087.jpg" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564974074776.bmp" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Static]Trip]]></title>
+        <id>https://ripmr.github.io/post/statictrip</id>
+        <link href="https://ripmr.github.io/post/statictrip">
+        </link>
+        <updated>2019-03-09T06:00:42.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>CG静帧练习，《肉包子》的一些初期构想
+</code></pre>
+<p><img src="https://ripmr.github.io/post-images/1564973624629.bmp" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564973633262.bmp" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564973636957.bmp" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Tool]RaindropFX Update 1.01 (Pro)]]></title>
+        <id>https://ripmr.github.io/post/toolraindropfx-update-101-pro</id>
+        <link href="https://ripmr.github.io/post/toolraindropfx-update-101-pro">
+        </link>
+        <updated>2019-02-25T12:52:58.000Z</updated>
+        <content type="html"><![CDATA[<p>Unity3D屏幕雨雾特效插件 RaindropFX 现已更新至 V1.01 (PRO) 版本：</p>
+<blockquote>
+<p>新增可编程渲染管线(HDRP/LWRP)支持；<br>
+与 Unity Post Processing Stack (V2) 深度集成，简单易用；<br>
+新增: 前景水滴模糊效果、毛玻璃效果、屏幕雾效果、紊乱风效果；<br>
+更多可调节参数；<br>
+全部源码可访问；<br>
+额外附赠多种Post Processing Stack特效栈.</p>
+</blockquote>
+<pre><code>Asset Store 传送门
+</code></pre>
+<p><a href="http://u3d.as/1rjA">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
+<pre><code>Forum 传送门
+</code></pre>
+<p><a href="https://forum.unity.com/threads/raindropfx-realistic-camera-lens-rain-effect.519068/#post-3402707">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
+<pre><code>视频
+</code></pre>
+<p><a href="https://www.bilibili.com/video/av44691311">[Bilibili_1.01新特性]</a>
+<a href="https://youtu.be/TwDSwdZWCo4">[Youtube_配置使用教程]</a>
+<a href="https://youtu.be/xk8I4_vnDkc">[Youtube_附赠特效栈]</a></p>
+<pre><code>简介
+</code></pre>
+<p><strong>兼容性:</strong></p>
+<blockquote>
+<p>支持可编程渲染管线SRP (轻量渲染管线LWRP/高清渲染管线HDRP);<br>
+兼容前向渲染与缓冲渲染;<br>
+与Unity的后处理特效栈(v2)深度集成.</p>
+</blockquote>
+<p><strong>特性:</strong></p>
+<blockquote>
+<p>屏幕雨滴动画后处理特效;<br>
+基于物理计算的水滴动画;<br>
+支持添加风力以及紊乱风;<br>
+支持创建屏幕雾气并能够与运动的水滴产生自然的动态交互效果;<br>
+支持创建毛玻璃效果;<br>
+支持自定义水滴形状;<br>
+包含所有源代码，您可以自行修改.</p>
+</blockquote>
+<p><strong>额外附赠后处理特效:</strong></p>
+<blockquote>
+<p>高斯模糊;<br>
+色阶;<br>
+毛玻璃效果;<br>
+多玩家分屏效果，支持自定义遮罩;<br>
+以上后处理特效均已集成Unity后处理特效栈(v2)，支持排序产生不同的组合效果.</p>
+</blockquote>
+<pre><code>效果图
+</code></pre>
+<p><img src="https://ripmr.github.io/post-images/1564970346726.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970321629.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970325819.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970328458.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970331188.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970494884.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970500566.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970504065.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970510939.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970338696.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564970342796.png" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Static]Midnight Party-Procedural City Scape]]></title>
+        <id>https://ripmr.github.io/post/staticmidnight-party-procedural-city-scape</id>
+        <link href="https://ripmr.github.io/post/staticmidnight-party-procedural-city-scape">
+        </link>
+        <updated>2018-05-13T03:55:24.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>基于GhostTown制作的高细节程序化城市景观练习，《ProjectEvo》的一些初期技术尝试
+</code></pre>
+<p><img src="https://ripmr.github.io/post-images/1564973864220.bmp" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564973868629.bmp" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Tool]Unity3D屏幕雨滴特效插件RaindropFX]]></title>
+        <id>https://ripmr.github.io/post/toolunity3d-ping-mu-yu-di-te-xiao-cha-jian-raindropfx</id>
+        <link href="https://ripmr.github.io/post/toolunity3d-ping-mu-yu-di-te-xiao-cha-jian-raindropfx">
+        </link>
+        <updated>2018-02-11T01:30:18.000Z</updated>
+        <content type="html"><![CDATA[<p>Unity3D屏幕空间流体模拟后处理插件已上架Unity Asset Store，Forum相关板块将很快上线，youtube频道内还有更多相关操作指南，感谢各位热情的歪果小伙伴们(๑•̀ㅂ•́)و✧</p>
+<pre><code>Asset Store 传送门
+</code></pre>
+<p><a href="http://u3d.as/14V0">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
+<pre><code>视频
+</code></pre>
+<p><a href="https://www.bilibili.com/video/av19419888">[Bilibili_实机使用效果视频]</a>
+<a href="https://youtu.be/Gn93gcdtjLo">[Youtube_安装与使用教程]</a>
+<a href="https://youtu.be/iqPceup3YK8">[Youtube_编辑器使用效果]</a></p>
+<pre><code>简介
+</code></pre>
+<p><strong>简单易用的屏幕雨滴动画特效C#脚本</strong></p>
+<p><strong>包含的内容:</strong></p>
+<blockquote>
+<p>雨滴动画特效屏幕后处理脚本;<br>
+基于高度图的屏幕扭曲shader;<br>
+可供修改自定义的源代码;</p>
+</blockquote>
+<p><strong>特性:</strong></p>
+<blockquote>
+<p>支持缓冲渲染与前向渲染;<br>
+简单易用：拖拽脚本到摄影机即可使用;<br>
+基于物理算法的水滴动画;<br>
+支持添加风力;<br>
+支持自定义水滴纹理;<br>
+可供修改自定义的源代码.</p>
+</blockquote>
+<pre><code>效果图
+</code></pre>
+<p><img src="https://ripmr.github.io/post-images/1564969451875.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564969456280.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564969459710.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564969463837.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564969466506.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564969469237.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564969471802.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564969475524.png" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564969481676.png" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Static]Paprika]]></title>
+        <id>https://ripmr.github.io/post/staticpaprika</id>
+        <link href="https://ripmr.github.io/post/staticpaprika">
+        </link>
+        <updated>2018-01-22T07:36:17.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>CG静帧
+</code></pre>
+<p><img src="https://ripmr.github.io/post-images/1564968523617.bmp" alt=""><br>
+<img src="https://ripmr.github.io/post-images/1564968527500.bmp" alt=""></p>
 ]]></content>
     </entry>
 </feed>
