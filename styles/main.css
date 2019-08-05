@@ -1097,8 +1097,8 @@ a img {
 .author-meta {
   background: #222;
   color: white;
-  padding: 1.5em;
-  margin: 3em 0 0;
+  padding: 1em;
+  margin: 1em 0 0;
 }
 .author-meta a {
   color: #8c8c8c;
@@ -1116,24 +1116,31 @@ a img {
   clear: both;
 }
 .author-meta .author img {
-  float: left;
-  margin: 0 0.75em 1.5em 0;
-  width: 4.5em;
-  height: 4.5em;
+  float: right;
+  margin: 0 0 0 0;
+  width: 3.5em;
+  height: 3.5em;
   border-radius: 50%;
 }
-.author-meta .author a {
+/*.author-meta .author a {
   font-weight: 400;
   letter-spacing: 0.1em;
   display: block;
   width: 98px;
-  white-space: nowrap;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}*/
+.author-meta .nav-links {
+  display: inline-block;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .author-meta .bio a {
   margin-right: 0.375em;
   display: inline-block;
+  overflow: hidden;
 }
 /* 600px */
 @media all and (min-width: 37.5em) {
@@ -1182,7 +1189,8 @@ a img {
   }
   .bio {
     float: right;
-    width: 40%;
+    width: 10%;
+    margin: -1em 0 0 0;
   }
   .bio p {
     margin-top: 0;
