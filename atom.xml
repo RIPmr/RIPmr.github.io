@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ripmr.github.io</id>
     <title>HU ANIME</title>
-    <updated>2019-08-06T07:41:40.550Z</updated>
+    <updated>2019-08-06T11:24:25.176Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ripmr.github.io"/>
     <link rel="self" href="https://ripmr.github.io/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://ripmr.github.io/post/animeprojectevo-trailer">
         </link>
         <updated>2019-08-05T02:34:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>原创动画《ProjectEvo》测试片段</p>
+]]></summary>
         <content type="html"><![CDATA[<p>原创动画《ProjectEvo》测试片段</p>
+<!-- more -->
 <pre><code>Trailer link
 </code></pre>
 <p><a href="https://www.bilibili.com/video/av58001135">[Bilibili_Trailer]</a></p>
@@ -33,7 +36,7 @@
         </link>
         <updated>2019-08-05T02:22:21.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://ripmr.github.io/post-images/1564972006093.jpg" data-lightbox="image-1" data-title="Dai&Meng"><img src="https://ripmr.github.io/post-images/1564972006093.jpg" /></a><br>
-试着做一部泡面番，分享温暖的小故事，不定期更新</p>
+试着做一部泡面番，不定期更新</p>
 <pre><code>剧集列表（持续更新)
 </code></pre>
 <p><a href="https://www.bilibili.com/video/av45606600">[00-程序员小呆]</a><br>
@@ -55,8 +58,11 @@
         <link href="https://ripmr.github.io/post/toolsplinemesher-for-unity3d">
         </link>
         <updated>2019-06-13T02:04:21.000Z</updated>
-        <content type="html"><![CDATA[<p>HuAnime第二款自制Unity3D插件SplineMesher上架啦！
-现在你可以像在3ds Max中一样在U3D中交互式创建样条曲线并生成程序化管道模型</p>
+        <summary type="html"><![CDATA[<p>HuAnime第二款自制Unity3D插件SplineMesher上架啦！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>HuAnime第二款自制Unity3D插件SplineMesher上架啦！</p>
+<!-- more -->
+<p>现在你可以像在3ds Max中一样在U3D中交互式创建样条曲线并生成程序化管道模型</p>
 <pre><code>Asset Store传送门
 </code></pre>
 <p><a href="http://u3d.as/1yiU">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
@@ -144,8 +150,12 @@
         <link href="https://ripmr.github.io/post/staticior-133">
         </link>
         <updated>2019-04-08T11:33:19.000Z</updated>
+        <summary type="html"><![CDATA[<pre><code>CG静帧，人像练习
+</code></pre>
+]]></summary>
         <content type="html"><![CDATA[<pre><code>CG静帧，人像练习
 </code></pre>
+<!-- more -->
 <p><a href="https://ripmr.github.io/post-images/1564974063087.jpg" data-lightbox="image-1" data-title="IOR1.33"><img src="https://ripmr.github.io/post-images/1564974063087.jpg" /></a></p>
 ]]></content>
     </entry>
@@ -155,8 +165,12 @@
         <link href="https://ripmr.github.io/post/statictrip">
         </link>
         <updated>2019-03-09T06:00:42.000Z</updated>
+        <summary type="html"><![CDATA[<pre><code>CG静帧练习，《肉包子》的一些初期构想
+</code></pre>
+]]></summary>
         <content type="html"><![CDATA[<pre><code>CG静帧练习，《肉包子》的一些初期构想
 </code></pre>
+<!-- more -->
 <p><a href="https://ripmr.github.io/post-images/1564976387019.jpg" data-lightbox="image-1" data-title="Trip"><img src="https://ripmr.github.io/post-images/1564976387019.jpg" /></a><br>
 <a href="https://ripmr.github.io/post-images/1564976391776.jpg" data-lightbox="image-1" data-title="Trip"><img src="https://ripmr.github.io/post-images/1564976391776.jpg" /></a><br>
 <a href="https://ripmr.github.io/post-images/1564976394686.jpg" data-lightbox="image-1" data-title="Trip"><img src="https://ripmr.github.io/post-images/1564976394686.jpg" /></a></p>
@@ -168,7 +182,10 @@
         <link href="https://ripmr.github.io/post/toolraindropfx-update-101-pro">
         </link>
         <updated>2019-02-25T12:52:58.000Z</updated>
-        <content type="html"><![CDATA[<p>Unity3D屏幕雨雾特效插件 RaindropFX 现已更新至 V1.01 (PRO) 版本：</p>
+        <summary type="html"><![CDATA[<p>Unity3D屏幕雨雾特效插件 RaindropFX 现已更新至 V1.01 (PRO) 版本</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Unity3D屏幕雨雾特效插件 RaindropFX 现已更新至 V1.01 (PRO) 版本</p>
+<!-- more -->
 <blockquote>
 <p>新增可编程渲染管线(HDRP/LWRP)支持；<br>
 与 Unity Post Processing Stack (V2) 深度集成，简单易用；<br>
@@ -235,8 +252,12 @@
         <link href="https://ripmr.github.io/post/staticmidnight-party-procedural-city-scape">
         </link>
         <updated>2018-05-13T03:55:24.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>基于GhostTown制作的高细节程序化城市景观练习，《ProjectEvo》的一些初期技术尝试
+        <summary type="html"><![CDATA[<pre><code>GhostTown制作的程序化高细节城市景观练习，《ProjectEvo》的一些初期技术尝试
 </code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<pre><code>GhostTown制作的程序化高细节城市景观练习，《ProjectEvo》的一些初期技术尝试
+</code></pre>
+<!-- more -->
 <p><a href="https://ripmr.github.io/post-images/1564976306055.jpg" data-lightbox="image-1" data-title="GTXCity"><img src="https://ripmr.github.io/post-images/1564976306055.jpg" /></a><br>
 <a href="https://ripmr.github.io/post-images/1564976309282.jpg" data-lightbox="image-1" data-title="GTXCity"><img src="https://ripmr.github.io/post-images/1564976309282.jpg" /></a></p>
 ]]></content>
@@ -247,7 +268,11 @@
         <link href="https://ripmr.github.io/post/toolunity3d-ping-mu-yu-di-te-xiao-cha-jian-raindropfx">
         </link>
         <updated>2018-02-11T01:30:18.000Z</updated>
-        <content type="html"><![CDATA[<p>Unity3D屏幕空间流体模拟后处理插件已上架Unity Asset Store，Forum相关板块将很快上线，youtube频道内还有更多相关操作指南，感谢各位热情的歪果小伙伴们(๑•̀ㅂ•́)و✧</p>
+        <summary type="html"><![CDATA[<p>Unity3D屏幕空间流体模拟后处理插件已上架Unity Asset Store</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Unity3D屏幕空间流体模拟后处理插件已上架Unity Asset Store</p>
+<!-- more -->
+<p>Forum相关板块将很快上线，youtube频道内还有更多相关操作指南，感谢各位热情的歪果小伙伴们(๑•̀ㅂ•́)و✧</p>
 <pre><code>Asset Store 传送门
 </code></pre>
 <p><a href="http://u3d.as/14V0">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
@@ -293,8 +318,12 @@
         <link href="https://ripmr.github.io/post/staticpaprika">
         </link>
         <updated>2018-01-22T07:36:17.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>CG静帧
+        <summary type="html"><![CDATA[<pre><code>CG静帧，致敬大师
 </code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<pre><code>CG静帧，致敬大师
+</code></pre>
+<!-- more -->
 <p><a href="https://ripmr.github.io/post-images/staticpaprika.jpg" data-lightbox="image-1" data-title="Paprika"><img src="https://ripmr.github.io/post-images/staticpaprika.jpg" /></a><br>
 <a href="https://ripmr.github.io/post-images/1564976266095.jpg" data-lightbox="image-1" data-title="Paprika"><img src="https://ripmr.github.io/post-images/1564976266095.jpg" /></a></p>
 ]]></content>

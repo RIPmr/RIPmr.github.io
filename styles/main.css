@@ -306,7 +306,7 @@ img {
 .figure-list li {
   list-style: none;
   float: left;
-  width: 30%;
+  width: 31%;
   margin: 0 2% 2% 0;
 }
 .figure-list figure {
@@ -1136,10 +1136,16 @@ a img {
   background: #ededed;
   color: white;
   padding: 1em;
-  margin: 1em 0 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.author-meta a {
-  color: #8c8c8c;
+.author-meta span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.author-meta span img {
+  border-radius: 50%;
 }
 .author-meta a:link,
 .author-meta a:visited {
@@ -1160,15 +1166,15 @@ a img {
   height: 3.5em;
   border-radius: 50%;
 }
-/*.author-meta .author a {
+.author-meta .author a {
   font-weight: 400;
   letter-spacing: 0.1em;
   display: block;
   width: 98px;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .author-meta .nav-links {
   display: inline-block;
   overflow: hidden;
@@ -1228,10 +1234,7 @@ a img {
   .bio {
     float: right;
     width: 10%;
-    margin: -1em 0 0 0;
-  }
-  .bio p {
-    margin-top: 0;
+    margin: -2.5% 0 0 0;
   }
 }
 /* 700px */
