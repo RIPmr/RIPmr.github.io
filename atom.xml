@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ripmr.github.io</id>
     <title>HU ANIME</title>
-    <updated>2019-08-06T05:57:54.449Z</updated>
+    <updated>2019-08-06T07:39:04.895Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ripmr.github.io"/>
     <link rel="self" href="https://ripmr.github.io/atom.xml"/>
@@ -295,7 +295,7 @@
         <updated>2018-01-22T07:36:17.000Z</updated>
         <content type="html"><![CDATA[<pre><code>CG静帧
 </code></pre>
-<p><a href="https://ripmr.github.io/post-images/1564976262111.jpg" data-lightbox="image-1" data-title="Paprika"><img src="https://ripmr.github.io/post-images/1564976262111.jpg" /></a><br>
+<p><a href="https://ripmr.github.io/post-images/staticpaprika.jpg" data-lightbox="image-1" data-title="Paprika"><img src="https://ripmr.github.io/post-images/staticpaprika.jpg" /></a><br>
 <a href="https://ripmr.github.io/post-images/1564976266095.jpg" data-lightbox="image-1" data-title="Paprika"><img src="https://ripmr.github.io/post-images/1564976266095.jpg" /></a></p>
 ]]></content>
     </entry>
