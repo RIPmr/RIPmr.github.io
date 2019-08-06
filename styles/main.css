@@ -306,7 +306,7 @@ img {
 .figure-list li {
   list-style: none;
   float: left;
-  width: 31%;
+  width: 23%;
   margin: 0 2% 2% 0;
 }
 .figure-list figure {
@@ -1327,6 +1327,9 @@ a img {
 @media all and (min-width: 75em) {
   .entry-container {
     padding: 0 22.22%;
+  }
+  .entry-container_gallery {
+    padding: 0 12.22%;
   }
   .entry-content img.full-width {
     width: 179.9%;
