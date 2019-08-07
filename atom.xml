@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://huanime.com.cn/</id>
+    <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2019-08-07T06:39:10.392Z</updated>
+    <updated>2019-08-07T06:48:04.964Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://huanime.com.cn/"/>
-    <link rel="self" href="http://huanime.com.cn//atom.xml"/>
+    <link rel="alternate" href="https://huanime.com.cn/"/>
+    <link rel="self" href="https://huanime.com.cn//atom.xml"/>
     <subtitle>会画画的程序猿</subtitle>
-    <logo>http://huanime.com.cn//images/avatar.png</logo>
-    <icon>http://huanime.com.cn//favicon.ico</icon>
+    <logo>https://huanime.com.cn//images/avatar.png</logo>
+    <icon>https://huanime.com.cn//favicon.ico</icon>
     <rights>All rights reserved 2019, HU ANIME</rights>
     <entry>
         <title type="html"><![CDATA[[Anime]《ProjectEvo》-Trailer]]></title>
-        <id>http://huanime.com.cn//post/animeprojectevo-trailer</id>
-        <link href="http://huanime.com.cn//post/animeprojectevo-trailer">
+        <id>https://huanime.com.cn//post/animeprojectevo-trailer</id>
+        <link href="https://huanime.com.cn//post/animeprojectevo-trailer">
         </link>
         <updated>2019-08-05T02:34:51.000Z</updated>
         <summary type="html"><![CDATA[<p>原创动画《ProjectEvo》测试片段</p>
@@ -31,8 +31,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Anime]泡面番《小呆&小萌》]]></title>
-        <id>http://huanime.com.cn//post/anime-pao-mian-fan-xiao-ai-and-xiao-meng</id>
-        <link href="http://huanime.com.cn//post/anime-pao-mian-fan-xiao-ai-and-xiao-meng">
+        <id>https://huanime.com.cn//post/anime-pao-mian-fan-xiao-ai-and-xiao-meng</id>
+        <link href="https://huanime.com.cn//post/anime-pao-mian-fan-xiao-ai-and-xiao-meng">
         </link>
         <updated>2019-08-05T02:22:21.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://ripmr.github.io/post-images/1564972006093.jpg" data-lightbox="image-1" data-title="Dai&Meng"><img src="https://ripmr.github.io/post-images/1564972006093.jpg" /></a><br>
@@ -54,8 +54,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]SplineMesher for Unity3D]]></title>
-        <id>http://huanime.com.cn//post/toolsplinemesher-for-unity3d</id>
-        <link href="http://huanime.com.cn//post/toolsplinemesher-for-unity3d">
+        <id>https://huanime.com.cn//post/toolsplinemesher-for-unity3d</id>
+        <link href="https://huanime.com.cn//post/toolsplinemesher-for-unity3d">
         </link>
         <updated>2019-06-13T02:04:21.000Z</updated>
         <summary type="html"><![CDATA[<p>HuAnime第二款自制Unity3D插件SplineMesher上架啦！</p>
@@ -110,8 +110,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Anime]原创CG动画《肉包子》]]></title>
-        <id>http://huanime.com.cn//post/animeyuan-chuang-cg-dong-hua-rou-bao-zi</id>
-        <link href="http://huanime.com.cn//post/animeyuan-chuang-cg-dong-hua-rou-bao-zi">
+        <id>https://huanime.com.cn//post/animeyuan-chuang-cg-dong-hua-rou-bao-zi</id>
+        <link href="https://huanime.com.cn//post/animeyuan-chuang-cg-dong-hua-rou-bao-zi">
         </link>
         <updated>2019-04-29T04:30:17.000Z</updated>
         <content type="html"><![CDATA[<pre><code>正片传送门
@@ -146,8 +146,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Static]IOR 1.33]]></title>
-        <id>http://huanime.com.cn//post/staticior-133</id>
-        <link href="http://huanime.com.cn//post/staticior-133">
+        <id>https://huanime.com.cn//post/staticior-133</id>
+        <link href="https://huanime.com.cn//post/staticior-133">
         </link>
         <updated>2019-04-08T11:33:19.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>CG静帧，人像练习
@@ -161,8 +161,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Static]Trip]]></title>
-        <id>http://huanime.com.cn//post/statictrip</id>
-        <link href="http://huanime.com.cn//post/statictrip">
+        <id>https://huanime.com.cn//post/statictrip</id>
+        <link href="https://huanime.com.cn//post/statictrip">
         </link>
         <updated>2019-03-09T06:00:42.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>CG静帧练习，《肉包子》的一些初期构想
@@ -178,8 +178,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]RaindropFX Update 1.01 (Pro)]]></title>
-        <id>http://huanime.com.cn//post/toolraindropfx-update-101-pro</id>
-        <link href="http://huanime.com.cn//post/toolraindropfx-update-101-pro">
+        <id>https://huanime.com.cn//post/toolraindropfx-update-101-pro</id>
+        <link href="https://huanime.com.cn//post/toolraindropfx-update-101-pro">
         </link>
         <updated>2019-02-25T12:52:58.000Z</updated>
         <summary type="html"><![CDATA[<p>Unity3D屏幕雨雾特效插件 RaindropFX 现已更新至 V1.01 (PRO) 版本</p>
@@ -248,8 +248,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Static]Midnight Party-Procedural City Scape]]></title>
-        <id>http://huanime.com.cn//post/staticmidnight-party-procedural-city-scape</id>
-        <link href="http://huanime.com.cn//post/staticmidnight-party-procedural-city-scape">
+        <id>https://huanime.com.cn//post/staticmidnight-party-procedural-city-scape</id>
+        <link href="https://huanime.com.cn//post/staticmidnight-party-procedural-city-scape">
         </link>
         <updated>2018-05-13T03:55:24.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>GhostTown制作的程序化高细节城市景观练习，《ProjectEvo》的一些初期技术尝试
@@ -264,8 +264,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]Unity3D屏幕雨滴特效插件RaindropFX]]></title>
-        <id>http://huanime.com.cn//post/toolunity3d-ping-mu-yu-di-te-xiao-cha-jian-raindropfx</id>
-        <link href="http://huanime.com.cn//post/toolunity3d-ping-mu-yu-di-te-xiao-cha-jian-raindropfx">
+        <id>https://huanime.com.cn//post/toolunity3d-ping-mu-yu-di-te-xiao-cha-jian-raindropfx</id>
+        <link href="https://huanime.com.cn//post/toolunity3d-ping-mu-yu-di-te-xiao-cha-jian-raindropfx">
         </link>
         <updated>2018-02-11T01:30:18.000Z</updated>
         <summary type="html"><![CDATA[<p>Unity3D屏幕空间流体模拟后处理插件已上架Unity Asset Store</p>
@@ -314,8 +314,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Static]Paprika]]></title>
-        <id>http://huanime.com.cn//post/staticpaprika</id>
-        <link href="http://huanime.com.cn//post/staticpaprika">
+        <id>https://huanime.com.cn//post/staticpaprika</id>
+        <link href="https://huanime.com.cn//post/staticpaprika">
         </link>
         <updated>2018-01-22T07:36:17.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>CG静帧，致敬大师
