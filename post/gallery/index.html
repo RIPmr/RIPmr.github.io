@@ -6,7 +6,7 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>Gallery | HU ANIME</title>
-<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1565241219430">
+<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1565244152970">
 <link rel="stylesheet" href="https://huanime.com.cn//media/scripts/lib/lightbox.css" type='text/css' media='all'>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://huanime.com.cn//styles/main.css" type='text/css' media='all'>
@@ -204,10 +204,23 @@ position: absolute;
 if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
 window.location.href="https://huanime.com.cn/post/gallery_mobile/index.html";
    //alert('手机端')
-}else{
-	  var preAdj = document.getElementById('entry-content');
-	  preAdj.style.height = 500 + 'px';
-}
+}else{}
+</script>
+<div id="loadingDiv" style="position:absolute; width:0; height:500px; background-color:#FFFFFF; z-index:1000;" class="more-link"> 
+		<!--div style="position:relative;top: 50%;left: 50%;"-->
+				<!--div id="center" style="position:relative;"--> 
+				<center><span id="disp">Loading...</span></center>
+				<!--img src="https://ripmr.github.io/post-images/loading.gif" /-->
+				<!--/div-->
+		<!--/div-->
+</div> 
+<script>
+	  var temp = document.getElementById('entry-content');
+	  var loadDiv = document.getElementById('loadingDiv');
+	  temp.style.height = 500 + 'px';
+		// 展示loading效果
+	  loadDiv.style.display="block";
+	  loadDiv.style.width=temp.offsetWidth + 'px';
 </script>
 <div id="box">
 <div class="item"><a href="https://ripmr.github.io/post-images/1564971570690.jpg" data-lightbox="image-1" data-title="Gallery"><img src="https://ripmr.github.io/post-images/1564971570690.jpg" /></a></div>
@@ -273,6 +286,10 @@ window.location.href="https://huanime.com.cn/post/gallery_mobile/index.html";
 	
     window.onload = function() {
         waterFall();
+	 
+				// 移除loading效果
+				document.getElementById("loadingDiv").style.display="none";
+	
         function waterFall() {
             var pageWidth = containerDiv.offsetWidth - gap * 2.0;//getClient().width;
             var itemWidth = items[0].offsetWidth;
