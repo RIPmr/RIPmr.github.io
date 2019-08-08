@@ -1194,6 +1194,13 @@ a img {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.author-meta span p {
+  display: inline;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: normal;
+  text-overflow: ellipsis;
+}
 .author-meta .bio a {
   margin-right: 0.375em;
   display: inline-block;
