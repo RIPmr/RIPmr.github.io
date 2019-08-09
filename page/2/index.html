@@ -28,9 +28,33 @@
     })();
   </script>
 
-<!--
-
--->
+  <!--Block Debug Tools-->
+  <script>
+    function disableInfo() {
+    document.onkeydown = function() {
+    var e = window.event || arguments[0];
+    // block F12
+    if(e.keyCode == 123) {
+    return false;
+    // block Ctrl+Shift+I
+    } else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+    return false;
+    // block Shift+F10
+    } else if((e.shiftKey) && (e.keyCode == 121)){
+    return false;
+    }
+    };
+    // block right click
+    document.oncontextmenu = function() {
+    return false;
+    }
+    }
+    disableInfo();
+  </script>
+  
+  <!-- Google Analytics
+  
+  -->
   </head>
   <body class="home blog ct-body standard">
     <div id="overflow-container" class="overflow-container">
