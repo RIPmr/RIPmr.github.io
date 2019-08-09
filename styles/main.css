@@ -1251,6 +1251,13 @@ a img {
     line-height: 0;
     height: 0;
   }
+  .author-meta span p {
+    display: inline;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: normal;
+    text-overflow: ellipsis;
+  }
   .bio {
     float: right;
     width: 10%;
