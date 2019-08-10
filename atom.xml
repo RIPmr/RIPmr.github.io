@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2019-08-10T10:35:30.790Z</updated>
+    <updated>2019-08-10T10:54:37.263Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn//atom.xml"/>
@@ -127,15 +127,20 @@
 <p><a href="https://www.bilibili.com/video/av51081353">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
 <pre><code>V1.2.0工具列表
 </code></pre>
-<img src="https://ripmr.github.io/post-images/1565432598174.png" align="left" width="120" hspace="5" vspace="5">
-* Object Manage Tools
-> 	Renamer
-> 	Attacher
-> 	Detacher
-> 	Arranger
-> 	Selection Slot
-> 	Random Transer
-> 	Spline Knot Manager
+<p><img src="https://huanime.com.cn//post-images/1565434228673.png" alt=""></p>
+<img src="https://ripmr.github.io/post-images/1565432598174.png" />
+<ul>
+<li>Object Manage Tools</li>
+</ul>
+<blockquote>
+<p>Renamer<br>
+Attacher<br>
+Detacher<br>
+Arranger<br>
+Selection Slot<br>
+Random Transer<br>
+Spline Knot Manager</p>
+</blockquote>
 <ul>
 <li>Material Manage Tools</li>
 </ul>
