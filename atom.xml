@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2019-08-10T10:54:37.263Z</updated>
+    <updated>2019-08-10T13:53:13.649Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn//atom.xml"/>
@@ -114,9 +114,105 @@
         <link href="https://huanime.com.cn//post/toolhuanime-toolset-v12">
         </link>
         <updated>2019-05-01T13:02:13.000Z</updated>
-        <summary type="html"><![CDATA[<p>Make everything automatic!</p>
+        <summary type="html"><![CDATA[<style>
+		.menu1, .menu1 ul {
+			list-style: none;
+			width: 210px;
+			background-color: #f9f9f9;
+			text-align: left;
+			position: relative;
+		  left: -4%;
+		}
+
+			.menu1 a:hover {
+				   color: #336666;
+				   background-color: #F5E3C0;
+			}
+
+			.menu1 a {
+				   position: relative;
+				   display: block;
+				   text-decoration: none;
+				   border-bottom: 1px solid #ccc;
+				   color: #000;
+				   width: 100%;
+				   line-height: 32px;
+			}
+
+			.menu1 .active {
+				   position: relative;
+			}
+
+			.menu1 li:hover ul ul {
+				left: -999px;
+			}
+
+			.menu1 li:hover ul {
+				   left: 90%;
+			}
+
+			.menu1 li li:hover ul {
+				   position: absolute;
+				   left: 90%;
+			}
+
+			.menu1 .active ul {
+				   position: absolute;
+				   top: -1px;
+				   left: -999px;
+			}
+</style>
+<p>Make everything automatic!</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>Make everything automatic!</p>
+        <content type="html"><![CDATA[<style>
+		.menu1, .menu1 ul {
+			list-style: none;
+			width: 210px;
+			background-color: #f9f9f9;
+			text-align: left;
+			position: relative;
+		  left: -4%;
+		}
+
+			.menu1 a:hover {
+				   color: #336666;
+				   background-color: #F5E3C0;
+			}
+
+			.menu1 a {
+				   position: relative;
+				   display: block;
+				   text-decoration: none;
+				   border-bottom: 1px solid #ccc;
+				   color: #000;
+				   width: 100%;
+				   line-height: 32px;
+			}
+
+			.menu1 .active {
+				   position: relative;
+			}
+
+			.menu1 li:hover ul ul {
+				left: -999px;
+			}
+
+			.menu1 li:hover ul {
+				   left: 90%;
+			}
+
+			.menu1 li li:hover ul {
+				   position: absolute;
+				   left: 90%;
+			}
+
+			.menu1 .active ul {
+				   position: absolute;
+				   top: -1px;
+				   left: -999px;
+			}
+</style>
+<p>Make everything automatic!</p>
 <!-- more -->
 <pre><code>简介
 </code></pre>
@@ -127,36 +223,214 @@
 <p><a href="https://www.bilibili.com/video/av51081353">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
 <pre><code>V1.2.0工具列表
 </code></pre>
-<p><img src="https://huanime.com.cn//post-images/1565434228673.png" alt=""></p>
-<img src="https://ripmr.github.io/post-images/1565432598174.png" />
-<ul>
-<li>Object Manage Tools</li>
-</ul>
-<blockquote>
-<p>Renamer<br>
-Attacher<br>
-Detacher<br>
-Arranger<br>
-Selection Slot<br>
-Random Transer<br>
-Spline Knot Manager</p>
-</blockquote>
-<ul>
-<li>Material Manage Tools</li>
-</ul>
-<blockquote>
-<p>Show textures in viewport (Standard/Vray Mtl)</p>
-</blockquote>
-<ul>
-<li>Animation Tools</li>
-</ul>
-<blockquote>
-<p>HU_Anim Icon Set<br>
-Transform Manager<br>
-Attachment Holder<br>
-Spline Controller<br>
-Keyframe Filter</p>
-</blockquote>
+<div class="menu"><ul class="menu1"><li class="active">
+			<a>Object Manage Tools ></a>
+			<ul>
+				<li class="active"><a href="">Attacher</a>
+					<ul><li><a href="###">按类型(class)合并选中物体</a></li></ul>
+				</li>
+				<li class="active"><a href="">Detacher</a>
+					<ul><li><a href="###">分离子物体(elements)</a></li></ul>
+				</li>
+				<li class="active"><a href="">Arranger</a>
+					<ul><li><a href="###">按间隔整理选中物体</a></li></ul>
+				</li>
+				<li class="active"><a href="">Selection Slot</a>
+					<ul><li><a href="###">存储当前物体选中状态到选择集，点击选择集按钮恢复选中状态</a></li></ul>
+				</li>
+				<li class="active"><a href="">Random Transer</a>
+					<ul><li><a href="###">为选中物体赋予随机位置、旋转与缩放状态</a></li></ul>
+				</li>
+				<li class="active"><a href="">Spline Knot Manager</a>
+					<ul><li><a href="###">更改选中样条线顶点的类型</a></li></ul>
+				</li>
+			</ul>
+</li></ul></div>
+<div class="menu"><ul class="menu1"><li class="active">
+			<a>Material Manage Tools ></a>
+			<ul>
+				<li class="active"><a href="">Show textures in viewport</a>
+					<ul><li><a href="###">在视图中用材质贴图替换物体颜色外观，支持标准材质与Vray材质</a></li></ul>
+				</li>
+			</ul>
+</li></ul></div>
+<div class="menu"><ul class="menu1"><li class="active">
+			<a>Animation Tools ></a>
+			<ul>
+				<li class="active"><a href="">HU_Anim Icon Set</a>
+					<ul><li><a href="###">动画绑定用样条线图形预设集</a></li></ul>
+				</li>
+				<li class="active"><a href="">Transform Manager</a>
+					<ul><li><a href="###">锁定物体的一个或多个Transform属性</a></li></ul>
+				</li>
+				<li class="active"><a href="">Attachment Holder</a>
+					<ul><li><a href="###">为物体快捷创建附着约束</a></li></ul>
+				</li>
+				<li class="active"><a href="">Spline Controller</a>
+					<ul><li><a href="###">为样条线的每个顶点创建控制器</a></li></ul>
+				</li>
+				<li class="active"><a href="">Keyframe Filter</a>
+					<ul><li><a href="###">删除动画关键帧中的某些属性</a></li></ul>
+				</li>
+				<li class="active"><a href="">Anim Repeater</a>
+					<ul><li><a href="###">重复并延长当前物体的选中动画帧，支持增量动画</a></li></ul>
+				</li>
+				<li class="active"><a href="">Anim Recorder</a>
+					<ul><li><a href="###">将一个物体的动画记录到另一个物体</a></li></ul>
+				</li>
+				<li class="active"><a href="">Anim Rotator</a>
+					<ul><li><a href="###">旋转行走动画</a></li></ul>
+				</li>
+				<li class="active"><a href="">Anim Noiser</a>
+					<ul><li><a href="###">为物体添加噪声动画</a></li></ul>
+				</li>
+			</ul>
+</li></ul></div>
+<div class="menu"><ul class="menu1"><li class="active">
+			<a>Procedural Object Tools ></a>
+			<ul>
+				<li class="active"><a href="">IES Light Creator</a>
+					<ul><li><a href="###">为Ghost Town生成的程序建筑模型添加IES射灯(Model+Vray IES Light)</a></li></ul>
+				</li>
+				<li class="active"><a href="">Light Ceil Creator</a>
+					<ul><li><a href="###">基于选中的poly面重新拓扑生成带灯带的屋顶，灯带类型为Vray灯光物体(Vray Mesh Light)</a></li></ul>
+				</li>
+				<li class="active"><a href="">Voxel Tree</a>
+					<ul><li><a href="###">生成带生长动画的程序化体素树模型</a></li></ul>
+				</li>
+				<li class="active"><a href="">Debugger Boxes</a>
+					<ul><li><a href="###">在随机位置生成一堆带随机网格颜色的盒子模型</a></li></ul>
+				</li>
+				<li class="active"><a href="">Rect Slicer</a>
+					<ul><li><a href="###">将模型切块</a></li></ul>
+				</li>
+				<li class="active"><a href="">Catenary Maker</a>
+					<ul><li><a href="###">基于选中的样条线生成悬线</a></li></ul>
+				</li>
+				<li class="active"><a href="">Geo Cutter</a>
+					<ul><li><a href="###">批量模型布尔切割</a></li></ul>
+				</li>
+				<li class="active"><a href="">Poly Recreator</a>
+					<ul><li><a href="###">清除选中模型中的错误位置信息(尤其是来自模型空间的错误信息)。当模型产生错误结果时，请尝试用此插件"重新创建"模型进行修复</a></li></ul>
+				</li>
+				<li class="active"><a href="">Spline Recreator</a>
+					<ul><li><a href="###">将选中样条曲线转换为可执行的MaxScript，同时可用于清除样条曲线中的错误位置信息</a></li></ul>
+				</li>
+				<li class="active"><a href="">Sub-Spline Connector</a>
+					<ul><li><a href="###">按百分比位置连接选中样条线的子样条线，并生成一条新的样条线，支持位置排序</a></li></ul>
+				</li>
+				<li class="active"><a href="">Mesh From Spline</a>
+					<ul><li><a href="###">基于选中样条线的子样条线生成网格模型，支持位置排序</a></li></ul>
+				</li>
+				<li class="active"><a href="">Skynet Creator</a>
+					<ul><li><a href="###">基于深度优先搜索(DFS)生成网状结构模型，使用Point物体作为基础物体的子物体时Point即可被自动识别为延伸端口(下一个物体的生成方向)</a></li></ul>
+				</li>
+				<li class="active"><a href="">Snowy Surface</a>
+					<ul><li><a href="###">为选中物体添加积雪效果(提取法线方向为Z向的面生成新的积雪模型)</a></li></ul>
+				</li>
+				<li class="active"><a href="">Pillars Generator</a>
+					<ul><li><a href="###">生成随机外观的柱子模型</a></li></ul>
+				</li>
+				<li class="active"><a href="">Cobwebs Generator</a>
+					<ul><li><a href="###">基于选中物体随机生成蜘蛛网(基于样条线)</a></li></ul>
+				</li>
+				<li class="active"><a href="">Rock Generator</a>
+					<ul><li><a href="###">生成随机外观的岩石模型</a></li></ul>
+				</li>
+				<li class="active"><a href="">Feather Generator</a>
+					<ul><li><a href="###">羽毛模型生成器</a></li></ul>
+				</li>
+				<li class="active"><a href="">Mindflow Splines Creator</a>
+					<ul><li><a href="###">基于选中的样条线图形生成样条线描边</a></li></ul>
+				</li>
+				<li class="active"><a href="">Procedural Sci-Fi Building Gen</a>
+					<ul><li><a href="###">程序化科幻建筑生成器</a></li></ul>
+				</li>
+			</ul>
+</li></ul></div>
+<div class="menu"><ul class="menu1"><li class="active">
+			<a>Procedural Animation Tools ></a>
+			<ul>
+				<li class="active"><a href="">Range Affector</a>
+					<ul><li><a href="###">基于控制器生成程序化运动图形动画</a></li></ul>
+				</li>
+				<li class="active"><a href="">Elevator Animator</a>
+					<ul><li><a href="###">程序化电梯动画生成器</a></li></ul>
+				</li>
+				<li class="active"><a href="">Boat Animator</a>
+					<ul><li><a href="###">船舶摇摆动画生成器，支持四种噪声类型</a></li></ul>
+				</li>
+				<li class="active"><a href="">Star Trace</a>
+					<ul><li><a href="###">生成类似延时摄影生成的星轨动画效果，可自动生成渐变拖尾Vray材质</a></li></ul>
+				</li>
+				<li class="active"><a href="">Poly Fracture</a>
+					<ul><li><a href="###">poly网格破碎，新增基于控制器的爆炸动画生成</a></li></ul>
+				</li>
+				<li class="active"><a href="">Vol.Sel To Texture</a>
+					<ul><li><a href="###">基于体积选择生成贴图序列</a></li></ul>
+				</li>
+				<li class="active"><a href="">Drop Animation</a>
+					<ul><li><a href="###">掉落动画生成器</a></li></ul>
+				</li>
+				<li class="active"><a href="">Spring</a>
+					<ul><li><a href="###">为物体的已有动画帧增加弹性次级动画效果</a></li></ul>
+				</li>
+				<li class="active"><a href="">Cat Tail</a>
+					<ul><li><a href="###">为选中的骨骼链或样条线生成飘带动画</a></li></ul>
+				</li>
+				<li class="active"><a href="">PF Baker</a>
+					<ul><li><a href="###">烘焙PF粒子到网格动画</a></li></ul>
+				</li>
+			</ul>
+</li></ul></div>
+<div class="menu"><ul class="menu1"><li class="active">
+			<a>Rigging Tools ></a>
+			<ul>
+				<li class="active"><a href="">Auto Rigging For MakeHuman</a>
+					<ul><li><a href="###">为MakeHuman(1.2)生成的模型自动生成高级人体绑定</a></li></ul>
+				</li>
+				<li class="active"><a href="">Auto Facial Rigging Tools</a>
+					<ul><li><a href="###">自动面部绑定</a></li></ul>
+				</li>
+				<li class="active"><a href="">Auto Skin Weight</a>
+					<ul><li><a href="###">更加便捷的蒙皮权重设置方式</a></li></ul>
+				</li>
+				<li class="active"><a href="">Make Stretchy Bones</a>
+					<ul><li><a href="###">将选中骨骼转化为弹性骨骼</a></li></ul>
+				</li>
+				<li class="active"><a href="">Bone Divider</a>
+					<ul><li><a href="###">根据百分比将选中骨骼打断为多节</a></li></ul>
+				</li>
+			</ul>
+</li></ul></div>
+<div class="menu"><ul class="menu1"><li class="active">
+			<a>Asset Operator Tools ></a>
+			<ul>
+				<li class="active"><a href="">Batch Exporter</a>
+					<ul><li><a href="###">批量导出工具</a></li></ul>
+				</li>
+				<li class="active"><a href="">Batch Loader</a>
+					<ul><li><a href="###">批量导入工具</a></li></ul>
+				</li>
+				<li class="active"><a href="">Bitmap Renamer</a>
+					<ul><li><a href="###">重命名所有当前场景中引用的贴图</a></li></ul>
+				</li>
+				<li class="active"><a href="">Instances To Proxy</a>
+					<ul><li><a href="###">将实例物体转为Vray代理</a></li></ul>
+				</li>
+			</ul>
+</li></ul></div>
+<div class="menu"><ul class="menu1"><li class="active">
+			<a>Others ></a>
+			<ul>
+				<li class="active"><a href="">Quickly open common file paths</a>
+					<ul><li><a href="###">常用max路径的快捷打开方式</a></li></ul>
+				</li>
+			</ul>
+</li></ul></div>
+<pre><code>截图
+</code></pre>
+<div align=center><a href="https://ripmr.github.io/post-images/1565432598174.png" data-lightbox="image-1" data-title="Gallery"><img src="https://ripmr.github.io/post-images/1565432598174.png" /></a></div>
 ]]></content>
     </entry>
     <entry>
