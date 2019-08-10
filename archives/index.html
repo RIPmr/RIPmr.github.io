@@ -7,7 +7,7 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>HU ANIME</title>
-<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1565314276857">
+<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1565433326985">
 <link rel="stylesheet" href="https://huanime.com.cn//media/scripts/lib/lightbox.css" type='text/css' media='all'>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://huanime.com.cn//styles/main.css" type='text/css' media='all'>
@@ -30,26 +30,27 @@
 
   <!--Block Debug Tools-->
   <script>
+    var debugMode = true;
     function disableInfo() {
-    document.onkeydown = function() {
-    var e = window.event || arguments[0];
-    // block F12
-    if(e.keyCode == 123) {
-    return false;
-    // block Ctrl+Shift+I
-    } else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
-    return false;
-    // block Shift+F10
-    } else if((e.shiftKey) && (e.keyCode == 121)){
-    return false;
+      document.onkeydown = function() {
+        var e = window.event || arguments[0];
+        // block F12
+        if (e.keyCode == 123) {
+          return false;
+        // block Ctrl+Shift+I
+        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+          return false;
+        // block Shift+F10
+        } else if ((e.shiftKey) && (e.keyCode == 121)) {
+          return false;
+        }
+      };
+      // block right click
+      document.oncontextmenu = function() {
+        return false;
+      }
     }
-    };
-    // block right click
-    document.oncontextmenu = function() {
-    return false;
-    }
-    }
-    disableInfo();
+    if (!debugMode) disableInfo();
   </script>
   
   <!-- Google Analytics
@@ -243,6 +244,18 @@
                     
                     
                         <div class="timeline-content">
+                            <!--h3 class="timeline-title"> [Tool]HuAnime Toolset V1.2</h3-->
+                            <h3 class="timeline-title"> <a href="https://huanime.com.cn//post/toolhuanime-toolset-v12">[Tool]HuAnime Toolset V1.2</a></h3>
+                            <p>
+                                <p>Make everything automatic!</p>
+
+                            </p>
+                            <a href="https://huanime.com.cn//post/toolhuanime-toolset-v12" class="btn">click to view</a>
+                        </div>
+                    
+                    
+                    
+                        <div class="timeline-content">
                             <!--h3 class="timeline-title"> [Anime]原创CG动画《肉包子》</h3-->
                             <h3 class="timeline-title"> <a href="https://huanime.com.cn//post/animeyuan-chuang-cg-dong-hua-rou-bao-zi">[Anime]原创CG动画《肉包子》</a></h3>
                             <p>
@@ -339,6 +352,8 @@
                     
                     
                     
+                    
+                    
                         <div class="timeline-content">
                             <!--h3 class="timeline-title"> [Static]Midnight Party-Procedural City Scape</h3-->
                             <h3 class="timeline-title"> <a href="https://huanime.com.cn//post/staticmidnight-party-procedural-city-scape">[Static]Midnight Party-Procedural City Scape</a></h3>
@@ -403,6 +418,8 @@
     <!--                    <img src="assets/images/star.svg" alt="2017">-->
                         <span>2017</span>
                     </div>
+                    
+                    
                     
                     
                     
@@ -536,6 +553,8 @@
                     
                     
                     
+                    
+                    
                         <div class="timeline-content">
                             <!--h3 class="timeline-title"> [Anime]U3D实时动画《VirtualReality》</h3-->
                             <h3 class="timeline-title"> <a href="https://huanime.com.cn//post/animeyuan-chuang-cg-dong-hua-virtualreality">[Anime]U3D实时动画《VirtualReality》</a></h3>
@@ -606,6 +625,8 @@
                     
                     
                     
+                    
+                    
                         <div class="timeline-content">
                             <!--h3 class="timeline-title"> [Anime]原创CG动画《药》</h3-->
                             <h3 class="timeline-title"> <a href="https://huanime.com.cn//post/animeyuan-chuang-cg-dong-hua-yao">[Anime]原创CG动画《药》</a></h3>
@@ -636,6 +657,8 @@
     <!--                    <img src="assets/images/star.svg" alt="2014">-->
                         <span>2014</span>
                     </div>
+                    
+                    
                     
                     
                     

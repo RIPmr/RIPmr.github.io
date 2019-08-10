@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2019-08-09T05:57:32.658Z</updated>
+    <updated>2019-08-10T10:35:30.790Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn//atom.xml"/>
@@ -106,6 +106,52 @@
 <p><a href="https://ripmr.github.io/post-images/1564970955665.png" data-lightbox="image-1" data-title="SplineMesher"><img src="https://ripmr.github.io/post-images/1564970955665.png" /></a></p>
 <p><a href="https://ripmr.github.io/post-images/1564970967519.png" data-lightbox="image-1" data-title="SplineMesher"><img src="https://ripmr.github.io/post-images/1564970967519.png" /></a></p>
 <p><a href="https://ripmr.github.io/post-images/1564970969783.png" data-lightbox="image-1" data-title="SplineMesher"><img src="https://ripmr.github.io/post-images/1564970969783.png" /></a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Tool]HuAnime Toolset V1.2]]></title>
+        <id>https://huanime.com.cn//post/toolhuanime-toolset-v12</id>
+        <link href="https://huanime.com.cn//post/toolhuanime-toolset-v12">
+        </link>
+        <updated>2019-05-01T13:02:13.000Z</updated>
+        <summary type="html"><![CDATA[<p>Make everything automatic!</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Make everything automatic!</p>
+<!-- more -->
+<pre><code>简介
+</code></pre>
+<p>自制 3ds Max 动画创作全流程工具包 Hu Anime Toolset v1.2.0<br>
+献给我与 3ds Max 走过的第一个十年</p>
+<pre><code>效果视频
+</code></pre>
+<p><a href="https://www.bilibili.com/video/av51081353">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
+<pre><code>V1.2.0工具列表
+</code></pre>
+<img src="https://ripmr.github.io/post-images/1565432598174.png" align="left" width="120" hspace="5" vspace="5">
+* Object Manage Tools
+> 	Renamer
+> 	Attacher
+> 	Detacher
+> 	Arranger
+> 	Selection Slot
+> 	Random Transer
+> 	Spline Knot Manager
+<ul>
+<li>Material Manage Tools</li>
+</ul>
+<blockquote>
+<p>Show textures in viewport (Standard/Vray Mtl)</p>
+</blockquote>
+<ul>
+<li>Animation Tools</li>
+</ul>
+<blockquote>
+<p>HU_Anim Icon Set<br>
+Transform Manager<br>
+Attachment Holder<br>
+Spline Controller<br>
+Keyframe Filter</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
@@ -310,22 +356,6 @@
 <p><a href="https://ripmr.github.io/post-images/1564969471802.png" data-lightbox="image-1" data-title="RaindropFX0.5.0"><img src="https://ripmr.github.io/post-images/1564969471802.png" /></a></p>
 <p><a href="https://ripmr.github.io/post-images/1564969475524.png" data-lightbox="image-1" data-title="RaindropFX0.5.0"><img src="https://ripmr.github.io/post-images/1564969475524.png" /></a></p>
 <p><a href="https://ripmr.github.io/post-images/1564969481676.png" data-lightbox="image-1" data-title="RaindropFX0.5.0"><img src="https://ripmr.github.io/post-images/1564969481676.png" /></a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Static]Paprika]]></title>
-        <id>https://huanime.com.cn//post/staticpaprika</id>
-        <link href="https://huanime.com.cn//post/staticpaprika">
-        </link>
-        <updated>2018-01-22T07:36:17.000Z</updated>
-        <summary type="html"><![CDATA[<pre><code>CG静帧，致敬大师
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<pre><code>CG静帧，致敬大师
-</code></pre>
-<!-- more -->
-<p><a href="https://ripmr.github.io/post-images/staticpaprika.jpg" data-lightbox="image-1" data-title="Paprika"><img src="https://ripmr.github.io/post-images/staticpaprika.jpg" /></a><br>
-<a href="https://ripmr.github.io/post-images/1564976266095.jpg" data-lightbox="image-1" data-title="Paprika"><img src="https://ripmr.github.io/post-images/1564976266095.jpg" /></a></p>
 ]]></content>
     </entry>
 </feed>
