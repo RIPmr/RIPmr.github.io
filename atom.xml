@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2019-08-12T07:03:54.487Z</updated>
+    <updated>2019-08-12T07:10:55.453Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn//atom.xml"/>
@@ -525,208 +525,208 @@ New tools added.</p>
 <div class="menu"><ul class="menu1"><li class="active">
 			<a>Object Manage Tools ></a>
 			<ul>
-				<li class="active"><a href="">Renamer</a>
-					<ul><li><a href="###">批量重命名选中物体</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Renamer</a>
+					<ul><li><a href="javascript:void(0);">批量重命名选中物体</a></li></ul>
 				</li>
-				<li class="active"><a href="">Attacher</a>
-					<ul><li><a href="###">按类型(class)合并选中物体</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Attacher</a>
+					<ul><li><a href="javascript:void(0);">按类型(class)合并选中物体</a></li></ul>
 				</li>
-				<li class="active"><a href="">Detacher</a>
-					<ul><li><a href="###">分离子物体(elements)</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Detacher</a>
+					<ul><li><a href="javascript:void(0);">分离子物体(elements)</a></li></ul>
 				</li>
-				<li class="active"><a href="">Arranger</a>
-					<ul><li><a href="###">按间隔整理选中物体</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Arranger</a>
+					<ul><li><a href="javascript:void(0);">按间隔整理选中物体</a></li></ul>
 				</li>
-				<li class="active"><a href="">Selection Slot</a>
-					<ul><li><a href="###">存储当前物体选中状态到选择集，点击选择集按钮恢复选中状态</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Selection Slot</a>
+					<ul><li><a href="javascript:void(0);">存储当前物体选中状态到选择集，点击选择集按钮恢复选中状态</a></li></ul>
 				</li>
-				<li class="active"><a href="">Random Transer</a>
-					<ul><li><a href="###">为选中物体赋予随机位置、旋转与缩放状态</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Random Transer</a>
+					<ul><li><a href="javascript:void(0);">为选中物体赋予随机位置、旋转与缩放状态</a></li></ul>
 				</li>
-				<li class="active"><a href="">Spline Knot Manager</a>
-					<ul><li><a href="###">更改选中样条线顶点的类型</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Spline Knot Manager</a>
+					<ul><li><a href="javascript:void(0);">更改选中样条线顶点的类型</a></li></ul>
 				</li>
 			</ul>
 </li></ul></div>
 <div class="menu"><ul class="menu1"><li class="active">
 			<a>Material Manage Tools ></a>
 			<ul>
-				<li class="active"><a href="">Show textures in viewport</a>
-					<ul><li><a href="###">在视图中用材质贴图替换物体颜色外观，支持标准材质与Vray材质</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Show textures in viewport</a>
+					<ul><li><a href="javascript:void(0);">在视图中用材质贴图替换物体颜色外观，支持标准材质与Vray材质</a></li></ul>
 				</li>
 			</ul>
 </li></ul></div>
 <div class="menu"><ul class="menu1"><li class="active">
 			<a>Animation Tools ></a>
 			<ul>
-				<li class="active"><a href="">HU_Anim Icon Set</a>
-					<ul><li><a href="###">动画绑定用样条线图形预设集</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">HU_Anim Icon Set</a>
+					<ul><li><a href="javascript:void(0);">动画绑定用样条线图形预设集</a></li></ul>
 				</li>
-				<li class="active"><a href="">Transform Manager</a>
-					<ul><li><a href="###">锁定物体的一个或多个Transform属性</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Transform Manager</a>
+					<ul><li><a href="javascript:void(0);">锁定物体的一个或多个Transform属性</a></li></ul>
 				</li>
-				<li class="active"><a href="">Attachment Holder</a>
-					<ul><li><a href="###">为物体快捷创建附着约束</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Attachment Holder</a>
+					<ul><li><a href="javascript:void(0);">为物体快捷创建附着约束</a></li></ul>
 				</li>
-				<li class="active"><a href="">Spline Controller</a>
-					<ul><li><a href="###">为样条线的每个顶点创建控制器</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Spline Controller</a>
+					<ul><li><a href="javascript:void(0);">为样条线的每个顶点创建控制器</a></li></ul>
 				</li>
-				<li class="active"><a href="">Keyframe Filter</a>
-					<ul><li><a href="###">删除动画关键帧中的某些属性</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Keyframe Filter</a>
+					<ul><li><a href="javascript:void(0);">删除动画关键帧中的某些属性</a></li></ul>
 				</li>
-				<li class="active"><a href="">Anim Repeater</a>
-					<ul><li><a href="###">重复并延长当前物体的选中动画帧，支持增量动画</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Anim Repeater</a>
+					<ul><li><a href="javascript:void(0);">重复并延长当前物体的选中动画帧，支持增量动画</a></li></ul>
 				</li>
-				<li class="active"><a href="">Anim Recorder</a>
-					<ul><li><a href="###">将一个物体的动画记录到另一个物体</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Anim Recorder</a>
+					<ul><li><a href="javascript:void(0);">将一个物体的动画记录到另一个物体</a></li></ul>
 				</li>
-				<li class="active"><a href="">Anim Rotator</a>
-					<ul><li><a href="###">旋转行走动画</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Anim Rotator</a>
+					<ul><li><a href="javascript:void(0);">旋转行走动画</a></li></ul>
 				</li>
-				<li class="active"><a href="">Anim Noiser</a>
-					<ul><li><a href="###">为物体添加噪声动画</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Anim Noiser</a>
+					<ul><li><a href="javascript:void(0);">为物体添加噪声动画</a></li></ul>
 				</li>
 			</ul>
 </li></ul></div>
 <div class="menu"><ul class="menu1"><li class="active">
 			<a>Procedural Object Tools ></a>
 			<ul>
-				<li class="active"><a href="">IES Light Creator</a>
-					<ul><li><a href="###">为Ghost Town生成的程序建筑模型添加IES射灯(Model+Vray IES Light)</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">IES Light Creator</a>
+					<ul><li><a href="javascript:void(0);">为Ghost Town生成的程序建筑模型添加IES射灯(Model+Vray IES Light)</a></li></ul>
 				</li>
-				<li class="active"><a href="">Light Ceil Creator</a>
-					<ul><li><a href="###">基于选中的poly面重新拓扑生成带灯带的屋顶，灯带类型为Vray灯光物体(Vray Mesh Light)</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Light Ceil Creator</a>
+					<ul><li><a href="javascript:void(0);">基于选中的poly面重新拓扑生成带灯带的屋顶，灯带类型为Vray灯光物体(Vray Mesh Light)</a></li></ul>
 				</li>
-				<li class="active"><a href="">Voxel Tree</a>
-					<ul><li><a href="###">生成带生长动画的程序化体素树模型</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Voxel Tree</a>
+					<ul><li><a href="javascript:void(0);">生成带生长动画的程序化体素树模型</a></li></ul>
 				</li>
-				<li class="active"><a href="">Debugger Boxes</a>
-					<ul><li><a href="###">在随机位置生成一堆带随机网格颜色的盒子模型</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Debugger Boxes</a>
+					<ul><li><a href="javascript:void(0);">在随机位置生成一堆带随机网格颜色的盒子模型</a></li></ul>
 				</li>
-				<li class="active"><a href="">Rect Slicer</a>
-					<ul><li><a href="###">将模型切块</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Rect Slicer</a>
+					<ul><li><a href="javascript:void(0);">将模型切块</a></li></ul>
 				</li>
-				<li class="active"><a href="">Catenary Maker</a>
-					<ul><li><a href="###">基于选中的样条线生成悬线</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Catenary Maker</a>
+					<ul><li><a href="javascript:void(0);">基于选中的样条线生成悬线</a></li></ul>
 				</li>
-				<li class="active"><a href="">Geo Cutter</a>
-					<ul><li><a href="###">批量模型布尔切割</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Geo Cutter</a>
+					<ul><li><a href="javascript:void(0);">批量模型布尔切割</a></li></ul>
 				</li>
-				<li class="active"><a href="">Poly Recreator</a>
-					<ul><li><a href="###">清除选中模型中的错误位置信息(尤其是来自模型空间的错误信息)。当模型产生错误结果时，请尝试用此插件"重新创建"模型进行修复</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Poly Recreator</a>
+					<ul><li><a href="javascript:void(0);">清除选中模型中的错误位置信息(尤其是来自模型空间的错误信息)。当模型产生错误结果时，请尝试用此插件"重新创建"模型进行修复</a></li></ul>
 				</li>
-				<li class="active"><a href="">Spline Recreator</a>
-					<ul><li><a href="###">将选中样条曲线转换为可执行的MaxScript，同时可用于清除样条曲线中的错误位置信息</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Spline Recreator</a>
+					<ul><li><a href="javascript:void(0);">将选中样条曲线转换为可执行的MaxScript，同时可用于清除样条曲线中的错误位置信息</a></li></ul>
 				</li>
-				<li class="active"><a href="">Sub-Spline Connector</a>
-					<ul><li><a href="###">按百分比位置连接选中样条线的子样条线，并生成一条新的样条线，支持位置排序</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Sub-Spline Connector</a>
+					<ul><li><a href="javascript:void(0);">按百分比位置连接选中样条线的子样条线，并生成一条新的样条线，支持位置排序</a></li></ul>
 				</li>
-				<li class="active"><a href="">Mesh From Spline</a>
-					<ul><li><a href="###">基于选中样条线的子样条线生成网格模型，支持位置排序</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Mesh From Spline</a>
+					<ul><li><a href="javascript:void(0);">基于选中样条线的子样条线生成网格模型，支持位置排序</a></li></ul>
 				</li>
-				<li class="active"><a href="">Skynet Creator</a>
-					<ul><li><a href="###">基于深度优先搜索(DFS)生成网状结构模型，使用Point物体作为基础物体的子物体时Point即可被自动识别为延伸端口(下一个物体的生成方向)</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Skynet Creator</a>
+					<ul><li><a href="javascript:void(0);">基于深度优先搜索(DFS)生成网状结构模型，使用Point物体作为基础物体的子物体时Point即可被自动识别为延伸端口(下一个物体的生成方向)</a></li></ul>
 				</li>
-				<li class="active"><a href="">Snowy Surface</a>
-					<ul><li><a href="###">为选中物体添加积雪效果(提取法线方向为Z向的面生成新的积雪模型)</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Snowy Surface</a>
+					<ul><li><a href="javascript:void(0);">为选中物体添加积雪效果(提取法线方向为Z向的面生成新的积雪模型)</a></li></ul>
 				</li>
-				<li class="active"><a href="">Pillars Generator</a>
-					<ul><li><a href="###">生成随机外观的柱子模型</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Pillars Generator</a>
+					<ul><li><a href="javascript:void(0);">生成随机外观的柱子模型</a></li></ul>
 				</li>
-				<li class="active"><a href="">Cobwebs Generator</a>
-					<ul><li><a href="###">基于选中物体随机生成蜘蛛网(基于样条线)</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Cobwebs Generator</a>
+					<ul><li><a href="javascript:void(0);">基于选中物体随机生成蜘蛛网(基于样条线)</a></li></ul>
 				</li>
-				<li class="active"><a href="">Rock Generator</a>
-					<ul><li><a href="###">生成随机外观的岩石模型</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Rock Generator</a>
+					<ul><li><a href="javascript:void(0);">生成随机外观的岩石模型</a></li></ul>
 				</li>
-				<li class="active"><a href="">Feather Generator</a>
-					<ul><li><a href="###">羽毛模型生成器</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Feather Generator</a>
+					<ul><li><a href="javascript:void(0);">羽毛模型生成器</a></li></ul>
 				</li>
-				<li class="active"><a href="">Mindflow Splines Creator</a>
-					<ul><li><a href="###">基于选中的样条线图形生成样条线描边</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Mindflow Splines Creator</a>
+					<ul><li><a href="javascript:void(0);">基于选中的样条线图形生成样条线描边</a></li></ul>
 				</li>
-				<li class="active"><a href="">Procedural Sci-Fi Building Gen</a>
-					<ul><li><a href="###">程序化科幻建筑生成器</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Procedural Sci-Fi Building Gen</a>
+					<ul><li><a href="javascript:void(0);">程序化科幻建筑生成器</a></li></ul>
 				</li>
 			</ul>
 </li></ul></div>
 <div class="menu"><ul class="menu1"><li class="active">
 			<a>Procedural Animation Tools ></a>
 			<ul>
-				<li class="active"><a href="">Range Affector</a>
-					<ul><li><a href="###">基于控制器生成程序化运动图形动画</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Range Affector</a>
+					<ul><li><a href="javascript:void(0);">基于控制器生成程序化运动图形动画</a></li></ul>
 				</li>
-				<li class="active"><a href="">Elevator Animator</a>
-					<ul><li><a href="###">程序化电梯动画生成器</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Elevator Animator</a>
+					<ul><li><a href="javascript:void(0);">程序化电梯动画生成器</a></li></ul>
 				</li>
-				<li class="active"><a href="">Boat Animator</a>
-					<ul><li><a href="###">船舶摇摆动画生成器，支持四种噪声类型</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Boat Animator</a>
+					<ul><li><a href="javascript:void(0);">船舶摇摆动画生成器，支持四种噪声类型</a></li></ul>
 				</li>
-				<li class="active"><a href="">Star Trace</a>
-					<ul><li><a href="###">生成类似延时摄影生成的星轨动画效果，可自动生成渐变拖尾Vray材质</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Star Trace</a>
+					<ul><li><a href="javascript:void(0);">生成类似延时摄影生成的星轨动画效果，可自动生成渐变拖尾Vray材质</a></li></ul>
 				</li>
-				<li class="active"><a href="">Poly Fracture</a>
-					<ul><li><a href="###">poly网格破碎，新增基于控制器的爆炸动画生成</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Poly Fracture</a>
+					<ul><li><a href="javascript:void(0);">poly网格破碎，新增基于控制器的爆炸动画生成</a></li></ul>
 				</li>
-				<li class="active"><a href="">Vol.Sel To Texture</a>
-					<ul><li><a href="###">基于体积选择生成贴图序列</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Vol.Sel To Texture</a>
+					<ul><li><a href="javascript:void(0);">基于体积选择生成贴图序列</a></li></ul>
 				</li>
-				<li class="active"><a href="">Drop Animation</a>
-					<ul><li><a href="###">掉落动画生成器</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Drop Animation</a>
+					<ul><li><a href="javascript:void(0);">掉落动画生成器</a></li></ul>
 				</li>
-				<li class="active"><a href="">Spring</a>
-					<ul><li><a href="###">为物体的已有动画帧增加弹性次级动画效果</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Spring</a>
+					<ul><li><a href="javascript:void(0);">为物体的已有动画帧增加弹性次级动画效果</a></li></ul>
 				</li>
-				<li class="active"><a href="">Cat Tail</a>
-					<ul><li><a href="###">为选中的骨骼链或样条线生成飘带动画</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Cat Tail</a>
+					<ul><li><a href="javascript:void(0);">为选中的骨骼链或样条线生成飘带动画</a></li></ul>
 				</li>
-				<li class="active"><a href="">PF Baker</a>
-					<ul><li><a href="###">烘焙PF粒子到网格动画</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">PF Baker</a>
+					<ul><li><a href="javascript:void(0);">烘焙PF粒子到网格动画</a></li></ul>
 				</li>
 			</ul>
 </li></ul></div>
 <div class="menu"><ul class="menu1"><li class="active">
 			<a>Rigging Tools ></a>
 			<ul>
-				<li class="active"><a href="">Auto Rigging For MakeHuman</a>
-					<ul><li><a href="###">为MakeHuman(1.2)生成的模型自动生成高级人体绑定</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Auto Rigging For MakeHuman</a>
+					<ul><li><a href="javascript:void(0);">为MakeHuman(1.2)生成的模型自动生成高级人体绑定</a></li></ul>
 				</li>
-				<li class="active"><a href="">Auto Facial Rigging Tools</a>
-					<ul><li><a href="###">自动面部绑定</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Auto Facial Rigging Tools</a>
+					<ul><li><a href="javascript:void(0);">自动面部绑定</a></li></ul>
 				</li>
-				<li class="active"><a href="">Auto Skin Weight</a>
-					<ul><li><a href="###">更加便捷的蒙皮权重设置方式</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Auto Skin Weight</a>
+					<ul><li><a href="javascript:void(0);">更加便捷的蒙皮权重设置方式</a></li></ul>
 				</li>
-				<li class="active"><a href="">Make Stretchy Bones</a>
-					<ul><li><a href="###">将选中骨骼转化为弹性骨骼</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Make Stretchy Bones</a>
+					<ul><li><a href="javascript:void(0);">将选中骨骼转化为弹性骨骼</a></li></ul>
 				</li>
-				<li class="active"><a href="">Bone Divider</a>
-					<ul><li><a href="###">根据百分比将选中骨骼打断为多节</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Bone Divider</a>
+					<ul><li><a href="javascript:void(0);">根据百分比将选中骨骼打断为多节</a></li></ul>
 				</li>
 			</ul>
 </li></ul></div>
 <div class="menu"><ul class="menu1"><li class="active">
 			<a>Asset Operator Tools ></a>
 			<ul>
-				<li class="active"><a href="">Batch Exporter</a>
-					<ul><li><a href="###">批量导出工具</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Batch Exporter</a>
+					<ul><li><a href="javascript:void(0);">批量导出工具</a></li></ul>
 				</li>
-				<li class="active"><a href="">Batch Loader</a>
-					<ul><li><a href="###">批量导入工具</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Batch Loader</a>
+					<ul><li><a href="javascript:void(0);">批量导入工具</a></li></ul>
 				</li>
-				<li class="active"><a href="">Bitmap Renamer</a>
-					<ul><li><a href="###">重命名所有当前场景中引用的贴图</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Bitmap Renamer</a>
+					<ul><li><a href="javascript:void(0);">重命名所有当前场景中引用的贴图</a></li></ul>
 				</li>
-				<li class="active"><a href="">Instances To Proxy</a>
-					<ul><li><a href="###">将实例物体转为Vray代理</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Instances To Proxy</a>
+					<ul><li><a href="javascript:void(0);">将实例物体转为Vray代理</a></li></ul>
 				</li>
 			</ul>
 </li></ul></div>
 <div class="menu"><ul class="menu1"><li class="active">
 			<a>Others ></a>
 			<ul>
-				<li class="active"><a href="">Quickly open common file paths</a>
-					<ul><li><a href="###">常用max路径的快捷打开方式</a></li></ul>
+				<li class="active"><a href="javascript:void(0);">Quickly open common file paths</a>
+					<ul><li><a href="javascript:void(0);">常用max路径的快捷打开方式</a></li></ul>
 				</li>
 			</ul>
 </li></ul></div>
