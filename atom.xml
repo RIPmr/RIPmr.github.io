@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2019-08-11T07:46:39.648Z</updated>
+    <updated>2019-08-12T07:03:54.487Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn//atom.xml"/>
@@ -39,7 +39,7 @@
 *,body,ul,h1,h2{ margin:0; padding:0; list-style:none;}
 //body{font-size:12px; padding-top:20px;}
 a{ color:#777;border:none;}
-#menu { width:540px; margin:auto;}
+#menu { width:100%; margin:auto;}
  #menu h1 { font-size:16px;  margin-top:1px;  background-color:#F93;}
  #menu h2 { font-size:14px; border:#E7E7E7 1px solid; border-top-color:#FFF; background-color:#F4F4F4;}
  #menu ul { padding-left:14px; height:auto;border:#E7E7E7 1px solid; border-top:none;overflow:auto;}
@@ -84,7 +84,7 @@ function ShowMenu(obj,n){
 *,body,ul,h1,h2{ margin:0; padding:0; list-style:none;}
 //body{font-size:12px; padding-top:20px;}
 a{ color:#777;border:none;}
-#menu { width:540px; margin:auto;}
+#menu { width:100%; margin:auto;}
  #menu h1 { font-size:16px;  margin-top:1px;  background-color:#F93;}
  #menu h2 { font-size:14px; border:#E7E7E7 1px solid; border-top-color:#FFF; background-color:#F4F4F4;}
  #menu ul { padding-left:14px; height:auto;border:#E7E7E7 1px solid; border-top:none;overflow:auto;}
@@ -396,9 +396,18 @@ New tools added.</p>
         </link>
         <updated>2019-05-01T13:02:13.000Z</updated>
         <summary type="html"><![CDATA[<style>
-		.menu1, .menu1 ul {
+		.menu1 {
 			list-style: none;
-			width: 210px;
+			width: 30%;
+			background-color: #f9f9f9;
+			text-align: left;
+			position: relative;
+		  left: -4%;
+		}
+	
+	.menu1 ul {
+			list-style: none;
+			width: 100%;
 			background-color: #f9f9f9;
 			text-align: left;
 			position: relative;
@@ -429,12 +438,12 @@ New tools added.</p>
 			}
 
 			.menu1 li:hover ul {
-				   left: 90%;
+				   left: 88%;
 			}
 
 			.menu1 li li:hover ul {
 				   position: absolute;
-				   left: 90%;
+				   left: 88%;
 			}
 
 			.menu1 .active ul {
@@ -446,9 +455,18 @@ New tools added.</p>
 <p>Make everything automatic!</p>
 ]]></summary>
         <content type="html"><![CDATA[<style>
-		.menu1, .menu1 ul {
+		.menu1 {
 			list-style: none;
-			width: 210px;
+			width: 30%;
+			background-color: #f9f9f9;
+			text-align: left;
+			position: relative;
+		  left: -4%;
+		}
+	
+	.menu1 ul {
+			list-style: none;
+			width: 100%;
 			background-color: #f9f9f9;
 			text-align: left;
 			position: relative;
@@ -479,12 +497,12 @@ New tools added.</p>
 			}
 
 			.menu1 li:hover ul {
-				   left: 90%;
+				   left: 88%;
 			}
 
 			.menu1 li li:hover ul {
 				   position: absolute;
-				   left: 90%;
+				   left: 88%;
 			}
 
 			.menu1 .active ul {
