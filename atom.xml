@@ -2,18 +2,238 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-02-03T08:31:17.463Z</updated>
+    <updated>2020-02-26T13:33:26.122Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
-    <link rel="self" href="https://huanime.com.cn//atom.xml"/>
+    <link rel="self" href="https://huanime.com.cn/atom.xml"/>
     <subtitle>会画画的程序猿</subtitle>
-    <logo>https://huanime.com.cn//images/avatar.png</logo>
-    <icon>https://huanime.com.cn//favicon.ico</icon>
+    <logo>https://huanime.com.cn/images/avatar.png</logo>
+    <icon>https://huanime.com.cn/favicon.ico</icon>
     <rights>All rights reserved 2020, HU ANIME</rights>
     <entry>
+        <title type="html"><![CDATA[[Tuto]docsify在线文档生成]]></title>
+        <id>https://huanime.com.cn/post/docsify-zai-xian-wen-dang-sheng-cheng/</id>
+        <link href="https://huanime.com.cn/post/docsify-zai-xian-wen-dang-sheng-cheng/">
+        </link>
+        <updated>2020-02-26T11:04:29.000Z</updated>
+        <summary type="html"><![CDATA[<p>docsify 是一个动态生成文档网站的工具，不同于 GitBook、Hexo 等的地方是它不会将 .md 转成 .html 文件，所有转换工作都是在运行时进行。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>docsify 是一个动态生成文档网站的工具，不同于 GitBook、Hexo 等的地方是它不会将 .md 转成 .html 文件，所有转换工作都是在运行时进行。</p>
+<!-- more -->
+<h2 id="配置docsify">配置docsify</h2>
+<p>docsify需要本地先安装node, 如果没有安装node，可在node官网选择对应操作系统下载安装：https://nodejs.org/zh-cn/</p>
+<p>终端输入npm i docsify-cli -g进行全局安装：<br>
+<code>npm i docsify-cli -g</code></p>
+<p>安装结束后使用docsify -v查看是否安装成功：</p>
+<pre><code>docsify -v
+
+docsify-cli version:
+  x.x.x
+</code></pre>
+<h2 id="初始化一个文档">初始化一个文档</h2>
+<h3 id="1-手动创建indexhtml并引入docsify文件">① 手动创建index.html并引入docsify文件</h3>
+<p>只需要创建一个index.html文件，内容如下：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;//unpkg.com/docsify/themes/vue.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+  &lt;script&gt;
+    window.$docsify = {
+      //...
+    }
+  &lt;/script&gt;
+  &lt;script src=&quot;//unpkg.com/docsify/lib/docsify.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>然后在项目中创建一个README.md文件：</p>
+<pre><code>## I'm homepage
+This is my homepage
+</code></pre>
+<h3 id="2-自动初始化">② 自动初始化</h3>
+<p>首先需要创建一个项目目录：<br>
+<code>mkdir docsify</code></p>
+<p>进入项目目录后，使用docsify init ./来初始化一个项目：</p>
+<pre><code>cd docsify
+
+docsify init ./
+
+Initialization succeeded! Please run docsify serve ./
+</code></pre>
+<p>初始化成功后,docsify目录会生成如下几个文件：</p>
+<ul>
+<li>index.html入口文件</li>
+<li>README.md会做为主页内容渲染</li>
+<li>nojekyll用于阻止 GitHub Pages 会忽略掉下划线开头的文件<br>
+<strong>nojekyll文件很重要，如果网站部署到GitHub Pages时，一定要注意这个文件。</strong></li>
+</ul>
+<p>直接编辑 ./README.md 就能更新网站内容，当然也可以添加其他.md文件。</p>
+<h2 id="本地预览">本地预览</h2>
+<h3 id="1-http-server服务方式">① http-server服务方式</h3>
+<p>用http-server启动服务 (可在终端输入npm install http-server -g来安装http-server)，在浏览器中输入http://127.0.0.1:8080即可浏览效果。</p>
+<pre><code>http-server 
+
+Starting up http-server, serving ./
+Available on:
+  http://127.0.0.1:8080
+  http://172.24.70.142:8080
+Hit CTRL-C to stop the server
+</code></pre>
+<h3 id="2-docsify-serve方式">② docsify serve方式</h3>
+<p>docsify serve是一个本地服务器，通过 docsify serve 可以方便地预览效果，而且提供 LiveReload 功能。</p>
+<p>启动docsify serve (./docs根目录下cmd)：</p>
+<pre><code>docsify serve ./
+
+Serving F:\...\...\docs now.
+Listening at http://localhost:3000
+</code></pre>
+<p>终止docsify serve：<br>
+<code>Ctrl+C</code></p>
+<p>默认访问端口：<br>
+<code>http://localhost:3000</code></p>
+<h2 id="文档部署">文档部署</h2>
+<p>GitHub Pages 支持从三个地方读取文件:</p>
+<pre><code>- master分支
+- master分支下的docs目录
+- gh-pages分支
+</code></pre>
+<ul>
+<li>如果你的文档直接是在项目根目录写的，那么可直接把代码推送到master分支上， GitHub Pages里选择master branch;</li>
+<li>如果你的文档是在master分支下的docs/目录下编写的，那么可直接把代码推送到master分支上，GitHub Pages里选择master branch/docs folder。</li>
+</ul>
+<h2 id="文档编写">文档编写</h2>
+<h3 id="定制侧边栏">定制侧边栏</h3>
+<p>默认情况下，侧边栏会根据当前文档的标题生成目录。也可以设置文档链接，通过 Markdown 文件生成，此时需要手动创建 _sidebar.md 文件:</p>
+<pre><code>* RaindropFX Pro
+	* [2.0.0](RaindropFXPro200)
+	* [1.5.0](RaindropFXPro150)
+	* [1.0.1](RaindropFXPro101)
+	* [Revision History](RaindropFXProHistory)
+	* [FAQ](RaindropFXProFAQ)
+* [RaindropFX Lite](RaindropFXLite)
+* [SplineMesher](SplineMesher)
+</code></pre>
+<ul>
+<li>如果只在根目录有一个_sidebar.md文件，那么所有页面都将使用这个一个配置，也就是所有页面的侧边栏都一样。</li>
+<li>如果一个子目录中有_sidebar.md文件，那么这个子目录下的所有页面将使用这个文件的侧边栏。</li>
+<li>_sidebar.md的加载逻辑是从每层目录下获取文件，如果当前目录不存在该文件则回退到上一级目录。例如当前路径为/zh-cn/more-pages则从/zh-cn/_sidebar.md获取文件，如果不存在则从/_sidebar.md获取。</li>
+</ul>
+<p>如果子目录有_sidebar.md,但你就想使用根目录的_sidebar.md，可在index.html文件中的window.$docsify添加alias字段：</p>
+<pre><code>&lt;script&gt;
+  window.$docsify = {
+    loadSidebar: true,
+    alias: {
+      '/.*/_sidebar.md': '/_sidebar.md'
+    }
+  }
+&lt;/script&gt;
+</code></pre>
+<p>配置alias字段后，所有页面都会显示项目根目录_sidebar.md文件的配置作为侧边栏，子目录的_sidebar.md文件会失效。</p>
+<h3 id="配置导航栏">配置导航栏</h3>
+<p>首先需要在index.html文件中的window.$docsify添加loadNavbar: true,选项：</p>
+<pre><code>&lt;script&gt;
+  window.$docsify = {
+    loadNavbar: true
+  }
+&lt;/script&gt;
+&lt;script src=&quot;//unpkg.com/docsify&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>接着在项目根目录创建_navbar.md文件：</p>
+<pre><code>* [home1](home1)
+* [home2](home2)
+* [bar](bar/)
+* [bar/a](bar/a)
+</code></pre>
+<ul>
+<li>如果使用配置文件来设置导航栏，那么在index.html中定义的导航栏只有在定制的首页才会生效，其他页面会被覆盖。</li>
+<li>如果只在根目录有一个_navbar.md文件，那么所有页面都将使用这个一个配置，也就是所有页面的导航栏都一样。</li>
+<li>如果一个子目录中有_navbar.md文件，那么这个子目录下的所有页面将使用这个文件的导航栏。</li>
+<li>_navbar.md的加载逻辑是从每层目录下获取文件，如果当前目录不存在该文件则回退到上一级目录。例如当前路径为/zh-cn/more-pages则从/zh-cn/_navbar.md获取文件，如果不存在则从/_navbar.md获取。</li>
+</ul>
+<p>如果导航内容过多，可以写成嵌套的列表，会被渲染成下拉列表的形式：</p>
+<pre><code>* 根目录
+  * [home1](home1)
+  * [home2](home2)
+  * [guide](guide)
+
+* bar目录
+  * [bar](bar/)
+  * [a文件](bar/a)
+  * [b文件](bar/b)
+</code></pre>
+<h3 id="多级文档">多级文档</h3>
+<p>如果需要创建多个页面，或者需要多级路由的网站，在 docsify 里也能轻松实现。</p>
+<p>假设你的目录结构如下：</p>
+<pre><code>-| docs/
+  -| README.md
+  -| guide.md
+  -| zh-cn/
+    -| README.md
+    -| guide.md
+</code></pre>
+<p>那么对应的访问页面将是:</p>
+<pre><code>docs/README.md        =&gt; http://domain.com
+docs/guide.md         =&gt; http://domain.com/guide
+docs/zh-cn/README.md  =&gt; http://domain.com/zh-cn/
+docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
+</code></pre>
+<h3 id="隐藏标题">隐藏标题</h3>
+<p>当设置了 subMaxLevel 时，默认情况下每个标题都会自动添加到目录中。如果你想忽略特定的标题，可以给它添加 {docsify-ignore} ：</p>
+<pre><code># Getting Started
+
+## Header {docsify-ignore}
+</code></pre>
+<h3 id="自定义配置">自定义配置</h3>
+<h3 id="搜索配置">搜索配置</h3>
+<p>全文搜索插件会根据当前页面上的超链接获取文档内容，在 localStorage 内建立文档索引。默认过期时间为一天，当然我们可以自己指定需要缓存的文件列表或者配置过期时间。</p>
+<pre><code>&lt;script&gt;
+    window.$docsify = {
+      // 完整配置参数
+      search: {
+        maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
+        paths: [],                      // or 'auto'，匹配文件路径
+        placeholder: 'Type to search',  // 搜索提示框文字， 支持本地化
+        noData: 'No Results!',          // 找不到结果文字提示，支持本地化
+        depth: 2,                       // 搜索标题的最大程级, 1 - 6
+      }
+    }
+  &lt;/script&gt;
+  &lt;!-- 引入搜索模块 --&gt;
+  &lt;script src=&quot;//unpkg.com/docsify/lib/plugins/search.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="评论插件gitalk">评论插件Gitalk</h3>
+<p>一个现代化的，基于Preact和Github Issue的评论系统。配置完成后需要登录自己的账号点开一次对应文档才会自动在项目中生成Issue。</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//unpkg.com/gitalk/dist/gitalk.css&quot;&gt;
+&lt;script src=&quot;//unpkg.com/docsify/lib/plugins/gitalk.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//unpkg.com/gitalk/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  const gitalk = new Gitalk({
+    clientID: 'Github Application Client ID',
+    clientSecret: 'Github Application Client Secret',
+    repo: 'Github repo',
+    owner: 'Github repo owner',
+    admin: ['Github repo collaborators, only these guys can initialize github issues'],
+    // facebook-like distraction free mode
+    distractionFreeMode: false
+  })
+&lt;/script&gt;
+</code></pre>
+<h3 id="更改样式">更改样式</h3>
+<p>在HTML文件中引入样式表：</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css&quot;&gt;
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[[Static]New Year 2020]]></title>
-        <id>https://huanime.com.cn//post/statichappy-new-year-2020</id>
-        <link href="https://huanime.com.cn//post/statichappy-new-year-2020">
+        <id>https://huanime.com.cn/post/statichappy-new-year-2020/</id>
+        <link href="https://huanime.com.cn/post/statichappy-new-year-2020/">
         </link>
         <updated>2020-01-27T08:41:27.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>新年快乐！
@@ -28,8 +248,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Anime]《ProjectEvo》-Trailer]]></title>
-        <id>https://huanime.com.cn//post/animeprojectevo-trailer</id>
-        <link href="https://huanime.com.cn//post/animeprojectevo-trailer">
+        <id>https://huanime.com.cn/post/animeprojectevo-trailer/</id>
+        <link href="https://huanime.com.cn/post/animeprojectevo-trailer/">
         </link>
         <updated>2019-08-06T02:34:51.000Z</updated>
         <summary type="html"><![CDATA[<p>原创动画《ProjectEvo》测试片段</p>
@@ -47,8 +267,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]HuAnime Toolset  Update V1.8]]></title>
-        <id>https://huanime.com.cn//post/toolhuanime-toolset-update-v18</id>
-        <link href="https://huanime.com.cn//post/toolhuanime-toolset-update-v18">
+        <id>https://huanime.com.cn/post/toolhuanime-toolset-update-v18/</id>
+        <link href="https://huanime.com.cn/post/toolhuanime-toolset-update-v18/">
         </link>
         <updated>2019-08-06T02:31:56.000Z</updated>
         <summary type="html"><![CDATA[<style>
@@ -328,8 +548,8 @@ New tools added.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[[Anime]泡面番《小呆&小萌》]]></title>
-        <id>https://huanime.com.cn//post/anime-pao-mian-fan-xiao-ai-and-xiao-meng</id>
-        <link href="https://huanime.com.cn//post/anime-pao-mian-fan-xiao-ai-and-xiao-meng">
+        <id>https://huanime.com.cn/post/anime-pao-mian-fan-xiao-ai-and-xiao-meng/</id>
+        <link href="https://huanime.com.cn/post/anime-pao-mian-fan-xiao-ai-and-xiao-meng/">
         </link>
         <updated>2019-08-05T02:22:21.000Z</updated>
         <content type="html"><![CDATA[<p><a href="../../post-images/1564972006093.jpg" data-lightbox="image-1" data-title="Dai&Meng"><img src="../../post-images/1564972006093.jpg" /></a><br>
@@ -352,8 +572,8 @@ New tools added.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]SplineMesher for Unity3D]]></title>
-        <id>https://huanime.com.cn//post/toolsplinemesher-for-unity3d</id>
-        <link href="https://huanime.com.cn//post/toolsplinemesher-for-unity3d">
+        <id>https://huanime.com.cn/post/toolsplinemesher-for-unity3d/</id>
+        <link href="https://huanime.com.cn/post/toolsplinemesher-for-unity3d/">
         </link>
         <updated>2019-06-13T02:04:21.000Z</updated>
         <summary type="html"><![CDATA[<p>HuAnime第二款自制Unity3D插件SplineMesher上架啦！</p>
@@ -408,8 +628,8 @@ New tools added.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]HuAnime Toolset V1.2]]></title>
-        <id>https://huanime.com.cn//post/toolhuanime-toolset-v12</id>
-        <link href="https://huanime.com.cn//post/toolhuanime-toolset-v12">
+        <id>https://huanime.com.cn/post/toolhuanime-toolset-v12/</id>
+        <link href="https://huanime.com.cn/post/toolhuanime-toolset-v12/">
         </link>
         <updated>2019-05-01T13:02:13.000Z</updated>
         <summary type="html"><![CDATA[<style>
@@ -754,8 +974,8 @@ New tools added.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[[Anime]原创CG动画《肉包子》]]></title>
-        <id>https://huanime.com.cn//post/animeyuan-chuang-cg-dong-hua-rou-bao-zi</id>
-        <link href="https://huanime.com.cn//post/animeyuan-chuang-cg-dong-hua-rou-bao-zi">
+        <id>https://huanime.com.cn/post/animeyuan-chuang-cg-dong-hua-rou-bao-zi/</id>
+        <link href="https://huanime.com.cn/post/animeyuan-chuang-cg-dong-hua-rou-bao-zi/">
         </link>
         <updated>2019-04-29T04:30:17.000Z</updated>
         <content type="html"><![CDATA[<pre><code>正片传送门
@@ -790,8 +1010,8 @@ New tools added.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[[Static]IOR 1.33]]></title>
-        <id>https://huanime.com.cn//post/staticior-133</id>
-        <link href="https://huanime.com.cn//post/staticior-133">
+        <id>https://huanime.com.cn/post/staticior-133/</id>
+        <link href="https://huanime.com.cn/post/staticior-133/">
         </link>
         <updated>2019-04-08T11:33:19.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>CG静帧，人像练习
@@ -805,8 +1025,8 @@ New tools added.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[[Static]Trip]]></title>
-        <id>https://huanime.com.cn//post/statictrip</id>
-        <link href="https://huanime.com.cn//post/statictrip">
+        <id>https://huanime.com.cn/post/statictrip/</id>
+        <link href="https://huanime.com.cn/post/statictrip/">
         </link>
         <updated>2019-03-09T06:00:42.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>CG静帧练习，《肉包子》的一些初期构想
@@ -818,76 +1038,6 @@ New tools added.</p>
 <p><a href="../../post-images/1564976387019.jpg" data-lightbox="image-1" data-title="Trip"><img src="../../post-images/1564976387019.jpg" /></a><br>
 <a href="../../post-images/1564976391776.jpg" data-lightbox="image-1" data-title="Trip"><img src="../../post-images/1564976391776.jpg" /></a><br>
 <a href="../../post-images/1564976394686.jpg" data-lightbox="image-1" data-title="Trip"><img src="../../post-images/1564976394686.jpg" /></a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Tool]RaindropFX Update 1.01 (Pro)]]></title>
-        <id>https://huanime.com.cn//post/toolraindropfx-update-101-pro</id>
-        <link href="https://huanime.com.cn//post/toolraindropfx-update-101-pro">
-        </link>
-        <updated>2019-02-25T12:52:58.000Z</updated>
-        <summary type="html"><![CDATA[<p>Unity3D屏幕雨雾特效插件 RaindropFX 现已更新至 V1.01 (PRO) 版本</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>Unity3D屏幕雨雾特效插件 RaindropFX 现已更新至 V1.01 (PRO) 版本</p>
-<!-- more -->
-<blockquote>
-<p>新增可编程渲染管线(HDRP/LWRP)支持；<br>
-与 Unity Post Processing Stack (V2) 深度集成，简单易用；<br>
-新增: 前景水滴模糊效果、毛玻璃效果、屏幕雾效果、紊乱风效果；<br>
-更多可调节参数；<br>
-全部源码可访问；<br>
-额外附赠多种Post Processing Stack特效栈.</p>
-</blockquote>
-<pre><code>Asset Store 传送门
-</code></pre>
-<p><a href="http://u3d.as/1rjA">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
-<pre><code>Forum 传送门
-</code></pre>
-<p><a href="https://forum.unity.com/threads/raindropfx-realistic-camera-lens-rain-effect.519068/#post-3402707">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
-<pre><code>视频
-</code></pre>
-<p><a href="https://www.bilibili.com/video/av44691311">[Bilibili_1.01新特性]</a><br>
-<a href="https://youtu.be/TwDSwdZWCo4">[Youtube_配置使用教程]</a><br>
-<a href="https://youtu.be/xk8I4_vnDkc">[Youtube_附赠特效栈]</a></p>
-<pre><code>简介
-</code></pre>
-<p><strong>兼容性:</strong></p>
-<blockquote>
-<p>支持可编程渲染管线SRP (轻量渲染管线LWRP/高清渲染管线HDRP);<br>
-兼容前向渲染与缓冲渲染;<br>
-与Unity的后处理特效栈(v2)深度集成.</p>
-</blockquote>
-<p><strong>特性:</strong></p>
-<blockquote>
-<p>屏幕雨滴动画后处理特效;<br>
-基于物理计算的水滴动画;<br>
-支持添加风力以及紊乱风;<br>
-支持创建屏幕雾气并能够与运动的水滴产生自然的动态交互效果;<br>
-支持创建毛玻璃效果;<br>
-支持自定义水滴形状;<br>
-包含所有源代码，您可以自行修改.</p>
-</blockquote>
-<p><strong>额外附赠后处理特效:</strong></p>
-<blockquote>
-<p>高斯模糊;<br>
-色阶;<br>
-毛玻璃效果;<br>
-多玩家分屏效果，支持自定义遮罩;<br>
-以上后处理特效均已集成Unity后处理特效栈(v2)，支持排序产生不同的组合效果.</p>
-</blockquote>
-<pre><code>效果图
-</code></pre>
-<p><a href="../../post-images/1564970346726.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970346726.png" /></a></p>
-<p><a href="../../post-images/1564970321629.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970321629.png" /></a></p>
-<p><a href="../../post-images/1564970325819.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970325819.png" /></a></p>
-<p><a href="../../post-images/1564970328458.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970328458.png" /></a></p>
-<p><a href="../../post-images/1564970331188.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970331188.png" /></a></p>
-<p><a href="../../post-images/1564970494884.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970494884.png" /></a></p>
-<p><a href="../../post-images/1564970500566.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970500566.png" /></a></p>
-<p><a href="../../post-images/1564970504065.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970504065.png" /></a></p>
-<p><a href="../../post-images/1564970510939.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970510939.png" /></a></p>
-<p><a href="../../post-images/1564970338696.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970338696.png" /></a></p>
-<p><a href="../../post-images/1564970342796.png" data-lightbox="image-1" data-title="RaindropFX1.01"><img src="../../post-images/1564970342796.png" /></a></p>
 ]]></content>
     </entry>
 </feed>
