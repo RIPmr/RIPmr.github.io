@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-02-26T13:33:26.122Z</updated>
+    <updated>2020-02-27T05:54:41.525Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -11,14 +11,127 @@
     <icon>https://huanime.com.cn/favicon.ico</icon>
     <rights>All rights reserved 2020, HU ANIME</rights>
     <entry>
+        <title type="html"><![CDATA[[Tool]RaindropFX Pro update 2.0.0]]></title>
+        <id>https://huanime.com.cn/post/raindropfx-pro-update-200/</id>
+        <link href="https://huanime.com.cn/post/raindropfx-pro-update-200/">
+        </link>
+        <updated>2020-02-26T13:38:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>Unity3D 屏幕雨雾特效插件现已更新至2.0.0</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Unity3D 屏幕雨雾特效插件现已更新至2.0.0</p>
+<!-- more -->
+<blockquote>
+<p>fixed: error with null raindrop texture;<br>
+修复：未添加雨滴纹理时报错；<br>
+fixed: FPS dropping down even when there are no drops on screen;<br>
+修复：场景中不存在水滴时后处理会拉低帧率；<br>
+fixed: enabling HDR option of camera causes an error in object space version;<br>
+修复：开启摄影机的HDR选项时会导致物体表面空间版本报错；<br>
+fixed: object space version is now compatible with AURA2.<br>
+修复：1.5.0版本表面空间版本不兼容AURA2体积光插件。</p>
+</blockquote>
+<blockquote>
+<p>added: radial wind;<br>
+新增: 径向风;<br>
+added: tint color for droplets;<br>
+新增: 有色液滴模拟;<br>
+added: accurate foreground droplet blur;<br>
+新增: 精确前景雨滴模糊;<br>
+added: stable object space version;<br>
+新增: 物体表面空间版本（稳定版本）;<br>
+added: better visual quality of object space version;<br>
+新增: 优化了总体视觉效果;<br>
+added: batches are reduced by 5 from the previous version when there are no more droplets in the scene.<br>
+新增: 场景中不存在雨滴时batches比上一版本降低了5;</p>
+</blockquote>
+<pre><code>Asset Store 传送门
+</code></pre>
+<p><a href="http://u3d.as/1rjA">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
+<pre><code>Forum 传送门
+</code></pre>
+<p><a href="https://forum.unity.com/threads/raindropfx-realistic-camera-lens-rain-effect.519068/#post-3402707">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
+<pre><code>Video 视频
+</code></pre>
+<p><a href="https://youtu.be/0Ru2kwtMks0">[Youtube_2.0NewFeatures]</a></p>
+<pre><code>Intro 简介
+</code></pre>
+<p><strong>Compatibility/兼容性:</strong></p>
+<blockquote>
+<p>SRP supported (LWRP and HDRP);<br>
+支持可编程渲染管线SRP (轻量渲染管线LWRP/高清渲染管线HDRP);<br>
+Both forward rendering and deferred rendering are supported;<br>
+兼容前向渲染与缓冲渲染;<br>
+Deeply integrated with post-processing stack (V2);<br>
+与Unity的后处理特效栈(v2)深度集成.</p>
+</blockquote>
+<p><strong>Important/特别注意:</strong></p>
+<blockquote>
+<p>Since Unity 2018.4 HDRP and URP using their own built-in post-processing stack instead of PPV2, RaindropFX Pro 2.0 can not be used in SRP in Unity 2018.4+;<br>
+由于Unity自2018.4版本开始HDRP以及URP使用各自内置的后处理特效栈，不再依赖post-processing stack V2，所以RaindropFX Pro 2.0无法应用于2018.4以上版本Unity的可编程渲染管线；<br>
+Separate versions of RaindropFX will be released soon to support new versions HDRP.<br>
+这些渲染管线将有独立版本的RaindropFX支持，目前用于 HDRP 7.1.8+ 的 RaindropFX 正在测试中。</p>
+</blockquote>
+<p><strong>Features/特性:</strong></p>
+<blockquote>
+<p>deeply integrated with Post Processing Stack (v2);<br>
+与PPV2深度集成；<br>
+post effect of the falling drops on the camera lens;<br>
+屏幕雨滴动画后处理特效;<br>
+raindrops animation based on physics;<br>
+基于物理计算的水滴动画;<br>
+wind turbulence support;<br>
+支持添加风力以及紊乱风;<br>
+radial wind for driving simulation;<br>
+用于驾驶模拟的径向风；<br>
+simulate colored liquids;<br>
+模拟有色液体；<br>
+create screen fog effect and interactive with waterdrops naturally;<br>
+支持创建屏幕雾气并能够与运动的水滴产生自然的动态交互效果;<br>
+object space supported (add raindrop to object surface);<br>
+新增物体表面空间版本（添加雨滴到物体表面）；<br>
+batch image renderer (add raindrop to your video sequence);<br>
+雨滴序列帧渲染器（可渲染雨滴动画到自定义序列帧）；<br>
+custom raindrop texture supported;<br>
+支持自定义水滴形状;<br>
+all source code is included, so you can customize it for yourself.<br>
+包含所有源代码，您可以自行修改.</p>
+</blockquote>
+<p><strong>Bonus post effects/额外附赠后处理特效:</strong></p>
+<blockquote>
+<p>Gaussian blur;<br>
+高斯模糊;<br>
+color levels;<br>
+色阶;<br>
+frosted glass effect;<br>
+毛玻璃效果;<br>
+split screen effect based on custom mask;<br>
+多玩家分屏效果，支持自定义遮罩;<br>
+screenshot captor;<br>
+基于PPV2的截图工具；<br>
+all the effects are integrated with Post Processing Stack (v2) and support sorting to get different results.<br>
+以上后处理特效均已集成Unity后处理特效栈(v2)，支持排序产生不同的组合效果.</p>
+</blockquote>
+<pre><code>Screenshots 效果图
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1582782545107.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://huanime.com.cn//post-images/1582782583861.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1582782589936.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1582782593908.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://huanime.com.cn//post-images/1582782598973.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://huanime.com.cn//post-images/1582782606474.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://huanime.com.cn//post-images/1582782617460.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://huanime.com.cn//post-images/1582782621005.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[[Tuto]docsify在线文档生成]]></title>
         <id>https://huanime.com.cn/post/docsify-zai-xian-wen-dang-sheng-cheng/</id>
         <link href="https://huanime.com.cn/post/docsify-zai-xian-wen-dang-sheng-cheng/">
         </link>
         <updated>2020-02-26T11:04:29.000Z</updated>
-        <summary type="html"><![CDATA[<p>docsify 是一个动态生成文档网站的工具，不同于 GitBook、Hexo 等的地方是它不会将 .md 转成 .html 文件，所有转换工作都是在运行时进行。</p>
+        <summary type="html"><![CDATA[<p>docsify 是一个动态生成文档网站的工具，不同于 GitBook、Hexo 等，它不会将 .md 转成 .html 文件，所有转换工作都在运行时进行。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>docsify 是一个动态生成文档网站的工具，不同于 GitBook、Hexo 等的地方是它不会将 .md 转成 .html 文件，所有转换工作都是在运行时进行。</p>
+        <content type="html"><![CDATA[<p>docsify 是一个动态生成文档网站的工具，不同于 GitBook、Hexo 等，它不会将 .md 转成 .html 文件，所有转换工作都在运行时进行。</p>
 <!-- more -->
 <h2 id="配置docsify">配置docsify</h2>
 <p>docsify需要本地先安装node, 如果没有安装node，可在node官网选择对应操作系统下载安装：https://nodejs.org/zh-cn/</p>
@@ -189,7 +302,6 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
 
 ## Header {docsify-ignore}
 </code></pre>
-<h3 id="自定义配置">自定义配置</h3>
 <h3 id="搜索配置">搜索配置</h3>
 <p>全文搜索插件会根据当前页面上的超链接获取文档内容，在 localStorage 内建立文档索引。默认过期时间为一天，当然我们可以自己指定需要缓存的文件列表或者配置过期时间。</p>
 <pre><code>&lt;script&gt;
@@ -1021,23 +1133,6 @@ New tools added.</p>
 </code></pre>
 <!-- more -->
 <p><a href="../../post-images/1564974063087.jpg" data-lightbox="image-1" data-title="IOR1.33"><img src="../../post-images/1564974063087.jpg" /></a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Static]Trip]]></title>
-        <id>https://huanime.com.cn/post/statictrip/</id>
-        <link href="https://huanime.com.cn/post/statictrip/">
-        </link>
-        <updated>2019-03-09T06:00:42.000Z</updated>
-        <summary type="html"><![CDATA[<pre><code>CG静帧练习，《肉包子》的一些初期构想
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<pre><code>CG静帧练习，《肉包子》的一些初期构想
-</code></pre>
-<!-- more -->
-<p><a href="../../post-images/1564976387019.jpg" data-lightbox="image-1" data-title="Trip"><img src="../../post-images/1564976387019.jpg" /></a><br>
-<a href="../../post-images/1564976391776.jpg" data-lightbox="image-1" data-title="Trip"><img src="../../post-images/1564976391776.jpg" /></a><br>
-<a href="../../post-images/1564976394686.jpg" data-lightbox="image-1" data-title="Trip"><img src="../../post-images/1564976394686.jpg" /></a></p>
 ]]></content>
     </entry>
 </feed>
