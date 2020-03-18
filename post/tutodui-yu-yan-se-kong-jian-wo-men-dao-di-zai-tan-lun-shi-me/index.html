@@ -1,0 +1,742 @@
+<html>
+<head>
+	<!--meta charset="utf-8" /-->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<title>[Tuto]ColorSpace—我们到底在谈论什么(上) | HU ANIME</title>
+<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1584523515594">
+<link rel="stylesheet" href="https://huanime.com.cn//media/scripts/lib/lightbox.css" type='text/css' media='all'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://huanime.com.cn//styles/main.css" type='text/css' media='all'>
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+  <!--Baidu Analytics-->
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?264d1f69b0edf52af180e8994eaf44bc";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <!--Block Debug Tools-->
+  <script>
+    var debugMode = false;
+    function disableInfo() {
+      document.onkeydown = function() {
+        var e = window.event || arguments[0];
+        // block F12
+        if (e.keyCode == 123) {
+          return false;
+        // block Ctrl+Shift+I
+        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+          return false;
+        // block Shift+F10
+        } else if ((e.shiftKey) && (e.keyCode == 121)) {
+          return false;
+        }
+        if ((e.ctrlKey) && (e.keyCode == 83)) { //ctrl+s
+            return false;
+        }
+      };
+      // block right click
+      document.oncontextmenu = function() {
+        return false;
+      }
+      document.oncontextmenu=new Function("event.returnValue=false");  
+      document.onselectstart=new Function("event.returnValue=false");  
+    }
+    if (!debugMode) disableInfo();
+  </script>
+  
+  <!-- Google Analytics
+  
+  -->
+</head>
+<body class="home blog ct-body standard">
+	<div id="overflow-container" class="overflow-container">
+		<a class="skip-content" href="#main">Skip to content</a>
+		<header id="site-header" class="site-header" role="banner">
+    <div class='top-navigation top-navigation-important'>
+        <div class='container'>
+            <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+                <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+                <div class="menu">
+                    <ul id="menu-secondary-items" class="menu-secondary-items">
+                        
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/qi5SVakfq/">Tools</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/CGbk4KNOa/">Code</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/R8pKVfB50/">Static</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/WSyUFaaTQ/">Anime</a>
+                        </li>
+                            
+                        
+                    </ul>
+                </div>
+            </div>
+            <ul class="social-media-icons">
+              
+                    
+                        <li>
+                            <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                              <i class="fab fa-github" title="github"></i>
+                                <span class="screen-reader-text">github</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://blog.sina.com.cn/u/5618229278" data-animate-hover="pulse" class="weibo" target="_blank">
+                              <i class="fab fa-weibo" title="weibo"></i>
+                                <span class="screen-reader-text">weibo</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                              <i class="fas fa-film" title="film"></i>
+                                <span class="screen-reader-text">film</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                              <i class="fas fa-image" title="image"></i>
+                                <span class="screen-reader-text">image</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                              <i class="fas fa-plug" title="plug"></i>
+                                <span class="screen-reader-text">plug</span>
+                            </a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="https://huanime.com.cn/">  HU ANIME </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">会画画的程序猿</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/">HOME</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/archives">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/archives">TIMELINE</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/gallery">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/gallery">GALLERY</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="https://huanime.com.cn/document/" target="_blank">DOCUMENT</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/about">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/about">ABOUT</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+		<div id="main" class="main" role="main">
+			<div id="loop-container" class="loop-container">
+				<div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+					
+					<div class='featured-image lazy lazy-bg-image' data-background="https://huanime.com.cn//post-images/tutodui-yu-yan-se-kong-jian-wo-men-dao-di-zai-tan-lun-shi-me.png">
+					</div>
+					
+
+					<div class="entry-meta">
+						<span class="date">· 2020-03-17 ·</span> <span> / </span>
+						<span class="author">
+							<a href="https://huanime.com.cn/" title="" rel="author"> SEE THE WORLD</a></a>
+						</span>
+						
+						<span class="category">
+							<span> / </span>
+							<a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
+						</span>
+						
+					</div>
+					<div class='entry-header'>
+						<h1 class='entry-title'>[Tuto]ColorSpace—我们到底在谈论什么(上)</h1>
+					</div>
+					
+					<div class="entry-container">
+					
+						<div id="entry-content" class="entry-content">
+							<article>
+								<pre><code>原理篇：颜色空间（Color Space）到底是什么？它对于CG又意味着什么？
+</code></pre>
+<!-- more -->
+<br>
+<h4 id="cg渲染为什么死抠细节在材质-贴图上花了诸多功夫出图感觉还是像渲的做不到照片般的真实感">CG渲染，为什么死抠细节，在材质、贴图上花了诸多功夫，出图感觉还是像&quot;渲&quot;的，做不到照片般的真实感？</h4>
+<ul>
+<li>因为你可能忽略了<strong>数字影像的色彩管理</strong>。</li>
+</ul>
+<hr>
+<h2 id="1-dynamic-range">1 Dynamic Range</h2>
+<p>一切要从照相机的原理说起，CG渲染，其实就是一架虚拟相机拍摄虚拟的景设。<br>
+当我们用相机拍摄一个背对阳光的人物，默认状态下人物会变得比较黑；但如果你将焦点对准人物，人物会变得&quot;白起来&quot;，但相应的背景天空会过曝，几乎看不清细节，这是由&quot;曝光点&quot;引起的。</p>
+<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1584004142838.jpg" alt="" loading="lazy"></figure>
+<p>被聚焦的物体会被自动调节成 &quot;中灰&quot; 色。照相机能展现的色彩范围是有一定限度的，它只能记录所能展现的最亮与最暗颜色之间的颜色。而超过了这个范围的颜色，会被直接映射为黑色或白色，这就是我们经常在照片中看到的 &quot;死黑&quot; 或 &quot;过曝&quot; 区域。</p>
+<figure data-type="image" tabindex="2"><img src="https://huanime.com.cn//post-images/1584004076271.jpg" alt="" loading="lazy"></figure>
+<p>照相机以 &quot;中灰&quot; 为基准点，所能记录的最亮和最暗的色彩范围，就叫<strong>Dynamic Range</strong>。<br>
+一个相机的Dynamic Range越大，拍摄出来的照片就越好。</p>
+<p><img src="https://huanime.com.cn//post-images/1584004220393.jpg" alt="" loading="lazy"><center>Dynamic Range</center></p>
+<p>普通相机最多可以拍摄到11左右的动态范围，dSLRs相机的最大动态范围是14左右，而影视拍摄常用的摄像机最多可以拍摄到15，而我们人眼所能看到的最大动态范围是20，远远超过了这些相机所能记录的范围值。</p>
+<h4 id="那么三维软件的dynamic-range又是多少呢">那么三维软件的Dynamic Range又是多少呢？</h4>
+<ul>
+<li>渲染器大都使用sRGB颜色模式，最多只能展现<strong>7-8左右</strong>的动态范围，连一部廉价相机都不如。</li>
+</ul>
+<h2 id="2-color-space">2 Color Space</h2>
+<h3 id="2-1-色彩空间的定义">2-1 色彩空间的定义</h3>
+<p><strong>颜色空间</strong>是指一个能够解析数值的<strong>颜色模型</strong>。<strong>色域</strong> (gamut/color gamut)，则是色彩的某个完整的<strong>子集</strong>。在色彩模型和参照色彩空间之间添加一个特定的<strong>转换函数</strong>，在参照色彩空间中建立一个确定的“范围”，这就叫色域，对于给定的色彩模型，这就定义了一个色彩空间。</p>
+<p>当定义一个色彩空间的时候，至少需要三个重要的指标：</p>
+<ol>
+<li>色域（三个基色的坐标形成的三角形）</li>
+<li>白点（相当于色域三角形的中心）</li>
+<li>转换函数（如何对色域三角形进行采样）</li>
+</ol>
+<p>1.色域 (也叫做基色)<br>
+也就是图中最外面的白色粗线形成的三角形，如果三角形的三个顶点的位置发生了变化，必然会导致整个三角形所覆盖的颜色范围发生变化。</p>
+<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1584433074709.jpg" alt="" width="350" loading="lazy"></figure>
+<center>各个领域的常见色域</center>
+<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1584433159473.jpg" alt="" width="500" loading="lazy"></figure>
+<center>常见色域范围对比</center>
+<p>2.白点<br>
+如果三角形的位置不变，但是中心白点移动了位置，那么颜色范围也会发生改变。</p>
+<figure data-type="image" tabindex="5"><img src="https://huanime.com.cn//post-images/1584365883877.png" alt="" width="600" loading="lazy"></figure>
+<center>基色与白点</center>
+<p>3.转换函数<br>
+<code>*NOTE: 这里我们需要先认清一个十分常见的误区：Linear和Gamma并非色彩空间！</code><br>
+Maya、Nuke等软件的色彩空间选项中包含Linear“色彩空间”，但实际上这是一种错误的理解，Linear、gamma不是色彩空间，而是如何 <strong>采样</strong> 的概念。</p>
+<figure data-type="image" tabindex="6"><img src="https://huanime.com.cn//post-images/1584366240861.png" alt="" width="600" loading="lazy"></figure>
+<p>比如下图中，两个色彩空间的色域一样，白点也一样。我们向内切分这个三角形，对比一下每次切割的顶点，就会发现不同的切割方式会对应不同的颜色。通常理解的 <strong>linear</strong> 只不过是 <strong>gamma = 1</strong> 的情况，可以理解为“均匀” 切分。</p>
+<figure data-type="image" tabindex="7"><img src="https://huanime.com.cn//post-images/1584423382416.png" alt="" width="600" loading="lazy"></figure>
+<p>那么为什么会出现不同的采样方式呢？因为不同光值下人眼对中灰的识别并不是按线性分布的 (视觉 50% 灰=亮度 18% 灰)，人眼对暗部变化的感知更为明显，Log 函数就是为了拟合人眼识别的规律来储存相机记录的数据，它可以记录更多的明暗信息，拥有更高的宽容度。</p>
+<figure data-type="image" tabindex="8"><img src="https://huanime.com.cn//post-images/1584427852523.png" alt="" loading="lazy"></figure>
+<center>原始信息</center>
+<figure data-type="image" tabindex="9"><img src="https://huanime.com.cn//post-images/1584427856862.png" alt="" loading="lazy"></figure>
+<center>Linearly Encoding</center>
+<figure data-type="image" tabindex="10"><img src="https://huanime.com.cn//post-images/1584427860388.png" alt="" loading="lazy"></figure>
+<center>Gamma Encoding</center>
+<p>可以看出，Gamma 校正后的编码更能体现人眼的识别范围，并且节省编码空间，这种编码方式下，所有的编码值都能得到有效利用。</p>
+<p>常见色域、转换函数、白点参数：</p>
+<table>
+<thead>
+<tr>
+<th>色域</th>
+<th>转换函数</th>
+<th>白点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sRGB</td>
+<td>linear</td>
+<td>D50</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>gamma 2.2</td>
+<td>D60</td>
+</tr>
+<tr>
+<td>V-Gamut</td>
+<td>gamma 2.6</td>
+<td>DCI</td>
+</tr>
+<tr>
+<td>ProPhoto RGB</td>
+<td>cineon</td>
+<td>D65</td>
+</tr>
+<tr>
+<td>Rec.2020</td>
+<td>logC</td>
+<td>... ...</td>
+</tr>
+<tr>
+<td>Rec.709</td>
+<td>RedLogFilm</td>
+<td></td>
+</tr>
+<tr>
+<td>AdobeRGB</td>
+<td>Slog3</td>
+<td></td>
+</tr>
+<tr>
+<td>... ...</td>
+<td>... ...</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>我们只要任意组合三列其中之一 (白点往往是官方和色域一起规定的，所以可以省略)，就可以得到一个'<strong>色彩空间</strong>'。这也就是为什么我们经常会看到LUT的文件名上写着 sRGB-D65-linear、WideGamut-D50-linear 等等。当然还有一些色彩空间不需要说那么多，因为这些色彩空间在定义的当初就完全规定了色域、白点、gamma。因此只要说出他的名字就可以了，比如 ACES。</p>
+<h3 id="2-2-色域转换">2-2 色域转换</h3>
+<p>摄像机拍摄的照片数据(RAW)全部是&quot;01&quot;二进制形式存储的一组RBG确定值，由于不同的设备有不同的色域，因此把这样一组数值输入不同的设备，会产生不同的颜色。如果不进行科学的处理，在不同的设备不同的系统中交换图像RGB数据时，设备或系统只会机械的读取RGB的绝对值，不同色彩空间下的色彩转换发生混乱，色彩将不能正确再现。因此要把这些数据转变成我们能看到的图像，就需要颜色转换(Color Transform)。</p>
+<figure data-type="image" tabindex="11"><img src="https://huanime.com.cn//post-images/1584020374938.jpg" alt="" loading="lazy"></figure>
+<p>有些相机里会自带一些色域：sRGB、Adobe RGB。还有部分厂家会有自己特有的色彩空间，如索尼的 S-Gamut3、松下的 V-Gamut、富士的 F-Log-Gamut；以及各种国际标准色彩空间：ProPhoto RGB、P3、Rec.709、Rec.2020 等等。这些色域都可以在色彩空间色度图中表现出来，严格来讲这些色域都是 CIE-XYZ 的子集。可以通过线性转换来得到。<br>
+典型的转换过程是这样的：</p>
+<figure data-type="image" tabindex="12"><img src="https://huanime.com.cn//post-images/1584101198495.jpg" alt="" loading="lazy"></figure>
+<ol>
+<li>拍摄，得到滤镜阵列的原始文件，存为raw;</li>
+<li>解马赛克(Demosaicing)，根据预设的色彩矩阵将拍摄得到的原始数据转化到cie-xyz色彩空间，或其他绝对色彩空间（非设备依赖色彩空间）;</li>
+<li>每个色彩空间都有白点和与cie-xyz相互转换的色彩矩阵。根据白平衡设定改变矩阵，用改变后的色彩矩阵转换图形到对应的色彩空间。不同品牌的相机有各自不同的转换方式，Sony的叫S-log，Canon的叫Canon log，阿莱的叫logC，等;</li>
+<li>根据色彩空间制定的OETF曲线（如hlg，gamma2.2），将图像压缩并存储为log文件。</li>
+</ol>
+<p>若色域未经转换就直接丢给 Rec.709 标准的显示器或者上传到网络空间的话，会产生颜色偏差。这是因为 Rec.709 标准的显示器把更宽广色域的 RGB 三值直接对应到 sRGB 的值中所产生的偏差，通常会出现饱和度下降的情况；若两个色域的白点也不一致的话，色温也会出现偏差。目前被大多数显示设备所接受并使用的 Rec.709 标准使用的色域与 sRGB 相同，并且网络上显示图片的标准也是 sRGB，这就意味着 sRGB 目前统治着大部分的市场。部分相机虽然支持更大的色域范围，如：ProPhoto RGB、Adobe RGB、S-Gamut3、F-Gamut 等，但是要上传到网络空间则须转换到 sRGB 的色域。</p>
+<h3 id="2-3-常见转换函数">2-3 常见转换函数</h3>
+<h4 id="gamma22">Gamma2.2</h4>
+<p>Gamma 本质上为幂函数，是一种既符合人眼视觉特性，又节省编码空间的编码方法。设编码值为 C，亮度为 I，则两者的关系为：</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mo>=</mo><msup><mi>I</mi><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>γ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">C = {I^{1/\gamma }}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">/</span><span class="mord mathdefault mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>其中 𝛾（读作 gamma）为常数，因系统而异。</p>
+<figure data-type="image" tabindex="13"><img src="https://huanime.com.cn//post-images/1584430896601.png" alt="" loading="lazy"></figure>
+<p>Gamma 校正几乎存在于所有的摄像设备和显示设备中，但其存在一定的局限性：</p>
+<ol>
+<li>颜色混合<br>
+由于图片中的 RGB 的值是通过 Gamma 校正存放在文件中的，这就造成了图像在模糊过程中出现颜色断层的现象，以红色和绿色举例：</li>
+</ol>
+<figure data-type="image" tabindex="14"><img src="https://huanime.com.cn//post-images/1584429194478.png" alt="" width="600" loading="lazy"></figure>
+<p>大部分软件中模糊颜色值时仅仅取相邻颜色的平均值，因此会出现丑陋的暗带；而正确的计算方法是先将颜色还原为线性，计算后再基于gamma转换：</p>
+<figure data-type="image" tabindex="15"><img src="https://huanime.com.cn//post-images/1584429287522.png" alt="" width="600" loading="lazy"></figure>
+<p><strong>这也就是VFX中经常提到的 '线性工作流' 的来历</strong>。</p>
+<ol start="2">
+<li>动态范围<br>
+Gamma 另一个局限性在于动态范围。Gamma 校正过的图像会在亮部和高光的表现欠佳，因为这种校正下超出 90% 亮度所获得的电压范围很小。<br>
+究其原因是人眼对亮度的反映本质上来说是<strong>对数响应</strong>，指数形式的 Gamma 校正只能在一定程度上模拟人眼的非线性识别，与人眼的特性有根本性的差异，这会导致最终影像的信噪比和动态范围降低。</li>
+</ol>
+<p>有一个解决方案为 Rec.709（800%），即在 电压的80% 处设置拐点，并且把 800% 的亮度视为原来的 100% 并且等比例拉伸：</p>
+<figure data-type="image" tabindex="16"><img src="https://huanime.com.cn//post-images/1584429497626.png" alt="" loading="lazy"></figure>
+<h4 id="srgb-rec709">sRGB &amp; Rec.709</h4>
+<p>sRGB的转换函数和Rec.709非常相似，但并不相同。两个转换函数都是分段函数，第一部分为线性函数，第二部分是指数函数。只不过在sRGB的时候，指数部分是2.4，而Rec.709的指数部分是2.2。</p>
+<p><img src="https://huanime.com.cn//post-images/1584018984239.png" alt="" loading="lazy"><center>sRGB</center></p>
+<p><img src="https://huanime.com.cn//post-images/1584018993711.png" alt="" loading="lazy"><center>Rec.709</center></p>
+<figure data-type="image" tabindex="17"><img src="https://huanime.com.cn//post-images/1584019002024.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="18"><img src="https://huanime.com.cn//post-images/1584019009240.png" alt="" loading="lazy"></figure>
+<p>这种方法在一定程度上扩大了 Gamma 校正所能记录的亮度范围，但是也没有在根本上解决影调不够细腻及动态范围小的缺陷。</p>
+<p>为了解决 Gamma 校正的缺陷，目前所有主流摄影机都配备了 <strong>Log 校正</strong>。Log 图像文件起源于柯达的 Cineon 胶片扫描系统。 该系统将物理的胶片信息， 以 Log 对数函数曲线的计算方式， 转换为数字信息。 以这种方式转换的图像信息， 拥有更多的高亮信息、 阴影部分信息， 以及更宽的色域范围。<br>
+由于 Log 视频具有 Log 曲线特性， 并且拥有比 Rec.709 更宽的色域范围， 所以 Log 视频在普通显示器上呈现出低对比度、 低饱和度的特征。 现在各数字摄影机厂商， 都将 Log 函数曲线的记录方式应用在了各自的摄影机之中。 由于各个品牌的技术差异， 其拍摄视频的 Log 函数曲线、 色域范围都不尽相同。</p>
+<h4 id="c-log">C-log</h4>
+<p>Canon 的 Log 称为 C-log，分为三代Canon Log 3、 Canon Log 2 与 Canon Log，都是以后期处理流程为前提的伽马设置 ：</p>
+<ol>
+<li>
+<p>Canon Log 2 的特点是在调色中改善画质，因此与 Canon Log 相比，暗部色调过渡更自然。然而，有些场景会产生明显的噪点，需做降噪处理或在后期制作中调整更暗部区域。针对这一点，Canon Log 3 对暗部表现加以改善，采用可调整过渡变化的简易调色伽马，使噪点不易产生，既保留了 Canon Log 的易用性，同时实现了动态范围的拓宽。</p>
+</li>
+<li>
+<p>与 Canon Log 2 相同，选择 Canon Log 3 后，ISO在 100~800 下，动态范围可达 200%~1600%，在 ISO800 以上则可升至 1600% (Canon Log 3 相当于14档范围)。与 Canon Log 相比，在保留更暗部区域细节及 18% 附近特性的同时，具有更大的动态范围 (相当于 1600% / 14-STOP)，在更宽广的 LOG 空间内实现均等输出。</p>
+</li>
+</ol>
+<h4 id="alexa">Alexa</h4>
+<p>Arri 的 Log 叫 LogC ，有近百年胶片研究历史的 Arri 出的 LogC 颇受电影摄影师的欢迎。LogC 拥有14档曝光，这意味着 LogC 可以记录更多的高光信息而不会导致数据溢出，画面也会变得对比度更低。</p>
+<h4 id="s-logs-log2s-log3">S-log/S-log2/S-log3</h4>
+<p>Sony 的 Log 模式比较特别，高端微单中提供了从 PP1 - PP9 的9种预设：</p>
+<ol>
+<li><strong>PP1-PP6</strong> 是不使用索尼的 Log 模式拍摄的，色彩空间在 Rec.709，也就是普通显示器的色彩空间，拍出来的视频在显示器上播放显示为正常的颜色，不会出现饱和度以及对比度下降的情况，不过记录的视频会在高光和阴影上有所缺失。PP1-PP6 的差别在于 Gamma 曲线的使用，不同设置会在阴影和高光上有所区别；</li>
+<li><strong>PP7</strong> 使用的是 <strong>S-Log2</strong> 曲线；</li>
+<li><strong>PP8-9</strong> 使用的是 <strong>S-Log3</strong> 曲线。S-Log3 拥有比S-Log2 更多的阴影和高光的动态范围，中灰也更亮，曲线更接近于 Arri 的 LogC 曲线。</li>
+</ol>
+<h3 id="2-4-不同色彩空间对cg出图的影响">2-4 不同色彩空间对CG出图的影响</h3>
+<ol>
+<li>
+<p>gamma work flow<br>
+在三维软件中，渲染器其实就是一个虚拟的摄像机，它的原理跟真实的相机并无差别，因此，渲染完的二进制数据要想转成图像，就需要Color Transform。<br>
+sRGB存在如此弊端却一直沿用至今，有其历史原因，由于了解这个领域的人少之又少，当CRT时代sRGB被选用后，并没有人发现它的弊端，就被稀里糊涂的沿用起来了。而多少年过去了，有人发现了这个问题，但习惯和生态早已形成，无数艺术家已经&quot;习惯&quot;在sRGB模式工作下去。</p>
+</li>
+<li>
+<p>linear work flow<br>
+时间拨回到2004年 Vray 3.0 时代，VR论坛里的渲染高手开了一个帖子叫“线性工作流”, 当时非常火爆，很多人都试图来模仿这种工作模式但这套流程非常复杂，不过出来的效果也是非常震撼的，</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="19"><img src="https://huanime.com.cn//post-images/1584434687359.png" alt="" loading="lazy"></figure>
+<center>右侧为线性工作流</center>
+<p>左侧 gamma 流程下的出图明显偏暗，反射部分的对比度非常强烈，而更严重的问题是，当你试着去提高摄影机曝光去加亮场景时，出图就过曝了：</p>
+<figure data-type="image" tabindex="20"><img src="https://huanime.com.cn//post-images/1584434520056.jpg" alt="" loading="lazy"></figure>
+<p>其实问题很简单，VRay 和 Max 的计算方式，以及 VRay  Camera 对于光的反应曲线都是线性的， 这就是说它们都在 gamma 1.0 下运作，这当然正确无误，但问题就在于：</p>
+<ol>
+<li>首先要确保你在渲图时，所有输入Max材质编辑器的贴图的校正曲线正确；</li>
+<li>你看图的设备也要具备相同的设置才可以。</li>
+</ol>
+<p>而当时很多人都忽略了这个问题。但幸运的是，现在Vray已经提供了sRGB模式，可以在sRGB模式下正确查看渲染结果：</p>
+<figure data-type="image" tabindex="21"><img src="https://huanime.com.cn//post-images/1584435205422.png" alt="" width="500" loading="lazy"></figure>
+<p>于是Max中就可以有两种不同的线性工作流设置模式：</p>
+<p><img src="https://huanime.com.cn//post-images/1584435648892.png" alt="" width="600" loading="lazy"><center>gamma2.2模式，输出结果为sRGB空间，非线性</center></p>
+<p><img src="https://huanime.com.cn//post-images/1584435652619.png" alt="" width="600" loading="lazy"><center>linear模式，输出结果是线性的，推荐这种模式，有更大后期空间</center></p>
+<p>现在新版的Max中已经不可以再手动设置输入贴图的gamma，这是因为它已经被默认设置为第二种线性工作流方式，Vray 也已经默认第二种线性工作流方式渲染，所以现在你只管做图，其他的统统交给渲染管线！<br>
+<code>*NOTE:当你用新版Max打开旧版文件时，由于已经无法手动设置贴图gamma值，所以可能会得到错误的渲染结果，但不用担心，这两个参数只是被隐藏了，你仍然可以通过MaxScript对它们进行设置：</code></p>
+<pre><code>fileOutGamma=1.0;
+fileInGamma=1.0;
+</code></pre>
+<p>现在甚至像Unity 3D等实时渲染领域也开始推行Linear Workflow，</p>
+<figure data-type="image" tabindex="22"><img src="https://huanime.com.cn//post-images/1584435483756.png" alt="" loading="lazy"></figure>
+<p>开启Linear模式将能够提供更逼真的光照效果与正确的颜色混合：</p>
+<figure data-type="image" tabindex="23"><img src="https://huanime.com.cn//post-images/1584435493347.png" alt="" width="500" loading="lazy"></figure>
+<figure data-type="image" tabindex="24"><img src="https://huanime.com.cn//post-images/1584435496848.jpg" alt="" width="500" loading="lazy"></figure>
+<h3 id="似乎到这里关于cg渲染中颜色空间的世纪难题已经被解决了但事情永远不如想象的那么简单">似乎到这里，关于CG渲染中颜色空间的世纪难题已经被解决了，但事情永远不如想象的那么简单😨</h3>
+<p>我们前面所说的linear workflow，相比gamma workflow它确实是更 '线性'，但实际上它是 linear-sRGB，由于sRGB的动态范围有限，这就导致了sRGB模式下，渲染图中过亮的地方仍然会过曝！</p>
+<figure data-type="image" tabindex="25"><img src="https://huanime.com.cn//post-images/1584436640964.png" alt="" loading="lazy"></figure>
+<center>左侧: linear-sRGB workflow, 右侧: ACES workflow</center>
+<p>这种情况在具有高强度光源的场景里尤为突出，例如爆炸，光线强度很容易就超过sRGB的上限。<br>
+除此之外sRGB还有一个致命缺点是，无法实现高强度光照下的 &quot;Color Desaturation&quot;。仔细观察电影镜头里的颜色，在光线充足的场景里，物体颜色的饱和度会被降低，这是一种自然现象，也是人眼看起来最真实、最舒服的现象。而sRGB模式下，当我们提高曝光值，场景中物体的颜色往往是奇迹般地变得更加“鲜艳”，也就是其饱和度反而提高了，这恰恰与现实世界看到的情况相反：</p>
+<figure data-type="image" tabindex="26"><img src="https://huanime.com.cn//post-images/1584437767298.png" alt="" width="500" loading="lazy"></figure>
+<figure data-type="image" tabindex="27"><img src="https://huanime.com.cn//post-images/1584437787221.png" alt="" width="500" loading="lazy"></figure>
+<h3 id="2-5-解决方案">2-5 解决方案？</h3>
+<figure data-type="image" tabindex="28"><img src="https://huanime.com.cn//post-images/1584020953069.png" alt="" loading="lazy"></figure>
+<p>ACES是美国电影艺术与科学学院创立的一套颜色统一化编码系统，旨在让高质量动态图片在任何设备上的效果都能保持一致，ACES支持的Dynamic Range高达25+，比人眼所能看到的最大范围还要高。使用ACES的图片效果灯光非常自然真实，亮部也呈现出“Color desaturation”效果，与sRGB模式形成鲜明对比，ACES很有可能成为业界公认的色彩管理标准。</p>
+<figure data-type="image" tabindex="29"><img src="https://huanime.com.cn//post-images/1584506020354.jpg" alt="" loading="lazy"></figure>
+<center>ACES的基色范围</center><br>
+<p>使用ACES能够在调色中维持色彩保真度，在不同的摄像机上实现颜色的标准化。它包括以下四个环节：</p>
+<ol>
+<li>IDT（InputDevice Transform），由数字摄影机拍摄、胶片扫描或者是从录像机采集到的IAS（Image Acquisition Source）图像元数据，经过IDT（InputDevice Transform）输入设备转换，转换为ACES色彩空间。</li>
+<li>RRT（Reference Rendering Transform），参考渲染转换把每个数字摄影机或者图像输入设备提供的IDT转换成标准的、高精度的、宽动态范围的图像数据，再从ACES数据中“还原”图像，把机器语言变成人类感官能接受的最赏心悦目的图像，把转换过的ACES素材进行优化输出到最终的显示设备上。</li>
+<li>在DaVinci Reslove等后期合成软件中进行色彩校正调色。</li>
+<li>ODT（Output Device Transform），输出设备转换准确的将ACES素材转换成任何色彩空间，优化后输出到最终的设备上。不同的ODT设置对应不同标准的监看和输出，比如在高清显示器上使用Rec.709，电脑上使用sRGB，数字投影机上使用DCI P3等。</li>
+</ol>
+<p>利用ACES色彩空间和特定的IDT-ODT流程，可以从任何采集设备获取图像，在校准过的显示器监看下调色，最后把它输出成任何格式。ACES能最大限度的利用输出媒介的色彩空间和动态范围，使“观感”最大化，最大限度的保留色彩的丰富性。</p>
+<figure data-type="image" tabindex="30"><img src="https://huanime.com.cn//post-images/1584434126289.png" alt="" loading="lazy"></figure>
+<center>ACES workflow 能够使得渲染器的动态范围突破天际，达到惊人的25</center><br>
+<h2 id="3-题外话">3 题外话</h2>
+<h3 id="3-1-什么是lut">3-1 什么是LUT</h3>
+<p>颜色查找表（Look Up Table, LUT），LUT 的本质为<strong>数学转换模型</strong>， 通过对颜色的采样与插值计算， 将色彩输入数值转换为特定的数值输出。其作用于图像的直接结果就是<strong>图像的颜色产生了变化</strong>，所以 LUT 可以通俗地理解为一种色彩效果的预设(&quot;滤镜&quot;)。</p>
+<h3 id="3-2-lut的作用">3-2 LUT的作用</h3>
+<p>在影视制作领域，LUT 通常应用在三个方面 ：</p>
+<ol>
+<li>用于显示设备的色彩校准；</li>
+<li>用于图像色彩空间的转换，如 <em>Blackmagic Cinema Camera Film to Rec.709</em> 是用于将 BMCC 摄影机拍摄的 Log 视频转换成 Rec.709 标准视频的 LUT；</li>
+<li>用于特殊色彩效果的设计与模拟。</li>
+</ol>
+<h3 id="3-3-关于rec709-to-log类型的lut">3-3 关于Rec.709 to Log类型的LUT</h3>
+<p>在很多片子中，我们经常用到 Log to Rec.709 这类型的 LUT。 这类 LUT 将拍摄的 RAW 文件或者 Log视频， 快速转换为拥有正常灰阶范围、 正常对比度、 正常饱和度的 Rec.709 标准图像。 让调色师拥有一个好的调色起点， 使其能在一个相对较短的工作时间内， 获得一个完美的调色效果。 所以运用 Log to Rec.709 的LUT， 在调色流程中， 被广泛调色师所接受。</p>
+<h4 id="那么对于-rec709-to-log-类型的-lut-很多人认为使用该类-lut-调色是错误的-无意义的-为什么大家普遍会这么认为">那么对于 Rec.709 to Log 类型的 LUT， 很多人认为使用该类 LUT 调色是错误的， 无意义的。 为什么大家普遍会这么认为？</h4>
+<ul>
+<li>因为大家都明白前期拍摄的窄色域视频， 在后期是无法变成宽色域的视； 前期拍摄的窄动态范围， 在后期也无法变成宽动态范围。而Rec.709 to Log 恰恰就是较窄色域和较窄动态范围的 Rec.709 标准文件， 到较宽色域和较宽动态范围的Log 文件的转换。 当然这不是真正的内在转换，只是让Rec.709 拥有 Log 的外观特征。 在 Rec.709 的视频上加载 Rec.709 to Log 类型的 LUT， 势必会造成视频信息损失、裁切的问题。 所以大家普遍认为用 Lut 将Rec.709 转换成 Log 是不可行的。</li>
+</ul>
+<h4 id="其实这种看法是片面的">其实这种看法是片面的:</h4>
+<ul>
+<li>Rec.709 to Log， 并不是毫无意义的技术。 在以前的胶片放映时代，就有运用过 Rec.709 to Log 类型LUT 的情况。当时一些影片，运用摄像机拍摄 Rec.709的视频， 需要将数字的视频文件转换成电影胶片， 以在影院放映。 这时候， 就需要在视频上加载 Rec.709 to Log 类型的 LUT， 将 Rec709 转换成 Log， 再制作成胶片， 在电影院放映时， 色彩才能正确呈现。</li>
+<li>在现在影视制作的全数字流程下， Rec.709 to Log 类型的 LUT 同样拥有用武之地。 当一个项目中同时拥有 Log 素材和 Rec.709 素材， 并且以 Log 素材为主， 那么我们在调色时， 需要对素材进行色彩管理 ：即给 Rec.709 素材加载 Rec.709 to Log 类型的的LUT，将 Rec.709 素材转换为 Log 素材。 这里所说的色彩管理， 是指将不同色彩空间、 不同Gamma 曲线的图像素材， 统一为一种较大的色彩空间， 然后在该色彩空间的基础上进行调色。</li>
+<li>为什么要将色彩空间统一后再做调色？ 因为各品牌摄影机的色彩空间和 Gamma 曲线都不相同， 导致图像的色彩与反差不相同。 这种情况下做镜头间的颜色匹配会有难度。 有时候来回调整多次仍然不能有一个满意的结果。 统一色彩空间后， 各种图像的饱和度、 色相、 Gamma 曲线都在一个标准之内， 图像的色彩外观都趋于统一， 这时匹配颜色时， 就会容易许多， 调色效率也会大大提高。</li>
+</ul>
+<h3 id="3-4-提一嘴raw">3-4 提一嘴RAW</h3>
+<p>我们都知道摄影中出片多用RAW格式，RAW的原意就是“未经加工”，RAW图像是CMOS或者CCD图像感应器将捕捉到的光源信号转化为数字信号的原始数据，同时记录了由相机拍摄所产生的一些原始数据如ISO的设置、快门速度、光圈值、白平衡等。可以把RAW概念化为“数字底片”，通常带有 HDR 高动态范围的光照信息，这在后期编辑图片的时候可以更好的控制曝光、白平衡、色彩饱和度等等。<br>
+<code>*NOTE: 不同的摄影机厂商的 RAW 格式后缀有所不同，佳能：CRW\CR2；柯达：KDC；尼康：NEF；索尼：ARW；松下：RW2 ...</code><br>
+RAW格式文件具有一定的特殊性，原理上讲，RAW文件的色域实现了摄影机传感器拜耳阵列滤光片阵的最大物理色域，空间模型上应该采用的是CIE-XYZ。RAW格式的伽马是直线性的，也可以理解为RAW没有加载任何的伽马，但RAW与Log是有本质上的不同的，虽然它们的最终目的都是尽可能记录下更多的信息。摘抄一段比较清晰的外文解释：</p>
+<pre><code>Raw is not Log because Log is in a video format, and raw is not video. Raw data has no video processing baked in and has to be converted into video for viewing. Log is video and has things like white balance baked into it. They're very much not the same; however, they're both designed to get the most information out of the sensor. Raw is getting everything the sensor has to offer; likewise, Log curves are designed to get the most tonal range out of the sensor. While they're very different formats, they have the same general application. Both raw and Log can be uncompressed, but that depends on the recording device. These terms, and many others, have all become part of our vocabulary in this digital cinema world.
+</code></pre>
+
+							</article>
+						</div>
+
+
+						
+							<div class='entry-meta-bottom'>
+								<div class="entry-categories">
+									<p>
+										<span>Categories</span>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/itfB5m7XS/" title="View all posts in Essay">Essay</a>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/qi5SVakfq/" title="View all posts in Tools">Tools</a>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/CGbk4KNOa/" title="View all posts in Code">Code</a>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/R8pKVfB50/" title="View all posts in Static">Static</a>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/WSyUFaaTQ/" title="View all posts in Anime">Anime</a>
+										
+										
+									</p>
+								</div>
+								<div class="entry-tags">
+									<p>
+										<span>Tags</span>
+										
+										<span class="category">
+											<a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
+										</span>
+										
+									</p>
+									</br>
+									<span>Home</span>
+									<span><a href="https://ripmr.github.io">Back to Home</a></span>
+								</div>
+							</div>
+							<div class="author-meta">
+								<span>
+									<img alt='' src="https://huanime.com.cn//images/avatar.png?v=1584523515594" class='avatar avatar-72 photo' height='72' width='72'>
+									<!--span>WRITTEN BY: </span-->
+								</span>
+								<span>
+								<p>
+									
+										<a href="https://huanime.com.cn/post/tutocolorspace-wo-men-dao-di-zai-tan-lun-shi-me-xia/">上一篇->[Tuto]ColorSpace—我们到底在谈论什么(下)</a>
+									
+								</p>
+								<br/>
+								<p>
+									
+										<a href="https://huanime.com.cn/post/tutogan-huo-ru-he-zai-vray-zhong-zheng-que-huan-yuan-zb-zhi-huan/">下一篇->[Tuto]干货—如何在Vray中正确还原ZB置换</a>
+									
+									
+								</p>
+								</span>
+								
+								<!--span>
+									<p></p>
+									
+									
+									<a class="github" target="_blank"
+									   href="https://github.com/RIPmr">
+										<i class="fab fa-github" title="github"></i>
+									</a>
+									
+									
+									
+									
+									
+									<a class="weibo" target="_blank"
+									   href="http://blog.sina.com.cn/u/5618229278">
+										<i class="fab fa-weibo" title="weibo"></i>
+									</a>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</span-->
+
+							</div>
+						
+					</div>
+				</div>
+				<section id="comments" class="comments">
+					
+					
+					<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '99293e39ad48006e77cb',
+    clientSecret: '48d99f5e46f34d52cfdc2051dd531dd9e437936a',
+    repo: 'RIPmr.github.io',
+    owner: 'RIPmr',
+    admin: ['RIPmr'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+					
+
+					
+					
+				</section>
+			</div>
+		</div>
+		<footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="https://huanime.com.cn/"> HU ANIME </a>
+    </h1>
+    <p class="site-description">会画画的程序猿</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+                <li>
+                    <a href="http://blog.sina.com.cn/u/5618229278" data-animate-hover="pulse" class="weibo" target="_blank">
+                        <i class="fab fa-weibo" title="weibo"></i>
+                        <span class="screen-reader-text">weibo</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                        <i class="fas fa-film" title="film"></i>
+                        <span class="screen-reader-text">film</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                        <i class="fas fa-image" title="image"></i>
+                        <span class="screen-reader-text">image</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                        <i class="fas fa-plug" title="plug"></i>
+                        <span class="screen-reader-text">plug</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>SEE THE WORLD</a></p>
+    </div>
+</footer>
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+<!--script src="https://huanime.com.cn//media/scripts/lib/lightbox-plus-jquery.min.js"></script>-->
+<script src="https://huanime.com.cn//media/scripts/lib/jquery.min.js"></script>
+<script src="https://huanime.com.cn//media/scripts/lib/jquerymigrate.js"></script>
+<script src="https://huanime.com.cn//media/scripts/lib/production.min.js"></script>
+<script src="https://huanime.com.cn//media/scripts/lib/lightbox.min.js"></script>
+	</div>
+</body>
+</html>
+

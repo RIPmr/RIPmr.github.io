@@ -7,7 +7,7 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>HU ANIME</title>
-<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1582783664672">
+<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1584523515594">
 <link rel="stylesheet" href="https://huanime.com.cn//media/scripts/lib/lightbox.css" type='text/css' media='all'>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://huanime.com.cn//styles/main.css" type='text/css' media='all'>
@@ -44,11 +44,16 @@
         } else if ((e.shiftKey) && (e.keyCode == 121)) {
           return false;
         }
+        if ((e.ctrlKey) && (e.keyCode == 83)) { //ctrl+s
+            return false;
+        }
       };
       // block right click
       document.oncontextmenu = function() {
         return false;
       }
+      document.oncontextmenu=new Function("event.returnValue=false");  
+      document.onselectstart=new Function("event.returnValue=false");  
     }
     if (!debugMode) disableInfo();
   </script>
@@ -71,6 +76,12 @@
                         
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
                             <a href="https://huanime.com.cn/tag/qi5SVakfq/">Tools</a>
                         </li>
                             
@@ -90,12 +101,6 @@
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
                             <a href="https://huanime.com.cn/tag/WSyUFaaTQ/">Anime</a>
-                        </li>
-                            
-                        
-                            
-                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
-                            <a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
                         </li>
                             
                         
@@ -246,6 +251,56 @@
                     
                     
                         <div class="timeline-content">
+                            <!--h3 class="timeline-title"> [Tuto]ColorSpace—我们到底在谈论什么(下)</h3-->
+                            <h3 class="timeline-title"> <a href="https://huanime.com.cn/post/tutocolorspace-wo-men-dao-di-zai-tan-lun-shi-me-xia/">[Tuto]ColorSpace—我们到底在谈论什么(下)</a></h3>
+                            <p>
+                                <pre><code>干货篇——如何在 3ds Max 和 AfterEffects 中实现ACES workflow
+</code></pre>
+
+                            </p>
+                            <a href="https://huanime.com.cn/post/tutocolorspace-wo-men-dao-di-zai-tan-lun-shi-me-xia/" class="btn">click to view</a>
+                        </div>
+                    
+                    
+                    
+                        <div class="timeline-content">
+                            <!--h3 class="timeline-title"> [Tuto]ColorSpace—我们到底在谈论什么(上)</h3-->
+                            <h3 class="timeline-title"> <a href="https://huanime.com.cn/post/tutodui-yu-yan-se-kong-jian-wo-men-dao-di-zai-tan-lun-shi-me/">[Tuto]ColorSpace—我们到底在谈论什么(上)</a></h3>
+                            <p>
+                                <pre><code>原理篇：颜色空间（Color Space）到底是什么？它对于CG又意味着什么？
+</code></pre>
+
+                            </p>
+                            <a href="https://huanime.com.cn/post/tutodui-yu-yan-se-kong-jian-wo-men-dao-di-zai-tan-lun-shi-me/" class="btn">click to view</a>
+                        </div>
+                    
+                    
+                    
+                        <div class="timeline-content">
+                            <!--h3 class="timeline-title"> [Tuto]干货—如何在Vray中正确还原ZB置换</h3-->
+                            <h3 class="timeline-title"> <a href="https://huanime.com.cn/post/tutogan-huo-ru-he-zai-vray-zhong-zheng-que-huan-yuan-zb-zhi-huan/">[Tuto]干货—如何在Vray中正确还原ZB置换</a></h3>
+                            <p>
+                                <p>ZB里苦苦雕好的细节，放到Renderer里又打回原形光溜溜？本文详细介绍ZB置换在Vray中还原的正确流程。但终究需要记住的是——Displacement is expensive.</p>
+
+                            </p>
+                            <a href="https://huanime.com.cn/post/tutogan-huo-ru-he-zai-vray-zhong-zheng-que-huan-yuan-zb-zhi-huan/" class="btn">click to view</a>
+                        </div>
+                    
+                    
+                    
+                        <div class="timeline-content">
+                            <!--h3 class="timeline-title"> [Tuto]VrayMtl—属性对观感的直接影响</h3-->
+                            <h3 class="timeline-title"> <a href="https://huanime.com.cn/post/tutovraymtl-shu-xing-dui-guan-gan-de-zhi-jie-ying-xiang/">[Tuto]VrayMtl—属性对观感的直接影响</a></h3>
+                            <p>
+                                <p>现代渲染器中有着极为复杂的材质属性，有些属性仅仅通过参差不齐的翻译名称很难理解究竟对应什么样的视觉效果，本文直观展示不同属性值对观感带来的影响。</p>
+
+                            </p>
+                            <a href="https://huanime.com.cn/post/tutovraymtl-shu-xing-dui-guan-gan-de-zhi-jie-ying-xiang/" class="btn">click to view</a>
+                        </div>
+                    
+                    
+                    
+                        <div class="timeline-content">
                             <!--h3 class="timeline-title"> [Tool]RaindropFX Pro update 2.0.0</h3-->
                             <h3 class="timeline-title"> <a href="https://huanime.com.cn/post/raindropfx-pro-update-200/">[Tool]RaindropFX Pro update 2.0.0</a></h3>
                             <p>
@@ -334,6 +389,14 @@
     <!--                    <img src="assets/images/star.svg" alt="2019">-->
                         <span>2019</span>
                     </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -610,6 +673,14 @@ function ShowMenu(obj,n){
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                         <div class="timeline-content">
                             <!--h3 class="timeline-title"> [Static]Midnight Party-Procedural City Scape</h3-->
                             <h3 class="timeline-title"> <a href="https://huanime.com.cn/post/staticmidnight-party-procedural-city-scape/">[Static]Midnight Party-Procedural City Scape</a></h3>
@@ -676,6 +747,14 @@ function ShowMenu(obj,n){
     <!--                    <img src="assets/images/star.svg" alt="2017">-->
                         <span>2017</span>
                     </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -844,6 +923,14 @@ function ShowMenu(obj,n){
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                         <div class="timeline-content">
                             <!--h3 class="timeline-title"> [Anime]U3D实时动画《VirtualReality》</h3-->
                             <h3 class="timeline-title"> <a href="https://huanime.com.cn/post/animeyuan-chuang-cg-dong-hua-virtualreality/">[Anime]U3D实时动画《VirtualReality》</a></h3>
@@ -926,6 +1013,14 @@ function ShowMenu(obj,n){
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                         <div class="timeline-content">
                             <!--h3 class="timeline-title"> [Anime]原创CG动画《药》</h3-->
                             <h3 class="timeline-title"> <a href="https://huanime.com.cn/post/animeyuan-chuang-cg-dong-hua-yao/">[Anime]原创CG动画《药》</a></h3>
@@ -956,6 +1051,14 @@ function ShowMenu(obj,n){
     <!--                    <img src="assets/images/star.svg" alt="2014">-->
                         <span>2014</span>
                     </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     

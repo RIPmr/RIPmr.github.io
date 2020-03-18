@@ -7,7 +7,7 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>Code | HU ANIME</title>
-<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1582783664672">
+<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1584523515594">
 <link rel="stylesheet" href="https://huanime.com.cn//media/scripts/lib/lightbox.css" type='text/css' media='all'>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://huanime.com.cn//styles/main.css" type='text/css' media='all'>
@@ -44,11 +44,16 @@
         } else if ((e.shiftKey) && (e.keyCode == 121)) {
           return false;
         }
+        if ((e.ctrlKey) && (e.keyCode == 83)) { //ctrl+s
+            return false;
+        }
       };
       // block right click
       document.oncontextmenu = function() {
         return false;
       }
+      document.oncontextmenu=new Function("event.returnValue=false");  
+      document.onselectstart=new Function("event.returnValue=false");  
     }
     if (!debugMode) disableInfo();
   </script>
@@ -67,6 +72,12 @@
                 <div class="menu">
                     <ul id="menu-secondary-items" class="menu-secondary-items">
                         
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
+                        </li>
+                            
                         
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
@@ -89,12 +100,6 @@
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
                             <a href="https://huanime.com.cn/tag/WSyUFaaTQ/">Anime</a>
-                        </li>
-                            
-                        
-                            
-                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
-                            <a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
                         </li>
                             
                         

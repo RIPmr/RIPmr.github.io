@@ -7,7 +7,7 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>[Tuto]docsify在线文档生成 | HU ANIME</title>
-<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1582783664672">
+<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1584523515594">
 <link rel="stylesheet" href="https://huanime.com.cn//media/scripts/lib/lightbox.css" type='text/css' media='all'>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://huanime.com.cn//styles/main.css" type='text/css' media='all'>
@@ -44,11 +44,16 @@
         } else if ((e.shiftKey) && (e.keyCode == 121)) {
           return false;
         }
+        if ((e.ctrlKey) && (e.keyCode == 83)) { //ctrl+s
+            return false;
+        }
       };
       // block right click
       document.oncontextmenu = function() {
         return false;
       }
+      document.oncontextmenu=new Function("event.returnValue=false");  
+      document.onselectstart=new Function("event.returnValue=false");  
     }
     if (!debugMode) disableInfo();
   </script>
@@ -71,6 +76,12 @@
                         
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
                             <a href="https://huanime.com.cn/tag/qi5SVakfq/">Tools</a>
                         </li>
                             
@@ -90,12 +101,6 @@
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
                             <a href="https://huanime.com.cn/tag/WSyUFaaTQ/">Anime</a>
-                        </li>
-                            
-                        
-                            
-                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
-                            <a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
                         </li>
                             
                         
@@ -261,7 +266,8 @@
 							<article>
 								<p>docsify 是一个动态生成文档网站的工具，不同于 GitBook、Hexo 等，它不会将 .md 转成 .html 文件，所有转换工作都在运行时进行。</p>
 <!-- more -->
-<h2 id="配置docsify">配置docsify</h2>
+<hr>
+<h2 id="1-配置docsify">1 配置docsify</h2>
 <p>docsify需要本地先安装node, 如果没有安装node，可在node官网选择对应操作系统下载安装：https://nodejs.org/zh-cn/</p>
 <p>终端输入npm i docsify-cli -g进行全局安装：<br>
 <code>npm i docsify-cli -g</code></p>
@@ -271,7 +277,7 @@
 docsify-cli version:
   x.x.x
 </code></pre>
-<h2 id="初始化一个文档">初始化一个文档</h2>
+<h2 id="2-初始化一个文档">2 初始化一个文档</h2>
 <h3 id="1-手动创建indexhtml并引入docsify文件">① 手动创建index.html并引入docsify文件</h3>
 <p>只需要创建一个index.html文件，内容如下：</p>
 <pre><code>&lt;!DOCTYPE html&gt;
@@ -315,7 +321,7 @@ Initialization succeeded! Please run docsify serve ./
 <strong>nojekyll文件很重要，如果网站部署到GitHub Pages时，一定要注意这个文件。</strong></li>
 </ul>
 <p>直接编辑 ./README.md 就能更新网站内容，当然也可以添加其他.md文件。</p>
-<h2 id="本地预览">本地预览</h2>
+<h2 id="3-本地预览">3 本地预览</h2>
 <h3 id="1-http-server服务方式">① http-server服务方式</h3>
 <p>用http-server启动服务 (可在终端输入npm install http-server -g来安装http-server)，在浏览器中输入http://127.0.0.1:8080即可浏览效果。</p>
 <pre><code>http-server 
@@ -338,7 +344,7 @@ Listening at http://localhost:3000
 <code>Ctrl+C</code></p>
 <p>默认访问端口：<br>
 <code>http://localhost:3000</code></p>
-<h2 id="文档部署">文档部署</h2>
+<h2 id="4-文档部署">4 文档部署</h2>
 <p>GitHub Pages 支持从三个地方读取文件:</p>
 <pre><code>- master分支
 - master分支下的docs目录
@@ -348,8 +354,8 @@ Listening at http://localhost:3000
 <li>如果你的文档直接是在项目根目录写的，那么可直接把代码推送到master分支上， GitHub Pages里选择master branch;</li>
 <li>如果你的文档是在master分支下的docs/目录下编写的，那么可直接把代码推送到master分支上，GitHub Pages里选择master branch/docs folder。</li>
 </ul>
-<h2 id="文档编写">文档编写</h2>
-<h3 id="定制侧边栏">定制侧边栏</h3>
+<h2 id="5-文档编写自定义">5 文档编写/自定义</h2>
+<h3 id="5-1-定制侧边栏">5-1 定制侧边栏</h3>
 <p>默认情况下，侧边栏会根据当前文档的标题生成目录。也可以设置文档链接，通过 Markdown 文件生成，此时需要手动创建 _sidebar.md 文件:</p>
 <pre><code>* RaindropFX Pro
 	* [2.0.0](RaindropFXPro200)
@@ -376,7 +382,7 @@ Listening at http://localhost:3000
 &lt;/script&gt;
 </code></pre>
 <p>配置alias字段后，所有页面都会显示项目根目录_sidebar.md文件的配置作为侧边栏，子目录的_sidebar.md文件会失效。</p>
-<h3 id="配置导航栏">配置导航栏</h3>
+<h3 id="5-2-配置导航栏">5-2 配置导航栏</h3>
 <p>首先需要在index.html文件中的window.$docsify添加loadNavbar: true,选项：</p>
 <pre><code>&lt;script&gt;
   window.$docsify = {
@@ -408,7 +414,7 @@ Listening at http://localhost:3000
   * [a文件](bar/a)
   * [b文件](bar/b)
 </code></pre>
-<h3 id="多级文档">多级文档</h3>
+<h3 id="5-3-多级文档">5-3 多级文档</h3>
 <p>如果需要创建多个页面，或者需要多级路由的网站，在 docsify 里也能轻松实现。</p>
 <p>假设你的目录结构如下：</p>
 <pre><code>-| docs/
@@ -424,13 +430,13 @@ docs/guide.md         =&gt; http://domain.com/guide
 docs/zh-cn/README.md  =&gt; http://domain.com/zh-cn/
 docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
 </code></pre>
-<h3 id="隐藏标题">隐藏标题</h3>
+<h3 id="5-4-隐藏标题">5-4 隐藏标题</h3>
 <p>当设置了 subMaxLevel 时，默认情况下每个标题都会自动添加到目录中。如果你想忽略特定的标题，可以给它添加 {docsify-ignore} ：</p>
 <pre><code># Getting Started
 
 ## Header {docsify-ignore}
 </code></pre>
-<h3 id="搜索配置">搜索配置</h3>
+<h3 id="5-5-搜索配置">5-5 搜索配置</h3>
 <p>全文搜索插件会根据当前页面上的超链接获取文档内容，在 localStorage 内建立文档索引。默认过期时间为一天，当然我们可以自己指定需要缓存的文件列表或者配置过期时间。</p>
 <pre><code>&lt;script&gt;
     window.$docsify = {
@@ -447,7 +453,7 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
   &lt;!-- 引入搜索模块 --&gt;
   &lt;script src=&quot;//unpkg.com/docsify/lib/plugins/search.js&quot;&gt;&lt;/script&gt;
 </code></pre>
-<h3 id="评论插件gitalk">评论插件Gitalk</h3>
+<h3 id="5-6-评论插件gitalk">5-6 评论插件Gitalk</h3>
 <p>一个现代化的，基于Preact和Github Issue的评论系统。配置完成后需要登录自己的账号点开一次对应文档才会自动在项目中生成Issue。</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//unpkg.com/gitalk/dist/gitalk.css&quot;&gt;
 &lt;script src=&quot;//unpkg.com/docsify/lib/plugins/gitalk.min.js&quot;&gt;&lt;/script&gt;
@@ -464,7 +470,7 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
   })
 &lt;/script&gt;
 </code></pre>
-<h3 id="更改样式">更改样式</h3>
+<h3 id="5-7-更改样式">5-7 更改样式</h3>
 <p>在HTML文件中引入样式表：</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css&quot;&gt;
 </code></pre>
@@ -481,6 +487,10 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
 										
 										
 										
+										<a href="https://huanime.com.cn/tag/itfB5m7XS/" title="View all posts in Essay">Essay</a>
+										
+										
+										
 										<a href="https://huanime.com.cn/tag/qi5SVakfq/" title="View all posts in Tools">Tools</a>
 										
 										
@@ -494,10 +504,6 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
 										
 										
 										<a href="https://huanime.com.cn/tag/WSyUFaaTQ/" title="View all posts in Anime">Anime</a>
-										
-										
-										
-										<a href="https://huanime.com.cn/tag/itfB5m7XS/" title="View all posts in Essay">Essay</a>
 										
 										
 									</p>
@@ -518,7 +524,7 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
 							</div>
 							<div class="author-meta">
 								<span>
-									<img alt='' src="https://huanime.com.cn//images/avatar.png?v=1582783664672" class='avatar avatar-72 photo' height='72' width='72'>
+									<img alt='' src="https://huanime.com.cn//images/avatar.png?v=1584523515594" class='avatar avatar-72 photo' height='72' width='72'>
 									<!--span>WRITTEN BY: </span-->
 								</span>
 								<span>

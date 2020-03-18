@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-02-27T06:08:04.822Z</updated>
+    <updated>2020-03-18T09:27:51.559Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -10,6 +10,674 @@
     <logo>https://huanime.com.cn/images/avatar.png</logo>
     <icon>https://huanime.com.cn/favicon.ico</icon>
     <rights>All rights reserved 2020, HU ANIME</rights>
+    <entry>
+        <title type="html"><![CDATA[[Tuto]ColorSpace—我们到底在谈论什么(下)]]></title>
+        <id>https://huanime.com.cn/post/tutocolorspace-wo-men-dao-di-zai-tan-lun-shi-me-xia/</id>
+        <link href="https://huanime.com.cn/post/tutocolorspace-wo-men-dao-di-zai-tan-lun-shi-me-xia/">
+        </link>
+        <updated>2020-03-18T09:04:35.000Z</updated>
+        <summary type="html"><![CDATA[<pre><code>干货篇——如何在 3ds Max 和 AfterEffects 中实现ACES workflow
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<pre><code>干货篇——如何在 3ds Max 和 AfterEffects 中实现ACES workflow
+</code></pre>
+<!-- more -->
+<br>
+<h2 id="4-干货">4 干货</h2>
+<h3 id="4-1-从出图格式说起">4-1 从出图格式说起</h3>
+<h4 id="jpegjoint-photographic-experts-group">JPEG（Joint Photographic Experts Group）</h4>
+<p>JPEG编码用来压缩去除冗余的图像和彩色数据，获取得极高的压缩率的同时能展现十分丰富生动的图像，换句话说，就是可以用较少的磁盘空间得到较好的图像质量。JPEG 图片以 24 位颜色存储单个光栅图像。JPEG 是与平台无关的格式，支持最高级别的压缩，但这种压缩是有损耗的。当编辑和重新保存JPEG文件时，JPEG会降低原始图片的数据质量，这种质量下降是累积性的。</p>
+<h4 id="pngportable-network-graphics">PNG（Portable Network Graphics）</h4>
+<p>一种无损压缩的位图片形格式。其设计目的是试图替代GIF和TIFF文件格式，同时增加一些GIF文件格式所不具备的特性。PNG文件采用LZ77算法的派生算法进行压缩，其结果是获得高的压缩比，不损失数据。它利用特殊的编码方法标记重复出现的数据，因而对图像的颜色没有影响，也不可能产生颜色的损失，这样就可以重复保存而不降低图像质量。</p>
+<h4 id="bmpbitmap">BMP（Bitmap）</h4>
+<p>微软Windows操作系统中的标准图像文件格式，可以分成两类：设备相关位图（DDB）和设备无关位图（DIB），使用非常广。它采用位映射存储格式，除了图像深度可选以外，不采用其他任何压缩，因此，BMP文件所占用的空间很大。BMP文件的图像深度可选lbit、4bit、8bit及24bit。BMP文件存储数据时，图像的扫描方式是按从左到右、从下到上的顺序。由于BMP文件格式是Windows环境中交换与图有关的数据的一种标准，因此在Windows环境中运行的图形图像软件都支持BMP图像格式。</p>
+<h4 id="ddsdirectdraw-surface">DDS（DirectDraw Surface）</h4>
+<p>DirectX纹理压缩（DirectX Texture Compression，简称DXTC）的产物。由NVIDIA公司开发。大部分3D游戏引擎都可以使用DDS格式的图片用作贴图，也可以制作法线贴图。通常情况下想要编辑此格式需要安装 dds 插件才行。这种格式现在使用的越来越少，但是一些老游戏还是 dds 贴图。</p>
+<h4 id="hdrhigh-dynamic-range">HDR(High-Dynamic Range)</h4>
+<p>相比普通的图像，可以提供更多的动态范围和图像细节，根据不同的曝光时间的LDR(Low-Dynamic Range)图像，利用每个曝光时间相对应最佳细节的LDR图像来合成最终HDR图像，能够更好的反映出真实环境中的视觉效果。现实真正存在的亮度差，即最亮的物体亮度，和最暗的物体亮度之比为10的8次方， 而人类的眼睛所能看到的范围是10的5次方左右。<br>
+它比其它格式的图像有着更大亮度的数据贮存，而且它记录亮度的方式与传统的图片不同，不是用非线性的方式将亮度信息压缩到8bit或16bit的颜色空间内，而是用直接对应的方式记录亮度信息，它可以说记录了图片环境中的照明信息，很多HDRI文件是以<strong>全景图</strong>的形式提供的，因此我们可以使用这种图象来“照亮”场景 (摄影中的RAW图像就算是 hdr 的一种)。<br>
+<code>*NOTE: HDRI与全景图有本质的区别，全景图指的是包含了360度范围场景的普通图象，可以是JPG格式，BMP格式，TGA格式等等，属于Low-Dynamic RangeRadiance Image，它并不带有光照信息。</code></p>
+<h4 id="tga-tagged-graphics">TGA (Tagged Graphics)</h4>
+<p>由美国Truevision公司为其显示卡开发的一种图像文件格式，已被国际上的图形、图像工业所接受。TGA格式在兼顾了BMP的图象质量的同时又兼顾了JPEG的体积优势。TGA格式支持压缩，使用不失真的压缩算法。特点：通道效果、方向性。在CG领域常作为影视动画的序列输出格式，因为兼具体积小和效果清晰的特点。</p>
+<h4 id="tifftagged-image-file-format">TIFF（Tagged Image File Format）</h4>
+<p>TIFF格式为<strong>无损压缩</strong>文件，压缩率低，这种格式可以支持RGB、CMYK等多种色彩模式，adobeRGB、proPhoto RGB等多种色彩空间，8位、16位、32位等各种色彩深度，甚至也能保留图层和alpha通道，也因此占用空间较大。TIFF 格式可以制作质量非常高的图像，因而经常用于出版印刷，也是CG制作中推荐使用的一种格式。</p>
+<h4 id="psdphotoshop-document">PSD（Photoshop Document）</h4>
+<p>Adobe公司的图像处理软件Photoshop的专用格式。这种格式可以存储Photoshop中所有的图层，通道、参考线、注解和颜色模式等信息。<br>
+<code>*NOTE: 但这种格式在CG制作中个人并不推荐使用：体积太大，读取速度缓慢。</code></p>
+<h4 id="exr">EXR</h4>
+<p>EXR是由工业光魔（Industrial Light &amp; Magic）开发的一种HDR标准。OpenEXR文件的扩展名为.exr，常见的OpenEXR文件是FP16（16bit Float Point，也被称为half Float Point）数据图像文件，每个通道的数据类型是FP16，一共四个通道64bpp，每个通道1个bit位用来标志“指数”，5个bit用来存放指数的值，10个bit存放色度坐标（u，v）的尾数，其动态范围从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6.14</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>5</mn></mrow></msup></mrow><annotation encoding="application/x-tex">6.14 × 10^{-5}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">6</span><span class="mord">.</span><span class="mord">1</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span>到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6.41</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">6.41 × 10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">6</span><span class="mord">.</span><span class="mord">4</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>。<br>
+在OpenEXR的算法里面共使用16bit来表示光照数据。虽然看起来和使用16bit亮度通道运算位数相同，但是OpenEXR巧妙的采用了1个bit位用来标志“指数”，5个bit用来存放指数的值，10个bit存放色度坐标的尾数，这样就轻易的解决了浮点数值由于位数少而精度不高的问题，大大的拓宽的在FP16下的动态范围。<br>
+<code>*NOTE: EXR是渲染出图中个人最推荐使用的无损格式，尤其是在做AOV分层渲染时，能够直接打包所有通道。但缺点在于当下主流图像处理软件的格式支持比较差，通常需要安装插件。</code></p>
+<h3 id="4-2-vray中的色彩模式">4-2 Vray中的色彩模式</h3>
+<p>前文已经介绍过Vray中的线性工作流，这里我们就再来简单地捋一捋LWF下VFB中的各种显示模式：</p>
+<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1584510519104.png" alt="" width="600" loading="lazy"></figure>
+<center>渲染完直接在VFB中查看的结果，毫无疑问是linear的，但显示器无法显示线性图像</center>
+<figure data-type="image" tabindex="2"><img src="https://huanime.com.cn//post-images/1584512643159.png" alt="" width="600" loading="lazy"></figure>
+<center>点这里可以切换到sRGB模式，也就是符合大部分显示器的色彩空间</center>
+<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1584512747459.png" alt="" loading="lazy"></figure>
+<center>或者加载LUT也可以正确查看图像，但记得要勾选应用LUT之前转换到LOG模式</center><br>
+<h3 id="4-3-redshift中的色彩模式">4-3 Redshift中的色彩模式</h3>
+<p>接着我们再来看看RS中的色彩管理，RS 3.6以上才具备VFB中的色彩管理功能：</p>
+<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1584512982216.png" alt="" width="250" loading="lazy"></figure>
+<p>RS的默认设置和VR有些许不同，默认就是sRGB模式，我们可以手动切换显示模式，Linear就相当于VR的默认显示：</p>
+<figure data-type="image" tabindex="5"><img src="https://huanime.com.cn//post-images/1584513089561.png" alt="" loading="lazy"></figure>
+<p>RS的色彩管理相比VR更加灵活的一点是，RS有 'Apply color management before LUT' 选项，这一选项使得我们几乎可以在应用LUT前将图像转换到任意色彩空间，而VR就只能对线性或LOG图像应用LUT。此外，VR中的OCIO选项与LUT不可同时启用，基于这个选项，RS就能够做到同时启用OCIO与LUT。</p>
+<figure data-type="image" tabindex="6"><img src="https://huanime.com.cn//post-images/1584513173223.png" alt="" loading="lazy"></figure>
+<h3 id="4-4-如何在ae中还原linear-workflow">4-4 如何在AE中还原Linear workflow</h3>
+<p>AE中的色彩管理环节众多，所以十分容易出错，后期合成时需要时刻注意我们在什么色彩空间下工作，正确的色彩空间才能带给我们正确的后期结果。CG渲染到后期的完整流程一言以蔽之就是：</p>
+<figure data-type="image" tabindex="7"><img src="https://huanime.com.cn//post-images/1584517610998.jpg" alt="" loading="lazy"></figure>
+<p>还是看不懂？没关系我们一步一步来。<br>
+我们将第一次渲染好的EXR导入AE中时，会发现事情和想象的有点不同：</p>
+<figure data-type="image" tabindex="8"><img src="https://huanime.com.cn//post-images/1584514665075.png" alt="" width="600" loading="lazy"></figure>
+<p>说好的Linear，怎么显示结果和sRGB一样？<br>
+这是因为AE有自己的输入输出色彩管理，输入色彩管理在这里：</p>
+<figure data-type="image" tabindex="9"><img src="https://huanime.com.cn//post-images/1584514831468.png" alt="" loading="lazy"></figure>
+<p>对于线性工作流，工作空间选择sRGB，并勾选线性化颜色空间 (也就是先前说的sRGB-Linear)，这时我们全部的颜色混合工作都是线性的，正确的。此外，记得还要勾选32-bit颜色，因为输出的EXR是32-bit Full-Float类型，默认的8-bit会丢失精度。</p>
+<figure data-type="image" tabindex="10"><img src="https://huanime.com.cn//post-images/1584515906622.png" alt="" width="600" loading="lazy"></figure>
+<p>这时图像看起来似乎并没有什么变化，这是因为AE还有一个显示颜色管理 (Display color management)， 这个选项用于模拟输出设备的显示效果，并且默认是开启的：</p>
+<figure data-type="image" tabindex="11"><img src="https://huanime.com.cn//post-images/1584515157249.png" alt="" width="350" loading="lazy"></figure>
+<p>所以实际上，仅仅是一步简单的导入操作，AE就已经为我们做了很多的色彩管理工作，也就是说导入的素材实际经历了下面几步流程：</p>
+<p><code>sRGB-Linear (导入素材，素材也可以是其他任意色彩空间) &gt; sRGB-Linear (转换到工作空间并进行后期处理) &gt; Rec.709 (转换到输出设备所能够呈现的色彩空间)</code></p>
+<p>这时如果关闭显示色彩管理，就可以看到黑乎乎的线性图像，如果你看到的仍然是校正后的图像，那么可能还需要设置素材的色彩解释方式 (通常来说，导入EXR时这些选项是自动设置好的)：</p>
+<figure data-type="image" tabindex="12"><img src="https://huanime.com.cn//post-images/1584515957523.png" alt="" loading="lazy"></figure>
+<p>勾选 '解释为线性光' 即可。<br>
+接着我们来还原一下Vray VFB中的几个选项：</p>
+<p>① sRGB<br>
+这个最简单，默认显示就可以了；</p>
+<p>② Linear<br>
+两种方法还原：关闭显示色彩管理，或者添加一个'Cineon转换器'对图像进行转换；</p>
+<p>③ LUT<br>
+LUT的加载是最复杂的，我们先来仔细理顺VR中的处理流程：<br>
+<code>Linear-sRGB (渲染结果) &gt; Log-sRGB (勾选转换到LOG) &gt; Rec.709 (应用LUT)</code></p>
+<p>所以我们在AE中也必须遵循这一流程：</p>
+<figure data-type="image" tabindex="13"><img src="https://huanime.com.cn//post-images/1584516371841.png" alt="" width="600" loading="lazy"></figure>
+<center>这样我们就得到了和VR VFB中一模一样的结果</center><br>
+<p>因为AE中复杂的色彩管理流程，这里的转换流程可能具有一定的误导性：LUT将颜色空间转换到了Rec.709，而我们显示器的显示色彩也是Rec.709，那么为什么LUT下面还要加一个转换到sRGB?</p>
+<ul>
+<li>因为我们的工作空间是sRGB，所以图像输出之前，还需要经历sRGB &gt; Rec.709的转换，所以这一步是必不可少的。</li>
+</ul>
+<pre><code>由于AE自带的Cineon转换器不提供转换到sRGB的功能，所以这里强推qp Nuclear LUT插件，所有的色彩空间转换一应俱全 (https://aescripts.com/qp-nuclear-lut/)
+</code></pre>
+<figure data-type="image" tabindex="14"><img src="https://huanime.com.cn//post-images/1584516824201.png" alt="" loading="lazy"></figure>
+<h3 id="4-5-vray中使用aces-workflow">4-5 Vray中使用ACES workflow</h3>
+<p>前面提到基于ACES工作流能够得到比线性工作流更逼真还原的渲染结果，现在Maya、Houdini有原生ACES工作流支持，Blender有Filmic插件支持，Max却还迟迟没有ACES支持，那么我们就无法使用ACES工作流了吗？当然可以！我们自己手动颜色管理！<br>
+基于前面的论述，具备IDT-ODT，我们就可以使用ACES workflow。使用ACES workflow，整个CG流程都得做出改变，要想使用ACES需要通过OCIO（open color io）这一开源接口(官网：http://opencolorio.org/)。<br>
+下载并解压即可，我们需要用到的实际上只是.config文件：</p>
+<figure data-type="image" tabindex="15"><img src="https://huanime.com.cn//post-images/1584517928155.png" alt="" loading="lazy"></figure>
+<p>开始之前我们需要先区分一下ACES提供的三种子颜色空间</p>
+<ul>
+<li><strong>ACES 2065- 1</strong> - This is a wide-range Linear, color space, with a larger coverage than the human eye, so it is used for archival copies and transfer of material between departments.</li>
+<li><strong>ACEScc and ACEScct</strong> - Logarithmic color spaces intended for color correction.</li>
+<li><strong>ACEScg</strong> - This is a Linear space for working with CG/VFX. This is the space you need to use as the main color space for working with color set-up and light in your rendered images.</li>
+</ul>
+<p>毫无疑问，我们要使用的是ACEScg。那么首先我们来还原IDT：<br>
+Vray中提供了VRayOCIO用于将输入的贴图转换到ACES颜色空间：</p>
+<figure data-type="image" tabindex="16"><img src="https://huanime.com.cn//post-images/1584518273281.png" alt="" loading="lazy"></figure>
+<p>首先加载config文件，输入和输出如下对号入座：</p>
+<ul>
+<li><strong>Utility-Linear - Rec.709 or sRGB</strong> - choose this for Linear images that use the Rec.709 or sRGB primaries/gamut (which are the same).</li>
+<li><strong>Utility-RAW</strong> - for images that do not require conversion (scalar masks, Displacement, Roughness).</li>
+<li><strong>Utility-Rec.709-Camera</strong> - for sRGB images, 8-16 bit (lightmaps, matte paints), (JPEG, PNG).</li>
+<li><strong>Utility-sRGB - Texture</strong> - recommended color space for sRGB image textures 8-16 bit (JPEG, PNG).</li>
+<li><strong>ACEScg</strong> - Color space for images that are already converted to ACEScg.</li>
+</ul>
+<p>现在贴图的转换就全部完成了，那么有的小伙伴会问了：我要用纯色怎么办呢？每次用纯色用PS生成一张纯色贴图？<br>
+当然不用，但是你也不能再直接在Max的颜色拾取器里面取色，因为这些颜色会被直接解释为ACES空间下的颜色，而实际上你需要的是sRGB空间下的颜色！<br>
+Vray提供了这种颜色转换：</p>
+<p><img src="https://huanime.com.cn//post-images/1584518635959.png" alt="" loading="lazy"><br>
+<canter>直接选ACES就可以</center></p>
+<p>什么你的VrayColor里面没有ACES？<br>
+别急，先关掉MAX，打开你电脑的环境变量配置，新增一条：</p>
+<figure data-type="image" tabindex="17"><img src="https://huanime.com.cn//post-images/1584518706890.png" alt="" loading="lazy"></figure>
+<p>然后重新打开MAX，你的VrayColor里面就会出现ACES了🤘</p>
+<p>但是还有一个问题😨<br>
+这样依然是直接选择ACES空间下的色彩，调色没了手感，我想继续在熟悉的sRGB空间取色，再转换到ACES，怎么办？<br>
+当然也没问题！打开你的MaxScript Listener，输入并运行：</p>
+<pre><code>vr=renderers.current
+vr.options_rgbcolorspace=2
+</code></pre>
+<p>然后回到材质编辑器，按 'U' 键更新视图，此时颜色模式选sRGB，熟悉的手感就又回来了👍</p>
+<p>下一步是还原ODT，这个就比较简单了，VFB里加载config，输入选ACEScg，输出选Rec.709或sRGB，简单粗暴：</p>
+<figure data-type="image" tabindex="18"><img src="https://huanime.com.cn//post-images/1584518994044.png" alt="" loading="lazy"></figure>
+<p>现在你可以尽情调节曝光值享受超大动态范围带来的自由度了！</p>
+<p>Max和Vray中ACES现在还没有被很完美地支持，需要很多手工配置，不过好消息是论坛里VRay 开发者已经给出了明确的会推出正式的ACES流程的答复：</p>
+<pre><code>ACES support is already working internally. After a bit more testing, we plan to implement it in the builds and possibly release it with the next official release.
+</code></pre>
+<h3 id="4-6-如何在ae中还原aces-workflow">4-6 如何在AE中还原ACES workflow</h3>
+<p>AE中还原ACES的流程和线性工作流是相似的，工作空间选ACEScg (2019及以上AE才有这个选项)：</p>
+<figure data-type="image" tabindex="19"><img src="https://huanime.com.cn//post-images/1584519206665.png" alt="" width="500" loading="lazy"></figure>
+<p>但是如果要在AE中使用OCIO自己管理转换流程，需要安装插件 (OpenColorIO，开源)：</p>
+<figure data-type="image" tabindex="20"><img src="https://huanime.com.cn//post-images/1584519651557.png" alt="" loading="lazy"></figure>
+<center>作者更新频繁，链接经常变，大家自己找吧😌</center><br>
+<h3 id="4-7-unity-post-processing-stack-中的-aces-颜色空间">4-7 Unity Post-Processing Stack 中的 ACES 颜色空间</h3>
+<p>在为本次的干货划上句号之前，这里还有一个疑问需要解释：</p>
+<h4 id="unity-中并没有实现-ocio自然也就不存在-aces-workflow-一说那么为什么-unity-官方的-ppv2-中会有-aces-颜色空间">Unity 中并没有实现 OCIO，自然也就不存在 ACES workflow 一说，那么为什么 Unity 官方的 PPV2 中会有 ACES 颜色空间？</h4>
+<figure data-type="image" tabindex="21"><img src="https://huanime.com.cn//post-images/1584520736945.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="22"><img src="https://huanime.com.cn//post-images/1584520053599.gif" alt="" loading="lazy"></figure>
+<p>因为得益于ACES极大的动态范围，即使是Linear-sRGB流程下渲染得到的图像，经过ACEScg转换后，也能够得到额外的对比度、色彩表现的增强：</p>
+<figure data-type="image" tabindex="23"><img src="https://huanime.com.cn//post-images/1584520995251.png" alt="" loading="lazy"></figure>
+<h2 id="5-总结">5 总结</h2>
+<p>无论是在以前的数字中间片时代， 还是现在的全数字流程时代， 运用色彩管理和匹配都是非常科学、 合理和必要的。</p>
+<p>但是，也没有必要过分追求流程的正确性，得到自己满意的艺术效果才是我们所做一切努力的最终目标，实际上即使是扫描线渲染器的优秀作品，放到今天看也依然优秀：</p>
+<figure data-type="image" tabindex="24"><img src="https://huanime.com.cn//post-images/1584521123295.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="25"><img src="https://huanime.com.cn//post-images/1584521127017.jpg" alt="" loading="lazy"></figure>
+<center>艺术家 Olivier Vernay Kim - Infographiste 3D</center>
+<p>更多的时候，我们需要去寻找自己身上艺术修养的不足，不断提高自己的审美。最后祝大家都能做出满意的作品！😌</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Tuto]ColorSpace—我们到底在谈论什么(上)]]></title>
+        <id>https://huanime.com.cn/post/tutodui-yu-yan-se-kong-jian-wo-men-dao-di-zai-tan-lun-shi-me/</id>
+        <link href="https://huanime.com.cn/post/tutodui-yu-yan-se-kong-jian-wo-men-dao-di-zai-tan-lun-shi-me/">
+        </link>
+        <updated>2020-03-17T08:49:43.000Z</updated>
+        <summary type="html"><![CDATA[<pre><code>原理篇：颜色空间（Color Space）到底是什么？它对于CG又意味着什么？
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<pre><code>原理篇：颜色空间（Color Space）到底是什么？它对于CG又意味着什么？
+</code></pre>
+<!-- more -->
+<br>
+<h4 id="cg渲染为什么死抠细节在材质-贴图上花了诸多功夫出图感觉还是像渲的做不到照片般的真实感">CG渲染，为什么死抠细节，在材质、贴图上花了诸多功夫，出图感觉还是像&quot;渲&quot;的，做不到照片般的真实感？</h4>
+<ul>
+<li>因为你可能忽略了<strong>数字影像的色彩管理</strong>。</li>
+</ul>
+<hr>
+<h2 id="1-dynamic-range">1 Dynamic Range</h2>
+<p>一切要从照相机的原理说起，CG渲染，其实就是一架虚拟相机拍摄虚拟的景设。<br>
+当我们用相机拍摄一个背对阳光的人物，默认状态下人物会变得比较黑；但如果你将焦点对准人物，人物会变得&quot;白起来&quot;，但相应的背景天空会过曝，几乎看不清细节，这是由&quot;曝光点&quot;引起的。</p>
+<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1584004142838.jpg" alt="" loading="lazy"></figure>
+<p>被聚焦的物体会被自动调节成 &quot;中灰&quot; 色。照相机能展现的色彩范围是有一定限度的，它只能记录所能展现的最亮与最暗颜色之间的颜色。而超过了这个范围的颜色，会被直接映射为黑色或白色，这就是我们经常在照片中看到的 &quot;死黑&quot; 或 &quot;过曝&quot; 区域。</p>
+<figure data-type="image" tabindex="2"><img src="https://huanime.com.cn//post-images/1584004076271.jpg" alt="" loading="lazy"></figure>
+<p>照相机以 &quot;中灰&quot; 为基准点，所能记录的最亮和最暗的色彩范围，就叫<strong>Dynamic Range</strong>。<br>
+一个相机的Dynamic Range越大，拍摄出来的照片就越好。</p>
+<p><img src="https://huanime.com.cn//post-images/1584004220393.jpg" alt="" loading="lazy"><center>Dynamic Range</center></p>
+<p>普通相机最多可以拍摄到11左右的动态范围，dSLRs相机的最大动态范围是14左右，而影视拍摄常用的摄像机最多可以拍摄到15，而我们人眼所能看到的最大动态范围是20，远远超过了这些相机所能记录的范围值。</p>
+<h4 id="那么三维软件的dynamic-range又是多少呢">那么三维软件的Dynamic Range又是多少呢？</h4>
+<ul>
+<li>渲染器大都使用sRGB颜色模式，最多只能展现<strong>7-8左右</strong>的动态范围，连一部廉价相机都不如。</li>
+</ul>
+<h2 id="2-color-space">2 Color Space</h2>
+<h3 id="2-1-色彩空间的定义">2-1 色彩空间的定义</h3>
+<p><strong>颜色空间</strong>是指一个能够解析数值的<strong>颜色模型</strong>。<strong>色域</strong> (gamut/color gamut)，则是色彩的某个完整的<strong>子集</strong>。在色彩模型和参照色彩空间之间添加一个特定的<strong>转换函数</strong>，在参照色彩空间中建立一个确定的“范围”，这就叫色域，对于给定的色彩模型，这就定义了一个色彩空间。</p>
+<p>当定义一个色彩空间的时候，至少需要三个重要的指标：</p>
+<ol>
+<li>色域（三个基色的坐标形成的三角形）</li>
+<li>白点（相当于色域三角形的中心）</li>
+<li>转换函数（如何对色域三角形进行采样）</li>
+</ol>
+<p>1.色域 (也叫做基色)<br>
+也就是图中最外面的白色粗线形成的三角形，如果三角形的三个顶点的位置发生了变化，必然会导致整个三角形所覆盖的颜色范围发生变化。</p>
+<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1584433074709.jpg" alt="" width="350" loading="lazy"></figure>
+<center>各个领域的常见色域</center>
+<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1584433159473.jpg" alt="" width="500" loading="lazy"></figure>
+<center>常见色域范围对比</center>
+<p>2.白点<br>
+如果三角形的位置不变，但是中心白点移动了位置，那么颜色范围也会发生改变。</p>
+<figure data-type="image" tabindex="5"><img src="https://huanime.com.cn//post-images/1584365883877.png" alt="" width="600" loading="lazy"></figure>
+<center>基色与白点</center>
+<p>3.转换函数<br>
+<code>*NOTE: 这里我们需要先认清一个十分常见的误区：Linear和Gamma并非色彩空间！</code><br>
+Maya、Nuke等软件的色彩空间选项中包含Linear“色彩空间”，但实际上这是一种错误的理解，Linear、gamma不是色彩空间，而是如何 <strong>采样</strong> 的概念。</p>
+<figure data-type="image" tabindex="6"><img src="https://huanime.com.cn//post-images/1584366240861.png" alt="" width="600" loading="lazy"></figure>
+<p>比如下图中，两个色彩空间的色域一样，白点也一样。我们向内切分这个三角形，对比一下每次切割的顶点，就会发现不同的切割方式会对应不同的颜色。通常理解的 <strong>linear</strong> 只不过是 <strong>gamma = 1</strong> 的情况，可以理解为“均匀” 切分。</p>
+<figure data-type="image" tabindex="7"><img src="https://huanime.com.cn//post-images/1584423382416.png" alt="" width="600" loading="lazy"></figure>
+<p>那么为什么会出现不同的采样方式呢？因为不同光值下人眼对中灰的识别并不是按线性分布的 (视觉 50% 灰=亮度 18% 灰)，人眼对暗部变化的感知更为明显，Log 函数就是为了拟合人眼识别的规律来储存相机记录的数据，它可以记录更多的明暗信息，拥有更高的宽容度。</p>
+<figure data-type="image" tabindex="8"><img src="https://huanime.com.cn//post-images/1584427852523.png" alt="" loading="lazy"></figure>
+<center>原始信息</center>
+<figure data-type="image" tabindex="9"><img src="https://huanime.com.cn//post-images/1584427856862.png" alt="" loading="lazy"></figure>
+<center>Linearly Encoding</center>
+<figure data-type="image" tabindex="10"><img src="https://huanime.com.cn//post-images/1584427860388.png" alt="" loading="lazy"></figure>
+<center>Gamma Encoding</center>
+<p>可以看出，Gamma 校正后的编码更能体现人眼的识别范围，并且节省编码空间，这种编码方式下，所有的编码值都能得到有效利用。</p>
+<p>常见色域、转换函数、白点参数：</p>
+<table>
+<thead>
+<tr>
+<th>色域</th>
+<th>转换函数</th>
+<th>白点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sRGB</td>
+<td>linear</td>
+<td>D50</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>gamma 2.2</td>
+<td>D60</td>
+</tr>
+<tr>
+<td>V-Gamut</td>
+<td>gamma 2.6</td>
+<td>DCI</td>
+</tr>
+<tr>
+<td>ProPhoto RGB</td>
+<td>cineon</td>
+<td>D65</td>
+</tr>
+<tr>
+<td>Rec.2020</td>
+<td>logC</td>
+<td>... ...</td>
+</tr>
+<tr>
+<td>Rec.709</td>
+<td>RedLogFilm</td>
+<td></td>
+</tr>
+<tr>
+<td>AdobeRGB</td>
+<td>Slog3</td>
+<td></td>
+</tr>
+<tr>
+<td>... ...</td>
+<td>... ...</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>我们只要任意组合三列其中之一 (白点往往是官方和色域一起规定的，所以可以省略)，就可以得到一个'<strong>色彩空间</strong>'。这也就是为什么我们经常会看到LUT的文件名上写着 sRGB-D65-linear、WideGamut-D50-linear 等等。当然还有一些色彩空间不需要说那么多，因为这些色彩空间在定义的当初就完全规定了色域、白点、gamma。因此只要说出他的名字就可以了，比如 ACES。</p>
+<h3 id="2-2-色域转换">2-2 色域转换</h3>
+<p>摄像机拍摄的照片数据(RAW)全部是&quot;01&quot;二进制形式存储的一组RBG确定值，由于不同的设备有不同的色域，因此把这样一组数值输入不同的设备，会产生不同的颜色。如果不进行科学的处理，在不同的设备不同的系统中交换图像RGB数据时，设备或系统只会机械的读取RGB的绝对值，不同色彩空间下的色彩转换发生混乱，色彩将不能正确再现。因此要把这些数据转变成我们能看到的图像，就需要颜色转换(Color Transform)。</p>
+<figure data-type="image" tabindex="11"><img src="https://huanime.com.cn//post-images/1584020374938.jpg" alt="" loading="lazy"></figure>
+<p>有些相机里会自带一些色域：sRGB、Adobe RGB。还有部分厂家会有自己特有的色彩空间，如索尼的 S-Gamut3、松下的 V-Gamut、富士的 F-Log-Gamut；以及各种国际标准色彩空间：ProPhoto RGB、P3、Rec.709、Rec.2020 等等。这些色域都可以在色彩空间色度图中表现出来，严格来讲这些色域都是 CIE-XYZ 的子集。可以通过线性转换来得到。<br>
+典型的转换过程是这样的：</p>
+<figure data-type="image" tabindex="12"><img src="https://huanime.com.cn//post-images/1584101198495.jpg" alt="" loading="lazy"></figure>
+<ol>
+<li>拍摄，得到滤镜阵列的原始文件，存为raw;</li>
+<li>解马赛克(Demosaicing)，根据预设的色彩矩阵将拍摄得到的原始数据转化到cie-xyz色彩空间，或其他绝对色彩空间（非设备依赖色彩空间）;</li>
+<li>每个色彩空间都有白点和与cie-xyz相互转换的色彩矩阵。根据白平衡设定改变矩阵，用改变后的色彩矩阵转换图形到对应的色彩空间。不同品牌的相机有各自不同的转换方式，Sony的叫S-log，Canon的叫Canon log，阿莱的叫logC，等;</li>
+<li>根据色彩空间制定的OETF曲线（如hlg，gamma2.2），将图像压缩并存储为log文件。</li>
+</ol>
+<p>若色域未经转换就直接丢给 Rec.709 标准的显示器或者上传到网络空间的话，会产生颜色偏差。这是因为 Rec.709 标准的显示器把更宽广色域的 RGB 三值直接对应到 sRGB 的值中所产生的偏差，通常会出现饱和度下降的情况；若两个色域的白点也不一致的话，色温也会出现偏差。目前被大多数显示设备所接受并使用的 Rec.709 标准使用的色域与 sRGB 相同，并且网络上显示图片的标准也是 sRGB，这就意味着 sRGB 目前统治着大部分的市场。部分相机虽然支持更大的色域范围，如：ProPhoto RGB、Adobe RGB、S-Gamut3、F-Gamut 等，但是要上传到网络空间则须转换到 sRGB 的色域。</p>
+<h3 id="2-3-常见转换函数">2-3 常见转换函数</h3>
+<h4 id="gamma22">Gamma2.2</h4>
+<p>Gamma 本质上为幂函数，是一种既符合人眼视觉特性，又节省编码空间的编码方法。设编码值为 C，亮度为 I，则两者的关系为：</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mo>=</mo><msup><mi>I</mi><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>γ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">C = {I^{1/\gamma }}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">/</span><span class="mord mathdefault mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>其中 𝛾（读作 gamma）为常数，因系统而异。</p>
+<figure data-type="image" tabindex="13"><img src="https://huanime.com.cn//post-images/1584430896601.png" alt="" loading="lazy"></figure>
+<p>Gamma 校正几乎存在于所有的摄像设备和显示设备中，但其存在一定的局限性：</p>
+<ol>
+<li>颜色混合<br>
+由于图片中的 RGB 的值是通过 Gamma 校正存放在文件中的，这就造成了图像在模糊过程中出现颜色断层的现象，以红色和绿色举例：</li>
+</ol>
+<figure data-type="image" tabindex="14"><img src="https://huanime.com.cn//post-images/1584429194478.png" alt="" width="600" loading="lazy"></figure>
+<p>大部分软件中模糊颜色值时仅仅取相邻颜色的平均值，因此会出现丑陋的暗带；而正确的计算方法是先将颜色还原为线性，计算后再基于gamma转换：</p>
+<figure data-type="image" tabindex="15"><img src="https://huanime.com.cn//post-images/1584429287522.png" alt="" width="600" loading="lazy"></figure>
+<p><strong>这也就是VFX中经常提到的 '线性工作流' 的来历</strong>。</p>
+<ol start="2">
+<li>动态范围<br>
+Gamma 另一个局限性在于动态范围。Gamma 校正过的图像会在亮部和高光的表现欠佳，因为这种校正下超出 90% 亮度所获得的电压范围很小。<br>
+究其原因是人眼对亮度的反映本质上来说是<strong>对数响应</strong>，指数形式的 Gamma 校正只能在一定程度上模拟人眼的非线性识别，与人眼的特性有根本性的差异，这会导致最终影像的信噪比和动态范围降低。</li>
+</ol>
+<p>有一个解决方案为 Rec.709（800%），即在 电压的80% 处设置拐点，并且把 800% 的亮度视为原来的 100% 并且等比例拉伸：</p>
+<figure data-type="image" tabindex="16"><img src="https://huanime.com.cn//post-images/1584429497626.png" alt="" loading="lazy"></figure>
+<h4 id="srgb-rec709">sRGB &amp; Rec.709</h4>
+<p>sRGB的转换函数和Rec.709非常相似，但并不相同。两个转换函数都是分段函数，第一部分为线性函数，第二部分是指数函数。只不过在sRGB的时候，指数部分是2.4，而Rec.709的指数部分是2.2。</p>
+<p><img src="https://huanime.com.cn//post-images/1584018984239.png" alt="" loading="lazy"><center>sRGB</center></p>
+<p><img src="https://huanime.com.cn//post-images/1584018993711.png" alt="" loading="lazy"><center>Rec.709</center></p>
+<figure data-type="image" tabindex="17"><img src="https://huanime.com.cn//post-images/1584019002024.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="18"><img src="https://huanime.com.cn//post-images/1584019009240.png" alt="" loading="lazy"></figure>
+<p>这种方法在一定程度上扩大了 Gamma 校正所能记录的亮度范围，但是也没有在根本上解决影调不够细腻及动态范围小的缺陷。</p>
+<p>为了解决 Gamma 校正的缺陷，目前所有主流摄影机都配备了 <strong>Log 校正</strong>。Log 图像文件起源于柯达的 Cineon 胶片扫描系统。 该系统将物理的胶片信息， 以 Log 对数函数曲线的计算方式， 转换为数字信息。 以这种方式转换的图像信息， 拥有更多的高亮信息、 阴影部分信息， 以及更宽的色域范围。<br>
+由于 Log 视频具有 Log 曲线特性， 并且拥有比 Rec.709 更宽的色域范围， 所以 Log 视频在普通显示器上呈现出低对比度、 低饱和度的特征。 现在各数字摄影机厂商， 都将 Log 函数曲线的记录方式应用在了各自的摄影机之中。 由于各个品牌的技术差异， 其拍摄视频的 Log 函数曲线、 色域范围都不尽相同。</p>
+<h4 id="c-log">C-log</h4>
+<p>Canon 的 Log 称为 C-log，分为三代Canon Log 3、 Canon Log 2 与 Canon Log，都是以后期处理流程为前提的伽马设置 ：</p>
+<ol>
+<li>
+<p>Canon Log 2 的特点是在调色中改善画质，因此与 Canon Log 相比，暗部色调过渡更自然。然而，有些场景会产生明显的噪点，需做降噪处理或在后期制作中调整更暗部区域。针对这一点，Canon Log 3 对暗部表现加以改善，采用可调整过渡变化的简易调色伽马，使噪点不易产生，既保留了 Canon Log 的易用性，同时实现了动态范围的拓宽。</p>
+</li>
+<li>
+<p>与 Canon Log 2 相同，选择 Canon Log 3 后，ISO在 100~800 下，动态范围可达 200%~1600%，在 ISO800 以上则可升至 1600% (Canon Log 3 相当于14档范围)。与 Canon Log 相比，在保留更暗部区域细节及 18% 附近特性的同时，具有更大的动态范围 (相当于 1600% / 14-STOP)，在更宽广的 LOG 空间内实现均等输出。</p>
+</li>
+</ol>
+<h4 id="alexa">Alexa</h4>
+<p>Arri 的 Log 叫 LogC ，有近百年胶片研究历史的 Arri 出的 LogC 颇受电影摄影师的欢迎。LogC 拥有14档曝光，这意味着 LogC 可以记录更多的高光信息而不会导致数据溢出，画面也会变得对比度更低。</p>
+<h4 id="s-logs-log2s-log3">S-log/S-log2/S-log3</h4>
+<p>Sony 的 Log 模式比较特别，高端微单中提供了从 PP1 - PP9 的9种预设：</p>
+<ol>
+<li><strong>PP1-PP6</strong> 是不使用索尼的 Log 模式拍摄的，色彩空间在 Rec.709，也就是普通显示器的色彩空间，拍出来的视频在显示器上播放显示为正常的颜色，不会出现饱和度以及对比度下降的情况，不过记录的视频会在高光和阴影上有所缺失。PP1-PP6 的差别在于 Gamma 曲线的使用，不同设置会在阴影和高光上有所区别；</li>
+<li><strong>PP7</strong> 使用的是 <strong>S-Log2</strong> 曲线；</li>
+<li><strong>PP8-9</strong> 使用的是 <strong>S-Log3</strong> 曲线。S-Log3 拥有比S-Log2 更多的阴影和高光的动态范围，中灰也更亮，曲线更接近于 Arri 的 LogC 曲线。</li>
+</ol>
+<h3 id="2-4-不同色彩空间对cg出图的影响">2-4 不同色彩空间对CG出图的影响</h3>
+<ol>
+<li>
+<p>gamma work flow<br>
+在三维软件中，渲染器其实就是一个虚拟的摄像机，它的原理跟真实的相机并无差别，因此，渲染完的二进制数据要想转成图像，就需要Color Transform。<br>
+sRGB存在如此弊端却一直沿用至今，有其历史原因，由于了解这个领域的人少之又少，当CRT时代sRGB被选用后，并没有人发现它的弊端，就被稀里糊涂的沿用起来了。而多少年过去了，有人发现了这个问题，但习惯和生态早已形成，无数艺术家已经&quot;习惯&quot;在sRGB模式工作下去。</p>
+</li>
+<li>
+<p>linear work flow<br>
+时间拨回到2004年 Vray 3.0 时代，VR论坛里的渲染高手开了一个帖子叫“线性工作流”, 当时非常火爆，很多人都试图来模仿这种工作模式但这套流程非常复杂，不过出来的效果也是非常震撼的，</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="19"><img src="https://huanime.com.cn//post-images/1584434687359.png" alt="" loading="lazy"></figure>
+<center>右侧为线性工作流</center>
+<p>左侧 gamma 流程下的出图明显偏暗，反射部分的对比度非常强烈，而更严重的问题是，当你试着去提高摄影机曝光去加亮场景时，出图就过曝了：</p>
+<figure data-type="image" tabindex="20"><img src="https://huanime.com.cn//post-images/1584434520056.jpg" alt="" loading="lazy"></figure>
+<p>其实问题很简单，VRay 和 Max 的计算方式，以及 VRay  Camera 对于光的反应曲线都是线性的， 这就是说它们都在 gamma 1.0 下运作，这当然正确无误，但问题就在于：</p>
+<ol>
+<li>首先要确保你在渲图时，所有输入Max材质编辑器的贴图的校正曲线正确；</li>
+<li>你看图的设备也要具备相同的设置才可以。</li>
+</ol>
+<p>而当时很多人都忽略了这个问题。但幸运的是，现在Vray已经提供了sRGB模式，可以在sRGB模式下正确查看渲染结果：</p>
+<figure data-type="image" tabindex="21"><img src="https://huanime.com.cn//post-images/1584435205422.png" alt="" width="500" loading="lazy"></figure>
+<p>于是Max中就可以有两种不同的线性工作流设置模式：</p>
+<p><img src="https://huanime.com.cn//post-images/1584435648892.png" alt="" width="600" loading="lazy"><center>gamma2.2模式，输出结果为sRGB空间，非线性</center></p>
+<p><img src="https://huanime.com.cn//post-images/1584435652619.png" alt="" width="600" loading="lazy"><center>linear模式，输出结果是线性的，推荐这种模式，有更大后期空间</center></p>
+<p>现在新版的Max中已经不可以再手动设置输入贴图的gamma，这是因为它已经被默认设置为第二种线性工作流方式，Vray 也已经默认第二种线性工作流方式渲染，所以现在你只管做图，其他的统统交给渲染管线！<br>
+<code>*NOTE:当你用新版Max打开旧版文件时，由于已经无法手动设置贴图gamma值，所以可能会得到错误的渲染结果，但不用担心，这两个参数只是被隐藏了，你仍然可以通过MaxScript对它们进行设置：</code></p>
+<pre><code>fileOutGamma=1.0;
+fileInGamma=1.0;
+</code></pre>
+<p>现在甚至像Unity 3D等实时渲染领域也开始推行Linear Workflow，</p>
+<figure data-type="image" tabindex="22"><img src="https://huanime.com.cn//post-images/1584435483756.png" alt="" loading="lazy"></figure>
+<p>开启Linear模式将能够提供更逼真的光照效果与正确的颜色混合：</p>
+<figure data-type="image" tabindex="23"><img src="https://huanime.com.cn//post-images/1584435493347.png" alt="" width="500" loading="lazy"></figure>
+<figure data-type="image" tabindex="24"><img src="https://huanime.com.cn//post-images/1584435496848.jpg" alt="" width="500" loading="lazy"></figure>
+<h3 id="似乎到这里关于cg渲染中颜色空间的世纪难题已经被解决了但事情永远不如想象的那么简单">似乎到这里，关于CG渲染中颜色空间的世纪难题已经被解决了，但事情永远不如想象的那么简单😨</h3>
+<p>我们前面所说的linear workflow，相比gamma workflow它确实是更 '线性'，但实际上它是 linear-sRGB，由于sRGB的动态范围有限，这就导致了sRGB模式下，渲染图中过亮的地方仍然会过曝！</p>
+<figure data-type="image" tabindex="25"><img src="https://huanime.com.cn//post-images/1584436640964.png" alt="" loading="lazy"></figure>
+<center>左侧: linear-sRGB workflow, 右侧: ACES workflow</center>
+<p>这种情况在具有高强度光源的场景里尤为突出，例如爆炸，光线强度很容易就超过sRGB的上限。<br>
+除此之外sRGB还有一个致命缺点是，无法实现高强度光照下的 &quot;Color Desaturation&quot;。仔细观察电影镜头里的颜色，在光线充足的场景里，物体颜色的饱和度会被降低，这是一种自然现象，也是人眼看起来最真实、最舒服的现象。而sRGB模式下，当我们提高曝光值，场景中物体的颜色往往是奇迹般地变得更加“鲜艳”，也就是其饱和度反而提高了，这恰恰与现实世界看到的情况相反：</p>
+<figure data-type="image" tabindex="26"><img src="https://huanime.com.cn//post-images/1584437767298.png" alt="" width="500" loading="lazy"></figure>
+<figure data-type="image" tabindex="27"><img src="https://huanime.com.cn//post-images/1584437787221.png" alt="" width="500" loading="lazy"></figure>
+<h3 id="2-5-解决方案">2-5 解决方案？</h3>
+<figure data-type="image" tabindex="28"><img src="https://huanime.com.cn//post-images/1584020953069.png" alt="" loading="lazy"></figure>
+<p>ACES是美国电影艺术与科学学院创立的一套颜色统一化编码系统，旨在让高质量动态图片在任何设备上的效果都能保持一致，ACES支持的Dynamic Range高达25+，比人眼所能看到的最大范围还要高。使用ACES的图片效果灯光非常自然真实，亮部也呈现出“Color desaturation”效果，与sRGB模式形成鲜明对比，ACES很有可能成为业界公认的色彩管理标准。</p>
+<figure data-type="image" tabindex="29"><img src="https://huanime.com.cn//post-images/1584506020354.jpg" alt="" loading="lazy"></figure>
+<center>ACES的基色范围</center><br>
+<p>使用ACES能够在调色中维持色彩保真度，在不同的摄像机上实现颜色的标准化。它包括以下四个环节：</p>
+<ol>
+<li>IDT（InputDevice Transform），由数字摄影机拍摄、胶片扫描或者是从录像机采集到的IAS（Image Acquisition Source）图像元数据，经过IDT（InputDevice Transform）输入设备转换，转换为ACES色彩空间。</li>
+<li>RRT（Reference Rendering Transform），参考渲染转换把每个数字摄影机或者图像输入设备提供的IDT转换成标准的、高精度的、宽动态范围的图像数据，再从ACES数据中“还原”图像，把机器语言变成人类感官能接受的最赏心悦目的图像，把转换过的ACES素材进行优化输出到最终的显示设备上。</li>
+<li>在DaVinci Reslove等后期合成软件中进行色彩校正调色。</li>
+<li>ODT（Output Device Transform），输出设备转换准确的将ACES素材转换成任何色彩空间，优化后输出到最终的设备上。不同的ODT设置对应不同标准的监看和输出，比如在高清显示器上使用Rec.709，电脑上使用sRGB，数字投影机上使用DCI P3等。</li>
+</ol>
+<p>利用ACES色彩空间和特定的IDT-ODT流程，可以从任何采集设备获取图像，在校准过的显示器监看下调色，最后把它输出成任何格式。ACES能最大限度的利用输出媒介的色彩空间和动态范围，使“观感”最大化，最大限度的保留色彩的丰富性。</p>
+<figure data-type="image" tabindex="30"><img src="https://huanime.com.cn//post-images/1584434126289.png" alt="" loading="lazy"></figure>
+<center>ACES workflow 能够使得渲染器的动态范围突破天际，达到惊人的25</center><br>
+<h2 id="3-题外话">3 题外话</h2>
+<h3 id="3-1-什么是lut">3-1 什么是LUT</h3>
+<p>颜色查找表（Look Up Table, LUT），LUT 的本质为<strong>数学转换模型</strong>， 通过对颜色的采样与插值计算， 将色彩输入数值转换为特定的数值输出。其作用于图像的直接结果就是<strong>图像的颜色产生了变化</strong>，所以 LUT 可以通俗地理解为一种色彩效果的预设(&quot;滤镜&quot;)。</p>
+<h3 id="3-2-lut的作用">3-2 LUT的作用</h3>
+<p>在影视制作领域，LUT 通常应用在三个方面 ：</p>
+<ol>
+<li>用于显示设备的色彩校准；</li>
+<li>用于图像色彩空间的转换，如 <em>Blackmagic Cinema Camera Film to Rec.709</em> 是用于将 BMCC 摄影机拍摄的 Log 视频转换成 Rec.709 标准视频的 LUT；</li>
+<li>用于特殊色彩效果的设计与模拟。</li>
+</ol>
+<h3 id="3-3-关于rec709-to-log类型的lut">3-3 关于Rec.709 to Log类型的LUT</h3>
+<p>在很多片子中，我们经常用到 Log to Rec.709 这类型的 LUT。 这类 LUT 将拍摄的 RAW 文件或者 Log视频， 快速转换为拥有正常灰阶范围、 正常对比度、 正常饱和度的 Rec.709 标准图像。 让调色师拥有一个好的调色起点， 使其能在一个相对较短的工作时间内， 获得一个完美的调色效果。 所以运用 Log to Rec.709 的LUT， 在调色流程中， 被广泛调色师所接受。</p>
+<h4 id="那么对于-rec709-to-log-类型的-lut-很多人认为使用该类-lut-调色是错误的-无意义的-为什么大家普遍会这么认为">那么对于 Rec.709 to Log 类型的 LUT， 很多人认为使用该类 LUT 调色是错误的， 无意义的。 为什么大家普遍会这么认为？</h4>
+<ul>
+<li>因为大家都明白前期拍摄的窄色域视频， 在后期是无法变成宽色域的视； 前期拍摄的窄动态范围， 在后期也无法变成宽动态范围。而Rec.709 to Log 恰恰就是较窄色域和较窄动态范围的 Rec.709 标准文件， 到较宽色域和较宽动态范围的Log 文件的转换。 当然这不是真正的内在转换，只是让Rec.709 拥有 Log 的外观特征。 在 Rec.709 的视频上加载 Rec.709 to Log 类型的 LUT， 势必会造成视频信息损失、裁切的问题。 所以大家普遍认为用 Lut 将Rec.709 转换成 Log 是不可行的。</li>
+</ul>
+<h4 id="其实这种看法是片面的">其实这种看法是片面的:</h4>
+<ul>
+<li>Rec.709 to Log， 并不是毫无意义的技术。 在以前的胶片放映时代，就有运用过 Rec.709 to Log 类型LUT 的情况。当时一些影片，运用摄像机拍摄 Rec.709的视频， 需要将数字的视频文件转换成电影胶片， 以在影院放映。 这时候， 就需要在视频上加载 Rec.709 to Log 类型的 LUT， 将 Rec709 转换成 Log， 再制作成胶片， 在电影院放映时， 色彩才能正确呈现。</li>
+<li>在现在影视制作的全数字流程下， Rec.709 to Log 类型的 LUT 同样拥有用武之地。 当一个项目中同时拥有 Log 素材和 Rec.709 素材， 并且以 Log 素材为主， 那么我们在调色时， 需要对素材进行色彩管理 ：即给 Rec.709 素材加载 Rec.709 to Log 类型的的LUT，将 Rec.709 素材转换为 Log 素材。 这里所说的色彩管理， 是指将不同色彩空间、 不同Gamma 曲线的图像素材， 统一为一种较大的色彩空间， 然后在该色彩空间的基础上进行调色。</li>
+<li>为什么要将色彩空间统一后再做调色？ 因为各品牌摄影机的色彩空间和 Gamma 曲线都不相同， 导致图像的色彩与反差不相同。 这种情况下做镜头间的颜色匹配会有难度。 有时候来回调整多次仍然不能有一个满意的结果。 统一色彩空间后， 各种图像的饱和度、 色相、 Gamma 曲线都在一个标准之内， 图像的色彩外观都趋于统一， 这时匹配颜色时， 就会容易许多， 调色效率也会大大提高。</li>
+</ul>
+<h3 id="3-4-提一嘴raw">3-4 提一嘴RAW</h3>
+<p>我们都知道摄影中出片多用RAW格式，RAW的原意就是“未经加工”，RAW图像是CMOS或者CCD图像感应器将捕捉到的光源信号转化为数字信号的原始数据，同时记录了由相机拍摄所产生的一些原始数据如ISO的设置、快门速度、光圈值、白平衡等。可以把RAW概念化为“数字底片”，通常带有 HDR 高动态范围的光照信息，这在后期编辑图片的时候可以更好的控制曝光、白平衡、色彩饱和度等等。<br>
+<code>*NOTE: 不同的摄影机厂商的 RAW 格式后缀有所不同，佳能：CRW\CR2；柯达：KDC；尼康：NEF；索尼：ARW；松下：RW2 ...</code><br>
+RAW格式文件具有一定的特殊性，原理上讲，RAW文件的色域实现了摄影机传感器拜耳阵列滤光片阵的最大物理色域，空间模型上应该采用的是CIE-XYZ。RAW格式的伽马是直线性的，也可以理解为RAW没有加载任何的伽马，但RAW与Log是有本质上的不同的，虽然它们的最终目的都是尽可能记录下更多的信息。摘抄一段比较清晰的外文解释：</p>
+<pre><code>Raw is not Log because Log is in a video format, and raw is not video. Raw data has no video processing baked in and has to be converted into video for viewing. Log is video and has things like white balance baked into it. They're very much not the same; however, they're both designed to get the most information out of the sensor. Raw is getting everything the sensor has to offer; likewise, Log curves are designed to get the most tonal range out of the sensor. While they're very different formats, they have the same general application. Both raw and Log can be uncompressed, but that depends on the recording device. These terms, and many others, have all become part of our vocabulary in this digital cinema world.
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Tuto]干货—如何在Vray中正确还原ZB置换]]></title>
+        <id>https://huanime.com.cn/post/tutogan-huo-ru-he-zai-vray-zhong-zheng-que-huan-yuan-zb-zhi-huan/</id>
+        <link href="https://huanime.com.cn/post/tutogan-huo-ru-he-zai-vray-zhong-zheng-que-huan-yuan-zb-zhi-huan/">
+        </link>
+        <updated>2020-03-15T05:01:11.000Z</updated>
+        <summary type="html"><![CDATA[<p>ZB里苦苦雕好的细节，放到Renderer里又打回原形光溜溜？本文详细介绍ZB置换在Vray中还原的正确流程。但终究需要记住的是——Displacement is expensive.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>ZB里苦苦雕好的细节，放到Renderer里又打回原形光溜溜？本文详细介绍ZB置换在Vray中还原的正确流程。但终究需要记住的是——Displacement is expensive.</p>
+<!-- more -->
+<hr>
+<style>
+        .popup {
+            width: 100vw;
+            background-color: rgba(0, 0, 0, .5);
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            width: 400px;
+            background-color: #fff;
+            box-sizing: border-box;
+            padding: 10px 30px;
+            color: black;
+        }
+
+        .top {
+            width: 100%;
+            font-weight: bold;
+            border-bottom: 2px solid black;
+        }
+
+        .content {
+             display: flex;
+        }
+        .left {
+            width: 50%;
+            display: inline-block;
+        }
+        .right {
+            flex: 1;
+        }
+</style>
+<script>
+        var isDelete = false;
+        function showPopup(c) {
+            document.getElementById("exp").innerHTML=c;
+            document.getElementById("popup").style.display = "flex";
+        }
+        function hidePopup(x) {
+            document.getElementById("popup").style.display = "none";
+            isDelete = x;
+        }
+</script>
+<div class="popup" id="popup" onclick="hidePopup(false)">
+    <div class="popup-content">
+        <div class="top"><p>Explanation</p></div>
+        <br><div id="exp"><p>Content</p></div><br>
+        <div><button type="button" onclick="hidePopup(true) "class="btn">Close</button></div>
+        <br>
+    </div>
+</div>
+<h2 id="1-从置换贴图的格式说起">1 从置换贴图的格式说起</h2>
+<p>置换贴图的置换值 (也就是被置换后的顶点离开原位置的程度) 直接对应于烘焙模型的尺寸，因此置换贴图的精度直接影响置换结果的精度，普通 .JPEG .PNG 等格式肯定是不推荐使用的，推荐使用的是 .TIFF .EXR 等最大色深为32bit，可采用LZW等无损压缩方案的存储格式。<br>
+但是如果生产环境中硬盘空间有限，也可以使用16位浮点(Half-float)，并且仍然可以得到几乎相同的结果。但是，重要的是要确保使用<strong>16位浮点(float)<strong>格式存储图像，而不是</strong>16位整数(integer)</strong>。在这个工作流中，<strong>整数格式不能正确工作</strong>，这是因为整数格式不支持<strong>负像素值</strong>，浮点置换贴图使用这些值来表示凹陷区域。但如果条件允许，尽量使用32-bit Full-float。<br>
+<br></p>
+<h2 id="2-写在导出之前">2 写在导出之前</h2>
+<h3 id="2-1-检查低模">2-1 检查低模</h3>
+<p>在较高细分级别雕刻时，较低细分级别网格顶点的位置通常也会受到影响。因此，<strong>导入雕刻程序的低分辨率网格可能不再与用于生成置换贴图的低分辨率网格完全相同</strong>。<br>
+<br></p>
+<h3 id="2-2-注意uv布局的正确性">2-2 注意UV布局的正确性</h3>
+<p>置换贴图通常需要良好的UV布局，重叠的UV将在生成的贴图中导致错误。此外，ZBrush特别不喜欢将UV直接放置在UV表的<strong>边缘</strong>上（就像某些自动展UV软件所做的那样），因此请<strong>确保UV始终稍微放置在UV表的边缘以内</strong>。</p>
+<p><img src="https://huanime.com.cn//post-images/1584257982354.png" alt="" width="600" loading="lazy"><center>时刻注意不能这么做😕</center></p>
+<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1584258437205.png" alt="" width="600" loading="lazy"></figure>
+<center>如果你也使用RizomUV，那么你可以直接设置margin😏</center>
+<br>
+<h2 id="3-对接流程">3 对接流程</h2>
+<h3 id="3-1-zbrush导出流程">3-1 ZBrush导出流程</h3>
+<div class="content">
+         <div class="left">
+         <center><a href="../../post-images/1584325629808.jpg" data-lightbox="image-1" data-title="ExportSetting"><img src="../../post-images/1584325629808.jpg" /></a></center><br>
+         </div>
+         <div class="right">这里我们使用Multi Map Exporter：<br>
+         <ol type="1">
+            <li>准备好雕刻好的高模和用于导出的低模；</li>
+            <li>如果高模是从另一个DCC软件导入的，请转到 Tool 卷展栏，展开 Geometry，然后点击“重建细分曲面”(Reconstruct Subdiv)，直到达到所需的最低级别，重新生成较低细分的模型；</li>
+            <li>在 ZPlugin 卷展栏中找到 Multi Map Exporter，选中 Displacement 按钮；</li>
+            <li>设置导出贴图的尺寸 (推荐2K以上)；</li>
+            <li>打开'Flip V' <a class="list-group-item" onclick="showPopup(&quot;ZBrush内部的UV贴图处理方式Maya和Max等不同，贴图会垂直翻转，因此将该选项打开可使得导出的贴图兼容主流DCC软件。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>将 'SubDiv Level' 调低 <a class="list-group-item" onclick="showPopup(&quot;如果找不到该选项，点击'Export Options'查看更多贴图选项。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>关掉 'Adaptive' <a class="list-group-item" onclick="showPopup(&quot;ZBrush将根据模型的不同区域细节的多少自动设置不同的扫描精度，以产生准确的置换贴图，但相应的计算时间会增加很多。但实际上它并不一定能够产生更好的结果，而且渲染时间会变得非常长。所以当你选择输出大分辨率的贴图时，这个选项并不推荐开启。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>将 'DPSubPix' 设置为4 <a class="list-group-item" onclick="showPopup(&quot;这个参数决定了生成的置换贴图的精确程度。越大的数值能够生成越高质量的贴图，但计算时间会随之增长。当你的网格精度非常高(顶点数超过16mil)，或你只需要渲染小分辨率的贴图(2K以下)，那么参数值只需要设置为2或更低。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>关掉 'SmoothUV' <a class="list-group-item" onclick="showPopup(&quot;这个选项用于平滑烘焙中使用的低模的UV，能够减少贴图上的接缝，但可能会造成UV的偏移。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>将 'Mid' 设置为 0 <a class="list-group-item" onclick="showPopup(&quot;用于确定置换的 '起始点'，也就是像素值为0时顶点不会被置换。相应地，Vray中也有相关设置可以与此处对应，所以不设置为0也没有关系。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>关闭 '3 Channels' <a class="list-group-item" onclick="showPopup(&quot;关闭该选项时，置换信息将仅储存到贴图的RED通道。由于32-bit置换贴图只会在该通道储存信息，因此关闭该项能够减小输出文件的体积。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>将 'Scale' 设为1 <a class="list-group-item" onclick="showPopup(&quot;最终生成的贴图的像素值将乘以这个缩放比例。当我们的模型没有进过缩放时，选择1:1即可。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>开启EXR选项，点击 'Create All Maps' 生成贴图。</li>
+        </ol>
+        </div>
+</div>
+<h3 id="3-2-3ds-max渲染设置">3-2 3ds Max渲染设置</h3>
+<div class="content">
+         <div class="left">
+         <center><a href="../../post-images/1584332034295.jpg" data-lightbox="image-1" data-title="RenderingSetting"><img src="../../post-images/1584332034295.jpg" /></a></center><br>
+         </div>
+         <div class="right"
+         <ol type="1">Vray为例：<br>
+            <li>导入低模 <a class="list-group-item" onclick="showPopup(&quot;请注意检查导入的低模是否与生成贴图所用的低模相同&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>为低模添加一个 'Unwrap UVW' 修改器；</li>
+            <li>点击修改器卷展栏上的 'Open UV Editor...' 打开UV编辑器，启用UV编辑器的顶点选择模式，Ctrl+A选中模型UV；</li>
+            <li>'Tools -> Break' 打断所有UV边，然后关闭编辑器 <a class="list-group-item" onclick="showPopup(&quot;用于避免3ds Max自动平滑模型UV，因为MAX中没有与ZB中smoothUV所用相同的平滑算法。Meshsmooth修改器的 'Old Style Mapping' 与ZB的平滑算法比较相似，但仍然是有所区别的，可能会造成不可预测的UV扭曲。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>继续添加一个 'Turbosmooth' 修改器，迭代次数设为3或更高 <a class="list-group-item" onclick="showPopup(&quot;根据低模的面数可以适当增减，但要确保足够的面数做置换。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>继续添加一个 'VRayDisplacementMod' 修改器， 勾选 '3D Mapping' <a class="list-group-item" onclick="showPopup(&quot;通常来说 3D Mapping 是最好的置换模式，但有时2D置换的效果更好。它们基于不同的算法，你可以多做尝试选择效果最好的一个。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>点击 'None' 加载一张 'VRayHDRI' 到修改器，并将这张HDRI贴图实例化到材质编辑器，加载之前生成的贴图 ;</li>
+            <li>在颜色空间下拉列表中，选择 'None' 类型，确保贴图是线性 (Linear) 的。其他设置保持默认 <a class="list-group-item" onclick="showPopup(&quot;这个参数告诉Vray这张贴图不需要做任何gamma矫正。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>回到 VRayDisplacementMod 修改器，关闭 'Filter Texmap' <a class="list-group-item" onclick="showPopup(&quot;避免贴图被平滑，这有助于保留贴图上的高频细节。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>'Edge Length' 设置为4.0或更低 <a class="list-group-item" onclick="showPopup(&quot;越低的边长值代表更高的细分级别，更好的置换效果，更长的渲染时间和更多的内存占用。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>勾选 'Keep Continuity' <a class="list-group-item" onclick="showPopup(&quot;启用该项使得被置换物体的边保持连续(当置换数值比较大时，它们可能会裂开)。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>将 'Texmap Min' 以及 'Texmap Max' 设置为贴图中最大和最小像素值。 <a class="list-group-item" onclick="showPopup(&quot;通常这个值可以在一些后期合成软件比如NUKE中查询到。将这两个值设置为较大能够确保被置换物体的细节不会被 'clipping'，但设的太大会导致增加渲染时间。&quot;)" href="javascript:void()"><i class="fa fa-question-circle fa-fw"></i></a> ;</li>
+            <li>F10打开max的渲染设置，在VRay的 'Global Switches' 中确保 'Displacement' 已经勾选；</li>
+            <li>现在你可以开始渲染了！</li>
+        </ol>
+        </div>
+</div>
+<h2 id="4-经验之谈">4 经验之谈</h2>
+<h3 id="4-1-提高细分">4-1 提高细分</h3>
+<p>在理想的情况下，浮点置换映射总是能产生精确的结果，与原始的高分辨率网格完全没有区别。不幸的是，由于低模面数的限制，通常在不做细分的情况下无法还原置换贴图中成吨的细节。每个软件都有自己的方法来完成类似的任务，比如Turbo Smooth，OpenSubdiv等等。所以，不要指望一个方盒子能够依赖仅仅一张置换贴图变成一颗苹果，置换需要极大的代价。</p>
+<figure data-type="image" tabindex="2"><img src="https://huanime.com.cn//post-images/1584335863533.png" alt="" width="500" loading="lazy"></figure>
+<center>加一点点细节👆</center>
+<br>
+<h3 id="4-2-置换补偿">4-2 置换补偿</h3>
+<p>置换贴图的置换值直接对应于烘焙模型的尺寸，因此当你已经将一张置换贴图应用于低模后，再去对低模执行缩放操作，就会使得置换的强度 (intensity) 过高或不足，此时可以通过设置VRay中的 'Displacement Amount' 进行置换强度的补偿。<br>
+<br></p>
+<h3 id="4-3-关于导出时的烘焙级别">4-3 关于导出时的烘焙级别</h3>
+<p>通常来说，烘焙法线贴图时，低模级别为4；烘焙置换贴图时，低模级别为2(高模细分6以上)，但Vray比较吃细节，建议低模级别更低一些。</p>
+<h2 id="5-总结">5 总结</h2>
+<p>Displacement Map 如今被越来越广泛地应用到CG制作流程中，不仅仅是CG，甚至是Real-time pipeline。<br>
+<img src="https://huanime.com.cn//post-images/1584334813107.png" alt="" loading="lazy"></p>
+<center>Quixel扫描材质</center><br>
+<p>Quixel家的扫描材质质感十足，但往往自己拿来用就变成了'买家秀'，究其原因很多CGer认为置换是万灵药，殊不知还原'卖家秀'里成吨的细节需要付出的代价。<br>
+归根结底，置换需慎重，用置换要考虑到整个场景的资源分配，符合实际应用需求。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Tuto]VrayMtl—属性对观感的直接影响]]></title>
+        <id>https://huanime.com.cn/post/tutovraymtl-shu-xing-dui-guan-gan-de-zhi-jie-ying-xiang/</id>
+        <link href="https://huanime.com.cn/post/tutovraymtl-shu-xing-dui-guan-gan-de-zhi-jie-ying-xiang/">
+        </link>
+        <updated>2020-03-13T04:49:50.000Z</updated>
+        <summary type="html"><![CDATA[<p>现代渲染器中有着极为复杂的材质属性，有些属性仅仅通过参差不齐的翻译名称很难理解究竟对应什么样的视觉效果，本文直观展示不同属性值对观感带来的影响。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>现代渲染器中有着极为复杂的材质属性，有些属性仅仅通过参差不齐的翻译名称很难理解究竟对应什么样的视觉效果，本文直观展示不同属性值对观感带来的影响。</p>
+<!-- more -->
+<hr>
+<h3 id="diffuse">Diffuse:</h3>
+<p>固有色，这个十分容易理解，什么样的颜色值，物体本身就是什么颜色。</p>
+<h3 id="reflect">Reflect:</h3>
+<p>这个也十分容易理解，反射强度。<br><br>
+<img src="https://huanime.com.cn//post-images/1584338737464.png" alt="" loading="lazy"></p>
+<h3 id="roughness">Roughness:</h3>
+<p>来描述对象表面细微的颗粒，它能让颜色看起来能加平坦，使对象看起来像蒙了一层灰尘。想想石膏的表面和砖的表面，都是非光滑、无反射的表面，但粗糙质感的程度是不同的 (使物体表面颜色看起来更加亮、更加平坦，像是表面蒙上一层灰，受光照时颗粒感更重)。</p>
+<center><a href="../../post-images/1584338758290.png" data-lightbox="image-1" data-title="Roughness"><img src="../../post-images/1584338758290.png" /></a></center>
+<h3 id="reflect-color">Reflect Color：</h3>
+<p>可以说，反射颜色是很多CGer容易忽略的属性。因为大家通常只会使用灰度来表现反射的强度，而不理解色彩在反射中的意义。而实际上如果把材料分为金属性和非金属性两类：金属性材质，反射颜色中应该体现出漫反射颜色的特点；非金属材质，反射颜色通常用不同程度的灰度即可。如果你留心观察钛金的表面反射，你会发现，即使光源是白色的，在钛金的反射中，它依然是黄色的。要实现这一点，就需要把反射颜色修改为黄色调。其它有色金属以此类推。还有一种特殊的材质就是珍珠，珍珠的反射也是有色调的。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339159011.png" alt="" loading="lazy"></p>
+<h3 id="reflection-glossiness-反射模糊">Reflection Glossiness (反射模糊):</h3>
+<p>反射模糊参数控制反射的清晰/模糊程度，通常真实世界的对象除了电镀金属 (铬合金)、镜子等物体外，其余的对象都有不同程度的反射模糊。其实，反射模糊只是一个视觉现象，其原因是因为对象的表面不够光滑。换句话说，Reflection Glossiness 更准确的定义应该是表面光滑度。数值为1时，表示表面完全光滑，这时反射的效果绝对清晰，如镜子一般。数值为0时，表示表面非常粗糙，反射模糊到几乎察觉不到，无限接近100%漫反射效果。不过，大多数情况下，反射模糊参数都没有必要低于0.3，过低的数值就接近完全没有反射的效果了。<br>
+<code>*NOTE: 光滑度的降低同时会降低菲涅尔反射的强度</code><br><br>
+<img src="https://huanime.com.cn//post-images/1584339125534.png" alt="" loading="lazy"></p>
+<h3 id="subdivs">Subdivs:</h3>
+<p>当 Reflection Glossiness 参数低于1时，VRay实际上就激活了分布式光线追踪计算方法，这种方法比起逆向式光线追踪要成倍的消耗系统资源。默认值8的意思就是说，原来要对一条光线进行追踪的话，现在就要乘以8。因为反射模糊了，需要更多的采样光线才能获得更加细腻的效果。通常，反射模糊值与细分值成反比，也就是反射越模糊，需要的细分值越高。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339684233.png" alt="" loading="lazy"></p>
+<h3 id="highlight-glossiness">Highlight glossiness:</h3>
+<p>如果你的目标是创建真实质感的材质，不建议解除 Highlight glossiness 的锁定。也就是不要点击该参数右侧的L按钮，这表示它始终与 Reflection Glossiness 使用同样的参数。</p>
+<h3 id="fresnel-reflections">Fresnel reflections:</h3>
+<p>菲涅尔是一个人的名字，他发现水面的反射有一种现象，视线垂直于水面的时候，水面主要呈现透明效果，而视线接近平行于水面时，水面主要呈现反射效果。也就是同一材质的表面，视线的角度不同，其反射效果也会有变化。这时最容易被初学者忽视的属性，也是最不易理解的属性。实际上，这个世界上所有的物质在反射光线的时候，都会出现菲涅尔现象。</p>
+<p><code>*NOTE: CG制作中一个传统的技巧是，习惯在 Reflection color 中加 Falloff 贴图来实现 Fresnel 菲涅尔现象。这其实是过时的做法（早期3dsMax光线追踪材质的常用做法），因为现在的材质系统都提供了 Fresnel Reflections 结合折射率来直接控制。</code></p>
+<h3 id="fresnel-ior">Fresnel IOR:</h3>
+<p>如果要获得真实的反射效果，除了激活菲涅尔反射，还必须配合正确的菲涅尔折射率。注意，不同于透明物体的折射率，这里指的是菲涅尔折射率。该参数必须大于1.01，否则不会获得正确的效果。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339736852.png" alt="" loading="lazy"></p>
+<h3 id="max-depth">MAX Depth:</h3>
+<p>在真实世界中，两个彼此相对的反射体，他们之间光线的相互反射次数是无穷的。但在计算机的世界里，每一次光线的反射都是需要消耗系统资源来运算的，所以，就不可能完全照搬真实世界。光线追踪的计算次数必须有所限制，以此来避免资源耗尽。MAX Depth 的作用就是如此。当出现反射对象彼此相互反射时，反射光线追踪的最大深度达到设定值之后，则停止光线追踪，反馈 Exit color ，通常为黑色。该参数的默认值一般能满足大多数情况的需要。如果你需要确定地知道该参数设定为多少合适，不妨先把 Exit color 设定为鲜艳的颜色，如图中的绿色，然后根据渲染结果来判断。具体如何判断呢？那就是，从渲染图像中看，反射对象表面不要出现明显的退出色，即使有，其像素也应小到不宜察觉为好。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339780743.png" alt="" loading="lazy"></p>
+<h3 id="dim-distance-暗淡距离">Dim distance (暗淡距离):</h3>
+<p>指定一个距离值，超过该距离则停止光线追终。这意味着，反射表面中，将不会反射出超过该距离值的对象。这是非真实的效果，仅作为加速光线追踪计算的一种方法。因为有时，太远的对象我们认为它对反射效果的影响已不是很大，则可以利用 Dim distance 将它逐渐过渡为不参与反射。</p>
+<h3 id="dim-falloff">Dim falloff:</h3>
+<p>为暗淡距离设置衰减半径。</p>
+<h3 id="refractions">Refractions:</h3>
+<p>用于控制材质透明的程度，也就是可以被光线穿透的对象材质。比如水、玻璃、钻石、透明塑料等等。</p>
+<h3 id="refract-color">Refract color:</h3>
+<p>默认值为黑色，即没有任何折射效果，所有的光线都不能穿过对象。Refract color 为白色时，则意味着全部的光线都可以穿过对象，即完全透明的效果。其余的灰度值，可以产生不同透明度的材质效果。 与反射颜色一样，折射颜色也可以使用色彩，创建彩色的透明体。也是有三种变化，一种是颜色、一种是位图纹理，还有一种是程序纹理。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339794599.png" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1584339799723.png" alt="" loading="lazy"></figure>
+<h3 id="refraction-glossiness">Refraction glossiness:</h3>
+<p>当透明体的表面不再光滑的时候，其效果就是折射模糊，比如一块清晰地透明玻璃，透过它可以清楚地看到后面的情景，如果这块玻璃的表面用高压水枪喷射金刚砂打磨 (磨砂玻璃的加工工艺)，透过这块玻璃看后面的情景就会模糊。这就是所谓的折射模糊。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339826257.png" alt="" loading="lazy"></p>
+<h3 id="subdivs-2">Subdivs:</h3>
+<p>随着 Refraction glossiness 值的降低，透明模糊效果会越来越明显，当表面出现明显噪波的时候 (就是比较粗糙的杂点)，则意味着要增加 Subdivs 值了。记住，增加 Subdivs 虽然可以获得更加细腻的效果，但是也会成倍的增加渲染时间。尤其是折射模糊。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339831349.png" alt="" loading="lazy"></p>
+<h3 id="ior-折射率">IOR (折射率):</h3>
+<p>我们将光线在空气之中的折射定义为1，当光线进入其它介质时，光线的角度会发生变化，这个角度的变化就是折射率。我们把筷子斜插进水里，会看前筷子好像变弯了，这就是最简单的折射现象。在创建材质的时候，不同的材料，要设置相匹配的折射率，才能获得最真实的效果。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339844312.png" alt="" loading="lazy"></p>
+<h3 id="max-depth-2">Max depth:</h3>
+<p>设置折射光线的穿透对象表面的最大层数，一个有厚度的玻璃是两层，也就是说，要看到一个玻璃杯背后的情景，光线需要穿过四层表面。达到设定的最大深度后，表面的背后无论有什么，都反馈为 Exit color 。通常，折射的最大深度都不宜低于6。</p>
+<h3 id="dispersion-色散">Dispersion (色散):</h3>
+<p>打开该选项，则计算复杂的色散效果。菱形玻璃将白光分解成彩虹就是色散，钻石折射出彩色的光芒，也是色散。</p>
+<h3 id="abbe-阿贝折射">Abbe (阿贝折射):</h3>
+<p>与 Dispersion 配合使用，增加该值可以让彩虹效应更加明显。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339870273.png" alt="" loading="lazy"></p>
+<h3 id="fog-color-雾颜色">Fog color (雾颜色):</h3>
+<p>Fog color 用来产生透明物体的吸光现象，我们知道，光线是有衰减的，在透明的介质内部，光线的衰减速度比空气中的快。如果你对这些觉得不好理解，可以试想一下，一块玻璃看起来很透明，如果十块玻璃叠在一起、一百块玻璃叠在一起，它们还会是透明的吗？所以，即使是同一透明体，其透明效果与材料的厚薄也是有密切关系的，所谓 Fog color ，就是模拟当内部光线被吸收后，透明体所呈现的颜色。</p>
+<h3 id="fog-multiplier">Fog Multiplier:</h3>
+<p>快速修改 Fog color 浓淡的方法，注意，随着雾培增值的增加，对象会变得越来越不透明，就好像物体的内部起了雾一样，雾倍增就是用来控制雾的浓度的。这一组参数主要用来做彩色玻璃效果，而且，特别适合做透明实体雕塑，比如首饰上的装饰或其它工艺品。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339883740.png" alt="" loading="lazy"></p>
+<h3 id="fog-bias">Fog bias:</h3>
+<p>与 Fog Multiplie 一样，Fog bias 也是用来影响透明体内部雾效的浓度的，不过，这两个参数的控制都不是基于物理性的。大多数情况下都要凭经验和结果来判断。Fog bias 影响的，是厚度不同时，雾浓度随厚度不同而变化的对比度，负值色调看起来更加浓烈，正值看起来更清新淡雅。它通常需要与Fog Multiplier 参数配合使用。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339890038.png" alt="" loading="lazy"></p>
+<h3 id="brdf-双向反射分布-卷展栏">BRDF (双向反射分布) 卷展栏</h3>
+<p>BRDF 是一个非常专业的CG术语，它影响材质的高光的形态和反射效果。VRay内置了四种着色器：GGX、Phong、Blinn 和 Ward。Phong产生非常锐利的高光，Blinn与Phong类似，但高光的边缘更加柔和，Ward产生的高光更加柔软，GGX看似与Phong没有差别，但实际上GGX的高光范围延伸地更大，更适合表现金属材质。塑料更适合Blinn或Ward类型，对于玻璃，使用Phong是最合适的。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339894062.png" alt="" loading="lazy"></p>
+<h3 id="anisotropy-各向异性">Anisotropy (各向异性):</h3>
+<p>Anisotropy 可以使高光产生拉伸变形，通常用于创建表面有密集划痕的材质，比如拉丝金属、头发、密集的线圈等等。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339907131.png" alt="" loading="lazy"></p>
+<h3 id="rotation">Rotation:</h3>
+<p>可以通过修改该参数来旋转拉伸后的高光，仅在各向异性效果激活后才有效果。注意，高光被拉伸的方向，通常与表面划痕的方向垂直才是正确的。</p>
+<h3 id="uv-vectors-derivation-uv方向来源">UV vectors derivation (UV方向来源):</h3>
+<p>除了上面的 Rotation 之外，还可以通过切换 Local axis 来改变高光的方向。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339911195.png" alt="" loading="lazy"></p>
+<h3 id="energy-preservation-mode">Energy Preservation Mode</h3>
+<p>该选项决定了材质反射入射光线的方式。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339922860.png" alt="" loading="lazy"></p>
+<h3 id="opacity-mode-parameter">Opacity Mode Parameter</h3>
+<p>这个属性通常不需要过多关注，但列在这里是因为VRay现在有一个已知的issue：渲染树叶等带 alpha 的透明贴图时，边缘裁切会出现问题，目前的临时替代方案是使用HDRI加载贴图。<br><br>
+<img src="https://huanime.com.cn//post-images/1584339936396.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]RaindropFX Pro update 2.0.0]]></title>
         <id>https://huanime.com.cn/post/raindropfx-pro-update-200/</id>
@@ -133,7 +801,8 @@ all the effects are integrated with Post Processing Stack (v2) and support sorti
 ]]></summary>
         <content type="html"><![CDATA[<p>docsify 是一个动态生成文档网站的工具，不同于 GitBook、Hexo 等，它不会将 .md 转成 .html 文件，所有转换工作都在运行时进行。</p>
 <!-- more -->
-<h2 id="配置docsify">配置docsify</h2>
+<hr>
+<h2 id="1-配置docsify">1 配置docsify</h2>
 <p>docsify需要本地先安装node, 如果没有安装node，可在node官网选择对应操作系统下载安装：https://nodejs.org/zh-cn/</p>
 <p>终端输入npm i docsify-cli -g进行全局安装：<br>
 <code>npm i docsify-cli -g</code></p>
@@ -143,7 +812,7 @@ all the effects are integrated with Post Processing Stack (v2) and support sorti
 docsify-cli version:
   x.x.x
 </code></pre>
-<h2 id="初始化一个文档">初始化一个文档</h2>
+<h2 id="2-初始化一个文档">2 初始化一个文档</h2>
 <h3 id="1-手动创建indexhtml并引入docsify文件">① 手动创建index.html并引入docsify文件</h3>
 <p>只需要创建一个index.html文件，内容如下：</p>
 <pre><code>&lt;!DOCTYPE html&gt;
@@ -187,7 +856,7 @@ Initialization succeeded! Please run docsify serve ./
 <strong>nojekyll文件很重要，如果网站部署到GitHub Pages时，一定要注意这个文件。</strong></li>
 </ul>
 <p>直接编辑 ./README.md 就能更新网站内容，当然也可以添加其他.md文件。</p>
-<h2 id="本地预览">本地预览</h2>
+<h2 id="3-本地预览">3 本地预览</h2>
 <h3 id="1-http-server服务方式">① http-server服务方式</h3>
 <p>用http-server启动服务 (可在终端输入npm install http-server -g来安装http-server)，在浏览器中输入http://127.0.0.1:8080即可浏览效果。</p>
 <pre><code>http-server 
@@ -210,7 +879,7 @@ Listening at http://localhost:3000
 <code>Ctrl+C</code></p>
 <p>默认访问端口：<br>
 <code>http://localhost:3000</code></p>
-<h2 id="文档部署">文档部署</h2>
+<h2 id="4-文档部署">4 文档部署</h2>
 <p>GitHub Pages 支持从三个地方读取文件:</p>
 <pre><code>- master分支
 - master分支下的docs目录
@@ -220,8 +889,8 @@ Listening at http://localhost:3000
 <li>如果你的文档直接是在项目根目录写的，那么可直接把代码推送到master分支上， GitHub Pages里选择master branch;</li>
 <li>如果你的文档是在master分支下的docs/目录下编写的，那么可直接把代码推送到master分支上，GitHub Pages里选择master branch/docs folder。</li>
 </ul>
-<h2 id="文档编写">文档编写</h2>
-<h3 id="定制侧边栏">定制侧边栏</h3>
+<h2 id="5-文档编写自定义">5 文档编写/自定义</h2>
+<h3 id="5-1-定制侧边栏">5-1 定制侧边栏</h3>
 <p>默认情况下，侧边栏会根据当前文档的标题生成目录。也可以设置文档链接，通过 Markdown 文件生成，此时需要手动创建 _sidebar.md 文件:</p>
 <pre><code>* RaindropFX Pro
 	* [2.0.0](RaindropFXPro200)
@@ -248,7 +917,7 @@ Listening at http://localhost:3000
 &lt;/script&gt;
 </code></pre>
 <p>配置alias字段后，所有页面都会显示项目根目录_sidebar.md文件的配置作为侧边栏，子目录的_sidebar.md文件会失效。</p>
-<h3 id="配置导航栏">配置导航栏</h3>
+<h3 id="5-2-配置导航栏">5-2 配置导航栏</h3>
 <p>首先需要在index.html文件中的window.$docsify添加loadNavbar: true,选项：</p>
 <pre><code>&lt;script&gt;
   window.$docsify = {
@@ -280,7 +949,7 @@ Listening at http://localhost:3000
   * [a文件](bar/a)
   * [b文件](bar/b)
 </code></pre>
-<h3 id="多级文档">多级文档</h3>
+<h3 id="5-3-多级文档">5-3 多级文档</h3>
 <p>如果需要创建多个页面，或者需要多级路由的网站，在 docsify 里也能轻松实现。</p>
 <p>假设你的目录结构如下：</p>
 <pre><code>-| docs/
@@ -296,13 +965,13 @@ docs/guide.md         =&gt; http://domain.com/guide
 docs/zh-cn/README.md  =&gt; http://domain.com/zh-cn/
 docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
 </code></pre>
-<h3 id="隐藏标题">隐藏标题</h3>
+<h3 id="5-4-隐藏标题">5-4 隐藏标题</h3>
 <p>当设置了 subMaxLevel 时，默认情况下每个标题都会自动添加到目录中。如果你想忽略特定的标题，可以给它添加 {docsify-ignore} ：</p>
 <pre><code># Getting Started
 
 ## Header {docsify-ignore}
 </code></pre>
-<h3 id="搜索配置">搜索配置</h3>
+<h3 id="5-5-搜索配置">5-5 搜索配置</h3>
 <p>全文搜索插件会根据当前页面上的超链接获取文档内容，在 localStorage 内建立文档索引。默认过期时间为一天，当然我们可以自己指定需要缓存的文件列表或者配置过期时间。</p>
 <pre><code>&lt;script&gt;
     window.$docsify = {
@@ -319,7 +988,7 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
   &lt;!-- 引入搜索模块 --&gt;
   &lt;script src=&quot;//unpkg.com/docsify/lib/plugins/search.js&quot;&gt;&lt;/script&gt;
 </code></pre>
-<h3 id="评论插件gitalk">评论插件Gitalk</h3>
+<h3 id="5-6-评论插件gitalk">5-6 评论插件Gitalk</h3>
 <p>一个现代化的，基于Preact和Github Issue的评论系统。配置完成后需要登录自己的账号点开一次对应文档才会自动在项目中生成Issue。</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//unpkg.com/gitalk/dist/gitalk.css&quot;&gt;
 &lt;script src=&quot;//unpkg.com/docsify/lib/plugins/gitalk.min.js&quot;&gt;&lt;/script&gt;
@@ -336,7 +1005,7 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
   })
 &lt;/script&gt;
 </code></pre>
-<h3 id="更改样式">更改样式</h3>
+<h3 id="5-7-更改样式">5-7 更改样式</h3>
 <p>在HTML文件中引入样式表：</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css&quot;&gt;
 </code></pre>
@@ -680,459 +1349,6 @@ New tools added.</p>
 <a href="../../post-images/1564972091063.jpg" data-lightbox="image-1" data-title="Dai&Meng"><img src="../../post-images/1564972091063.jpg" /></a><br>
 <a href="../../post-images/1564972094658.jpg" data-lightbox="image-1" data-title="Dai&Meng"><img src="../../post-images/1564972094658.jpg" /></a><br>
 <a href="../../post-images/1564972165233.jpg" data-lightbox="image-1" data-title="Dai&Meng"><img src="../../post-images/1564972165233.jpg" /></a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Tool]SplineMesher for Unity3D]]></title>
-        <id>https://huanime.com.cn/post/toolsplinemesher-for-unity3d/</id>
-        <link href="https://huanime.com.cn/post/toolsplinemesher-for-unity3d/">
-        </link>
-        <updated>2019-06-13T02:04:21.000Z</updated>
-        <summary type="html"><![CDATA[<p>HuAnime第二款自制Unity3D插件SplineMesher上架啦！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>HuAnime第二款自制Unity3D插件SplineMesher上架啦！</p>
-<!-- more -->
-<p>现在你可以像在3ds Max中一样在U3D中交互式创建样条曲线并生成程序化管道模型</p>
-<pre><code>Asset Store传送门
-</code></pre>
-<p><a href="http://u3d.as/1yiU">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
-<pre><code>视频
-</code></pre>
-<p><a href="https://www.bilibili.com/video/av57999372">[Bilibili_安装使用教程]</a></p>
-<pre><code>简介
-</code></pre>
-<p><strong>程序化样条线网格工具</strong> - 程序化样条线工具，支持可编辑样条线并基于样条线生成管道网格.</p>
-<p><strong>兼容性:</strong></p>
-<blockquote>
-<p>支持所有平台与所有渲染管线.</p>
-</blockquote>
-<p><strong>工具亮点:</strong></p>
-<blockquote>
-<p>在样条线顶点十分稀疏的情况下依然能够生成正确的顶点位置。保持每一段管道网格的粗细一致;<br>
-能够自动校正锐利转角处的管道网格顶点位置;<br>
-支持三种不同的UV展开方式，能够从容应对各种情况下的贴图拉伸问题;<br>
-支持使用自定义曲线调节管道每一节的粗细.</p>
-</blockquote>
-<p><strong>其他特性:</strong></p>
-<blockquote>
-<p>简单易用: 拖拽脚本到空物体即可使用;<br>
-可手动或通过代码编辑/生成样条线/网格，编辑器模式下与游戏模式下都可实时编辑;<br>
-现已支持两种类型的可编辑样条线 (折线类型与贝塞尔曲线类型), 将来将持续加入更多类型;<br>
-数学库单独封装，您可在本插件之外方便调用;<br>
-提供所有源码，您可自行查看与修改.</p>
-</blockquote>
-<pre><code>效果图
-</code></pre>
-<p><a href="../../post-images/1564970889852.PNG" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970889852.PNG" /></a></p>
-<p><a href="../../post-images/1564970908514.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970908514.png" /></a></p>
-<p><a href="../../post-images/1564970922411.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970922411.png" /></a></p>
-<p><a href="../../post-images/1564970926657.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970926657.png" /></a></p>
-<p><a href="../../post-images/1564970931483.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970931483.png" /></a></p>
-<p><a href="../../post-images/1564970935361.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970935361.png" /></a></p>
-<p><a href="../../post-images/1564970938987.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970938987.png" /></a></p>
-<p><a href="../../post-images/1564970941911.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970941911.png" /></a></p>
-<p><a href="../../post-images/1564970949879.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970949879.png" /></a></p>
-<p><a href="../../post-images/1564970953087.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970953087.png" /></a></p>
-<p><a href="../../post-images/1564970955665.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970955665.png" /></a></p>
-<p><a href="../../post-images/1564970967519.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970967519.png" /></a></p>
-<p><a href="../../post-images/1564970969783.png" data-lightbox="image-1" data-title="SplineMesher"><img src="../../post-images/1564970969783.png" /></a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Tool]HuAnime Toolset V1.2]]></title>
-        <id>https://huanime.com.cn/post/toolhuanime-toolset-v12/</id>
-        <link href="https://huanime.com.cn/post/toolhuanime-toolset-v12/">
-        </link>
-        <updated>2019-05-01T13:02:13.000Z</updated>
-        <summary type="html"><![CDATA[<style>
-		.menu1 {
-			list-style: none;
-			width: 30%;
-			background-color: #f9f9f9;
-			text-align: left;
-			position: relative;
-		  left: -4%;
-		}
-	
-	.menu1 ul {
-			list-style: none;
-			width: 100%;
-			background-color: #f9f9f9;
-			text-align: left;
-			position: relative;
-		  left: -4%;
-		}
-
-			.menu1 a:hover {
-				   color: #336666;
-				   background-color: #F5E3C0;
-			}
-
-			.menu1 a {
-				   position: relative;
-				   display: block;
-				   text-decoration: none;
-				   border-bottom: 1px solid #ccc;
-				   color: #000;
-				   width: 100%;
-				   line-height: 32px;
-			}
-
-			.menu1 .active {
-				   position: relative;
-			}
-
-			.menu1 li:hover ul ul {
-				left: -999px;
-			}
-
-			.menu1 li:hover ul {
-				   left: 88%;
-			}
-
-			.menu1 li li:hover ul {
-				   position: absolute;
-				   left: 88%;
-			}
-
-			.menu1 .active ul {
-				   position: absolute;
-				   top: -1px;
-				   left: -999px;
-			}
-</style>
-<p>Make everything automatic!</p>
-]]></summary>
-        <content type="html"><![CDATA[<style>
-		.menu1 {
-			list-style: none;
-			width: 30%;
-			background-color: #f9f9f9;
-			text-align: left;
-			position: relative;
-		  left: -4%;
-		}
-	
-	.menu1 ul {
-			list-style: none;
-			width: 100%;
-			background-color: #f9f9f9;
-			text-align: left;
-			position: relative;
-		  left: -4%;
-		}
-
-			.menu1 a:hover {
-				   color: #336666;
-				   background-color: #F5E3C0;
-			}
-
-			.menu1 a {
-				   position: relative;
-				   display: block;
-				   text-decoration: none;
-				   border-bottom: 1px solid #ccc;
-				   color: #000;
-				   width: 100%;
-				   line-height: 32px;
-			}
-
-			.menu1 .active {
-				   position: relative;
-			}
-
-			.menu1 li:hover ul ul {
-				left: -999px;
-			}
-
-			.menu1 li:hover ul {
-				   left: 88%;
-			}
-
-			.menu1 li li:hover ul {
-				   position: absolute;
-				   left: 88%;
-			}
-
-			.menu1 .active ul {
-				   position: absolute;
-				   top: -1px;
-				   left: -999px;
-			}
-</style>
-<p>Make everything automatic!</p>
-<!-- more -->
-<pre><code>简介
-</code></pre>
-<p>自制 3ds Max 动画创作全流程工具包 Hu Anime Toolset v1.2.0<br>
-献给我与 3ds Max 走过的第一个十年</p>
-<pre><code>效果视频
-</code></pre>
-<p><a href="https://www.bilibili.com/video/av51081353">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
-<pre><code>V1.2.0工具列表
-</code></pre>
-<div class="menu"><ul class="menu1"><li class="active">
-			<a>Object Manage Tools ></a>
-			<ul>
-				<li class="active"><a href="javascript:void(0);">Renamer</a>
-					<ul><li><a href="javascript:void(0);">批量重命名选中物体</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Attacher</a>
-					<ul><li><a href="javascript:void(0);">按类型(class)合并选中物体</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Detacher</a>
-					<ul><li><a href="javascript:void(0);">分离子物体(elements)</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Arranger</a>
-					<ul><li><a href="javascript:void(0);">按间隔整理选中物体</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Selection Slot</a>
-					<ul><li><a href="javascript:void(0);">存储当前物体选中状态到选择集，点击选择集按钮恢复选中状态</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Random Transer</a>
-					<ul><li><a href="javascript:void(0);">为选中物体赋予随机位置、旋转与缩放状态</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Spline Knot Manager</a>
-					<ul><li><a href="javascript:void(0);">更改选中样条线顶点的类型</a></li></ul>
-				</li>
-			</ul>
-</li></ul></div>
-<div class="menu"><ul class="menu1"><li class="active">
-			<a>Material Manage Tools ></a>
-			<ul>
-				<li class="active"><a href="javascript:void(0);">Show textures in viewport</a>
-					<ul><li><a href="javascript:void(0);">在视图中用材质贴图替换物体颜色外观，支持标准材质与Vray材质</a></li></ul>
-				</li>
-			</ul>
-</li></ul></div>
-<div class="menu"><ul class="menu1"><li class="active">
-			<a>Animation Tools ></a>
-			<ul>
-				<li class="active"><a href="javascript:void(0);">HU_Anim Icon Set</a>
-					<ul><li><a href="javascript:void(0);">动画绑定用样条线图形预设集</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Transform Manager</a>
-					<ul><li><a href="javascript:void(0);">锁定物体的一个或多个Transform属性</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Attachment Holder</a>
-					<ul><li><a href="javascript:void(0);">为物体快捷创建附着约束</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Spline Controller</a>
-					<ul><li><a href="javascript:void(0);">为样条线的每个顶点创建控制器</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Keyframe Filter</a>
-					<ul><li><a href="javascript:void(0);">删除动画关键帧中的某些属性</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Anim Repeater</a>
-					<ul><li><a href="javascript:void(0);">重复并延长当前物体的选中动画帧，支持增量动画</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Anim Recorder</a>
-					<ul><li><a href="javascript:void(0);">将一个物体的动画记录到另一个物体</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Anim Rotator</a>
-					<ul><li><a href="javascript:void(0);">旋转行走动画</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Anim Noiser</a>
-					<ul><li><a href="javascript:void(0);">为物体添加噪声动画</a></li></ul>
-				</li>
-			</ul>
-</li></ul></div>
-<div class="menu"><ul class="menu1"><li class="active">
-			<a>Procedural Object Tools ></a>
-			<ul>
-				<li class="active"><a href="javascript:void(0);">IES Light Creator</a>
-					<ul><li><a href="javascript:void(0);">为Ghost Town生成的程序建筑模型添加IES射灯(Model+Vray IES Light)</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Light Ceil Creator</a>
-					<ul><li><a href="javascript:void(0);">基于选中的poly面重新拓扑生成带灯带的屋顶，灯带类型为Vray灯光物体(Vray Mesh Light)</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Voxel Tree</a>
-					<ul><li><a href="javascript:void(0);">生成带生长动画的程序化体素树模型</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Debugger Boxes</a>
-					<ul><li><a href="javascript:void(0);">在随机位置生成一堆带随机网格颜色的盒子模型</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Rect Slicer</a>
-					<ul><li><a href="javascript:void(0);">将模型切块</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Catenary Maker</a>
-					<ul><li><a href="javascript:void(0);">基于选中的样条线生成悬线</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Geo Cutter</a>
-					<ul><li><a href="javascript:void(0);">批量模型布尔切割</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Poly Recreator</a>
-					<ul><li><a href="javascript:void(0);">清除选中模型中的错误位置信息(尤其是来自模型空间的错误信息)。当模型产生错误结果时，请尝试用此插件"重新创建"模型进行修复</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Spline Recreator</a>
-					<ul><li><a href="javascript:void(0);">将选中样条曲线转换为可执行的MaxScript，同时可用于清除样条曲线中的错误位置信息</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Sub-Spline Connector</a>
-					<ul><li><a href="javascript:void(0);">按百分比位置连接选中样条线的子样条线，并生成一条新的样条线，支持位置排序</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Mesh From Spline</a>
-					<ul><li><a href="javascript:void(0);">基于选中样条线的子样条线生成网格模型，支持位置排序</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Skynet Creator</a>
-					<ul><li><a href="javascript:void(0);">基于深度优先搜索(DFS)生成网状结构模型，使用Point物体作为基础物体的子物体时Point即可被自动识别为延伸端口(下一个物体的生成方向)</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Snowy Surface</a>
-					<ul><li><a href="javascript:void(0);">为选中物体添加积雪效果(提取法线方向为Z向的面生成新的积雪模型)</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Pillars Generator</a>
-					<ul><li><a href="javascript:void(0);">生成随机外观的柱子模型</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Cobwebs Generator</a>
-					<ul><li><a href="javascript:void(0);">基于选中物体随机生成蜘蛛网(基于样条线)</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Rock Generator</a>
-					<ul><li><a href="javascript:void(0);">生成随机外观的岩石模型</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Feather Generator</a>
-					<ul><li><a href="javascript:void(0);">羽毛模型生成器</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Mindflow Splines Creator</a>
-					<ul><li><a href="javascript:void(0);">基于选中的样条线图形生成样条线描边</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Procedural Sci-Fi Building Gen</a>
-					<ul><li><a href="javascript:void(0);">程序化科幻建筑生成器</a></li></ul>
-				</li>
-			</ul>
-</li></ul></div>
-<div class="menu"><ul class="menu1"><li class="active">
-			<a>Procedural Animation Tools ></a>
-			<ul>
-				<li class="active"><a href="javascript:void(0);">Range Affector</a>
-					<ul><li><a href="javascript:void(0);">基于控制器生成程序化运动图形动画</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Elevator Animator</a>
-					<ul><li><a href="javascript:void(0);">程序化电梯动画生成器</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Boat Animator</a>
-					<ul><li><a href="javascript:void(0);">船舶摇摆动画生成器，支持四种噪声类型</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Star Trace</a>
-					<ul><li><a href="javascript:void(0);">生成类似延时摄影生成的星轨动画效果，可自动生成渐变拖尾Vray材质</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Poly Fracture</a>
-					<ul><li><a href="javascript:void(0);">poly网格破碎，新增基于控制器的爆炸动画生成</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Vol.Sel To Texture</a>
-					<ul><li><a href="javascript:void(0);">基于体积选择生成贴图序列</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Drop Animation</a>
-					<ul><li><a href="javascript:void(0);">掉落动画生成器</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Spring</a>
-					<ul><li><a href="javascript:void(0);">为物体的已有动画帧增加弹性次级动画效果</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Cat Tail</a>
-					<ul><li><a href="javascript:void(0);">为选中的骨骼链或样条线生成飘带动画</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">PF Baker</a>
-					<ul><li><a href="javascript:void(0);">烘焙PF粒子到网格动画</a></li></ul>
-				</li>
-			</ul>
-</li></ul></div>
-<div class="menu"><ul class="menu1"><li class="active">
-			<a>Rigging Tools ></a>
-			<ul>
-				<li class="active"><a href="javascript:void(0);">Auto Rigging For MakeHuman</a>
-					<ul><li><a href="javascript:void(0);">为MakeHuman(1.2)生成的模型自动生成高级人体绑定</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Auto Facial Rigging Tools</a>
-					<ul><li><a href="javascript:void(0);">自动面部绑定</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Auto Skin Weight</a>
-					<ul><li><a href="javascript:void(0);">更加便捷的蒙皮权重设置方式</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Make Stretchy Bones</a>
-					<ul><li><a href="javascript:void(0);">将选中骨骼转化为弹性骨骼</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Bone Divider</a>
-					<ul><li><a href="javascript:void(0);">根据百分比将选中骨骼打断为多节</a></li></ul>
-				</li>
-			</ul>
-</li></ul></div>
-<div class="menu"><ul class="menu1"><li class="active">
-			<a>Asset Operator Tools ></a>
-			<ul>
-				<li class="active"><a href="javascript:void(0);">Batch Exporter</a>
-					<ul><li><a href="javascript:void(0);">批量导出工具</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Batch Loader</a>
-					<ul><li><a href="javascript:void(0);">批量导入工具</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Bitmap Renamer</a>
-					<ul><li><a href="javascript:void(0);">重命名所有当前场景中引用的贴图</a></li></ul>
-				</li>
-				<li class="active"><a href="javascript:void(0);">Instances To Proxy</a>
-					<ul><li><a href="javascript:void(0);">将实例物体转为Vray代理</a></li></ul>
-				</li>
-			</ul>
-</li></ul></div>
-<div class="menu"><ul class="menu1"><li class="active">
-			<a>Others ></a>
-			<ul>
-				<li class="active"><a href="javascript:void(0);">Quickly open common file paths</a>
-					<ul><li><a href="javascript:void(0);">常用max路径的快捷打开方式</a></li></ul>
-				</li>
-			</ul>
-</li></ul></div>
-<pre><code>截图
-</code></pre>
-<div align=center><a href="../../post-images/1565432598174.png" data-lightbox="image-1" data-title="HuAnime Toolset v1.2"><img src="../../post-images/1565432598174.png" /></a></div>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Anime]原创CG动画《肉包子》]]></title>
-        <id>https://huanime.com.cn/post/animeyuan-chuang-cg-dong-hua-rou-bao-zi/</id>
-        <link href="https://huanime.com.cn/post/animeyuan-chuang-cg-dong-hua-rou-bao-zi/">
-        </link>
-        <updated>2019-04-29T04:30:17.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>正片传送门
-</code></pre>
-<p><a href="https://www.bilibili.com/video/av50760741">[Bilibili_补档]</a><br>
-<a href="https://youtu.be/cToaO63eGiQ">[Youtube]</a></p>
-<pre><code>简介
-</code></pre>
-<p>人总是遭遇挫折<br>
-就想离家<br>
-去远行</p>
-<p>人生就像肉包子打狗<br>
-更多的时候<br>
-包子在地上滚了两圈<br>
-无狗问津</p>
-<p>但请你再坚持坚持<br>
-回头还是要捡起来包子<br>
-继续积极地生活</p>
-<pre><code>剧照
-</code></pre>
-<p><a href="../../post-images/1564971570690.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971570690.jpg" /></a></p>
-<p><a href="../../post-images/1564971575225.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971575225.jpg" /></a></p>
-<p><a href="../../post-images/1564971577592.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971577592.jpg" /></a></p>
-<p><a href="../../post-images/1564971579861.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971579861.jpg" /></a></p>
-<p><a href="../../post-images/1564971582363.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971582363.jpg" /></a></p>
-<p><a href="../../post-images/1564971584545.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971584545.jpg" /></a></p>
-<p><a href="../../post-images/1564971586484.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971586484.jpg" /></a></p>
-<p><a href="../../post-images/1564971595168.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971595168.jpg" /></a></p>
-<p><a href="../../post-images/1564971597927.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971597927.jpg" /></a></p>
-<p><a href="../../post-images/1564971600917.jpg" data-lightbox="image-1" data-title="MeatBuns"><img src="../../post-images/1564971600917.jpg" /></a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Static]IOR 1.33]]></title>
-        <id>https://huanime.com.cn/post/staticior-133/</id>
-        <link href="https://huanime.com.cn/post/staticior-133/">
-        </link>
-        <updated>2019-04-08T11:33:19.000Z</updated>
-        <summary type="html"><![CDATA[<pre><code>CG静帧，人像练习
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<pre><code>CG静帧，人像练习
-</code></pre>
-<!-- more -->
-<p><a href="../../post-images/1564974063087.jpg" data-lightbox="image-1" data-title="IOR1.33"><img src="../../post-images/1564974063087.jpg" /></a></p>
 ]]></content>
     </entry>
 </feed>

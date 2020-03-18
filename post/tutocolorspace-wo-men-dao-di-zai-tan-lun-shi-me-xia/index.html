@@ -1,0 +1,627 @@
+<html>
+<head>
+	<!--meta charset="utf-8" /-->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<title>[Tuto]ColorSpace—我们到底在谈论什么(下) | HU ANIME</title>
+<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1584523515594">
+<link rel="stylesheet" href="https://huanime.com.cn//media/scripts/lib/lightbox.css" type='text/css' media='all'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://huanime.com.cn//styles/main.css" type='text/css' media='all'>
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+  <!--Baidu Analytics-->
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?264d1f69b0edf52af180e8994eaf44bc";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <!--Block Debug Tools-->
+  <script>
+    var debugMode = false;
+    function disableInfo() {
+      document.onkeydown = function() {
+        var e = window.event || arguments[0];
+        // block F12
+        if (e.keyCode == 123) {
+          return false;
+        // block Ctrl+Shift+I
+        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+          return false;
+        // block Shift+F10
+        } else if ((e.shiftKey) && (e.keyCode == 121)) {
+          return false;
+        }
+        if ((e.ctrlKey) && (e.keyCode == 83)) { //ctrl+s
+            return false;
+        }
+      };
+      // block right click
+      document.oncontextmenu = function() {
+        return false;
+      }
+      document.oncontextmenu=new Function("event.returnValue=false");  
+      document.onselectstart=new Function("event.returnValue=false");  
+    }
+    if (!debugMode) disableInfo();
+  </script>
+  
+  <!-- Google Analytics
+  
+  -->
+</head>
+<body class="home blog ct-body standard">
+	<div id="overflow-container" class="overflow-container">
+		<a class="skip-content" href="#main">Skip to content</a>
+		<header id="site-header" class="site-header" role="banner">
+    <div class='top-navigation top-navigation-important'>
+        <div class='container'>
+            <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+                <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+                <div class="menu">
+                    <ul id="menu-secondary-items" class="menu-secondary-items">
+                        
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/qi5SVakfq/">Tools</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/CGbk4KNOa/">Code</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/R8pKVfB50/">Static</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="https://huanime.com.cn/tag/WSyUFaaTQ/">Anime</a>
+                        </li>
+                            
+                        
+                    </ul>
+                </div>
+            </div>
+            <ul class="social-media-icons">
+              
+                    
+                        <li>
+                            <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                              <i class="fab fa-github" title="github"></i>
+                                <span class="screen-reader-text">github</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="http://blog.sina.com.cn/u/5618229278" data-animate-hover="pulse" class="weibo" target="_blank">
+                              <i class="fab fa-weibo" title="weibo"></i>
+                                <span class="screen-reader-text">weibo</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                              <i class="fas fa-film" title="film"></i>
+                                <span class="screen-reader-text">film</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                              <i class="fas fa-image" title="image"></i>
+                                <span class="screen-reader-text">image</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                              <i class="fas fa-plug" title="plug"></i>
+                                <span class="screen-reader-text">plug</span>
+                            </a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="https://huanime.com.cn/">  HU ANIME </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">会画画的程序猿</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/">HOME</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/archives">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/archives">TIMELINE</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/gallery">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/gallery">GALLERY</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="https://huanime.com.cn/document/" target="_blank">DOCUMENT</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/about">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/about">ABOUT</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+		<div id="main" class="main" role="main">
+			<div id="loop-container" class="loop-container">
+				<div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+					
+					<div class='featured-image lazy lazy-bg-image' data-background="https://huanime.com.cn//post-images/tutocolorspace-wo-men-dao-di-zai-tan-lun-shi-me-xia.png">
+					</div>
+					
+
+					<div class="entry-meta">
+						<span class="date">· 2020-03-18 ·</span> <span> / </span>
+						<span class="author">
+							<a href="https://huanime.com.cn/" title="" rel="author"> SEE THE WORLD</a></a>
+						</span>
+						
+						<span class="category">
+							<span> / </span>
+							<a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
+						</span>
+						
+					</div>
+					<div class='entry-header'>
+						<h1 class='entry-title'>[Tuto]ColorSpace—我们到底在谈论什么(下)</h1>
+					</div>
+					
+					<div class="entry-container">
+					
+						<div id="entry-content" class="entry-content">
+							<article>
+								<pre><code>干货篇——如何在 3ds Max 和 AfterEffects 中实现ACES workflow
+</code></pre>
+<!-- more -->
+<br>
+<h2 id="4-干货">4 干货</h2>
+<h3 id="4-1-从出图格式说起">4-1 从出图格式说起</h3>
+<h4 id="jpegjoint-photographic-experts-group">JPEG（Joint Photographic Experts Group）</h4>
+<p>JPEG编码用来压缩去除冗余的图像和彩色数据，获取得极高的压缩率的同时能展现十分丰富生动的图像，换句话说，就是可以用较少的磁盘空间得到较好的图像质量。JPEG 图片以 24 位颜色存储单个光栅图像。JPEG 是与平台无关的格式，支持最高级别的压缩，但这种压缩是有损耗的。当编辑和重新保存JPEG文件时，JPEG会降低原始图片的数据质量，这种质量下降是累积性的。</p>
+<h4 id="pngportable-network-graphics">PNG（Portable Network Graphics）</h4>
+<p>一种无损压缩的位图片形格式。其设计目的是试图替代GIF和TIFF文件格式，同时增加一些GIF文件格式所不具备的特性。PNG文件采用LZ77算法的派生算法进行压缩，其结果是获得高的压缩比，不损失数据。它利用特殊的编码方法标记重复出现的数据，因而对图像的颜色没有影响，也不可能产生颜色的损失，这样就可以重复保存而不降低图像质量。</p>
+<h4 id="bmpbitmap">BMP（Bitmap）</h4>
+<p>微软Windows操作系统中的标准图像文件格式，可以分成两类：设备相关位图（DDB）和设备无关位图（DIB），使用非常广。它采用位映射存储格式，除了图像深度可选以外，不采用其他任何压缩，因此，BMP文件所占用的空间很大。BMP文件的图像深度可选lbit、4bit、8bit及24bit。BMP文件存储数据时，图像的扫描方式是按从左到右、从下到上的顺序。由于BMP文件格式是Windows环境中交换与图有关的数据的一种标准，因此在Windows环境中运行的图形图像软件都支持BMP图像格式。</p>
+<h4 id="ddsdirectdraw-surface">DDS（DirectDraw Surface）</h4>
+<p>DirectX纹理压缩（DirectX Texture Compression，简称DXTC）的产物。由NVIDIA公司开发。大部分3D游戏引擎都可以使用DDS格式的图片用作贴图，也可以制作法线贴图。通常情况下想要编辑此格式需要安装 dds 插件才行。这种格式现在使用的越来越少，但是一些老游戏还是 dds 贴图。</p>
+<h4 id="hdrhigh-dynamic-range">HDR(High-Dynamic Range)</h4>
+<p>相比普通的图像，可以提供更多的动态范围和图像细节，根据不同的曝光时间的LDR(Low-Dynamic Range)图像，利用每个曝光时间相对应最佳细节的LDR图像来合成最终HDR图像，能够更好的反映出真实环境中的视觉效果。现实真正存在的亮度差，即最亮的物体亮度，和最暗的物体亮度之比为10的8次方， 而人类的眼睛所能看到的范围是10的5次方左右。<br>
+它比其它格式的图像有着更大亮度的数据贮存，而且它记录亮度的方式与传统的图片不同，不是用非线性的方式将亮度信息压缩到8bit或16bit的颜色空间内，而是用直接对应的方式记录亮度信息，它可以说记录了图片环境中的照明信息，很多HDRI文件是以<strong>全景图</strong>的形式提供的，因此我们可以使用这种图象来“照亮”场景 (摄影中的RAW图像就算是 hdr 的一种)。<br>
+<code>*NOTE: HDRI与全景图有本质的区别，全景图指的是包含了360度范围场景的普通图象，可以是JPG格式，BMP格式，TGA格式等等，属于Low-Dynamic RangeRadiance Image，它并不带有光照信息。</code></p>
+<h4 id="tga-tagged-graphics">TGA (Tagged Graphics)</h4>
+<p>由美国Truevision公司为其显示卡开发的一种图像文件格式，已被国际上的图形、图像工业所接受。TGA格式在兼顾了BMP的图象质量的同时又兼顾了JPEG的体积优势。TGA格式支持压缩，使用不失真的压缩算法。特点：通道效果、方向性。在CG领域常作为影视动画的序列输出格式，因为兼具体积小和效果清晰的特点。</p>
+<h4 id="tifftagged-image-file-format">TIFF（Tagged Image File Format）</h4>
+<p>TIFF格式为<strong>无损压缩</strong>文件，压缩率低，这种格式可以支持RGB、CMYK等多种色彩模式，adobeRGB、proPhoto RGB等多种色彩空间，8位、16位、32位等各种色彩深度，甚至也能保留图层和alpha通道，也因此占用空间较大。TIFF 格式可以制作质量非常高的图像，因而经常用于出版印刷，也是CG制作中推荐使用的一种格式。</p>
+<h4 id="psdphotoshop-document">PSD（Photoshop Document）</h4>
+<p>Adobe公司的图像处理软件Photoshop的专用格式。这种格式可以存储Photoshop中所有的图层，通道、参考线、注解和颜色模式等信息。<br>
+<code>*NOTE: 但这种格式在CG制作中个人并不推荐使用：体积太大，读取速度缓慢。</code></p>
+<h4 id="exr">EXR</h4>
+<p>EXR是由工业光魔（Industrial Light &amp; Magic）开发的一种HDR标准。OpenEXR文件的扩展名为.exr，常见的OpenEXR文件是FP16（16bit Float Point，也被称为half Float Point）数据图像文件，每个通道的数据类型是FP16，一共四个通道64bpp，每个通道1个bit位用来标志“指数”，5个bit用来存放指数的值，10个bit存放色度坐标（u，v）的尾数，其动态范围从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6.14</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>5</mn></mrow></msup></mrow><annotation encoding="application/x-tex">6.14 × 10^{-5}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">6</span><span class="mord">.</span><span class="mord">1</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></span>到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6.41</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">6.41 × 10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">6</span><span class="mord">.</span><span class="mord">4</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>。<br>
+在OpenEXR的算法里面共使用16bit来表示光照数据。虽然看起来和使用16bit亮度通道运算位数相同，但是OpenEXR巧妙的采用了1个bit位用来标志“指数”，5个bit用来存放指数的值，10个bit存放色度坐标的尾数，这样就轻易的解决了浮点数值由于位数少而精度不高的问题，大大的拓宽的在FP16下的动态范围。<br>
+<code>*NOTE: EXR是渲染出图中个人最推荐使用的无损格式，尤其是在做AOV分层渲染时，能够直接打包所有通道。但缺点在于当下主流图像处理软件的格式支持比较差，通常需要安装插件。</code></p>
+<h3 id="4-2-vray中的色彩模式">4-2 Vray中的色彩模式</h3>
+<p>前文已经介绍过Vray中的线性工作流，这里我们就再来简单地捋一捋LWF下VFB中的各种显示模式：</p>
+<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1584510519104.png" alt="" width="600" loading="lazy"></figure>
+<center>渲染完直接在VFB中查看的结果，毫无疑问是linear的，但显示器无法显示线性图像</center>
+<figure data-type="image" tabindex="2"><img src="https://huanime.com.cn//post-images/1584512643159.png" alt="" width="600" loading="lazy"></figure>
+<center>点这里可以切换到sRGB模式，也就是符合大部分显示器的色彩空间</center>
+<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1584512747459.png" alt="" loading="lazy"></figure>
+<center>或者加载LUT也可以正确查看图像，但记得要勾选应用LUT之前转换到LOG模式</center><br>
+<h3 id="4-3-redshift中的色彩模式">4-3 Redshift中的色彩模式</h3>
+<p>接着我们再来看看RS中的色彩管理，RS 3.6以上才具备VFB中的色彩管理功能：</p>
+<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1584512982216.png" alt="" width="250" loading="lazy"></figure>
+<p>RS的默认设置和VR有些许不同，默认就是sRGB模式，我们可以手动切换显示模式，Linear就相当于VR的默认显示：</p>
+<figure data-type="image" tabindex="5"><img src="https://huanime.com.cn//post-images/1584513089561.png" alt="" loading="lazy"></figure>
+<p>RS的色彩管理相比VR更加灵活的一点是，RS有 'Apply color management before LUT' 选项，这一选项使得我们几乎可以在应用LUT前将图像转换到任意色彩空间，而VR就只能对线性或LOG图像应用LUT。此外，VR中的OCIO选项与LUT不可同时启用，基于这个选项，RS就能够做到同时启用OCIO与LUT。</p>
+<figure data-type="image" tabindex="6"><img src="https://huanime.com.cn//post-images/1584513173223.png" alt="" loading="lazy"></figure>
+<h3 id="4-4-如何在ae中还原linear-workflow">4-4 如何在AE中还原Linear workflow</h3>
+<p>AE中的色彩管理环节众多，所以十分容易出错，后期合成时需要时刻注意我们在什么色彩空间下工作，正确的色彩空间才能带给我们正确的后期结果。CG渲染到后期的完整流程一言以蔽之就是：</p>
+<figure data-type="image" tabindex="7"><img src="https://huanime.com.cn//post-images/1584517610998.jpg" alt="" loading="lazy"></figure>
+<p>还是看不懂？没关系我们一步一步来。<br>
+我们将第一次渲染好的EXR导入AE中时，会发现事情和想象的有点不同：</p>
+<figure data-type="image" tabindex="8"><img src="https://huanime.com.cn//post-images/1584514665075.png" alt="" width="600" loading="lazy"></figure>
+<p>说好的Linear，怎么显示结果和sRGB一样？<br>
+这是因为AE有自己的输入输出色彩管理，输入色彩管理在这里：</p>
+<figure data-type="image" tabindex="9"><img src="https://huanime.com.cn//post-images/1584514831468.png" alt="" loading="lazy"></figure>
+<p>对于线性工作流，工作空间选择sRGB，并勾选线性化颜色空间 (也就是先前说的sRGB-Linear)，这时我们全部的颜色混合工作都是线性的，正确的。此外，记得还要勾选32-bit颜色，因为输出的EXR是32-bit Full-Float类型，默认的8-bit会丢失精度。</p>
+<figure data-type="image" tabindex="10"><img src="https://huanime.com.cn//post-images/1584515906622.png" alt="" width="600" loading="lazy"></figure>
+<p>这时图像看起来似乎并没有什么变化，这是因为AE还有一个显示颜色管理 (Display color management)， 这个选项用于模拟输出设备的显示效果，并且默认是开启的：</p>
+<figure data-type="image" tabindex="11"><img src="https://huanime.com.cn//post-images/1584515157249.png" alt="" width="350" loading="lazy"></figure>
+<p>所以实际上，仅仅是一步简单的导入操作，AE就已经为我们做了很多的色彩管理工作，也就是说导入的素材实际经历了下面几步流程：</p>
+<p><code>sRGB-Linear (导入素材，素材也可以是其他任意色彩空间) &gt; sRGB-Linear (转换到工作空间并进行后期处理) &gt; Rec.709 (转换到输出设备所能够呈现的色彩空间)</code></p>
+<p>这时如果关闭显示色彩管理，就可以看到黑乎乎的线性图像，如果你看到的仍然是校正后的图像，那么可能还需要设置素材的色彩解释方式 (通常来说，导入EXR时这些选项是自动设置好的)：</p>
+<figure data-type="image" tabindex="12"><img src="https://huanime.com.cn//post-images/1584515957523.png" alt="" loading="lazy"></figure>
+<p>勾选 '解释为线性光' 即可。<br>
+接着我们来还原一下Vray VFB中的几个选项：</p>
+<p>① sRGB<br>
+这个最简单，默认显示就可以了；</p>
+<p>② Linear<br>
+两种方法还原：关闭显示色彩管理，或者添加一个'Cineon转换器'对图像进行转换；</p>
+<p>③ LUT<br>
+LUT的加载是最复杂的，我们先来仔细理顺VR中的处理流程：<br>
+<code>Linear-sRGB (渲染结果) &gt; Log-sRGB (勾选转换到LOG) &gt; Rec.709 (应用LUT)</code></p>
+<p>所以我们在AE中也必须遵循这一流程：</p>
+<figure data-type="image" tabindex="13"><img src="https://huanime.com.cn//post-images/1584516371841.png" alt="" width="600" loading="lazy"></figure>
+<center>这样我们就得到了和VR VFB中一模一样的结果</center><br>
+<p>因为AE中复杂的色彩管理流程，这里的转换流程可能具有一定的误导性：LUT将颜色空间转换到了Rec.709，而我们显示器的显示色彩也是Rec.709，那么为什么LUT下面还要加一个转换到sRGB?</p>
+<ul>
+<li>因为我们的工作空间是sRGB，所以图像输出之前，还需要经历sRGB &gt; Rec.709的转换，所以这一步是必不可少的。</li>
+</ul>
+<pre><code>由于AE自带的Cineon转换器不提供转换到sRGB的功能，所以这里强推qp Nuclear LUT插件，所有的色彩空间转换一应俱全 (https://aescripts.com/qp-nuclear-lut/)
+</code></pre>
+<figure data-type="image" tabindex="14"><img src="https://huanime.com.cn//post-images/1584516824201.png" alt="" loading="lazy"></figure>
+<h3 id="4-5-vray中使用aces-workflow">4-5 Vray中使用ACES workflow</h3>
+<p>前面提到基于ACES工作流能够得到比线性工作流更逼真还原的渲染结果，现在Maya、Houdini有原生ACES工作流支持，Blender有Filmic插件支持，Max却还迟迟没有ACES支持，那么我们就无法使用ACES工作流了吗？当然可以！我们自己手动颜色管理！<br>
+基于前面的论述，具备IDT-ODT，我们就可以使用ACES workflow。使用ACES workflow，整个CG流程都得做出改变，要想使用ACES需要通过OCIO（open color io）这一开源接口(官网：http://opencolorio.org/)。<br>
+下载并解压即可，我们需要用到的实际上只是.config文件：</p>
+<figure data-type="image" tabindex="15"><img src="https://huanime.com.cn//post-images/1584517928155.png" alt="" loading="lazy"></figure>
+<p>开始之前我们需要先区分一下ACES提供的三种子颜色空间</p>
+<ul>
+<li><strong>ACES 2065- 1</strong> - This is a wide-range Linear, color space, with a larger coverage than the human eye, so it is used for archival copies and transfer of material between departments.</li>
+<li><strong>ACEScc and ACEScct</strong> - Logarithmic color spaces intended for color correction.</li>
+<li><strong>ACEScg</strong> - This is a Linear space for working with CG/VFX. This is the space you need to use as the main color space for working with color set-up and light in your rendered images.</li>
+</ul>
+<p>毫无疑问，我们要使用的是ACEScg。那么首先我们来还原IDT：<br>
+Vray中提供了VRayOCIO用于将输入的贴图转换到ACES颜色空间：</p>
+<figure data-type="image" tabindex="16"><img src="https://huanime.com.cn//post-images/1584518273281.png" alt="" loading="lazy"></figure>
+<p>首先加载config文件，输入和输出如下对号入座：</p>
+<ul>
+<li><strong>Utility-Linear - Rec.709 or sRGB</strong> - choose this for Linear images that use the Rec.709 or sRGB primaries/gamut (which are the same).</li>
+<li><strong>Utility-RAW</strong> - for images that do not require conversion (scalar masks, Displacement, Roughness).</li>
+<li><strong>Utility-Rec.709-Camera</strong> - for sRGB images, 8-16 bit (lightmaps, matte paints), (JPEG, PNG).</li>
+<li><strong>Utility-sRGB - Texture</strong> - recommended color space for sRGB image textures 8-16 bit (JPEG, PNG).</li>
+<li><strong>ACEScg</strong> - Color space for images that are already converted to ACEScg.</li>
+</ul>
+<p>现在贴图的转换就全部完成了，那么有的小伙伴会问了：我要用纯色怎么办呢？每次用纯色用PS生成一张纯色贴图？<br>
+当然不用，但是你也不能再直接在Max的颜色拾取器里面取色，因为这些颜色会被直接解释为ACES空间下的颜色，而实际上你需要的是sRGB空间下的颜色！<br>
+Vray提供了这种颜色转换：</p>
+<p><img src="https://huanime.com.cn//post-images/1584518635959.png" alt="" loading="lazy"><br>
+<canter>直接选ACES就可以</center></p>
+<p>什么你的VrayColor里面没有ACES？<br>
+别急，先关掉MAX，打开你电脑的环境变量配置，新增一条：</p>
+<figure data-type="image" tabindex="17"><img src="https://huanime.com.cn//post-images/1584518706890.png" alt="" loading="lazy"></figure>
+<p>然后重新打开MAX，你的VrayColor里面就会出现ACES了🤘</p>
+<p>但是还有一个问题😨<br>
+这样依然是直接选择ACES空间下的色彩，调色没了手感，我想继续在熟悉的sRGB空间取色，再转换到ACES，怎么办？<br>
+当然也没问题！打开你的MaxScript Listener，输入并运行：</p>
+<pre><code>vr=renderers.current
+vr.options_rgbcolorspace=2
+</code></pre>
+<p>然后回到材质编辑器，按 'U' 键更新视图，此时颜色模式选sRGB，熟悉的手感就又回来了👍</p>
+<p>下一步是还原ODT，这个就比较简单了，VFB里加载config，输入选ACEScg，输出选Rec.709或sRGB，简单粗暴：</p>
+<figure data-type="image" tabindex="18"><img src="https://huanime.com.cn//post-images/1584518994044.png" alt="" loading="lazy"></figure>
+<p>现在你可以尽情调节曝光值享受超大动态范围带来的自由度了！</p>
+<p>Max和Vray中ACES现在还没有被很完美地支持，需要很多手工配置，不过好消息是论坛里VRay 开发者已经给出了明确的会推出正式的ACES流程的答复：</p>
+<pre><code>ACES support is already working internally. After a bit more testing, we plan to implement it in the builds and possibly release it with the next official release.
+</code></pre>
+<h3 id="4-6-如何在ae中还原aces-workflow">4-6 如何在AE中还原ACES workflow</h3>
+<p>AE中还原ACES的流程和线性工作流是相似的，工作空间选ACEScg (2019及以上AE才有这个选项)：</p>
+<figure data-type="image" tabindex="19"><img src="https://huanime.com.cn//post-images/1584519206665.png" alt="" width="500" loading="lazy"></figure>
+<p>但是如果要在AE中使用OCIO自己管理转换流程，需要安装插件 (OpenColorIO，开源)：</p>
+<figure data-type="image" tabindex="20"><img src="https://huanime.com.cn//post-images/1584519651557.png" alt="" loading="lazy"></figure>
+<center>作者更新频繁，链接经常变，大家自己找吧😌</center><br>
+<h3 id="4-7-unity-post-processing-stack-中的-aces-颜色空间">4-7 Unity Post-Processing Stack 中的 ACES 颜色空间</h3>
+<p>在为本次的干货划上句号之前，这里还有一个疑问需要解释：</p>
+<h4 id="unity-中并没有实现-ocio自然也就不存在-aces-workflow-一说那么为什么-unity-官方的-ppv2-中会有-aces-颜色空间">Unity 中并没有实现 OCIO，自然也就不存在 ACES workflow 一说，那么为什么 Unity 官方的 PPV2 中会有 ACES 颜色空间？</h4>
+<figure data-type="image" tabindex="21"><img src="https://huanime.com.cn//post-images/1584520736945.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="22"><img src="https://huanime.com.cn//post-images/1584520053599.gif" alt="" loading="lazy"></figure>
+<p>因为得益于ACES极大的动态范围，即使是Linear-sRGB流程下渲染得到的图像，经过ACEScg转换后，也能够得到额外的对比度、色彩表现的增强：</p>
+<figure data-type="image" tabindex="23"><img src="https://huanime.com.cn//post-images/1584520995251.png" alt="" loading="lazy"></figure>
+<h2 id="5-总结">5 总结</h2>
+<p>无论是在以前的数字中间片时代， 还是现在的全数字流程时代， 运用色彩管理和匹配都是非常科学、 合理和必要的。</p>
+<p>但是，也没有必要过分追求流程的正确性，得到自己满意的艺术效果才是我们所做一切努力的最终目标，实际上即使是扫描线渲染器的优秀作品，放到今天看也依然优秀：</p>
+<figure data-type="image" tabindex="24"><img src="https://huanime.com.cn//post-images/1584521123295.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="25"><img src="https://huanime.com.cn//post-images/1584521127017.jpg" alt="" loading="lazy"></figure>
+<center>艺术家 Olivier Vernay Kim - Infographiste 3D</center>
+<p>更多的时候，我们需要去寻找自己身上艺术修养的不足，不断提高自己的审美。最后祝大家都能做出满意的作品！😌</p>
+
+							</article>
+						</div>
+
+
+						
+							<div class='entry-meta-bottom'>
+								<div class="entry-categories">
+									<p>
+										<span>Categories</span>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/itfB5m7XS/" title="View all posts in Essay">Essay</a>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/qi5SVakfq/" title="View all posts in Tools">Tools</a>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/CGbk4KNOa/" title="View all posts in Code">Code</a>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/R8pKVfB50/" title="View all posts in Static">Static</a>
+										
+										
+										
+										<a href="https://huanime.com.cn/tag/WSyUFaaTQ/" title="View all posts in Anime">Anime</a>
+										
+										
+									</p>
+								</div>
+								<div class="entry-tags">
+									<p>
+										<span>Tags</span>
+										
+										<span class="category">
+											<a href="https://huanime.com.cn/tag/itfB5m7XS/">Essay</a>
+										</span>
+										
+									</p>
+									</br>
+									<span>Home</span>
+									<span><a href="https://ripmr.github.io">Back to Home</a></span>
+								</div>
+							</div>
+							<div class="author-meta">
+								<span>
+									<img alt='' src="https://huanime.com.cn//images/avatar.png?v=1584523515594" class='avatar avatar-72 photo' height='72' width='72'>
+									<!--span>WRITTEN BY: </span-->
+								</span>
+								<span>
+								<p>
+									
+										<a>已经是第一篇啦</a>
+									
+								</p>
+								<br/>
+								<p>
+									
+										<a href="https://huanime.com.cn/post/tutodui-yu-yan-se-kong-jian-wo-men-dao-di-zai-tan-lun-shi-me/">下一篇->[Tuto]ColorSpace—我们到底在谈论什么(上)</a>
+									
+									
+								</p>
+								</span>
+								
+								<!--span>
+									<p></p>
+									
+									
+									<a class="github" target="_blank"
+									   href="https://github.com/RIPmr">
+										<i class="fab fa-github" title="github"></i>
+									</a>
+									
+									
+									
+									
+									
+									<a class="weibo" target="_blank"
+									   href="http://blog.sina.com.cn/u/5618229278">
+										<i class="fab fa-weibo" title="weibo"></i>
+									</a>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</span-->
+
+							</div>
+						
+					</div>
+				</div>
+				<section id="comments" class="comments">
+					
+					
+					<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '99293e39ad48006e77cb',
+    clientSecret: '48d99f5e46f34d52cfdc2051dd531dd9e437936a',
+    repo: 'RIPmr.github.io',
+    owner: 'RIPmr',
+    admin: ['RIPmr'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+					
+
+					
+					
+				</section>
+			</div>
+		</div>
+		<footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="https://huanime.com.cn/"> HU ANIME </a>
+    </h1>
+    <p class="site-description">会画画的程序猿</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+                <li>
+                    <a href="http://blog.sina.com.cn/u/5618229278" data-animate-hover="pulse" class="weibo" target="_blank">
+                        <i class="fab fa-weibo" title="weibo"></i>
+                        <span class="screen-reader-text">weibo</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                        <i class="fas fa-film" title="film"></i>
+                        <span class="screen-reader-text">film</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                        <i class="fas fa-image" title="image"></i>
+                        <span class="screen-reader-text">image</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                        <i class="fas fa-plug" title="plug"></i>
+                        <span class="screen-reader-text">plug</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>SEE THE WORLD</a></p>
+    </div>
+</footer>
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+<!--script src="https://huanime.com.cn//media/scripts/lib/lightbox-plus-jquery.min.js"></script>-->
+<script src="https://huanime.com.cn//media/scripts/lib/jquery.min.js"></script>
+<script src="https://huanime.com.cn//media/scripts/lib/jquerymigrate.js"></script>
+<script src="https://huanime.com.cn//media/scripts/lib/production.min.js"></script>
+<script src="https://huanime.com.cn//media/scripts/lib/lightbox.min.js"></script>
+	</div>
+</body>
+</html>
+
