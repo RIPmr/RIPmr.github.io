@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-03-18T09:27:51.559Z</updated>
+    <updated>2020-03-21T05:24:57.864Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, HU ANIME</rights>
     <entry>
         <title type="html"><![CDATA[[Tuto]ColorSpace—我们到底在谈论什么(下)]]></title>
-        <id>https://huanime.com.cn/post/tutocolorspace-wo-men-dao-di-zai-tan-lun-shi-me-xia/</id>
-        <link href="https://huanime.com.cn/post/tutocolorspace-wo-men-dao-di-zai-tan-lun-shi-me-xia/">
+        <id>https://huanime.com.cn/post/tutocolorspace-p2/</id>
+        <link href="https://huanime.com.cn/post/tutocolorspace-p2/">
         </link>
         <updated>2020-03-18T09:04:35.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>干货篇——如何在 3ds Max 和 AfterEffects 中实现ACES workflow
@@ -167,8 +167,8 @@ vr.options_rgbcolorspace=2
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]ColorSpace—我们到底在谈论什么(上)]]></title>
-        <id>https://huanime.com.cn/post/tutodui-yu-yan-se-kong-jian-wo-men-dao-di-zai-tan-lun-shi-me/</id>
-        <link href="https://huanime.com.cn/post/tutodui-yu-yan-se-kong-jian-wo-men-dao-di-zai-tan-lun-shi-me/">
+        <id>https://huanime.com.cn/post/tutoyan-se-kong-jian-p1/</id>
+        <link href="https://huanime.com.cn/post/tutoyan-se-kong-jian-p1/">
         </link>
         <updated>2020-03-17T08:49:43.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>原理篇：颜色空间（Color Space）到底是什么？它对于CG又意味着什么？
@@ -437,8 +437,8 @@ RAW格式文件具有一定的特殊性，原理上讲，RAW文件的色域实�
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]干货—如何在Vray中正确还原ZB置换]]></title>
-        <id>https://huanime.com.cn/post/tutogan-huo-ru-he-zai-vray-zhong-zheng-que-huan-yuan-zb-zhi-huan/</id>
-        <link href="https://huanime.com.cn/post/tutogan-huo-ru-he-zai-vray-zhong-zheng-que-huan-yuan-zb-zhi-huan/">
+        <id>https://huanime.com.cn/post/tutovray-zb-disp/</id>
+        <link href="https://huanime.com.cn/post/tutovray-zb-disp/">
         </link>
         <updated>2020-03-15T05:01:11.000Z</updated>
         <summary type="html"><![CDATA[<p>ZB里苦苦雕好的细节，放到Renderer里又打回原形光溜溜？本文详细介绍ZB置换在Vray中还原的正确流程。但终究需要记住的是——Displacement is expensive.</p>
@@ -587,8 +587,8 @@ RAW格式文件具有一定的特殊性，原理上讲，RAW文件的色域实�
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]VrayMtl—属性对观感的直接影响]]></title>
-        <id>https://huanime.com.cn/post/tutovraymtl-shu-xing-dui-guan-gan-de-zhi-jie-ying-xiang/</id>
-        <link href="https://huanime.com.cn/post/tutovraymtl-shu-xing-dui-guan-gan-de-zhi-jie-ying-xiang/">
+        <id>https://huanime.com.cn/post/tutovraymtl-shu-xing/</id>
+        <link href="https://huanime.com.cn/post/tutovraymtl-shu-xing/">
         </link>
         <updated>2020-03-13T04:49:50.000Z</updated>
         <summary type="html"><![CDATA[<p>现代渲染器中有着极为复杂的材质属性，有些属性仅仅通过参差不齐的翻译名称很难理解究竟对应什么样的视觉效果，本文直观展示不同属性值对观感带来的影响。</p>
