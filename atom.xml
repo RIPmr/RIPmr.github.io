@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-03-21T05:24:57.864Z</updated>
+    <updated>2020-04-30T03:04:41.506Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -16,10 +16,10 @@
         <link href="https://huanime.com.cn/post/tutocolorspace-p2/">
         </link>
         <updated>2020-03-18T09:04:35.000Z</updated>
-        <summary type="html"><![CDATA[<pre><code>干货篇——如何在 3ds Max 和 AfterEffects 中实现ACES workflow
+        <summary type="html"><![CDATA[<pre><code>干货篇：如何在 3ds Max 和 AfterEffects 中实现ACES workflow
 </code></pre>
 ]]></summary>
-        <content type="html"><![CDATA[<pre><code>干货篇——如何在 3ds Max 和 AfterEffects 中实现ACES workflow
+        <content type="html"><![CDATA[<pre><code>干货篇：如何在 3ds Max 和 AfterEffects 中实现ACES workflow
 </code></pre>
 <!-- more -->
 <br>
@@ -586,7 +586,7 @@ RAW格式文件具有一定的特殊性，原理上讲，RAW文件的色域实�
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[Tuto]VrayMtl—属性对观感的直接影响]]></title>
+        <title type="html"><![CDATA[[Tuto]VrayMtl—直观了解材质属性]]></title>
         <id>https://huanime.com.cn/post/tutovraymtl-shu-xing/</id>
         <link href="https://huanime.com.cn/post/tutovraymtl-shu-xing/">
         </link>
@@ -1040,6 +1040,7 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
 <pre><code>Trailer link
 </code></pre>
 <p><a href="https://www.bilibili.com/video/av58001135">[Bilibili_Trailer]</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=58001135&bvid=BV1a4411c7R5&cid=101206249&page=1" width="700" height="350" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <pre><code>剧照
 </code></pre>
 <p><a href="../../post-images/1564972630912.jpg" data-lightbox="image-1" data-title="Cyberpunk City"><img src="../../post-images/1564972630912.jpg" /></a><br>
