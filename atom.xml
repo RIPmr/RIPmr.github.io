@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-07-12T10:12:46.936Z</updated>
+    <updated>2020-07-12T10:31:41.129Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -61,7 +61,7 @@ Burst被设计来与Job System配合使用，当用户在完成基于Job System�
 <br>
 <h4 id="下面我们结合ecs架构看看究竟为什么这种数据结构会导致低效率">下面我们结合ECS架构看看究竟为什么这种数据结构会导致低效率？</h4>
 <p>先来看看CPU的缓存结构：</p>
-<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1594540264945.png" alt="" loading="lazy"></figure>
+<center><img src="../../post-images/1594540264945.png" /></center>
 <center>CPU<---->寄存器<---->CPU缓存<---->内存</center>
 <br>
 <p>可以看到CPU缓存是介于内存和寄存器之间的一个存储区域，此外它存储空间比内存小，比寄存器大。</p>
@@ -98,21 +98,21 @@ CPU缓存的存储空间是有限的，于是我们希望CPU缓存存储的是�
 但要注意ECS也不是没有缺点，这种量身定制虽然带来了更多的选择和灵活性，但随之而来的是通用性的降低，因此ECS适用于规模庞大但个体之间差异不大的应用场景，当我们需要对群体中的每一个对象进行十分精细的控制时，ECS就显得力不从心了。
 </code></pre>
 <p>现在我们有了entity和component来高效地存储和读取数据，那么如何让数据流动起来呢？举个例子，如下图，当我们有很多的Bullet类型对象需要移动时，大多数程序员都会想到为它们编写一个管理器，例如一个Bullet Manager，然后维护一个Bullet列表，每帧更新这个列表中的所有Bullet的位置。没错，基于ECS处理这样一套框架再合适不过，bullet是entity，移动属性即为component，于是我们就可以将管理类bullet manager称作system，它管理所有bullet entity的移动。</p>
-<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1594540545567.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1594540545567.jpg" alt="" loading="lazy"></figure>
 <p>当然，我们不仅只能将这种架构用于单独一类对象的管理，如下图，我们可以为多类对象提供多个System进行统一管理，甚至也可以用一个system单独管理各类对象中的一类组件，在并行框架下将所有数据与处理逻辑完全解耦。</p>
-<figure data-type="image" tabindex="5"><img src="https://huanime.com.cn//post-images/1594540557633.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1594540557633.png" alt="" loading="lazy"></figure>
 <p>ECS中我们通过改变数据组织结构和删减冗余数据的方式减少了CPU寻址时间，改善了系统性能。但终究我们会发现，这似乎只是“拆东墙补西墙”，寻址带来的性能瓶颈并非消失了，而只是性能热点被转移到了对数据的运算处理上，那我们还能不能再提升一些性能？<br>
 我们知道，在Unity中虽然能够使用多线程，但其有非常大的限制，即线程只能进行与Unity无关的工作，例如数据运算等。与Unity引擎相关的操作几乎都会报错，例如用线程控制Transform就是一个无法实现的功能。在Unity中，所有与Unity相关的功能都只能够在主线程中完成，子线程是无法直接做到的。<br>
 这里不得不提的是，除了多线程，Unity中还存在另一种类似的功能：协程（Coroutine）。什么是协程呢？协程跟多线程类似，也有类似异步的效果，但其不是真正的异步，所有的运算处理仍然在主线程上，只是它的切分粒度不是基于系统划分的时间片，而是基于我们编写的yield return，协程可以在任何时候被挂起，先继续往下执行主函数，然后到下一帧再来继续执行上一帧没执行完的协程函数。协程有很多优点，例如它的粒度相对多线程大很多，所以可以避免数据访问冲突；再例如，多线程中无法执行的与Unity直接相关的数据操作在协程中都畅通无阻。<br>
 但协程的缺陷在于，虽然一个线程中可以有多个协程，但CPU的多个线程没有被完全利用起来，造成了资源浪费，如下图所示，“一核有难，七核围观”。于是到此就出现了一个两难的境地：多线程能够充分利用CPU资源但限制巨大，协程没有条条框框但却不能充分利用CPU资源，于是Job System应运而生。</p>
-<figure data-type="image" tabindex="6"><img src="https://huanime.com.cn//post-images/1594540580991.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://huanime.com.cn//post-images/1594540580991.jpg" alt="" loading="lazy"></figure>
 <p>从这个角度来说，Job System和ECS密不可分，我们基于system来驱动数据，而这些数据块(Chunk)都有着一样的结构，相似的行为方式，于是性能提升方案呼之欲出：<strong>基于Job System通过多线程处理entity移动的方式，我们就将原本全部积压在主线程上的任务均匀分摊到CPU的各个线程上去执行，彻底榨干所有CPU性能</strong>。</p>
 <h4 id="到此dots架构最核心的优化思想已经说完了但我们是不是忘了什么">到此，DOTS架构最核心的优化思想已经说完了，但我们是不是忘了什么？</h4>
-<figure data-type="image" tabindex="7"><img src="https://huanime.com.cn//post-images/1594540639974.gif" alt="" loading="lazy"></figure>
+<center><img src="../../post-images/1594540639974.gif" /></center>
 <center>Burst Compiler : 我还没上车呢！</center>
 <br>
 <p>最后，别忘了DOTS中还有Burst Compiler，它能够基于LLVM将用户的Job System C#代码转换为高度优化的本机代码，因此，只需要在Job代码块前增加“[BurstCompile]”声明，我们就可以在不用做任何额外操作的前提下，白嫖10-30％的性能提升。</p>
-<figure data-type="image" tabindex="8"><img src="https://huanime.com.cn//post-images/1594540718968.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://huanime.com.cn//post-images/1594540718968.png" alt="" loading="lazy"></figure>
 <center>Burst Compiler转换的汇编指令</center>
 <br>
 <h2 id="4-dots使用方式">4 DOTS使用方式</h2>
@@ -123,7 +123,7 @@ CPU缓存的存储空间是有限的，于是我们希望CPU缓存存储的是�
 <li>burst</li>
 <li>jobs</li>
 </ul>
-<figure data-type="image" tabindex="9"><img src="https://huanime.com.cn//post-images/1594540927735.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://huanime.com.cn//post-images/1594540927735.png" alt="" loading="lazy"></figure>
 <p>其中需要注意的一点是，使用Burst Compiler之前我们需要做一点设置：<br>
 <img src="https://huanime.com.cn//post-images/1594540800685.png" alt="" loading="lazy"></p>
 <ul>
@@ -173,8 +173,8 @@ namespace Shooter.Classic {
 }
 </code></pre>
 <p>这套框架下，我们会发现当飞船数量达到16,500时，系统就已经有点吃不消了，帧率达到临界线30FPS：</p>
-<figure data-type="image" tabindex="10"><img src="https://huanime.com.cn//post-images/1594541055741.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="11"><img src="https://huanime.com.cn//post-images/1594541060530.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://huanime.com.cn//post-images/1594541055741.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://huanime.com.cn//post-images/1594541060530.png" alt="" loading="lazy"></figure>
 <h4 id="4-2-2-classic-system-job-system">4-2-2 Classic System + Job System</h4>
 <p>现在我们使用Job System改写上一套框架中的Movement控制脚本，也就是使用多线程分批控制飞船的移动。改写后的MovementJob脚本如下，它实现了一个IJob接口，这意味这该脚本定义了一种task或job，能够批量管理、控制某一种data。<br>
 为了进一步了解这个Job是如何组织的，让我们分解来看它使用的接口：<br>
@@ -254,12 +254,12 @@ AddShips(int amount) {
 }
 </code></pre>
 <p>最后我们运行游戏，会看到现在在同等帧率下，同屏飞船数量被提升到了一倍左右：</p>
-<figure data-type="image" tabindex="12"><img src="https://huanime.com.cn//post-images/1594541335387.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="13"><img src="https://huanime.com.cn//post-images/1594541339224.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://huanime.com.cn//post-images/1594541335387.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://huanime.com.cn//post-images/1594541339224.png" alt="" loading="lazy"></figure>
 <h4 id="4-2-3-ecs-job-system">4-2-3 ECS + Job System</h4>
 <p>接着我们再来看看将GameObject替换为entities后系统的性能表现。<br>
 此时原本GameObject上所有的MonoBehaviour都需要被转换为Component，于是现在inspector上看到的属性可能看起来会有点奇怪，像下面这样：</p>
-<figure data-type="image" tabindex="14"><img src="https://huanime.com.cn//post-images/1594541354870.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://huanime.com.cn//post-images/1594541354870.png" alt="" loading="lazy"></figure>
 <p>属性值的定义方式如下，我们不再像Classical开发方式一样继承MonoBehaviour，而是继承IComponentData，这样保证属性中没有冗余数据：</p>
 <pre><code>using System;
 using Unity.Entities;
@@ -361,12 +361,12 @@ namespace Shooter.ECS {
 }
 </code></pre>
 <p>修改完成，我们再次运行游戏，这时同等帧率下的同屏飞船数已经到了惊人的91,000个：</p>
-<figure data-type="image" tabindex="15"><img src="https://huanime.com.cn//post-images/1594541444619.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="16"><img src="https://huanime.com.cn//post-images/1594541447575.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="https://huanime.com.cn//post-images/1594541444619.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="https://huanime.com.cn//post-images/1594541447575.png" alt="" loading="lazy"></figure>
 <h4 id="4-2-4-ecs-job-system-burst-compiler">4-2-4 ECS + Job System + Burst Compiler</h4>
 <p>最后别忘了我们还有Burst Compiler，在Job代码块上添加[BurstCompile]，重新编译后运行游戏，最终，我们将数量推到了极致：150,000。</p>
-<figure data-type="image" tabindex="17"><img src="https://huanime.com.cn//post-images/1594541473891.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="18"><img src="https://huanime.com.cn//post-images/1594541481020.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="15"><img src="https://huanime.com.cn//post-images/1594541473891.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="16"><img src="https://huanime.com.cn//post-images/1594541481020.png" alt="" loading="lazy"></figure>
 <h2 id="5-总结">5 总结</h2>
 <p>最后我们可以再回过头对比一下实验中的数据，可以看到，结合DOTS中所有的优化技术，我们能够将一套完全相同系统的性能提升十倍以上，而最终成品则几乎没有品质上的差别。</p>
 <table>
