@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-07-12T11:02:07.290Z</updated>
+    <updated>2020-08-28T07:39:54.026Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -10,6 +10,105 @@
     <logo>https://huanime.com.cn/images/avatar.png</logo>
     <icon>https://huanime.com.cn/favicon.ico</icon>
     <rights>All rights reserved 2020, HU ANIME</rights>
+    <entry>
+        <title type="html"><![CDATA[[Tool]RaindropFX Pro update 2.5.0]]></title>
+        <id>https://huanime.com.cn/post/toolraindropfx-pro-update-250/</id>
+        <link href="https://huanime.com.cn/post/toolraindropfx-pro-update-250/">
+        </link>
+        <updated>2020-08-28T07:25:41.000Z</updated>
+        <summary type="html"><![CDATA[<p>Unity3D 屏幕雨雾特效插件现已更新至2.5.0，新增HDRP支持</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Unity3D 屏幕雨雾特效插件现已更新至2.5.0，新增HDRP支持</p>
+<!-- more -->
+<blockquote>
+<p>added: dyniamic wipe effect;<br>
+新增: 动态擦除效果，可交互式擦除水滴及屏幕雾;<br>
+added: droplet pixelization;<br>
+新增: 水滴像素化，用于制作像素风游戏;<br>
+added: screen rain mask;<br>
+新增：屏幕雨滴遮罩，基于一张灰度图控制屏幕上水滴可见的部分（静态版本水滴擦除）.</p>
+</blockquote>
+<pre><code>Asset Store 传送门
+</code></pre>
+<p><a href="http://u3d.as/1M4D">&gt;&gt;&gt;Standard Version/标准渲染管线版&lt;&lt;&lt;</a><br>
+<a href="http://u3d.as/1Un5">&gt;&gt;&gt;HDRP Version/高清渲染管线版&lt;&lt;&lt;</a></p>
+<pre><code>Forum 传送门
+</code></pre>
+<p><a href="https://forum.unity.com/threads/raindropfx-realistic-camera-lens-rain-effect.519068/#post-3402707">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
+<pre><code>Video 视频
+</code></pre>
+<p><a href="https://youtu.be/M9g0TPl3ysw">[Youtube_2.5_NewFeatures]</a><br>
+<a href="https://youtu.be/u-329KEE7Go">[Youtube_SetupWipeEffect_StandardPipe]</a><br>
+<a href="https://youtu.be/n5AzNwzruZI">[Youtube_SetupWipeEffect_HDRP]</a></p>
+<pre><code>Intro 简介
+</code></pre>
+<p><strong>Compatibility/兼容性:</strong></p>
+<blockquote>
+<p>SRP supported (HDRP 7.1.8+);<br>
+支持可编程渲染管线SRP (高清渲染管线 7.1.8+);<br>
+Both forward rendering and deferred rendering are supported;<br>
+兼容前向渲染与缓冲渲染;<br>
+Deeply integrated with post-processing stack;<br>
+与Unity的后处理特效栈深度集成.</p>
+</blockquote>
+<p><strong>Features/特性:</strong></p>
+<blockquote>
+<p>deeply integrated with Post Processing Stack (v2);<br>
+与PPV2深度集成；<br>
+post effect of the falling drops on the camera lens;<br>
+屏幕雨滴动画后处理特效;<br>
+raindrops animation based on physics;<br>
+基于物理计算的水滴动画;<br>
+dynamic wipe effect;<br>
+交互式雨滴/屏幕雾擦除效果;<br>
+wind turbulence support;<br>
+支持添加风力以及紊乱风;<br>
+radial wind for driving simulation;<br>
+用于驾驶模拟的径向风；<br>
+simulate colored liquids;<br>
+模拟有色液体；<br>
+create screen fog effect and interactive with waterdrops naturally;<br>
+支持创建屏幕雾气并能够与运动的水滴产生自然的动态交互效果;<br>
+object space supported (add raindrop to object surface);<br>
+新增物体表面空间版本（添加雨滴到物体表面）；<br>
+batch image renderer (add raindrop to your video sequence);<br>
+雨滴序列帧渲染器（可渲染雨滴动画到自定义序列帧）；<br>
+custom raindrop texture supported;<br>
+支持自定义水滴形状;<br>
+all source code is included, so you can customize it for yourself.<br>
+包含所有源代码，您可以自行修改.</p>
+</blockquote>
+<p><strong>Bonus post effects/额外附赠后处理特效:</strong></p>
+<blockquote>
+<p>Gaussian blur;<br>
+高斯模糊;<br>
+color levels;<br>
+色阶;<br>
+frosted glass effect;<br>
+毛玻璃效果;<br>
+split screen effect based on custom mask;<br>
+多玩家分屏效果，支持自定义遮罩;<br>
+screenshot captor;<br>
+基于PPV2的截图工具；<br>
+all the effects are integrated with Post Processing Stack (v2) and support sorting to get different results.<br>
+以上后处理特效均已集成Unity后处理特效栈(v2)，支持排序产生不同的组合效果.</p>
+</blockquote>
+<pre><code>Screenshots 效果图
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1598600259922.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://huanime.com.cn//post-images/1598600272974.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1598600276688.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1598600280494.png" alt="" loading="lazy"></figure>
+<p><a href="../../post-images/1582782545107.png" data-lightbox="image-1" data-title="RaindropFX2.0"><img src="../../post-images/1582782545107.png" /></a></p>
+<p><a href="../../post-images/1582782583861.png" data-lightbox="image-1" data-title="RaindropFX2.0"><img src="../../post-images/1582782583861.png" /></a></p>
+<p><a href="../../post-images/1582782589936.png" data-lightbox="image-1" data-title="RaindropFX2.0"><img src="../../post-images/1582782589936.png" /></a></p>
+<p><a href="../../post-images/1582782593908.png" data-lightbox="image-1" data-title="RaindropFX2.0"><img src="../../post-images/1582782593908.png" /></a></p>
+<p><a href="../../post-images/1582782598973.png" data-lightbox="image-1" data-title="RaindropFX2.0"><img src="../../post-images/1582782598973.png" /></a></p>
+<p><a href="../../post-images/1582782606474.png" data-lightbox="image-1" data-title="RaindropFX2.0"><img src="../../post-images/1582782606474.png" /></a></p>
+<p><a href="../../post-images/1582782617460.png" data-lightbox="image-1" data-title="RaindropFX2.0"><img src="../../post-images/1582782617460.png" /></a></p>
+<p><a href="../../post-images/1582782621005.png" data-lightbox="image-1" data-title="RaindropFX2.0"><img src="../../post-images/1582782621005.png" /></a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]Unity DOTS 原理解读&入门指南]]></title>
         <id>https://huanime.com.cn/post/tutounity-dots-ru-men-zhi-nan/</id>
@@ -364,7 +463,7 @@ namespace Shooter.ECS {
 <figure data-type="image" tabindex="13"><img src="https://huanime.com.cn//post-images/1594541444619.png" alt="" loading="lazy"></figure>
 <figure data-type="image" tabindex="14"><img src="https://huanime.com.cn//post-images/1594541447575.png" alt="" loading="lazy"></figure>
 <h4 id="4-2-4-ecs-job-system-burst-compiler">4-2-4 ECS + Job System + Burst Compiler</h4>
-<p>最后别忘了我们还有Burst Compiler，在Job代码块上添加[BurstCompile]，重新编译后运行游戏，最终，我们将数量推到了极致：150,000。</p>
+<p>最后别忘了我们还有Burst Compiler，Burst Compiler的使用极其简单，在Job代码块上添加[BurstCompile]，重新编译后运行游戏即可。最终我们可以看到，数量达到了150,000个，对比最初Classical开发方式下的16,500个，同屏飞船数提升了整整一个数量级。</p>
 <figure data-type="image" tabindex="15"><img src="https://huanime.com.cn//post-images/1594541473891.png" alt="" loading="lazy"></figure>
 <figure data-type="image" tabindex="16"><img src="https://huanime.com.cn//post-images/1594541481020.png" alt="" loading="lazy"></figure>
 <h2 id="5-总结">5 总结</h2>
@@ -1473,287 +1572,6 @@ ifr.height=(ifr.offsetWidth/1.8).toString();
 </code></pre>
 <p><a href="../../post-images/1564972630912.jpg" data-lightbox="image-1" data-title="Cyberpunk City"><img src="../../post-images/1564972630912.jpg" /></a><br>
 <a href="../../post-images/1564972639320.jpg" data-lightbox="image-1" data-title="Cyberpunk City"><img src="../../post-images/1564972639320.jpg" /></a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Tool]HuAnime Toolset  Update V1.8]]></title>
-        <id>https://huanime.com.cn/post/toolhuanime-toolset-update-v18/</id>
-        <link href="https://huanime.com.cn/post/toolhuanime-toolset-update-v18/">
-        </link>
-        <updated>2019-08-06T02:31:56.000Z</updated>
-        <summary type="html"><![CDATA[<style>
-*,body,ul,h1,h2{ margin:0; padding:0; list-style:none;}
-//body{font-size:12px; padding-top:20px;}
-a{ color:#777;border:none;}
-#menu { width:100%; margin:auto;}
- #menu h1 { font-size:16px;  margin-top:1px;  background-color:#F93;}
- #menu h2 { font-size:14px; border:#E7E7E7 1px solid; border-top-color:#FFF; background-color:#F4F4F4;}
- #menu ul { padding-left:14px; height:auto;border:#E7E7E7 1px solid; border-top:none;overflow:auto;}
- #menu a { display:block; padding:5px 0 3px 10px; text-decoration:none; overflow:hidden;}
- #menu a:hover{ color:#6F0; background:#000;}
- #menu .no {display:none;}
- #menu .h1 a{color:#6F0;}
- #menu .h2 a{color:#06F;}
- #menu  h1 a{color:#FFF;}
-</style>
-<script language="JavaScript">
-function ShowMenu(obj,n){
- var Nav = obj.parentNode;
- if(!Nav.id){
-  var BName = Nav.getElementsByTagName("ul");
-  var HName = Nav.getElementsByTagName("h2");
-  var t = 2;
- }else{
-  var BName = document.getElementById(Nav.id).getElementsByTagName("span");
-  var HName = document.getElementById(Nav.id).getElementsByTagName("h1");
-  var t = 1;
- }
- for(var i=0; i<HName.length;i++){
-  HName[i].innerHTML = HName[i].innerHTML.replace("-","+");
-  HName[i].className = "";
- }
- obj.className = "h" + t;
- for(var i=0; i<BName.length; i++){if(i!=n){BName[i].className = "no";}}
- if(BName[n].className == "no"){
-  BName[n].className = "";
-  obj.innerHTML = obj.innerHTML.replace("+","-");
- }else{
-  BName[n].className = "no";
-  obj.className = "";
-  obj.innerHTML = obj.innerHTML.replace("-","+");
- }
-}
-</script>
-<p>Make everything automatic!</p>
-]]></summary>
-        <content type="html"><![CDATA[<style>
-*,body,ul,h1,h2{ margin:0; padding:0; list-style:none;}
-//body{font-size:12px; padding-top:20px;}
-a{ color:#777;border:none;}
-#menu { width:100%; margin:auto;}
- #menu h1 { font-size:16px;  margin-top:1px;  background-color:#F93;}
- #menu h2 { font-size:14px; border:#E7E7E7 1px solid; border-top-color:#FFF; background-color:#F4F4F4;}
- #menu ul { padding-left:14px; height:auto;border:#E7E7E7 1px solid; border-top:none;overflow:auto;}
- #menu a { display:block; padding:5px 0 3px 10px; text-decoration:none; overflow:hidden;}
- #menu a:hover{ color:#6F0; background:#000;}
- #menu .no {display:none;}
- #menu .h1 a{color:#6F0;}
- #menu .h2 a{color:#06F;}
- #menu  h1 a{color:#FFF;}
-</style>
-<script language="JavaScript">
-function ShowMenu(obj,n){
- var Nav = obj.parentNode;
- if(!Nav.id){
-  var BName = Nav.getElementsByTagName("ul");
-  var HName = Nav.getElementsByTagName("h2");
-  var t = 2;
- }else{
-  var BName = document.getElementById(Nav.id).getElementsByTagName("span");
-  var HName = document.getElementById(Nav.id).getElementsByTagName("h1");
-  var t = 1;
- }
- for(var i=0; i<HName.length;i++){
-  HName[i].innerHTML = HName[i].innerHTML.replace("-","+");
-  HName[i].className = "";
- }
- obj.className = "h" + t;
- for(var i=0; i<BName.length; i++){if(i!=n){BName[i].className = "no";}}
- if(BName[n].className == "no"){
-  BName[n].className = "";
-  obj.innerHTML = obj.innerHTML.replace("+","-");
- }else{
-  BName[n].className = "no";
-  obj.className = "";
-  obj.innerHTML = obj.innerHTML.replace("-","+");
- }
-}
-</script>
-<p>Make everything automatic!</p>
-<!-- more -->
-<pre><code>  •  Revision History
-</code></pre>
-<p><strong>v 1.80</strong></p>
-<blockquote>
-<p>Some tools have been updated.<br>
-New tools added.</p>
-</blockquote>
-<p><strong>v 1.50</strong></p>
-<blockquote>
-<p>Namespace of all tools is optimized with 'HU_' prefix.<br>
-Dockable dialog bar added.<br>
-New tools added.</p>
-</blockquote>
-<p><strong>v 1.20</strong></p>
-<blockquote>
-<p>New tools added.</p>
-</blockquote>
-<p><strong>v 1.00</strong></p>
-<blockquote>
-<p>First release.</p>
-</blockquote>
-<pre><code>V1.8.0工具列表
-</code></pre>
-</br>
-<pre><code>  · 主工具箱
-</code></pre>
-</br>
-<div id="menu">
-   <h1 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ [NEW]Configuration</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ Register/unregister Dialog Bar</a></a></h2><ul class="no"><a>启用/禁用可停靠的工具窗口</a></ul>
- </span>
- <h1 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Object Manage Tools</a></a></h1>
- <span class="no">
-		  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ Renamer</a></a></h2><ul class="no"><a>批量重命名选中物体</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Attacher</a></a></h2><ul class="no"><a>按类型(class)合并选中物体</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ Detacher</a></h2><ul class="no"><a>分离子物体(elements)</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ Arranger</a></h2><ul class="no"><a>按间隔整理选中物体</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,4)"><a href="javascript:void(0)">+ [NEW]Nested Isolator</a></h2><ul class="no"><a>多层隔离显示</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,5)"><a href="javascript:void(0)">+ [NEW]Auto Grouper</a></h2><ul class="no"><a>自动聚类选中物体，支持按组、子物体或网格合并方式聚类</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,6)"><a href="javascript:void(0)">+ Selection Slot</a></h2><ul class="no"><a>存储当前物体选中状态到选择集，点击选择集按钮恢复选中状态</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,7)"><a href="javascript:void(0)">+ Random Transer</a></h2><ul class="no"><a>为选中物体赋予随机位置、旋转与缩放状态</a></ul>
-  <h2 style="text-decoration:line-through"><a>+ [Deprecated]Poly ID Tools</a></h2>
-  <h2 onClick="javascript:ShowMenu(this,8)"><a href="javascript:void(0)">+ [NEW]Poly Tools</a></h2><ul class="no"><a>①按面积、邻接面数选择poly面</br>②显示选中poly顶点或面的编号</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,9)"><a href="javascript:void(0)">+ Poly Recreator</a></a></h2><ul class="no"><a>清除选中模型中的错误位置信息(尤其是来自模型空间的错误信息)。当模型产生错误结果时，请尝试用此插件"重新创建"模型进行修复</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,10)"><a href="javascript:void(0)">+ Spline Recreator</a></a></h2><ul class="no"><a>将选中样条曲线转换为可执行的MaxScript，同时可用于清除样条曲线中的错误位置信息</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,11)"><a href="javascript:void(0)">+ [NEW]Spline Outline</a></a></h2><ul class="no"><a>将选中样条线图形顶点按法线方向推出创建轮廓线</a></ul>
-	  <h2 style="text-decoration:line-through"><a>+ [Deprecated]Spline Knot Manager</a></h2>
-  <h2 onClick="javascript:ShowMenu(this,12)"><a href="javascript:void(0)">+ [NEW]Spline Tool Box</a></a></h2><ul class="no"><a>①样条线顶点类型管理</br>②样条线顶点选择工具</br>③样条线图形轮廓线创建</br>④按切线生成环线</br>⑤按比例打断样条线</br>⑥样条线顶点约束</br>⑦样条线信息Debug</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,13)"><a href="javascript:void(0)">+ [NEW]Spline Rendering Manager</a></a></h2><ul class="no"><a>按自定义曲线控制生成的管道模型半径</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,14)"><a href="javascript:void(0)">+ [NEW]Clear User Defined Props</a></a></h2><ul class="no"><a>清空自定义物体属性</a></ul>
- </span>
-  <h1 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ Material Manage Tools</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ [NEW]Material Browser</a></a></h2><ul class="no"><a>材质浏览器，批量管理所有场景中的材质</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Show textures in viewport</a></a></h2><ul class="no"><a>在视图中用材质贴图替换物体颜色外观，支持标准材质与Vray材质</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ [NEW]Mat Sweeper</a></a></h2><ul class="no"><a>清除选中物体的材质</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ [NEW]Color Mixer</a></a></h2><ul class="no"><a>颜色混合器，在两个自定义颜色之间创建过渡色</a></ul>
- </span>
-  <h1 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ Animation Tools</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ Transform Manager</a></h2><ul class="no"><a>锁定物体的一个或多个Transform属性</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Attachment Holder</a></h2><ul class="no"><a>为物体快捷创建附着约束</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ [NEW]Mirror Morpher</a></h2><ul class="no"><a>为Morph对象应用镜像顶点位置(不改变顶点编号)</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ Spline Controller</a></h2><ul class="no"><a>为样条线的每个顶点创建控制器</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,4)"><a href="javascript:void(0)">+ Keyframe Filter</a></h2><ul class="no"><a>删除动画关键帧中的某些属性</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,5)"><a href="javascript:void(0)">+ Anim Repeater</a></h2><ul class="no"><a>重复并延长当前物体的选中动画帧，支持增量动画</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,6)"><a href="javascript:void(0)">+ Anim Recorder</a></h2><ul class="no"><a>将一个物体的动画记录到另一个物体</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,7)"><a href="javascript:void(0)">+ Anim Rotator</a></h2><ul class="no"><a>旋转行走动画</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,8)"><a href="javascript:void(0)">+ Anim Noiser</a></h2><ul class="no"><a>为物体添加噪声动画</a></ul>
- </span>
-   <h1 onClick="javascript:ShowMenu(this,4)"><a href="javascript:void(0)">+ Procedural Modeling Tools</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ IES Light Creator</a></a></h2><ul class="no"><a>为Ghost Town生成的程序建筑模型添加IES射灯(Model+Vray IES Light)</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Light Ceil Creator</a></a></h2><ul class="no"><a>基于选中的poly面重新拓扑生成带灯带的屋顶，灯带类型为Vray灯光物体(Vray Mesh Light)</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ Voxel Tree Generator</a></a></h2><ul class="no"><a>生成带生长动画的程序化体素树模型</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ [NEW]Voxel Mesh Builder</a></a></h2><ul class="no"><a>将选中模型体素化</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,4)"><a href="javascript:void(0)">+ Debugger Boxes</a></a></h2><ul class="no"><a>在随机位置生成一堆带随机网格颜色的盒子模型</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,5)"><a href="javascript:void(0)">+ Catenary Maker</a></a></h2><ul class="no"><a>基于选中的样条线生成悬线</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,6)"><a href="javascript:void(0)">+ Rect Slicer</a></a></h2><ul class="no"><a>将模型切块</a></ul>
-	<h2 style="text-decoration:line-through"><a>+ [Deprecated]Geo Cutter</a></h2>
-  <h2 onClick="javascript:ShowMenu(this,7)"><a href="javascript:void(0)">+ Batch Boolean</a></a></h2><ul class="no"><a>批量模型布尔切割</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,8)"><a href="javascript:void(0)">+ [NEW][Demo Ver.]Face Retopology</a></a></h2><ul class="no"><a>重拓扑选中poly面</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,9)"><a href="javascript:void(0)">+ Sub-Spline Connector</a></a></h2><ul class="no"><a>按百分比位置连接选中样条线的子样条线，并生成一条新的样条线，支持位置排序</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,10)"><a href="javascript:void(0)">+ Mesh From Spline</a></a></h2><ul class="no"><a>基于选中样条线的子样条线生成网格模型，支持位置排序</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,11)"><a href="javascript:void(0)">+ Skynet Creator</a></a></h2><ul class="no"><a>基于深度优先搜索(DFS)生成网状结构模型，使用Point物体作为基础物体的子物体时Point即可被自动识别为延伸端口(下一个物体的生成方向)</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,12)"><a href="javascript:void(0)">+ Snowy Surface</a></a></h2><ul class="no"><a>为选中物体添加积雪效果(提取法线方向为Z向的面生成新的积雪模型)</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,13)"><a href="javascript:void(0)">+ Pillars Generator</a></a></h2><ul class="no"><a>生成随机外观的柱子模型</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,14)"><a href="javascript:void(0)">+ Cobwebs Generator</a></a></h2><ul class="no"><a>基于选中物体随机生成蜘蛛网(基于样条线)</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,15)"><a href="javascript:void(0)">+ Rock Generator</a></a></h2><ul class="no"><a>生成随机外观的岩石模型</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,16)"><a href="javascript:void(0)">+ Feather Generator</a></a></h2><ul class="no"><a>羽毛模型生成器</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,17)"><a href="javascript:void(0)">+ [NEW]Tire Generator</a></a></h2><ul class="no"><a>生成轮胎模型，带Vray置换与Vray材质</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,18)"><a href="javascript:void(0)">+ Mindflow Splines Creator</a></a></h2><ul class="no"><a>基于选中的样条线图形生成样条线描边</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,19)"><a href="javascript:void(0)">+ [NEW]Kitchen Cabinet Generator</a></a></h2><ul class="no"><a>生成橱柜模型</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,20)"><a href="javascript:void(0)">+ [NEW]Building Generator</a></a></h2><ul class="no"><a>基于L-System的更加一般化的建筑生成器</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,21)"><a href="javascript:void(0)">+ Procedural Sci-Fi Building Gen</a></a></h2><ul class="no"><a>程序化科幻建筑生成器</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,22)"><a href="javascript:void(0)">+ [NEW][Demo Ver.]Random Pipe Generator</a></a></h2><ul class="no"><a>在两个选中的Poly面之间生成无穿插管道样条线模型</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,23)"><a href="javascript:void(0)">+ [NEW][Demo Ver.]Procedural Cable Generator</a></a></h2><ul class="no"><a>程序化电缆线生成器</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,24)"><a href="javascript:void(0)">+ [NEW][Demo Ver.]Random Frame Generator</a></a></h2><ul class="no"><a>基于Delaunay Triangle的程序化金属框架模型生成器</a></ul>
- </span>
-   <h1 onClick="javascript:ShowMenu(this,5)"><a href="javascript:void(0)">+ Procedural Animating Tools</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ Range Affector</a></a></h2><ul class="no"><a>基于控制器生成程序化运动图形动画</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Elevator Animator</a></a></h2><ul class="no"><a>程序化电梯动画生成器</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ Boat Animator</a></a></h2><ul class="no"><a>船舶摇摆动画生成器，支持四种噪声类型</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ Star Trace</a></a></h2><ul class="no"><a>生成类似延时摄影生成的星轨动画效果，可自动生成渐变拖尾Vray材质</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,4)"><a href="javascript:void(0)">+ Poly Fracture</a></a></h2><ul class="no"><a>poly网格破碎，新增基于控制器的爆炸动画生成</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,5)"><a href="javascript:void(0)">+ Vol.Sel To Texture</a></a></h2><ul class="no"><a>基于体积选择生成贴图序列</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,6)"><a href="javascript:void(0)">+ Drop Animation</a></a></h2><ul class="no"><a>掉落动画生成器</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,7)"><a href="javascript:void(0)">+ Spring</a></a></h2><ul class="no"><a>为物体的已有动画帧增加弹性次级动画效果</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,8)"><a href="javascript:void(0)">+ Cat Tail</a></a></h2><ul class="no"><a>为选中的骨骼链或样条线生成飘带动画</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,9)"><a href="javascript:void(0)">+ PF Baker</a></a></h2><ul class="no"><a>烘焙PF粒子到网格动画</a></ul>
- </span>
-   <h1 onClick="javascript:ShowMenu(this,6)"><a href="javascript:void(0)">+ Rigging Tools</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ HU_Anim Icon Set</a></a></h2><ul class="no"><a>动画绑定用样条线图形预设集</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Auto Rigging For MakeHuman</a></a></h2><ul class="no"><a>为MakeHuman(1.0.2)生成的模型自动生成高级人体绑定</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ Auto Facial Rigging Tools</a></a></h2><ul class="no"><a>自动面部绑定</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ Auto Skin Weight</a></a></h2><ul class="no"><a>更加便捷的蒙皮权重设置方式</a></ul>
-	<h2 style="text-decoration:line-through"><a>+ [Deprecated]Make Stretchy Bones</a></h2>
-	<h2 style="text-decoration:line-through"><a>+ [Deprecated]Poly ID Tools</a></h2>
-  <h2 onClick="javascript:ShowMenu(this,4)"><a href="javascript:void(0)">+ [NEW]Bone Tools</a></a></h2><ul class="no"><a>骨骼工具箱</br>①将选中骨骼转化为弹性骨骼</br>②根据百分比将选中骨骼打断为多节</a></ul>
- </span>
-   <h1 onClick="javascript:ShowMenu(this,7)"><a href="javascript:void(0)">+ Asset Operator Tools</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ Batch Exporter</a></a></h2><ul class="no"><a>批量导出工具</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Batch Loader</a></a></h2><ul class="no"><a>批量导入工具</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ Bitmap Renamer</a></a></h2><ul class="no"><a>重命名所有当前场景中引用的贴图</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ Instances To Proxy</a></a></h2><ul class="no"><a>将实例物体转为Vray代理</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,4)"><a href="javascript:void(0)">+ [NEW]Batch MS Executer</a></a></h2><ul class="no"><a>批量.ms/.mcr文件自动执行脚本，支持子文件夹遍历</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,5)"><a href="javascript:void(0)">+ [NEW]MS Encrypter</a></a></h2><ul class="no"><a>.ms脚本快捷加密方式，生成.mse文件</a></ul>
- </span>
-   <h1 onClick="javascript:ShowMenu(this,8)"><a href="javascript:void(0)">+ Others</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ Quickly open common file paths</a></a></h2><ul class="no"><a>常用max路径的快捷打开方式</a></ul>
- </span>
-</br>
-<pre><code>  · 快速右键工具
-</code></pre>
-</br>
-   <h1 onClick="javascript:ShowMenu(this,9)"><a href="javascript:void(0)">+ [NEW]HuAnime Right Click Booster</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ BoxModeSwitch</a></a></h2><ul class="no"><a>将选中物体显示方式转换为包围盒模式，且转换后的模型不会被渲染器渲染</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ ClearScene</a></a></h2><ul class="no"><a>清空场景，包括隐藏物体</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ FaceToSphere</a></a></h2><ul class="no"><a>将圆柱顶端面转换为半球模型</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ Freeze_ShowInColor</a></a></h2><ul class="no"><a>冻结模型，但不显示模型为灰色</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,4)"><a href="javascript:void(0)">+ BorderFill</a></a></h2><ul class="no"><a>自动补齐poly缺口面</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,5)"><a href="javascript:void(0)">+ EdgeStraighten</a></a></h2><ul class="no"><a>将选中poly点对齐到直线</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,6)"><a href="javascript:void(0)">+ MeasureMove</a></a></h2><ul class="no"><a>按与参照物的指定距离移动选中顶点或物体</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,7)"><a href="javascript:void(0)">+ RegularizeEdgeLoop</a></a></h2><ul class="no"><a>将选中顶点、线段或面圆形化</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,8)"><a href="javascript:void(0)">+ SelectCamera</a></a></h2><ul class="no"><a>快捷选中当前场景中的摄影机</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,9)"><a href="javascript:void(0)">+ SelectChildren</a></a></h2><ul class="no"><a>选中所有当前选择集中物体的子物体</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,10)"><a href="javascript:void(0)">+ SkinPaintSwitch</a></a></h2><ul class="no"><a>蒙皮权重绘制工具的快捷调用方式</a></ul>
- </span>
-</br>
-<pre><code>  · 自定义修改器
-</code></pre>
-</br>
-   <h1 onClick="javascript:ShowMenu(this,10)"><a href="javascript:void(0)">+ [NEW]HuAnime Modifiers</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ Advanced Sweep</a></a></h2><ul class="no"><a>Spline Rendering Manager的修改器版本，根据自定义曲线调节生成的样条线管道模型半径</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Create Holes</a></a></h2><ul class="no"><a>基于选中的顶点或面生成孔洞</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ Extrude Edges</a></a></h2><ul class="no"><a>挤出选中边</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,3)"><a href="javascript:void(0)">+ Extrude Faces</a></a></h2><ul class="no"><a>挤出选中面</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,4)"><a href="javascript:void(0)">+ Inset Faces</a></a></h2><ul class="no"><a>插入选中面</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,5)"><a href="javascript:void(0)">+ Outline Faces</a></a></h2><ul class="no"><a>为选中面创建轮廓</a></ul>
- </span>
-</br>
-<pre><code>  · 自定义形状
-</code></pre>
-</br>
-   <h1 onClick="javascript:ShowMenu(this,11)"><a href="javascript:void(0)">+ [NEW]HuAnime Shapes</a></a></h1>
- <span class="no">
-  <h2 onClick="javascript:ShowMenu(this,0)"><a href="javascript:void(0)">+ Arrow</a></a></h2><ul class="no"><a>箭头形状</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">+ Hexagon Grid Ngons</a></a></h2><ul class="no"><a>多边形阵列</a></ul>
-  <h2 onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">+ ngonedge</a></a></h2><ul class="no"><a>基于边线创建多边形形状</a></ul>
- </span>
-</div>
-</br>
-<pre><code>截图
-</code></pre>
-</br>
-<div align=center><a href="../../post-images/1565491362505.png" data-lightbox="image-1" data-title="HuAnime Toolset v1.8"><img src="../../post-images/1565491362505.png" /></a></div>
 ]]></content>
     </entry>
 </feed>
