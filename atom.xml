@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-09-04T12:25:53.262Z</updated>
+    <updated>2020-09-04T12:34:35.043Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://huanime.com.cn/favicon.ico</icon>
     <rights>All rights reserved 2020, HU ANIME</rights>
     <entry>
-        <title type="html"><![CDATA[[Tool]Spline Mesher Pro]]></title>
+        <title type="html"><![CDATA[[Tool]Spline Mesher 2.0.0 (Pro)]]></title>
         <id>https://huanime.com.cn/post/toolspline-mesher-pro/</id>
         <link href="https://huanime.com.cn/post/toolspline-mesher-pro/">
         </link>
