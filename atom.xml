@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-08-28T07:47:35.125Z</updated>
+    <updated>2020-09-04T12:19:46.060Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -10,6 +10,107 @@
     <logo>https://huanime.com.cn/images/avatar.png</logo>
     <icon>https://huanime.com.cn/favicon.ico</icon>
     <rights>All rights reserved 2020, HU ANIME</rights>
+    <entry>
+        <title type="html"><![CDATA[[Tool]Spline Mesher Pro]]></title>
+        <id>https://huanime.com.cn/post/toolspline-mesher-pro/</id>
+        <link href="https://huanime.com.cn/post/toolspline-mesher-pro/">
+        </link>
+        <updated>2020-09-04T10:45:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>Unity3D程序化样条线建模工具SplineMesher专业版</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Unity3D程序化样条线建模工具SplineMesher专业版</p>
+<!-- more -->
+<blockquote>
+<p>added: custom contour shape;<br>
+新增: 自定义截面轮廓支持;<br>
+Added: shape editor;<br>
+新增: 二维图形编辑器；<br>
+Added: improved gizmo;<br>
+新增: 改进了样条线节点交互模式；<br>
+Added: grow effect;<br>
+新增: 样条线网格的生长参数；<br>
+Added: automatic LOD;<br>
+新增: 样条线网格自动LOD；<br>
+Added: Least-Square Bezier Curve fitting;<br>
+新增: 基于最小二乘法的贝塞尔曲线拟合；<br>
+Added: mesh subdivide;<br>
+新增: 样条线网格细分；<br>
+Added: displacement threshold;<br>
+新增: 置换曲线新增置换阈值参数；<br>
+Added: tree generator (experimental);<br>
+新增: 树木生成器（实验性版本）；<br>
+Added: out-of-range displace curve type (extend displacement curve automatically);<br>
+新增: 置换曲线out-of-range类型；<br>
+Fixed: fixed a problem that failed to generate mesh when there were too many vertices. SplineMesher can now support up to 4 billion vertices.<br>
+修复: 顶点数过多时生成畸形的网格。现在SplineMesher最大支持40亿顶点。</p>
+</blockquote>
+<pre><code>Asset Store 传送门
+</code></pre>
+<p><a href="http://u3d.as/218w">&gt;&gt;&gt;Pro Version/专业版&lt;&lt;&lt;</a></p>
+<pre><code>Video 视频
+</code></pre>
+<p><a href="https://youtu.be/W1Pnr_W-UDg">[Youtube_2.0_NewFeatures]</a><br>
+<a href="https://youtu.be/RFeAswWzg_k">[Youtube_1.0_HowToUse]</a></p>
+<pre><code>Intro 简介
+</code></pre>
+<p><strong>Compatibility/兼容性:</strong></p>
+<blockquote>
+<p>support all platforms and rendering pipelines.<br>
+支持所有平台与所有渲染管线.</p>
+</blockquote>
+<p><strong>Highlights/工具亮点:</strong></p>
+<blockquote>
+<p>easy to use: drag and drop the script to an empty gameobject to generate spline and tube mesh;<br>
+简单易用: 拖拽脚本到空物体即可使用;<br>
+mesh corner correction for very sharp spline corners;<br>
+自动校正锐利转角处的管道网格顶点位置;<br>
+support custom contour shape;<br>
+支持自定义样条截面轮廓;<br>
+different UV tile methods are offered to solve the texture stretching problem;<br>
+支持三种不同的UV展开方式，能够从容应对各种情况下的贴图拉伸问题;<br>
+adjust radius of each mesh segment by using custom displacement curve;<br>
+支持使用自定义曲线调节管道每一节的粗细;<br>
+grow parameter for planet growing animation;<br>
+支持基于growth参数制作植物生长动画;<br>
+automatic LOD (for Bezier Curve);<br>
+样条线网格自动LOD（贝塞尔曲线）;<br>
+support Least-Square Cubic Bezier Curve fitting;<br>
+最小二乘法贝塞尔曲线拟合;<br>
+spline mesh subdivide;<br>
+支持样条线网格细分;<br>
+edit spline and the tube mesh manually or using your code in no matter edit mode or game mode;<br>
+可手动或通过代码编辑/生成样条线/网格，编辑器模式下与游戏模式下都可实时编辑;<br>
+two types of spline are supported (corner and cubic bezier), and more types will be added in the future;<br>
+现已支持两种类型的可编辑样条线 (折线类型与贝塞尔曲线类型), 将来将持续加入更多类型;<br>
+tens of parameters (twist, rotate, grow, flip, cap, displacement threshold, etc.) to help you design any shape you like;<br>
+大量可设置参数（扭曲、旋转、生长、翻转、封口、置换阈值，...），帮助您轻松设计创意外形;<br>
+support up to 4 billion vertices.<br>
+支持多达40亿个顶点.</p>
+</blockquote>
+<p><strong>Bonus content/附赠内容:</strong></p>
+<blockquote>
+<p>mathematical functions are in separate class so you can use them outside of SplineMesher, such as: Least-Square fitting, calculate normal and tangent for each vertices of your own 3D/2D splines, and so on;<br>
+数学库单独封装，您可在本插件之外方便调用;<br>
+a tree generator is included (experimental version);<br>
+包含一个程序化树木生成器（实验性版本）;<br>
+a 2D shape editor is included (for drawing custom contour shape or adding it to your own script);<br>
+包含一个二维形状编辑器（用于绘制自定义样条截面轮廓，也可用于您的任意其他脚本）;<br>
+all source code is included, so you can customize it for yourself.<br>
+提供所有源码，您可自行查看与修改.</p>
+</blockquote>
+<pre><code>Screenshots 效果图
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1599221627262.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://huanime.com.cn//post-images/1599221654851.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1599221640901.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1599221644207.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://huanime.com.cn//post-images/1599221647812.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://huanime.com.cn//post-images/1599221651918.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://huanime.com.cn//post-images/1599221661001.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://huanime.com.cn//post-images/1599221718823.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://huanime.com.cn//post-images/1599221679472.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]RaindropFX Pro update 2.5.0]]></title>
         <id>https://huanime.com.cn/post/toolraindropfx-pro-update-250/</id>
@@ -1548,30 +1649,6 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
 <!-- more -->
 <p>2020，加油！<br>
 <a href="../../post-images/1580114531054.jpg" data-lightbox="image-1" data-title="Happy New Year 2020"><img src="../../post-images/1580114531054.jpg" /></a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Anime]《ProjectEvo》-Trailer]]></title>
-        <id>https://huanime.com.cn/post/animeprojectevo-trailer/</id>
-        <link href="https://huanime.com.cn/post/animeprojectevo-trailer/">
-        </link>
-        <updated>2019-08-06T02:34:51.000Z</updated>
-        <summary type="html"><![CDATA[<p>原创动画《ProjectEvo》测试片段</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>原创动画《ProjectEvo》测试片段</p>
-<!-- more -->
-<pre><code>Trailer link
-</code></pre>
-<p><a href="https://www.bilibili.com/video/av58001135">[Bilibili_Trailer]</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=58001135&bvid=BV1a4411c7R5&cid=101206249&page=1" width="700" height="350" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<script>
-var ifr = document.getElementsByTagName("iframe")[0];
-ifr.height=(ifr.offsetWidth/1.8).toString();
-</script>
-<pre><code>剧照
-</code></pre>
-<p><a href="../../post-images/1564972630912.jpg" data-lightbox="image-1" data-title="Cyberpunk City"><img src="../../post-images/1564972630912.jpg" /></a><br>
-<a href="../../post-images/1564972639320.jpg" data-lightbox="image-1" data-title="Cyberpunk City"><img src="../../post-images/1564972639320.jpg" /></a></p>
 ]]></content>
     </entry>
 </feed>
