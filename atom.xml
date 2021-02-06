@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2020-09-04T12:34:35.043Z</updated>
+    <updated>2021-02-06T13:09:15.949Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
     <subtitle>会画画的程序猿</subtitle>
     <logo>https://huanime.com.cn/images/avatar.png</logo>
     <icon>https://huanime.com.cn/favicon.ico</icon>
-    <rights>All rights reserved 2020, HU ANIME</rights>
+    <rights>All rights reserved 2021, HU ANIME</rights>
     <entry>
         <title type="html"><![CDATA[[Tool]Spline Mesher 2.0.0 (Pro)]]></title>
         <id>https://huanime.com.cn/post/toolspline-mesher-pro/</id>
