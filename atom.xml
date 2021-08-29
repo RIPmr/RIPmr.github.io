@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2021-08-29T15:54:40.908Z</updated>
+    <updated>2021-08-29T16:05:35.285Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, HU ANIME</rights>
     <entry>
         <title type="html"><![CDATA[[Static]Take-A-Shot]]></title>
-        <id>https://huanime.com.cn/post/statictake-a-shot/</id>
-        <link href="https://huanime.com.cn/post/statictake-a-shot/">
+        <id>https://huanime.com.cn/post/statictake-a-shot</id>
+        <link href="https://huanime.com.cn/post/statictake-a-shot">
         </link>
         <updated>2021-08-29T14:58:30.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>CG静帧
@@ -27,8 +27,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]Spline Mesher 2.0.0 (Pro)]]></title>
-        <id>https://huanime.com.cn/post/toolspline-mesher-pro/</id>
-        <link href="https://huanime.com.cn/post/toolspline-mesher-pro/">
+        <id>https://huanime.com.cn/post/toolspline-mesher-pro</id>
+        <link href="https://huanime.com.cn/post/toolspline-mesher-pro">
         </link>
         <updated>2020-09-04T10:45:20.000Z</updated>
         <summary type="html"><![CDATA[<p>Unity3D程序化样条线建模工具SplineMesher专业版</p>
@@ -128,8 +128,8 @@ all source code is included, so you can customize it for yourself.<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]RaindropFX Pro update 2.5.0]]></title>
-        <id>https://huanime.com.cn/post/toolraindropfx-pro-update-250/</id>
-        <link href="https://huanime.com.cn/post/toolraindropfx-pro-update-250/">
+        <id>https://huanime.com.cn/post/toolraindropfx-pro-update-250</id>
+        <link href="https://huanime.com.cn/post/toolraindropfx-pro-update-250">
         </link>
         <updated>2020-08-28T07:25:41.000Z</updated>
         <summary type="html"><![CDATA[<p>Unity3D 屏幕雨雾特效插件现已更新至2.5.0，新增HDRP支持</p>
@@ -227,8 +227,8 @@ all the effects are integrated with Post Processing Stack (v2) and support sorti
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]Unity DOTS 原理解读&入门指南]]></title>
-        <id>https://huanime.com.cn/post/tutounity-dots-ru-men-zhi-nan/</id>
-        <link href="https://huanime.com.cn/post/tutounity-dots-ru-men-zhi-nan/">
+        <id>https://huanime.com.cn/post/tutounity-dots-ru-men-zhi-nan</id>
+        <link href="https://huanime.com.cn/post/tutounity-dots-ru-men-zhi-nan">
         </link>
         <updated>2020-07-12T07:43:22.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>什么是DOTS？Data-Oriented-Tech-Stack，多线程式数据导向型技术堆栈，Unity开发的终极解耦框架和运行效率提升利器。
@@ -651,8 +651,8 @@ docs.unity3d.com/Manual/JobSystem.html</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]ColorSpace—我们到底在谈论什么(下)]]></title>
-        <id>https://huanime.com.cn/post/tutocolorspace-p2/</id>
-        <link href="https://huanime.com.cn/post/tutocolorspace-p2/">
+        <id>https://huanime.com.cn/post/tutocolorspace-p2</id>
+        <link href="https://huanime.com.cn/post/tutocolorspace-p2">
         </link>
         <updated>2020-03-18T09:04:35.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>干货篇：如何在 3ds Max 和 AfterEffects 中实现ACES workflow
@@ -806,8 +806,8 @@ vr.options_rgbcolorspace=2
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]ColorSpace—我们到底在谈论什么(上)]]></title>
-        <id>https://huanime.com.cn/post/tutoyan-se-kong-jian-p1/</id>
-        <link href="https://huanime.com.cn/post/tutoyan-se-kong-jian-p1/">
+        <id>https://huanime.com.cn/post/tutoyan-se-kong-jian-p1</id>
+        <link href="https://huanime.com.cn/post/tutoyan-se-kong-jian-p1">
         </link>
         <updated>2020-03-17T08:49:43.000Z</updated>
         <summary type="html"><![CDATA[<pre><code>原理篇：颜色空间（Color Space）到底是什么？它对于CG又意味着什么？
@@ -1076,8 +1076,8 @@ RAW格式文件具有一定的特殊性，原理上讲，RAW文件的色域实�
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]干货—如何在Vray中正确还原ZB置换]]></title>
-        <id>https://huanime.com.cn/post/tutovray-zb-disp/</id>
-        <link href="https://huanime.com.cn/post/tutovray-zb-disp/">
+        <id>https://huanime.com.cn/post/tutovray-zb-disp</id>
+        <link href="https://huanime.com.cn/post/tutovray-zb-disp">
         </link>
         <updated>2020-03-15T05:01:11.000Z</updated>
         <summary type="html"><![CDATA[<p>ZB里苦苦雕好的细节，放到Renderer里又打回原形光溜溜？本文详细介绍ZB置换在Vray中还原的正确流程。但终究需要记住的是——Displacement is expensive.</p>
@@ -1226,8 +1226,8 @@ RAW格式文件具有一定的特殊性，原理上讲，RAW文件的色域实�
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]直观了解VrayMtl材质属性]]></title>
-        <id>https://huanime.com.cn/post/tutovraymtl-shu-xing/</id>
-        <link href="https://huanime.com.cn/post/tutovraymtl-shu-xing/">
+        <id>https://huanime.com.cn/post/tutovraymtl-shu-xing</id>
+        <link href="https://huanime.com.cn/post/tutovraymtl-shu-xing">
         </link>
         <updated>2020-03-13T04:49:50.000Z</updated>
         <summary type="html"><![CDATA[<p>现代渲染器中有着极为复杂的材质属性，有些属性仅仅通过参差不齐的翻译名称很难理解究竟对应什么样的视觉效果，本文直观展示不同属性值对观感带来的影响。</p>
@@ -1319,8 +1319,8 @@ RAW格式文件具有一定的特殊性，原理上讲，RAW文件的色域实�
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]RaindropFX Pro update 2.0.0]]></title>
-        <id>https://huanime.com.cn/post/raindropfx-pro-update-200/</id>
-        <link href="https://huanime.com.cn/post/raindropfx-pro-update-200/">
+        <id>https://huanime.com.cn/post/raindropfx-pro-update-200</id>
+        <link href="https://huanime.com.cn/post/raindropfx-pro-update-200">
         </link>
         <updated>2020-02-26T13:38:37.000Z</updated>
         <summary type="html"><![CDATA[<p>Unity3D 屏幕雨雾特效插件现已更新至2.0.0</p>
@@ -1432,8 +1432,8 @@ all the effects are integrated with Post Processing Stack (v2) and support sorti
     </entry>
     <entry>
         <title type="html"><![CDATA[[Tuto]docsify在线文档生成]]></title>
-        <id>https://huanime.com.cn/post/docsify-zai-xian-wen-dang-sheng-cheng/</id>
-        <link href="https://huanime.com.cn/post/docsify-zai-xian-wen-dang-sheng-cheng/">
+        <id>https://huanime.com.cn/post/docsify-zai-xian-wen-dang-sheng-cheng</id>
+        <link href="https://huanime.com.cn/post/docsify-zai-xian-wen-dang-sheng-cheng">
         </link>
         <updated>2020-02-26T11:04:29.000Z</updated>
         <summary type="html"><![CDATA[<p>docsify 是一个动态生成文档网站的工具，不同于 GitBook、Hexo 等，它不会将 .md 转成 .html 文件，所有转换工作都在运行时进行。</p>
