@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huanime.com.cn/</id>
     <title>HU ANIME</title>
-    <updated>2021-02-06T13:09:15.949Z</updated>
+    <updated>2021-08-29T15:19:34.406Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huanime.com.cn/"/>
     <link rel="self" href="https://huanime.com.cn/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://huanime.com.cn/images/avatar.png</logo>
     <icon>https://huanime.com.cn/favicon.ico</icon>
     <rights>All rights reserved 2021, HU ANIME</rights>
+    <entry>
+        <title type="html"><![CDATA[[Static]Take-A-Shot]]></title>
+        <id>https://huanime.com.cn/post/statictake-a-shot/</id>
+        <link href="https://huanime.com.cn/post/statictake-a-shot/">
+        </link>
+        <updated>2021-08-29T14:58:30.000Z</updated>
+        <summary type="html"><![CDATA[<pre><code>CG静帧
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<pre><code>CG静帧
+</code></pre>
+<!-- more -->
+<p><a href="../../post-images/1630249216242.png" data-lightbox="image-1" data-title="Take A Shot"><img src="../../post-images/1630249216242.png" /></a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[Tool]Spline Mesher 2.0.0 (Pro)]]></title>
         <id>https://huanime.com.cn/post/toolspline-mesher-pro/</id>
@@ -1633,22 +1648,6 @@ docs/zh-cn/guide.md   =&gt; http://domain.com/zh-cn/guide
 <p>在HTML文件中引入样式表：</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css&quot;&gt;
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Static]New Year 2020]]></title>
-        <id>https://huanime.com.cn/post/statichappy-new-year-2020/</id>
-        <link href="https://huanime.com.cn/post/statichappy-new-year-2020/">
-        </link>
-        <updated>2020-01-27T08:41:27.000Z</updated>
-        <summary type="html"><![CDATA[<pre><code>新年快乐！
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<pre><code>新年快乐！
-</code></pre>
-<!-- more -->
-<p>2020，加油！<br>
-<a href="../../post-images/1580114531054.jpg" data-lightbox="image-1" data-title="Happy New Year 2020"><img src="../../post-images/1580114531054.jpg" /></a></p>
 ]]></content>
     </entry>
 </feed>
