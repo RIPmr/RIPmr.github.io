@@ -1,0 +1,568 @@
+<html>
+<head>
+	<!--meta charset="utf-8" /-->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive"-->
+<title>[Tool] RaindropFX for HDRP v3.0 - GPU Solver is Coming! | HU ANIME</title>
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1674214537347">
+<link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/lightbox.css" type='text/css' media='all'>
+<link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css" type='text/css' media='all'>
+<link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/atom-one-light.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<!--link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/katex.min.css" type='text/css' media='all'-->
+
+<script src="http://localhost:4000/media/scripts/lib/highlight.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/moment.min.js"></script>
+
+<!-- Google Analytics-->
+<!---->
+
+<!--Baidu Analytics-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?264d1f69b0edf52af180e8994eaf44bc";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<!--Block Debug Tools-->
+<script>
+  var debugMode = false;
+  function disableInfo() {
+    document.onkeydown = function() {
+      var e = window.event || arguments[0];
+      // block F12
+      if (e.keyCode == 123) {
+        return false;
+      // block Ctrl+Shift+I
+      } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+        return false;
+      // block Shift+F10
+      } else if ((e.shiftKey) && (e.keyCode == 121)) {
+        return false;
+      }
+      // block Ctrl+S
+      if ((e.ctrlKey) && (e.keyCode == 83)) {
+          return false;
+      }
+    };
+    // block right click
+    document.oncontextmenu = function() {
+      return false;
+    }
+    document.oncontextmenu=new Function("event.returnValue=false");  
+    document.onselectstart=new Function("event.returnValue=false");  
+  }
+  if (!debugMode) disableInfo();
+</script>
+
+</head>
+<body class="home blog ct-body standard">
+	<div id="overflow-container" class="overflow-container">
+		<a class="skip-content" href="#main">Skip to content</a>
+		<header id="site-header" class="site-header" role="banner">
+    <div class='top-navigation top-navigation-important'>
+        <div class='container'>
+            <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+                <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+                <div class="menu">
+                    <ul id="menu-secondary-items" class="menu-secondary-items">
+                        
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/qi5SVakfq/">Tools</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/R8pKVfB50/">Static</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/WSyUFaaTQ/">Anime</a>
+                        </li>
+                            
+                        
+                    </ul>
+                </div>
+            </div>
+            <ul class="social-media-icons">
+              
+                    
+                        <li>
+                            <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                              <i class="fab fa-github" title="github"></i>
+                                <span class="screen-reader-text">github</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                              <i class="fas fa-film" title="film"></i>
+                                <span class="screen-reader-text">film</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                              <i class="fas fa-image" title="image"></i>
+                                <span class="screen-reader-text">image</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCkvCi2G2Ay_AnC3NYthteag" data-animate-hover="pulse" class="youtube" target="_blank">
+                              <i class="fab fa-youtube" title="youtube"></i>
+                                <span class="screen-reader-text">youtube</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                              <i class="fas fa-plug" title="plug"></i>
+                                <span class="screen-reader-text">plug</span>
+                            </a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="http://localhost:4000">  HU ANIME </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">会画画的程序猿</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/">HOME</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/archives">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/archives">TIMELINE</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/gallery">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/gallery">GALLERY</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="http://localhost:4000document/" target="_blank">DOCUMENT</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/about">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/about">ABOUT</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+		<div id="main" class="main" role="main">
+			<div id="loop-container" class="loop-container">
+				<div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+					
+					<div class='featured-image lazy lazy-bg-image' data-background="http://localhost:4000/post-images/tool-raindropfx-for-hdrp-300.png">
+					</div>
+					
+
+					<div class="entry-meta">
+						<span class="date">· 2022-08-15 ·</span> <span> / </span>
+						<span class="author">
+							<a href="http://localhost:4000" title="" rel="author"> SEE THE WORLD</a></a>
+						</span>
+						
+						<span class="category">
+							<span> / </span>
+							<a href="http://localhost:4000/tag/qi5SVakfq/">Tools</a>
+						</span>
+						
+					</div>
+					<div class='entry-header'>
+						<h1 class='entry-title'>[Tool] RaindropFX for HDRP v3.0 - GPU Solver is Coming!</h1>
+					</div>
+					
+					<div class="entry-container">
+					
+						<div id="entry-content" class="entry-content">
+							<article>
+								<pre><code>RaindropFX GPU解算器来啦！
+</code></pre>
+<!-- more -->
+<pre><code>History 更改
+</code></pre>
+<blockquote>
+<p>fixed: shader error in HDRP 10.2.2;<br>
+修复：在HDRP10.2.2以上shader报错；<br>
+added: half batches decreased(CPU solver);<br>
+新增：CPU解算器Batches降低一半（性能提升最高达一倍）；<br>
+added: dynamic wipe for object space version(CPU solver);<br>
+新增：CPU解算器新增物体表面雨滴可擦除特性；<br>
+added: raindrop painting(screen space, CPU solver);<br>
+新增：CPU解算器增加屏幕空间交互式雨滴绘画功能；<br>
+added: force LUT(affecting the flow direction of water droplets on object surface);<br>
+新增：force LUT支持(用于影响物体表面雨滴的流动方向);<br>
+added: assembly definition;<br>
+新增：assembly definition;<br>
+added: dynamic scaling of full screen raindrop texture(no longer need to preset the size at the beginning of the game);<br>
+新增：动态全屏雨滴纹理（现在无需手动指定屏幕分辨率）；<br>
+added: controllable fogging speed;<br>
+新增：屏幕起雾速度控制；<br>
+added: GPU screen space solver(beta);<br>
+新增：屏幕空间GPU雨滴解算器（测试版）；<br>
+added: GPU object space solver(beta);<br>
+新增：物体表面空间GPU雨滴解算器（测试版）；<br>
+added: fluids can interact with normal map(object space, GPU solver).<br>
+新增：物体表面雨滴可与法线贴图交互.</p>
+</blockquote>
+<pre><code>Asset Store 传送门
+</code></pre>
+<p><a href="http://u3d.as/1M4D">&gt;&gt;&gt;Standard Version/标准渲染管线版&lt;&lt;&lt;</a><br>
+<a href="http://u3d.as/1Un5">&gt;&gt;&gt;HDRP Version/高清渲染管线版&lt;&lt;&lt;</a></p>
+<pre><code>Forum 传送门
+</code></pre>
+<p><a href="https://forum.unity.com/threads/raindropfx-realistic-camera-lens-rain-effect.519068/#post-3402707">&gt;&gt;&gt;戳我&lt;&lt;&lt;</a></p>
+<pre><code>Video 视频
+</code></pre>
+<p><a href="https://youtu.be/M9g0TPl3ysw">[Youtube_3.0_NewFeatures]</a><br>
+<a href="https://www.bilibili.com/video/BV1gz4y117DV">[Bilibili_RaindropFX_3.0]</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=587034100&bvid=BV1gz4y117DV&cid=307260707&page=1" width="700" height="350" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<script>
+var ifr = document.getElementsByTagName("iframe")[0];
+ifr.height=(ifr.offsetWidth/1.8).toString();
+</script>
+<pre><code>Intro 简介
+</code></pre>
+<p><strong>Compatibility/兼容性:</strong></p>
+<blockquote>
+<p>Compatible with HDRP 7.4.1+;<br>
+支持高清渲染管线 7.4.1及以上版本;</p>
+</blockquote>
+<p><strong>Features/特性:</strong></p>
+<blockquote>
+<p>deeply integrated with HDRP Post Processing Stack;<br>
+与HDRP屏幕后处理管线深度集成；<br>
+post effect of the falling drops on the camera lens;<br>
+屏幕雨滴动画后处理特效;<br>
+raindrops animation based on physics;<br>
+基于物理计算的水滴动画;<br>
+dynamic wipe effect;<br>
+交互式雨滴/屏幕雾擦除效果;<br>
+wind turbulence support;<br>
+支持添加风力以及紊乱风;<br>
+radial wind for driving simulation;<br>
+用于驾驶模拟的径向风；<br>
+simulate colored liquids;<br>
+模拟有色液体；<br>
+choose CPU or GPU as the solver as you like, CPU solver offers better quality while GPU solver offers best performance;<br>
+可选CPU或GPU作为雨滴解算器，CPU解算器提供最佳质量，GPU解算器提供极致性能；<br>
+object space supported (add raindrop to object surface);<br>
+支持将雨滴添加到物体表面；<br>
+fluids can interact with normal map (GPU solver only);<br>
+支持雨滴与法线贴图交互（仅GPU解算器支持此特性）；<br>
+custom raindrop texture supported;<br>
+支持自定义水滴形状;<br>
+all source code is included, so you can customize it for yourself.<br>
+包含所有源代码，您可以自行修改.</p>
+</blockquote>
+<pre><code>Screenshots 效果图
+</code></pre>
+<p><a href="../../post-images/1674118471981.png" data-lightbox="image-1" data-title="RaindropFX3.0"><img src="../../post-images/1674118471981.png" /></a></p>
+<p><a href="../../post-images/1674118457290.png" data-lightbox="image-1" data-title="RaindropFX3.0"><img src="../../post-images/1674118457290.png" /></a></p>
+<p><a href="../../post-images/1674118463356.png" data-lightbox="image-1" data-title="RaindropFX3.0"><img src="../../post-images/1674118463356.png" /></a></p>
+<p><a href="../../post-images/1674118466679.png" data-lightbox="image-1" data-title="RaindropFX3.0"><img src="../../post-images/1674118466679.png" /></a></p>
+
+							</article>
+						</div>
+
+
+						
+							<div class='entry-meta-bottom'>
+								<div class="entry-categories">
+									<p>
+										<span>Categories</span>
+										
+										
+										
+										<a href="http://localhost:4000/tag/itfB5m7XS/" title="View all posts in Essay">Essay</a>
+										
+										
+										
+										<a href="http://localhost:4000/tag/qi5SVakfq/" title="View all posts in Tools">Tools</a>
+										
+										
+										
+										<a href="http://localhost:4000/tag/R8pKVfB50/" title="View all posts in Static">Static</a>
+										
+										
+										
+										<a href="http://localhost:4000/tag/WSyUFaaTQ/" title="View all posts in Anime">Anime</a>
+										
+										
+									</p>
+								</div>
+								<div class="entry-tags">
+									<p>
+										<span>Tags</span>
+										
+										<span class="category">
+											<a href="http://localhost:4000/tag/qi5SVakfq/">Tools</a>
+										</span>
+										
+									</p>
+									</br>
+									<span>Home</span>
+									<span><a href="https://ripmr.github.io">Back to Home</a></span>
+								</div>
+							</div>
+							<div class="author-meta">
+								<span>
+									<img alt='' src="http://localhost:4000/images/avatar.png?v=1674214537347" class='avatar avatar-72 photo' height='72' width='72'>
+									<!--span>WRITTEN BY: </span-->
+								</span>
+								<span>
+								<p>
+									
+										<a href="http://localhost:4000/post/tool-raindropfx-for-urp-100/">上一篇->[Tool] RaindropFX for URP v1.0</a>
+									
+								</p>
+								<br/>
+								<p>
+									
+										<a href="http://localhost:4000/post/realtime-sand-rendering/">下一篇->[Research] 实时可交互沙土模拟方法 - 渲染部分</a>
+									
+									
+								</p>
+								</span>
+								
+								<!--span>
+									<p></p>
+									
+									
+									<a class="github" target="_blank"
+									   href="https://github.com/RIPmr">
+										<i class="fab fa-github" title="github"></i>
+									</a>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</span-->
+
+							</div>
+						
+					</div>
+				</div>
+				<section id="comments" class="comments">
+					
+					
+					<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '99293e39ad48006e77cb',
+    clientSecret: '48d99f5e46f34d52cfdc2051dd531dd9e437936a',
+    repo: 'RIPmr.github.io',
+    owner: 'RIPmr',
+    admin: ['RIPmr'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+					
+
+					
+					
+				</section>
+			</div>
+		</div>
+		<footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="http://localhost:4000"> HU ANIME </a>
+    </h1>
+    <p class="site-description">会画画的程序猿</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                        <i class="fas fa-film" title="film"></i>
+                        <span class="screen-reader-text">film</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                        <i class="fas fa-image" title="image"></i>
+                        <span class="screen-reader-text">image</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://www.youtube.com/channel/UCkvCi2G2Ay_AnC3NYthteag" data-animate-hover="pulse" class="youtube" target="_blank">
+                        <i class="fab fa-youtube" title="youtube"></i>
+                        <span class="screen-reader-text">youtube</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                        <i class="fas fa-plug" title="plug"></i>
+                        <span class="screen-reader-text">plug</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>SEE THE WORLD</a></p>
+    </div>
+</footer>
+
+<!--script>hljs.highlightAll();</script-->
+<script>
+  var codeBlocks = document.getElementsByName("codeblock");
+  if (codeBlocks.length) {
+    for (var i = 0; i < codeBlocks.length; i++) {
+      hljs.highlightBlock(codeBlocks[i]);
+    }
+  }
+</script>
+
+<!--script src="http://localhost:4000/media/scripts/lib/lightbox-plus-jquery.min.js"></script>-->
+<script src="http://localhost:4000/media/scripts/lib/jquery.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/jquerymigrate.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/production.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/lightbox.min.js"></script>
+	</div>
+</body>
+</html>
+

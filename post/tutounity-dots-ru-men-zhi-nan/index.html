@@ -7,63 +7,63 @@
 <!--meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive"-->
 <title>[Tuto]Unity DOTS 原理解读&amp;入门指南 | HU ANIME</title>
-<link rel="shortcut icon" href="https://huanime.com.cn//favicon.ico?v=1630254494067">
-<link rel="stylesheet" href="https://huanime.com.cn//media/scripts/lib/lightbox.css" type='text/css' media='all'>
-<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.8.1/css/all.css" rel="stylesheet">
-<link rel="stylesheet" href="https://huanime.com.cn//styles/main.css" type='text/css' media='all'>
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1674214537347">
+<link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/lightbox.css" type='text/css' media='all'>
+<link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css" type='text/css' media='all'>
+<link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/atom-one-light.min.css">
 
-<!--script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script-->
-<script src="https://huanime.com.cn//media/scripts/lib/highlight.min.js"></script>
-<script src="https://huanime.com.cn//media/scripts/lib/moment.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<!--link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/katex.min.css" type='text/css' media='all'-->
 
-<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css"-->
-<link rel="stylesheet" href="https://huanime.com.cn//media/scripts/lib/katex.min.css" type='text/css' media='all'>
+<script src="http://localhost:4000/media/scripts/lib/highlight.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/moment.min.js"></script>
 
-  <!--Baidu Analytics-->
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?264d1f69b0edf52af180e8994eaf44bc";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+<!-- Google Analytics-->
+<!---->
 
-  <!--Block Debug Tools-->
-  <script>
-    var debugMode = false;
-    function disableInfo() {
-      document.onkeydown = function() {
-        var e = window.event || arguments[0];
-        // block F12
-        if (e.keyCode == 123) {
-          return false;
-        // block Ctrl+Shift+I
-        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
-          return false;
-        // block Shift+F10
-        } else if ((e.shiftKey) && (e.keyCode == 121)) {
-          return false;
-        }
-        if ((e.ctrlKey) && (e.keyCode == 83)) { //ctrl+s
-            return false;
-        }
-      };
-      // block right click
-      document.oncontextmenu = function() {
+<!--Baidu Analytics-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?264d1f69b0edf52af180e8994eaf44bc";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<!--Block Debug Tools-->
+<script>
+  var debugMode = false;
+  function disableInfo() {
+    document.onkeydown = function() {
+      var e = window.event || arguments[0];
+      // block F12
+      if (e.keyCode == 123) {
+        return false;
+      // block Ctrl+Shift+I
+      } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+        return false;
+      // block Shift+F10
+      } else if ((e.shiftKey) && (e.keyCode == 121)) {
         return false;
       }
-      document.oncontextmenu=new Function("event.returnValue=false");  
-      document.onselectstart=new Function("event.returnValue=false");  
+      // block Ctrl+S
+      if ((e.ctrlKey) && (e.keyCode == 83)) {
+          return false;
+      }
+    };
+    // block right click
+    document.oncontextmenu = function() {
+      return false;
     }
-    if (!debugMode) disableInfo();
-  </script>
-  
-  <!-- Google Analytics
-  
-  -->
+    document.oncontextmenu=new Function("event.returnValue=false");  
+    document.onselectstart=new Function("event.returnValue=false");  
+  }
+  if (!debugMode) disableInfo();
+</script>
+
 </head>
 <body class="home blog ct-body standard">
 	<div id="overflow-container" class="overflow-container">
@@ -79,31 +79,25 @@
                         
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
-                            <a href="https://huanime.com.cn/tag/R8pKVfB50">Static</a>
+                            <a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
                         </li>
                             
                         
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
-                            <a href="https://huanime.com.cn/tag/qi5SVakfq">Tools</a>
+                            <a href="http://localhost:4000/tag/qi5SVakfq/">Tools</a>
                         </li>
                             
                         
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
-                            <a href="https://huanime.com.cn/tag/CGbk4KNOa">Code</a>
+                            <a href="http://localhost:4000/tag/R8pKVfB50/">Static</a>
                         </li>
                             
                         
                             
                         <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
-                            <a href="https://huanime.com.cn/tag/itfB5m7XS">Essay</a>
-                        </li>
-                            
-                        
-                            
-                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
-                            <a href="https://huanime.com.cn/tag/WSyUFaaTQ">Anime</a>
+                            <a href="http://localhost:4000/tag/WSyUFaaTQ/">Anime</a>
                         </li>
                             
                         
@@ -123,13 +117,6 @@
                 
                     
                 
-                    
-                        <li>
-                            <a href="http://blog.sina.com.cn/u/5618229278" data-animate-hover="pulse" class="weibo" target="_blank">
-                              <i class="fab fa-weibo" title="weibo"></i>
-                                <span class="screen-reader-text">weibo</span>
-                            </a>
-                        </li>
                     
                 
                     
@@ -158,6 +145,15 @@
                 
                     
                         <li>
+                            <a href="https://www.youtube.com/channel/UCkvCi2G2Ay_AnC3NYthteag" data-animate-hover="pulse" class="youtube" target="_blank">
+                              <i class="fab fa-youtube" title="youtube"></i>
+                                <span class="screen-reader-text">youtube</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
                             <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
                               <i class="fas fa-plug" title="plug"></i>
                                 <span class="screen-reader-text">plug</span>
@@ -172,7 +168,7 @@
     <div class="container">
         <div id="title-info" class="title-info">
             <div id='site-title' class='site-title'>
-                <a href="https://huanime.com.cn/">  HU ANIME </a>
+                <a href="http://localhost:4000">  HU ANIME </a>
             </div>
         </div>
         <button id="toggle-navigation" class="toggle-navigation">
@@ -216,7 +212,7 @@
                     
                         
                             <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
-                                <a href="https://huanime.com.cn/document/" target="_blank">DOCUMENT</a>
+                                <a href="http://localhost:4000document/" target="_blank">DOCUMENT</a>
                             </li>
                         
                     
@@ -243,24 +239,19 @@
 			<div id="loop-container" class="loop-container">
 				<div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
 					
-					<div class='featured-image lazy lazy-bg-image' data-background="https://huanime.com.cn//post-images/tutounity-dots-ru-men-zhi-nan.jpg">
+					<div class='featured-image lazy lazy-bg-image' data-background="http://localhost:4000/post-images/tutounity-dots-ru-men-zhi-nan.jpg">
 					</div>
 					
 
 					<div class="entry-meta">
 						<span class="date">· 2020-07-12 ·</span> <span> / </span>
 						<span class="author">
-							<a href="https://huanime.com.cn/" title="" rel="author"> SEE THE WORLD</a></a>
+							<a href="http://localhost:4000" title="" rel="author"> SEE THE WORLD</a></a>
 						</span>
 						
 						<span class="category">
 							<span> / </span>
-							<a href="https://huanime.com.cn/tag/CGbk4KNOa">Code</a>
-						</span>
-						
-						<span class="category">
-							<span> / </span>
-							<a href="https://huanime.com.cn/tag/itfB5m7XS">Essay</a>
+							<a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
 						</span>
 						
 					</div>
@@ -278,7 +269,7 @@
 <br>
 <h2 id="1-打个照面">1 打个照面</h2>
 <p>DOTS, Data-Oriented-Tech-Stack，多线程式数据导向型技术堆栈，它由四个子系统组成：ECS、Job System、Burst Compiler以及Project Tiny。ECS和Job System在Unity 2018推出，Burst Compiler和Project Tiny则于2019年问世，Unite2019上DOTS概念被正式提出。</p>
-<figure data-type="image" tabindex="1"><img src="https://huanime.com.cn//post-images/1594539995455.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://localhost:4000/post-images/1594539995455.jpg" alt="" loading="lazy"></figure>
 <h4 id="dots能做什么">DOTS能做什么？</h4>
 <p>DOTS是一套面向数据的高性能技术堆栈，一言以蔽之，同样的Unity项目，通过使用DOTS框架可以让项目得到接近十倍的性能提升，在移动平台上fps更高，电池消耗更低，发热更小。</p>
 <h2 id="2-subsystem-overview">2 Subsystem overview</h2>
@@ -309,7 +300,7 @@ Burst被设计来与Job System配合使用，当用户在完成基于Job System�
 <li>数据和逻辑是高度耦合的，这导致代码的可复用性很低；</li>
 <li>组件和组件之间需要来回引用，而组件又分布在堆内存的各处，CPU需要花费大量时间做寻址。</li>
 </ul>
-<figure data-type="image" tabindex="2"><img src="https://huanime.com.cn//post-images/1594540253597.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://localhost:4000/post-images/1594540253597.png" alt="" loading="lazy"></figure>
 <center>Scattered memory references between gameobjects, their behaviors, and their components</center>
 <br>
 <h4 id="下面我们结合ecs架构看看究竟为什么这种数据结构会导致低效率">下面我们结合ECS架构看看究竟为什么这种数据结构会导致低效率？</h4>
@@ -342,30 +333,30 @@ CPU缓存的存储空间是有限的，于是我们希望CPU缓存存储的是�
 · 冷数据：比较少用到的数据，一般以引用/指针来间接访问（即存储的是指针或者引用）。
 </code></pre>
 <p>这也就是ECS为何不采用OOP模式而改用Data Oriented Mode，OOP模式的主要的思想就是万物皆对象，调用的方式几乎都是以对象为基础，以模块化编程的带来优势的同时，也有他的负面效果：<strong>冗余数据过多，包袱过重</strong>。</p>
-<p><img src="https://huanime.com.cn//post-images/1594540465938.png" alt="" loading="lazy"><br>
-<img src="https://huanime.com.cn//post-images/1594540472477.jpg" alt="" loading="lazy"><br>
-<img src="https://huanime.com.cn//post-images/1594540477189.jpg" alt="" loading="lazy"></p>
+<p><img src="http://localhost:4000/post-images/1594540465938.png" alt="" loading="lazy"><br>
+<img src="http://localhost:4000/post-images/1594540472477.jpg" alt="" loading="lazy"><br>
+<img src="http://localhost:4000/post-images/1594540477189.jpg" alt="" loading="lazy"></p>
 <p>举个例子，如上图，当我们需要大批量地以不同速度移动GameObject时，实际上我们仅仅需要其speed与transform两个属性，而其余变量其实都可以丢掉。OOP就是如此，在进行数据传输的时候（数据读取）总会带着一些无用的数据，不仅仅零零散散（传统方式的内存管理是离散式的），而且还占用空间（上文提到的CPU多级缓存），随着现在游戏的规模越来越大，摩尔定律的失效，单纯的提高主频达到好的计算效果变得越来越力不从心。<br>
 而ECS中，所有所需数据量身定制，不存在多余数据，且确保所有的组件数据(Component Data)都紧密连接在一起，称为Archetype，这样就能确保存取内存资料时以最快的速度存取（也提高命中率）。例如，原有的Vector3换成了现在Float3，List换成了NativeArray，都是为了抛弃多余数据结构。</p>
 <pre><code>*NOTE:
 但要注意ECS也不是没有缺点，这种量身定制虽然带来了更多的选择和灵活性，但随之而来的是通用性的降低，因此ECS适用于规模庞大但个体之间差异不大的应用场景，当我们需要对群体中的每一个对象进行十分精细的控制时，ECS就显得力不从心了。
 </code></pre>
 <p>现在我们有了entity和component来高效地存储和读取数据，那么如何让数据流动起来呢？举个例子，如下图，当我们有很多的Bullet类型对象需要移动时，大多数程序员都会想到为它们编写一个管理器，例如一个Bullet Manager，然后维护一个Bullet列表，每帧更新这个列表中的所有Bullet的位置。没错，基于ECS处理这样一套框架再合适不过，bullet是entity，移动属性即为component，于是我们就可以将管理类bullet manager称作system，它管理所有bullet entity的移动。</p>
-<figure data-type="image" tabindex="3"><img src="https://huanime.com.cn//post-images/1594540545567.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="http://localhost:4000/post-images/1594540545567.jpg" alt="" loading="lazy"></figure>
 <p>当然，我们不仅只能将这种架构用于单独一类对象的管理，如下图，我们可以为多类对象提供多个System进行统一管理，甚至也可以用一个system单独管理各类对象中的一类组件，在并行框架下将所有数据与处理逻辑完全解耦。</p>
-<figure data-type="image" tabindex="4"><img src="https://huanime.com.cn//post-images/1594540557633.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="http://localhost:4000/post-images/1594540557633.png" alt="" loading="lazy"></figure>
 <p>ECS中我们通过改变数据组织结构和删减冗余数据的方式减少了CPU寻址时间，改善了系统性能。但终究我们会发现，这似乎只是“拆东墙补西墙”，寻址带来的性能瓶颈并非消失了，而只是性能热点被转移到了对数据的运算处理上，那我们还能不能再提升一些性能？<br>
 我们知道，在Unity中虽然能够使用多线程，但其有非常大的限制，即线程只能进行与Unity无关的工作，例如数据运算等。与Unity引擎相关的操作几乎都会报错，例如用线程控制Transform就是一个无法实现的功能。在Unity中，所有与Unity相关的功能都只能够在主线程中完成，子线程是无法直接做到的。<br>
 这里不得不提的是，除了多线程，Unity中还存在另一种类似的功能：协程（Coroutine）。什么是协程呢？协程跟多线程类似，也有类似异步的效果，但其不是真正的异步，所有的运算处理仍然在主线程上，只是它的切分粒度不是基于系统划分的时间片，而是基于我们编写的yield return，协程可以在任何时候被挂起，先继续往下执行主函数，然后到下一帧再来继续执行上一帧没执行完的协程函数。协程有很多优点，例如它的粒度相对多线程大很多，所以可以避免数据访问冲突；再例如，多线程中无法执行的与Unity直接相关的数据操作在协程中都畅通无阻。<br>
 但协程的缺陷在于，虽然一个线程中可以有多个协程，但CPU的多个线程没有被完全利用起来，造成了资源浪费，如下图所示，“一核有难，七核围观”。于是到此就出现了一个两难的境地：多线程能够充分利用CPU资源但限制巨大，协程没有条条框框但却不能充分利用CPU资源，于是Job System应运而生。</p>
-<figure data-type="image" tabindex="5"><img src="https://huanime.com.cn//post-images/1594540580991.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="http://localhost:4000/post-images/1594540580991.jpg" alt="" loading="lazy"></figure>
 <p>从这个角度来说，Job System和ECS密不可分，我们基于system来驱动数据，而这些数据块(Chunk)都有着一样的结构，相似的行为方式，于是性能提升方案呼之欲出：<strong>基于Job System通过多线程处理entity移动的方式，我们就将原本全部积压在主线程上的任务均匀分摊到CPU的各个线程上去执行，彻底榨干所有CPU性能</strong>。</p>
 <h4 id="到此dots架构最核心的优化思想已经说完了但我们是不是忘了什么">到此，DOTS架构最核心的优化思想已经说完了，但我们是不是忘了什么？</h4>
 <center><img src="../../post-images/1594540639974.gif" /></center>
 <center>Burst Compiler : 我还没上车呢！</center>
 <br>
 <p>最后，别忘了DOTS中还有Burst Compiler，它能够基于LLVM将用户的Job System C#代码转换为高度优化的本机代码，因此，只需要在Job代码块前增加“[BurstCompile]”声明，我们就可以在不用做任何额外操作的前提下，白嫖10-30％的性能提升。</p>
-<figure data-type="image" tabindex="6"><img src="https://huanime.com.cn//post-images/1594540718968.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="http://localhost:4000/post-images/1594540718968.png" alt="" loading="lazy"></figure>
 <center>Burst Compiler转换的汇编指令</center>
 <br>
 <h2 id="4-dots使用方式">4 DOTS使用方式</h2>
@@ -376,9 +367,9 @@ CPU缓存的存储空间是有限的，于是我们希望CPU缓存存储的是�
 <li>burst</li>
 <li>jobs</li>
 </ul>
-<figure data-type="image" tabindex="7"><img src="https://huanime.com.cn//post-images/1594540927735.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="http://localhost:4000/post-images/1594540927735.png" alt="" loading="lazy"></figure>
 <p>其中需要注意的一点是，使用Burst Compiler之前我们需要做一点设置：<br>
-<img src="https://huanime.com.cn//post-images/1594540800685.png" alt="" loading="lazy"></p>
+<img src="http://localhost:4000/post-images/1594540800685.png" alt="" loading="lazy"></p>
 <ul>
 <li><strong>Use Burst Jobs</strong>: 启用Burst Compiler，所有带[Burst Compile]标识的Job代码块会被自动编译</li>
 <li><strong>Burst Inspector</strong>: 查看BurstCompiler的所有编译结果</li>
@@ -395,7 +386,7 @@ CPU缓存的存储空间是有限的，于是我们希望CPU缓存存储的是�
 4、ECS + Job System + Burst Compiler
 </code></pre>
 <p>下面我们基于Unity官方的DOTS教程一一介绍并对比四套框架的性能，实验中使用的飞船模型如下：<br>
-<img src="https://huanime.com.cn//post-images/1594540919858.png" alt="" loading="lazy"></p>
+<img src="http://localhost:4000/post-images/1594540919858.png" alt="" loading="lazy"></p>
 <p>实验环境为Intel® Core™ i7-8700K CPU + NVIDIA GeForce* GTX 1080 GPU，我们使用四套不同的系统绘制一个包含大量飞船运动的宇宙场景。</p>
 <h4 id="4-2-1-classic-system">4-2-1 Classic System</h4>
 <p>Classic System在每一帧检测用户输入并触发AddShips()方法，此方法在屏幕的左右两侧之间找到一个随机位置，然后在该位置生成一个飞船模型，并将飞船的方向设置为向下。</p>
@@ -426,8 +417,8 @@ namespace Shooter.Classic {
 }
 </code></pre>
 <p>这套框架下，我们会发现当飞船数量达到16,500时，系统就已经有点吃不消了，帧率达到临界线30FPS：</p>
-<figure data-type="image" tabindex="8"><img src="https://huanime.com.cn//post-images/1594541055741.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="9"><img src="https://huanime.com.cn//post-images/1594541060530.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="http://localhost:4000/post-images/1594541055741.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="http://localhost:4000/post-images/1594541060530.png" alt="" loading="lazy"></figure>
 <h4 id="4-2-2-classic-system-job-system">4-2-2 Classic System + Job System</h4>
 <p>现在我们使用Job System改写上一套框架中的Movement控制脚本，也就是使用多线程分批控制飞船的移动。改写后的MovementJob脚本如下，它实现了一个IJob接口，这意味这该脚本定义了一种task或job，能够批量管理、控制某一种data。<br>
 为了进一步了解这个Job是如何组织的，让我们分解来看它使用的接口：<br>
@@ -507,12 +498,12 @@ AddShips(int amount) {
 }
 </code></pre>
 <p>最后我们运行游戏，会看到现在在同等帧率下，同屏飞船数量被提升到了一倍左右：</p>
-<figure data-type="image" tabindex="10"><img src="https://huanime.com.cn//post-images/1594541335387.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="11"><img src="https://huanime.com.cn//post-images/1594541339224.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="http://localhost:4000/post-images/1594541335387.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="http://localhost:4000/post-images/1594541339224.png" alt="" loading="lazy"></figure>
 <h4 id="4-2-3-ecs-job-system">4-2-3 ECS + Job System</h4>
 <p>接着我们再来看看将GameObject替换为entities后系统的性能表现。<br>
 此时原本GameObject上所有的MonoBehaviour都需要被转换为Component，于是现在inspector上看到的属性可能看起来会有点奇怪，像下面这样：</p>
-<figure data-type="image" tabindex="12"><img src="https://huanime.com.cn//post-images/1594541354870.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="http://localhost:4000/post-images/1594541354870.png" alt="" loading="lazy"></figure>
 <p>属性值的定义方式如下，我们不再像Classical开发方式一样继承MonoBehaviour，而是继承IComponentData，这样保证属性中没有冗余数据：</p>
 <pre><code>using System;
 using Unity.Entities;
@@ -614,12 +605,12 @@ namespace Shooter.ECS {
 }
 </code></pre>
 <p>修改完成，我们再次运行游戏，这时同等帧率下的同屏飞船数已经到了惊人的91,000个：</p>
-<figure data-type="image" tabindex="13"><img src="https://huanime.com.cn//post-images/1594541444619.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="14"><img src="https://huanime.com.cn//post-images/1594541447575.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="http://localhost:4000/post-images/1594541444619.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="http://localhost:4000/post-images/1594541447575.png" alt="" loading="lazy"></figure>
 <h4 id="4-2-4-ecs-job-system-burst-compiler">4-2-4 ECS + Job System + Burst Compiler</h4>
 <p>最后别忘了我们还有Burst Compiler，Burst Compiler的使用极其简单，在Job代码块上添加[BurstCompile]，重新编译后运行游戏即可。最终我们可以看到，数量达到了150,000个，对比最初Classical开发方式下的16,500个，同屏飞船数提升了整整一个数量级。</p>
-<figure data-type="image" tabindex="15"><img src="https://huanime.com.cn//post-images/1594541473891.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="16"><img src="https://huanime.com.cn//post-images/1594541481020.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="15"><img src="http://localhost:4000/post-images/1594541473891.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="16"><img src="http://localhost:4000/post-images/1594541481020.png" alt="" loading="lazy"></figure>
 <h2 id="5-总结">5 总结</h2>
 <p>最后我们可以再回过头对比一下实验中的数据，可以看到，结合DOTS中所有的优化技术，我们能够将一套完全相同系统的性能提升十倍以上，而最终成品则几乎没有品质上的差别。</p>
 <table>
@@ -671,7 +662,7 @@ namespace Shooter.ECS {
 	</tbody>
 </table>
 <p>Unity到2020已经变得越来越庞大臃肿，各类旧系统和新系统混杂在一起，让人不知如何选择，但使用任何新技术之前，我们都应该正确认识其能够带给我们的利弊，既不一味求变，也不故步自封，这样才能在面对问题时，做出最正确的选择。</p>
-<figure data-type="image" tabindex="17"><img src="https://huanime.com.cn//post-images/1594550052757.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="17"><img src="http://localhost:4000/post-images/1594550052757.jpg" alt="" loading="lazy"></figure>
 <h3 id="参考文献">参考文献：</h3>
 <p>[1] Get Started with the Unity* Entity Component System (ECS), C# Job System, and Burst Compiler，<br>
 software.intel.com/content/www/us/en/develop/articles/get-started-with-the-unity-entity-component-system-ecs-c-sharp-job-system-and-burst-compiler.html<br>
@@ -698,23 +689,19 @@ docs.unity3d.com/Manual/JobSystem.html</p>
 										
 										
 										
-										<a href="https://huanime.com.cn/tag/R8pKVfB50" title="View all posts in Static">Static</a>
+										<a href="http://localhost:4000/tag/itfB5m7XS/" title="View all posts in Essay">Essay</a>
 										
 										
 										
-										<a href="https://huanime.com.cn/tag/qi5SVakfq" title="View all posts in Tools">Tools</a>
+										<a href="http://localhost:4000/tag/qi5SVakfq/" title="View all posts in Tools">Tools</a>
 										
 										
 										
-										<a href="https://huanime.com.cn/tag/CGbk4KNOa" title="View all posts in Code">Code</a>
+										<a href="http://localhost:4000/tag/R8pKVfB50/" title="View all posts in Static">Static</a>
 										
 										
 										
-										<a href="https://huanime.com.cn/tag/itfB5m7XS" title="View all posts in Essay">Essay</a>
-										
-										
-										
-										<a href="https://huanime.com.cn/tag/WSyUFaaTQ" title="View all posts in Anime">Anime</a>
+										<a href="http://localhost:4000/tag/WSyUFaaTQ/" title="View all posts in Anime">Anime</a>
 										
 										
 									</p>
@@ -724,11 +711,7 @@ docs.unity3d.com/Manual/JobSystem.html</p>
 										<span>Tags</span>
 										
 										<span class="category">
-											<a href="https://huanime.com.cn/tag/CGbk4KNOa">Code</a>
-										</span>
-										
-										<span class="category">
-											<a href="https://huanime.com.cn/tag/itfB5m7XS">Essay</a>
+											<a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
 										</span>
 										
 									</p>
@@ -739,19 +722,19 @@ docs.unity3d.com/Manual/JobSystem.html</p>
 							</div>
 							<div class="author-meta">
 								<span>
-									<img alt='' src="https://huanime.com.cn//images/avatar.png?v=1630254494067" class='avatar avatar-72 photo' height='72' width='72'>
+									<img alt='' src="http://localhost:4000/images/avatar.png?v=1674214537347" class='avatar avatar-72 photo' height='72' width='72'>
 									<!--span>WRITTEN BY: </span-->
 								</span>
 								<span>
 								<p>
 									
-										<a href="https://huanime.com.cn/post/toolraindropfx-pro-update-250">上一篇->[Tool]RaindropFX Pro update 2.5.0</a>
+										<a href="http://localhost:4000/post/toolraindropfx-pro-update-250/">上一篇->[Tool]RaindropFX Pro update 2.5.0</a>
 									
 								</p>
 								<br/>
 								<p>
 									
-										<a href="https://huanime.com.cn/post/tutocolorspace-p2">下一篇->[Tuto]ColorSpace—我们到底在谈论什么(下)</a>
+										<a href="http://localhost:4000/post/tutocolorspace-p2/">下一篇->[Tuto]ColorSpace—我们到底在谈论什么(下)</a>
 									
 									
 								</p>
@@ -769,11 +752,6 @@ docs.unity3d.com/Manual/JobSystem.html</p>
 									
 									
 									
-									
-									<a class="weibo" target="_blank"
-									   href="http://blog.sina.com.cn/u/5618229278">
-										<i class="fab fa-weibo" title="weibo"></i>
-									</a>
 									
 									
 									
@@ -825,7 +803,7 @@ docs.unity3d.com/Manual/JobSystem.html</p>
 		</div>
 		<footer id="site-footer" class="site-footer" role="contentinfo">
     <h1>
-        <a href="https://huanime.com.cn/"> HU ANIME </a>
+        <a href="http://localhost:4000"> HU ANIME </a>
     </h1>
     <p class="site-description">会画画的程序猿</p>
     <div id="menu-footer" class="menu-container menu-footer" role="navigation">
@@ -847,13 +825,6 @@ docs.unity3d.com/Manual/JobSystem.html</p>
         
             
         
-            
-                <li>
-                    <a href="http://blog.sina.com.cn/u/5618229278" data-animate-hover="pulse" class="weibo" target="_blank">
-                        <i class="fab fa-weibo" title="weibo"></i>
-                        <span class="screen-reader-text">weibo</span>
-                    </a>
-                </li>
             
         
             
@@ -882,6 +853,15 @@ docs.unity3d.com/Manual/JobSystem.html</p>
         
             
                 <li>
+                    <a href="https://www.youtube.com/channel/UCkvCi2G2Ay_AnC3NYthteag" data-animate-hover="pulse" class="youtube" target="_blank">
+                        <i class="fab fa-youtube" title="youtube"></i>
+                        <span class="screen-reader-text">youtube</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
                     <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
                         <i class="fas fa-plug" title="plug"></i>
                         <span class="screen-reader-text">plug</span>
@@ -894,14 +874,22 @@ docs.unity3d.com/Manual/JobSystem.html</p>
         <p>SEE THE WORLD</a></p>
     </div>
 </footer>
+
+<!--script>hljs.highlightAll();</script-->
 <script>
-    hljs.initHighlightingOnLoad()
+  var codeBlocks = document.getElementsByName("codeblock");
+  if (codeBlocks.length) {
+    for (var i = 0; i < codeBlocks.length; i++) {
+      hljs.highlightBlock(codeBlocks[i]);
+    }
+  }
 </script>
-<!--script src="https://huanime.com.cn//media/scripts/lib/lightbox-plus-jquery.min.js"></script>-->
-<script src="https://huanime.com.cn//media/scripts/lib/jquery.min.js"></script>
-<script src="https://huanime.com.cn//media/scripts/lib/jquerymigrate.js"></script>
-<script src="https://huanime.com.cn//media/scripts/lib/production.min.js"></script>
-<script src="https://huanime.com.cn//media/scripts/lib/lightbox.min.js"></script>
+
+<!--script src="http://localhost:4000/media/scripts/lib/lightbox-plus-jquery.min.js"></script>-->
+<script src="http://localhost:4000/media/scripts/lib/jquery.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/jquerymigrate.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/production.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/lightbox.min.js"></script>
 	</div>
 </body>
 </html>

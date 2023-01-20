@@ -1,0 +1,618 @@
+<html>
+<head>
+	<!--meta charset="utf-8" /-->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive"-->
+<title>[Research] 实时可交互沙土模拟方法 - 渲染部分 | HU ANIME</title>
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1674214537347">
+<link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/lightbox.css" type='text/css' media='all'>
+<link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css" type='text/css' media='all'>
+<link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/atom-one-light.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<!--link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/katex.min.css" type='text/css' media='all'-->
+
+<script src="http://localhost:4000/media/scripts/lib/highlight.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/moment.min.js"></script>
+
+<!-- Google Analytics-->
+<!---->
+
+<!--Baidu Analytics-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?264d1f69b0edf52af180e8994eaf44bc";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<!--Block Debug Tools-->
+<script>
+  var debugMode = false;
+  function disableInfo() {
+    document.onkeydown = function() {
+      var e = window.event || arguments[0];
+      // block F12
+      if (e.keyCode == 123) {
+        return false;
+      // block Ctrl+Shift+I
+      } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+        return false;
+      // block Shift+F10
+      } else if ((e.shiftKey) && (e.keyCode == 121)) {
+        return false;
+      }
+      // block Ctrl+S
+      if ((e.ctrlKey) && (e.keyCode == 83)) {
+          return false;
+      }
+    };
+    // block right click
+    document.oncontextmenu = function() {
+      return false;
+    }
+    document.oncontextmenu=new Function("event.returnValue=false");  
+    document.onselectstart=new Function("event.returnValue=false");  
+  }
+  if (!debugMode) disableInfo();
+</script>
+
+</head>
+<body class="home blog ct-body standard">
+	<div id="overflow-container" class="overflow-container">
+		<a class="skip-content" href="#main">Skip to content</a>
+		<header id="site-header" class="site-header" role="banner">
+    <div class='top-navigation top-navigation-important'>
+        <div class='container'>
+            <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+                <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+                <div class="menu">
+                    <ul id="menu-secondary-items" class="menu-secondary-items">
+                        
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/qi5SVakfq/">Tools</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/R8pKVfB50/">Static</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/WSyUFaaTQ/">Anime</a>
+                        </li>
+                            
+                        
+                    </ul>
+                </div>
+            </div>
+            <ul class="social-media-icons">
+              
+                    
+                        <li>
+                            <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                              <i class="fab fa-github" title="github"></i>
+                                <span class="screen-reader-text">github</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                              <i class="fas fa-film" title="film"></i>
+                                <span class="screen-reader-text">film</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                              <i class="fas fa-image" title="image"></i>
+                                <span class="screen-reader-text">image</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCkvCi2G2Ay_AnC3NYthteag" data-animate-hover="pulse" class="youtube" target="_blank">
+                              <i class="fab fa-youtube" title="youtube"></i>
+                                <span class="screen-reader-text">youtube</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                              <i class="fas fa-plug" title="plug"></i>
+                                <span class="screen-reader-text">plug</span>
+                            </a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="http://localhost:4000">  HU ANIME </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">会画画的程序猿</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/">HOME</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/archives">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/archives">TIMELINE</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/gallery">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/gallery">GALLERY</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="http://localhost:4000document/" target="_blank">DOCUMENT</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/about">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/about">ABOUT</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+		<div id="main" class="main" role="main">
+			<div id="loop-container" class="loop-container">
+				<div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+					
+					<div class='featured-image lazy lazy-bg-image' data-background="http://localhost:4000/post-images/realtime-sand-rendering.png">
+					</div>
+					
+
+					<div class="entry-meta">
+						<span class="date">· 2022-06-26 ·</span> <span> / </span>
+						<span class="author">
+							<a href="http://localhost:4000" title="" rel="author"> SEE THE WORLD</a></a>
+						</span>
+						
+						<span class="category">
+							<span> / </span>
+							<a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
+						</span>
+						
+					</div>
+					<div class='entry-header'>
+						<h1 class='entry-title'>[Research] 实时可交互沙土模拟方法 - 渲染部分</h1>
+					</div>
+					
+					<div class="entry-container">
+					
+						<div id="entry-content" class="entry-content">
+							<article>
+								<pre><code>本篇续前文介绍一种移动端真实感沙土渲染方法
+</code></pre>
+<!-- more -->
+<h2 id="real-time-interactive-sand-simulation-in-mobile-platform">Real-time Interactive Sand Simulation in Mobile Platform</h2>
+<hr>
+<h3 id="渲染部分shading-part">渲染部分/Shading Part</h3>
+<p>做完物理解算，还需要做沙子的渲染部分。这里就不得不提《风之旅人》，在过去十年发行的众多独立游戏中，《风之旅人》几乎在各个方面都是卓越的典范。《风之旅人》可以说是“用沙子建造的”，它的沙子不仅仅是一个吸引眼球的视觉效果，而同时是与游戏核心玩法和整体体验息息相关的。<br>
+没有沙子，就没有《风之旅人》。</p>
+<figure data-type="image" tabindex="1"><img src="http://localhost:4000/post-images/1674107191377.png" alt="" loading="lazy"></figure>
+<center>《风之旅人》中的风沙渲染</center>
+<br>
+<h3 id="解刨风之旅人中的风沙渲染">解刨《风之旅人》中的风沙渲染</h3>
+<p>正因为有《风之旅人》这样的珠玉在前，所以实现我们自己的沙子shader之前，我们先来解刨一下《风之旅人》的沙子shader是怎么实现的。<br>
+thatgamecompany首席工程师John Edward曾经在GDC做过演讲：“Sand Rendering in journey”（传送门：https://www.youtube.com/watch?v=wt2yYnBRD3U&amp;ab_channel=GDC），本文对《风之旅人》的沙子shader解读大部分整理自上述课程。<br>
+《风之旅人》中的沙子光照模型可以用下图概括：</p>
+<figure data-type="image" tabindex="2"><img src="http://localhost:4000/post-images/1674107240735.png" alt="" loading="lazy"></figure>
+<center>《风之旅人》中的沙子渲染模型</center>
+<p>由于沙子是由许多微小的晶粒组成的，因此不能简单地用光滑表面对其进行光照建模，在渲染过程中，我们需要考虑沙子本身的粒度。</p>
+<h4 id="1-diffuse-part">1 - Diffuse Part</h4>
+<p>漫反射部分是整个shader的实现流程中最简单的部分，直接用lambert模型即可：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mo>=</mo><mn>4</mn><mo>∗</mo><mo>(</mo><mi>N</mi><mo>⊙</mo><mo>[</mo><mn>1.0</mn><mo separator="true">,</mo><mn>0.3</mn><mo separator="true">,</mo><mn>1.0</mn><mo>]</mo><mo>⋅</mo><mi>L</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">I = 4*(N \odot [1.0,0.3,1.0] \cdot L)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⊙</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mord">.</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">0</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mclose">)</span></span></span></span></span></p>
+<h4 id="2-rimlight-part">2 - RimLight Part</h4>
+<p>《风之旅人》中有着大片连绵的沙丘，为了让玩家能够看清楚每一个沙丘的边界，John Edward在shader中添加了Rim Light，这部分可以用Fresnel实现：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mo>=</mo><mrow><mo>(</mo><mn>1.0</mn><mo>−</mo><mi>N</mi><mo>⋅</mo><mi>V</mi><msup><mo>)</mo><mrow><mi>p</mi><mi>o</mi><mi>w</mi></mrow></msup></mrow><mo>∗</mo><mi>s</mi><mi>t</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>g</mi><mi>t</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">I = {(1.0 - N \cdot V)^{pow}} * strength
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mord">.</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714392em;"><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight" style="margin-right:0.02691em;">w</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span></span></span></span></span></p>
+<p>现在沙丘看上去像这样，整体还比较光滑：</p>
+<figure data-type="image" tabindex="3"><img src="http://localhost:4000/post-images/1674107509455.png" alt="" loading="lazy"></figure>
+<h4 id="3-normal-part">3 - Normal Part</h4>
+<p>为了让沙丘看上去不那么光滑，我们可以使用Normal Map通过扰动沙丘表面的法线方向来近似展现出沙子的粒度，但《风之旅人》里并没有使用传统意义上的Normal Map，而是使用一张Random Noise Texture来模拟沙子的法线，就像下图这样：</p>
+<figure data-type="image" tabindex="4"><img src="http://localhost:4000/post-images/1674107602930.png" alt="" loading="lazy"></figure>
+<p>每个像素的 R、G 和 B 分量存储沙子表面法向量的 X、Y 和 Z 分量。由于图片中存储的颜色分量范围为[0，1]，因此使用时我们需要将各个分量的范围重映射到[-1，1]：</p>
+<pre><code name="codeblock">float3 SandNormal (float2 uv, float3 N) {
+    float3 random = tex2D(_NoiseTex, uv).rgb;
+    // Random direction: [0,1]->[-1,+1]
+    float3 S = normalize(random * 2 - 1);
+    return S;
+}</code></pre>
+<p>现在它看起来像这样，左侧是没有法线模拟的沙子，右侧是有法线模拟的沙子：</p>
+<figure data-type="image" tabindex="5"><img src="http://localhost:4000/post-images/1674107825165.png" alt="" loading="lazy"></figure>
+<h4 id="4-specular-part">4 - Specular Part</h4>
+<p>高光部分，《风之旅人》做得比较独特。John Edward表示，他们团队在开发《风之旅人》时，希望游戏中的沙子感觉更像是流体，而不是固体。为了强化这种感觉，他们使用一种称之为Ocean Reflection的镜面反射，灵感来源于日落时在海洋或湖泊上看到的反射：</p>
+<figure data-type="image" tabindex="6"><img src="http://localhost:4000/post-images/1674107856892.png" alt="" loading="lazy"></figure>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>I</mi><mo>=</mo><mrow><mo>(</mo><mi>N</mi><mo>⋅</mo><mover accent="true"><mi>H</mi><mo>^</mo></mover><msup><mo>)</mo><mrow><mi>p</mi><mi>o</mi><mi>w</mi></mrow></msup></mrow><mo>∗</mo><mi>s</mi><mi>t</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>g</mi><mi>t</mi><mi>h</mi><mo separator="true">,</mo><mi>H</mi><mo>=</mo><mi>V</mi><mo>+</mo><mi>L</mi></mrow><annotation encoding="application/x-tex">I = {(N \cdot \hat H)^{pow}} * strength,H = V + L
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.19677em;vertical-align:-0.25em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9467699999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">^</span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714392em;"><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight" style="margin-right:0.02691em;">w</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span></span></span></span></span></p>
+<pre><code name="codeblock">float3 OceanSpecular (float3 N, float3 L, float3 V) {
+ 	// Half direction
+    float3 H = normalize(V + L);
+    float NdotH = max(0, dot(N, H));
+    float specular = pow(NdotH, _OceanSpecularPower) * _OceanSpecularStrength;
+    return specular * _OceanSpecularColor;
+}</code></pre>
+<p>加上Ocean Specular 之后，现在整个画面看起来是这种感觉：</p>
+<figure data-type="image" tabindex="7"><img src="http://localhost:4000/post-images/1674108700060.png" alt="" loading="lazy"></figure>
+<h4 id="5-glitter-sandripple-part">5 - Glitter &amp; SandRipple Part</h4>
+<p>最后两个部分是《风之旅人》中的沙子渲染最为独特的部分：模拟沙子的细碎闪光和沙子在风力作用下形成的波浪。<br>
+细碎的闪光是沙丘表面一个不容忽视的特征，在真实沙丘上我们之所以可以看到闪光，是因为一些沙粒随机地将光线反射回我们的眼睛。</p>
+<figure data-type="image" tabindex="8"><img src="http://localhost:4000/post-images/1674108732210.png" alt="" loading="lazy"></figure>
+<p>但我们无法仅使用Specular来模拟闪光，因为几何体表面的法线变化通常太过连续，无法反射得到零碎且亮度大于1.0的光线。因此，《风之旅人》将闪光效果作为一个单独的着色阶段来实现，这部分借鉴了PBR模型中的微表面理论（Micro-facet Theory），它将沙丘表面视为由无数个微观镜子组成，每个镜子都有随机的方向。<br>
+Normal Part中我们已经生成了一张Random Noise Texture，因此在这里我们就可以直接采样噪声纹理，将随机方向与构成沙子表面的每一粒沙子的微表面相关联。我们将这个噪声方向称为闪光方向，由于闪光方向是完全随机的，因此反射方向也将是完全随机而不连续的。最后结合Bloom屏幕后处理，我们就能够实现沙子表面细碎的闪光：</p>
+<figure data-type="image" tabindex="9"><img src="http://localhost:4000/post-images/1674108761619.png" alt="" loading="lazy"></figure>
+<pre><code name="codeblock">float3 GlitterSpecular (float2 uv, float3 N, float3 L, float3 V) {
+    float3 G = normalize(tex2D(_NoiseTex, uv).rgb * 2 - 1);
+    // Light that reflects on the glitter and hits the eye
+    float3 R = reflect(L, G);
+    float RdotV = max(0, dot(R, V));
+    if (RdotV > _GlitterThreshold) return 0;
+    else return (1 - RdotV) * _GlitterColor;
+}</code></pre>
+<p>最后是沙子表面波浪的部分，这是沙丘表面另一个不容忽视的特征。在风力作用下，沙粒之间由于摩擦力的作用而聚集在一起，形成波浪。这些波浪的变化不仅取决于沙丘的形状，还取决于风的方向和速度。大多数沙丘都仅在其一侧出现波纹：</p>
+<figure data-type="image" tabindex="10"><img src="http://localhost:4000/post-images/1674108795482.png" alt="" loading="lazy"></figure>
+<p>我们可以使用法线贴图来解决这个问题，但每次对沙丘做一些细微修改或创建新的沙丘时，都必须重新绘制法线纹理，这会显著减慢资产的生产速度。因此《风之旅人》中采用了一种更高效的解决方案：程序化（Procedural）波浪纹理。<br>
+根据观察可以得出：波浪的形状会随着沙丘的倾斜度而变化，浅而平坦的沙丘波浪比较柔和；陡峭的沙丘则呈现出更深的波浪，因此我们可以先准备两张可平铺的法线贴图，一张用于较浅的沙丘波浪，一张则用于较深的沙丘波浪，然后根据每个沙丘的陡峭程度、风的方向来混合这两张贴图。<br>
+这里采用的计算方式是：取沙丘表面法线与世界方向Y轴计算点积，计算结果越接近1，则两个向量之间的夹角越小，因此越陡峭；波浪的方向则根据风的方向与沙丘表面法线的点积来决定，但混合比例与陡度相反，因为通常沙丘逆风的一侧才会生成波浪。<br>
+最后混合所有计算结果，沙丘看起来就是游戏中呈现的模样：</p>
+<figure data-type="image" tabindex="11"><img src="http://localhost:4000/post-images/realtime-sand-rendering.png" alt="" loading="lazy"></figure>
+<br>
+<h3 id="实现我们自己的沙子渲染">实现我们自己的沙子渲染</h3>
+<p>《风之旅人》是自由视角，而我们的沙子模拟是俯视角，因此在渲染流程上，我们可以将《风之旅人》的方法作为参考，但无法照搬，因为视角的不同会带来很多效果和实现方式上的差异。<br>
+由于是俯视角，摄影机和光源角度都不会变化，因此显而易见的是我们首先可以删掉Ocean Specular部分的高光分量；其次，由于我们只做一小堆沙子，不像《风之旅人》中大规模的沙丘，小堆沙子不受风力影响，不会产生波纹，因此Ripple部分也可以排除。最后我们需要增加两个《风之旅人》的沙子Shader中没有的部分：杂质分量和Alpha分量，并对闪光分量的实现做一些修改，体现我们自己沙子Shader的特点。<br>
+下面四张分别是我们的沙子shader中需要预先输入的漫反射纹理、杂质纹理、法线纹理以及Alpha纹理：</p>
+<figure data-type="image" tabindex="12"><img src="http://localhost:4000/post-images/1674108931507.png" alt="" loading="lazy"></figure>
+<h4 id="1-diffuse-part-impurity-part">1 - Diffuse Part &amp; Impurity Part</h4>
+<p>漫反射部分比较简单，用一张可平铺的沙子纹理做采样就可以了。<br>
+但如果仅用一张Color Texture，我们很快就会发现问题：《风之旅人》中的大片沙子都非常纯净，没有任何杂质，如果我们照搬到小沙堆的渲染上，就会发现一个严重的问题：沙子显得太纯太假了，不够写实，而且重复感严重。<br>
+因此我们可以再正片叠底一张Impurity Texture到颜色部分，增加沙子的质感。需要注意的是Impurity Texture的平铺方式需要和Color Texture不同，减少重复感。</p>
+<h4 id="2-normal-part">2 - Normal Part</h4>
+<p>法线部分，同样是用一张可平铺的法线纹理，lambert模型做shading即可，丰富一下沙堆表面的明暗变化。这里一层法线就够了，不需要再混合做ripple了。</p>
+<h4 id="3-glitter-part">3 - Glitter Part</h4>
+<p>日常经验告诉我们，当扫除灰尘的时候，顺着扫除的方向会扬起烟尘。而沙子相比烟尘效果要更复杂一些，不仅有烟，还有细碎的闪光，这些闪光只在扬起烟雾的时候出现，不断闪烁，随后又消失，就像下图这样。</p>
+<figure data-type="image" tabindex="13"><img src="http://localhost:4000/post-images/1674108992762.png" alt="" loading="lazy"></figure>
+<p>为了让渲染结果更逼真，这部分闪光颗粒的模拟是不可或缺的，那么这部分怎么实现呢？上文模拟部分我们留了一个伏笔：解算纹理中我们留了一个G通道作为闪光分量，这个分量就是用在这里模拟闪光的。<br>
+首先我们回顾一下《风之旅人》中沙子闪光的实现，《风之旅人》中使用一张RGB噪声纹理模拟随机的沙子表面法线变化，实现视角相关的闪光效果。但我们的摄影机是静止的，所以明显不能简单地把噪声作为法线方向。<br>
+这里我们同样生成一张procedural noise texture，但和《风之旅人》中的噪声纹理不同，它是一张单通道纹理，我们实际只取用其灰度值。这个灰度值不作为法线，而是直接叠加到沙子的diffuse部分生成高光，当然叠加之前需要先让其通过一个高光滤波器，只保留其中亮度值大于一定阈值的像素点（下图左侧为灰度噪声图，右侧为闪光点反相）：</p>
+<figure data-type="image" tabindex="14"><img src="http://localhost:4000/post-images/1674109013773.png" alt="" loading="lazy"></figure>
+<p>然后把这部分作为亮度信息相加到diffuse上去即可生成闪光。但此时我们会面临两个问题：<br>
+1、闪光点怎么闪烁？烟雾运动停止后闪光怎么熄灭？<br>
+2、闪光点怎么跟随擦除方向和烟雾运动？</p>
+<p>首先闪烁效果的部分，我们可以在生成noise texture时用时间作为种子，这样noise texture就会随时间不断变化，且与摄影机视角无关，就能够实现闪烁。<br>
+运动和熄灭效果的实现就涉及到解算纹理的G通道：<br>
+如果我们直接把闪光分量叠加到Thickness Buffer，会造成Thickness Buffer在模拟中变得不精确，甚至带来数值耗散；而如果直接叠加到diffuse，又无法产生运动。因此最好的办法就是让闪光分量单独作为一个通道来模拟，这样每次迭代过程中，不仅Thickness Buffer和Velocity Buffer随着迭代改变，闪光分量也随着速度场的改变而改变，就得到了闪光随着烟雾运动的效果。</p>
+<p>其次，我们可以让G通道的亮度随解算时间t衰减：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>u</mi><mi>m</mi><mi>i</mi><mo>(</mo><mi>G</mi><mo separator="true">,</mo><mi>t</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>=</mo><mi>L</mi><mi>u</mi><mi>m</mi><mi>i</mi><mo>(</mo><mi>G</mi><mo separator="true">,</mo><mi>t</mi><mo>)</mo><mo>∗</mo><mrow><mo>(</mo><mn>1</mn><mi mathvariant="normal">/</mi><mn>2</mn><msup><mo>)</mo><mi>t</mi></msup></mrow></mrow><annotation encoding="application/x-tex">Lumi(G,t + 1) = Lumi(G,t) * {(1/2)^t}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mopen">(</span><span class="mord mathdefault">G</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mopen">(</span><span class="mord mathdefault">G</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.093556em;vertical-align:-0.25em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mord">/</span><span class="mord">2</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.843556em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>这样就能够做到扬起烟雾一定时间后，闪光熄灭。</p>
+<h4 id="4-alpha-part">4 - Alpha Part</h4>
+<p>最后Alpha部分，这部分既描述物理模拟中的Thickness Buffer，也描述渲染过程中的沙堆Alpha。如上文所述，这部分分量可以由artist绘制得到，并在解算的过程中会不断发生改变，在渲染着色阶段，我们直接将其作为Alpha输出即可。<br>
+这里需要注意的是，实际上Alpha Texture是可以合并到Color Texture的Alpha通道的，但Color Texture的RGB三个通道必须要保持四方连续，因为物理解算过程中Alpha通道的可见范围会不断发生变化，原来周围沙堆不可见的透明区域可能会在模拟途中变得可见，所以颜色通道必须是可平铺的。</p>
+<h3 id="one-last-thing">One Last Thing</h3>
+<p>至此所有的物理解算和渲染都已经完成了，但还有最后一步需要完成：如何判断沙子已经被玩家刷干净了？遍历每一个厚度场像素去计算剩余沙子的比例显然不合适，更何况Unity中RT的颜色值在CPU侧还无法直接读取。<br>
+因为沙子总余量的统计不需要特别精确，所以这里我们可以借助mipmap来实现对整个厚度场总厚度的估计，每次玩家交互后一旦厚度场发生变化，我们就重新生成厚度场的mipmap，然后把RT转换为Texture2D：</p>
+<pre><code name="codeblock">Texture2D ToTexture2D(RenderTexture rTex) {
+RenderTexture.active = rTex;
+    Texture2D tex = new Texture2D(rTex.width, rTex.height, TextureFormat, false);
+    tex.ReadPixels(new Rect(0, 0, rTex.width, rTex.height), 0, 0); 
+tex.Apply();
+    return tex;
+}</code></pre>
+<p>最后取最后一层或倒数第二层mipmap level的中心像素颜色<em>c</em>即可，我们可以设定一个判定阈值<em>threshold</em>，<em>c</em> &lt; <em>threshold</em>就代表沙子已经刷干净了。</p>
+<figure data-type="image" tabindex="15"><img src="http://localhost:4000/post-images/1674109174010.png" alt="" loading="lazy"></figure>
+<p>最终的模拟中我们共用到：<br>
+• 2张RenderTexture，大小512x512，格式R32G32B32A32_SFLOAT<br>
+• 1张RGBA纹理（RGB通道为沙子漫反射颜色，A通道为沙子的厚度场）<br>
+• 1张RGBA杂质纹理<br>
+• 1张法线纹理</p>
+<p>2张RT用于物理解算，其他纹理用于渲染。在配置2060 GPU的PC上物理解算部分GPU耗时0.21ms，渲染部分GPU耗时0.18ms，总耗时0.39ms；安卓端实机能以平均41.2FPS的帧率运行（测试机型：华为荣耀P20 Pro），对比2D MPM的21FPS，效率高出一倍。</p>
+<p>最后，把所有的拼图拼到一起，DRSS就大功告成啦！来看看最终的效果吧：</p>
+<figure data-type="image" tabindex="16"><img src="http://localhost:4000/post-images/1674109322891.gif" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="17"><img src="http://localhost:4000/post-images/1674109235286.gif" alt="" loading="lazy"></figure>
+<h3 id="总结conclusion">总结/Conclusion</h3>
+<p>本文简要介绍了一种实时移动端真实感沙土交互与渲染方法，能够模拟带厚度信息的俯视角干质沙土。实现DRSS的过程中最大的体会是：不存在现有解决方案的效果不一定就是无法实现的，根据实际需求尝试对做现有方法做一些优化改进，多走一步说不定问题就迎刃而解了。相比简单抽卡，以及《遇见逆水寒》中“擦玻璃”式的交互模式，沙土交互存在更多的不确定性，更能调动起玩家的兴趣，让玩家参与其中。</p>
+<p>但DRSS目前也还存在几点不足，未来可以有如下改进方向：<br>
+1、颜色和法线自始至终都是静态的，在解算过程中不会随着玩家交互而改变。这两个部分可以像闪光分量一样跟随Velocity Buffer做解算，让从颜色纹理中采样得到的颜色值也随着速度场运动，同时根据Thickness Buffer实时重新计算沙堆的法线方向，得到更加合理的明暗效果；<br>
+2、沙土目前仅可以与玩家交互，后期还可以考虑加入与周围环境中物品的交互；<br>
+3、如果把沙土覆盖的物品轮廓也考虑到沙土的法线中，做一个若隐若现的感觉，或许效果会更好。</p>
+
+							</article>
+						</div>
+
+
+						
+							<div class='entry-meta-bottom'>
+								<div class="entry-categories">
+									<p>
+										<span>Categories</span>
+										
+										
+										
+										<a href="http://localhost:4000/tag/itfB5m7XS/" title="View all posts in Essay">Essay</a>
+										
+										
+										
+										<a href="http://localhost:4000/tag/qi5SVakfq/" title="View all posts in Tools">Tools</a>
+										
+										
+										
+										<a href="http://localhost:4000/tag/R8pKVfB50/" title="View all posts in Static">Static</a>
+										
+										
+										
+										<a href="http://localhost:4000/tag/WSyUFaaTQ/" title="View all posts in Anime">Anime</a>
+										
+										
+									</p>
+								</div>
+								<div class="entry-tags">
+									<p>
+										<span>Tags</span>
+										
+										<span class="category">
+											<a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
+										</span>
+										
+									</p>
+									</br>
+									<span>Home</span>
+									<span><a href="https://ripmr.github.io">Back to Home</a></span>
+								</div>
+							</div>
+							<div class="author-meta">
+								<span>
+									<img alt='' src="http://localhost:4000/images/avatar.png?v=1674214537347" class='avatar avatar-72 photo' height='72' width='72'>
+									<!--span>WRITTEN BY: </span-->
+								</span>
+								<span>
+								<p>
+									
+										<a href="http://localhost:4000/post/tool-raindropfx-for-hdrp-300/">上一篇->[Tool] RaindropFX for HDRP v3.0 - GPU Solver is Coming!</a>
+									
+								</p>
+								<br/>
+								<p>
+									
+										<a href="http://localhost:4000/post/realtime-interactive-sand-simulation/">下一篇->[Research] 实时可交互沙土模拟方法 - 物理部分</a>
+									
+									
+								</p>
+								</span>
+								
+								<!--span>
+									<p></p>
+									
+									
+									<a class="github" target="_blank"
+									   href="https://github.com/RIPmr">
+										<i class="fab fa-github" title="github"></i>
+									</a>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</span-->
+
+							</div>
+						
+					</div>
+				</div>
+				<section id="comments" class="comments">
+					
+					
+					<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '99293e39ad48006e77cb',
+    clientSecret: '48d99f5e46f34d52cfdc2051dd531dd9e437936a',
+    repo: 'RIPmr.github.io',
+    owner: 'RIPmr',
+    admin: ['RIPmr'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+					
+
+					
+					
+				</section>
+			</div>
+		</div>
+		<footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="http://localhost:4000"> HU ANIME </a>
+    </h1>
+    <p class="site-description">会画画的程序猿</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                        <i class="fas fa-film" title="film"></i>
+                        <span class="screen-reader-text">film</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                        <i class="fas fa-image" title="image"></i>
+                        <span class="screen-reader-text">image</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://www.youtube.com/channel/UCkvCi2G2Ay_AnC3NYthteag" data-animate-hover="pulse" class="youtube" target="_blank">
+                        <i class="fab fa-youtube" title="youtube"></i>
+                        <span class="screen-reader-text">youtube</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                        <i class="fas fa-plug" title="plug"></i>
+                        <span class="screen-reader-text">plug</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>SEE THE WORLD</a></p>
+    </div>
+</footer>
+
+<!--script>hljs.highlightAll();</script-->
+<script>
+  var codeBlocks = document.getElementsByName("codeblock");
+  if (codeBlocks.length) {
+    for (var i = 0; i < codeBlocks.length; i++) {
+      hljs.highlightBlock(codeBlocks[i]);
+    }
+  }
+</script>
+
+<!--script src="http://localhost:4000/media/scripts/lib/lightbox-plus-jquery.min.js"></script>-->
+<script src="http://localhost:4000/media/scripts/lib/jquery.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/jquerymigrate.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/production.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/lightbox.min.js"></script>
+	</div>
+</body>
+</html>
+

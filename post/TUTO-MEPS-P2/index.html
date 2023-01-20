@@ -1,0 +1,538 @@
+<html>
+<head>
+	<!--meta charset="utf-8" /-->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive"-->
+<title>[Tuto] 无标记单目摄像头实时表情动捕 - 细节增强 | HU ANIME</title>
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1674214537347">
+<link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/lightbox.css" type='text/css' media='all'>
+<link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css" type='text/css' media='all'>
+<link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/atom-one-light.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<!--link rel="stylesheet" href="http://localhost:4000/media/scripts/lib/katex.min.css" type='text/css' media='all'-->
+
+<script src="http://localhost:4000/media/scripts/lib/highlight.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/moment.min.js"></script>
+
+<!-- Google Analytics-->
+<!---->
+
+<!--Baidu Analytics-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?264d1f69b0edf52af180e8994eaf44bc";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<!--Block Debug Tools-->
+<script>
+  var debugMode = false;
+  function disableInfo() {
+    document.onkeydown = function() {
+      var e = window.event || arguments[0];
+      // block F12
+      if (e.keyCode == 123) {
+        return false;
+      // block Ctrl+Shift+I
+      } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+        return false;
+      // block Shift+F10
+      } else if ((e.shiftKey) && (e.keyCode == 121)) {
+        return false;
+      }
+      // block Ctrl+S
+      if ((e.ctrlKey) && (e.keyCode == 83)) {
+          return false;
+      }
+    };
+    // block right click
+    document.oncontextmenu = function() {
+      return false;
+    }
+    document.oncontextmenu=new Function("event.returnValue=false");  
+    document.onselectstart=new Function("event.returnValue=false");  
+  }
+  if (!debugMode) disableInfo();
+</script>
+
+</head>
+<body class="home blog ct-body standard">
+	<div id="overflow-container" class="overflow-container">
+		<a class="skip-content" href="#main">Skip to content</a>
+		<header id="site-header" class="site-header" role="banner">
+    <div class='top-navigation top-navigation-important'>
+        <div class='container'>
+            <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
+                <button id="toggle-secondary-navigation" class="toggle-secondary-navigation"><i class="fa fa-plus"></i></button>
+                <div class="menu">
+                    <ul id="menu-secondary-items" class="menu-secondary-items">
+                        
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/qi5SVakfq/">Tools</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/R8pKVfB50/">Static</a>
+                        </li>
+                            
+                        
+                            
+                        <li id="menu-item" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item">
+                            <a href="http://localhost:4000/tag/WSyUFaaTQ/">Anime</a>
+                        </li>
+                            
+                        
+                    </ul>
+                </div>
+            </div>
+            <ul class="social-media-icons">
+              
+                    
+                        <li>
+                            <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                              <i class="fab fa-github" title="github"></i>
+                                <span class="screen-reader-text">github</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li>
+                            <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                              <i class="fas fa-film" title="film"></i>
+                                <span class="screen-reader-text">film</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                              <i class="fas fa-image" title="image"></i>
+                                <span class="screen-reader-text">image</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCkvCi2G2Ay_AnC3NYthteag" data-animate-hover="pulse" class="youtube" target="_blank">
+                              <i class="fab fa-youtube" title="youtube"></i>
+                                <span class="screen-reader-text">youtube</span>
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                              <i class="fas fa-plug" title="plug"></i>
+                                <span class="screen-reader-text">plug</span>
+                            </a>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="http://localhost:4000">  HU ANIME </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">会画画的程序猿</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/">HOME</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/archives">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/archives">TIMELINE</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/gallery">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/gallery">GALLERY</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="http://localhost:4000document/" target="_blank">DOCUMENT</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <!--% if (menu.name == 'GALLERY') {
+                                  <a href="/post/about">LINKS</a-->
+                                <!--%} else {%-->
+                                  <a href="/post/about">ABOUT</a>
+                                <!--%}%-->
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+		<div id="main" class="main" role="main">
+			<div id="loop-container" class="loop-container">
+				<div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+					
+					<div class='featured-image lazy lazy-bg-image' data-background="http://localhost:4000/post-images/TUTO-MEPS-P2.png">
+					</div>
+					
+
+					<div class="entry-meta">
+						<span class="date">· 2023-01-20 ·</span> <span> / </span>
+						<span class="author">
+							<a href="http://localhost:4000" title="" rel="author"> SEE THE WORLD</a></a>
+						</span>
+						
+						<span class="category">
+							<span> / </span>
+							<a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
+						</span>
+						
+					</div>
+					<div class='entry-header'>
+						<h1 class='entry-title'>[Tuto] 无标记单目摄像头实时表情动捕 - 细节增强</h1>
+					</div>
+					
+					<div class="entry-container">
+					
+						<div id="entry-content" class="entry-content">
+							<article>
+								<pre><code>直接使用前文中完成的MEPS版本进行动捕，我们会发现输出动画的抖动十分严重且缺乏细节。本篇我们基于多源数据增强MEPS的动捕细节表现及稳定性。
+</code></pre>
+<!-- more -->
+<h2 id="meps-markless-facial-tracking-and-expression-projection-using-single-rgb-webcam">MEPS: Markless facial tracking and expression projection using single RGB WebCam</h2>
+<hr>
+<h3 id="part-e-detail-enhancement-time-spatial-optimizations">Part E – Detail Enhancement &amp; Time Spatial Optimizations</h3>
+<h4 id="e-1-时空表情动画平滑-time-spatial-facial-animation-filter">E-1 时空表情动画平滑 / Time Spatial Facial Animation Filter</h4>
+<p>直接使用上一节中完成的MEPS版本进行动捕，我们会发现输出动画的抖动十分严重，尤其是眼睛部位。造成抖动的因素有很多，比如直接使用2D landmarks坐标点计算眼睛的闭合百分比、摄像头的分辨率不足等。</p>
+<figure data-type="image" tabindex="1"><img src="http://localhost:4000/post-images/1674212657706.gif" alt="" loading="lazy"></figure>
+<p>除了提高摄像头设备的分辨率、将Landmarks坐标转换为3D再进行计算之外，我们还可以通过时空间平滑进一步改善动捕动画的质量。</p>
+<p>就像光栅化渲染管线中做TAA一样，我们可以在Receiver模块维护一个动态的滑动窗口，对动捕数据做一个时空间序列上的高斯滤波。MEPS的实际实现中使用一个大小为12的窗口，执行平滑操作时取左边一半的2D高斯核进行计算。</p>
+<figure data-type="image" tabindex="2"><img src="http://localhost:4000/post-images/1674212671782.png" alt="" loading="lazy"></figure>
+<p>下图为执行时空间平滑前后的动捕数据对比，我们在一个完整的眨眼周期内按相同的时间间隔采样10次，分别记录左眼与右眼的闭合百分比。闭合百分比范围为0-100，0代表眼睛完全张开，100代表眼睛完全闭合。</p>
+<p>从数据中可以看到平滑后的眨眼动画抖动问题得到了极大改善，同样的处理方法也可以沿用到嘴部等其他部位。</p>
+<figure data-type="image" tabindex="3"><img src="http://localhost:4000/post-images/1674212694462.gif" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="http://localhost:4000/post-images/1674212688383.png" alt="" loading="lazy"></figure>
+<h4 id="e-2-音频数据融合-audio-based-facial-animation-enhancement">E-2 音频数据融合 / Audio based Facial Animation Enhancement</h4>
+<p>借鉴faceware中的处理方式，我们这里也可以通过增加音频信息的方式，帮助MEPS在捕捉演员的对话表演时得到更完美的口型动画。</p>
+<p>我们可以简单地仅处理a,e,i,o,u几个元音音节，也可以根据中文发音的特性多补充一些连读音节得到更精细的动画效果。现成的音频分析库有很多，MEPS中使用的是Microsoft推出的SAPI语音引擎，SAPI可以转换人类的声音语音流到可读的文本字符串或者文件。SAPI的详细使用流程就不在这里赘述了，大家感兴趣可以自行到Microsoft官网去查阅手册。</p>
+<p>最后我们通过“置信度”对从视频流中得到的动捕口型与从语音中得到的音节口型做混合，得到最终的口型动画输出。混合过程如下式：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>i</mi><mi>p</mi><mi>A</mi><mi>n</mi><mi>i</mi><mi>m</mi><mrow><mo fence="true">(</mo><mi>t</mi><mo fence="true">)</mo></mrow><mo>=</mo><mi>m</mi><mi>i</mi><mi>x</mi><mrow><mo fence="true">(</mo><mrow><mi>v</mi><mi>A</mi><mrow><mo fence="true">(</mo><mi>t</mi><mo fence="true">)</mo></mrow><mo separator="true">,</mo><mtext>  </mtext><mi>a</mi><mi>A</mi><mrow><mo fence="true">(</mo><mi>t</mi><mo fence="true">)</mo></mrow><mo separator="true">,</mo><mi>c</mi><mrow><mo fence="true">(</mo><mi>t</mi><mo fence="true">)</mo></mrow></mrow><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">LipAnim\left( t \right) = mix\left( {vA\left( t \right),\;aA\left( t \right),c\left( t \right)} \right)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">A</span><span class="mord mathdefault">n</span><span class="mord mathdefault">i</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathdefault">t</span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathdefault">t</span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathdefault">t</span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathdefault">t</span><span class="mclose delimcenter" style="top:0em;">)</span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span></span></p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mrow><mo fence="true">(</mo><mi>t</mi><mo fence="true">)</mo></mrow><mo>=</mo><mi>m</mi><mi>i</mi><mi>x</mi><mrow><mo fence="true">(</mo><mrow><mi>c</mi><mrow><mo fence="true">(</mo><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow><mo fence="true">)</mo></mrow><mo separator="true">,</mo><mi>max</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mrow><mn>0.5</mn><mo separator="true">,</mo><mfrac><mrow><mo fence="true">∣</mo><mrow><mi>v</mi><msup><mi>A</mi><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msup><mrow><mo fence="true">(</mo><mi>t</mi><mo fence="true">)</mo></mrow></mrow><mo fence="true">∣</mo></mrow><msup><mrow><mo fence="true">(</mo><mrow><mn>1</mn><mo>+</mo><mi>v</mi><msup><mi>A</mi><mo mathvariant="normal">′</mo></msup><msup><mrow><mo fence="true">(</mo><mi>t</mi><mo fence="true">)</mo></mrow><mn>2</mn></msup></mrow><mo fence="true">)</mo></mrow><mfrac><mn>3</mn><mn>2</mn></mfrac></msup></mfrac></mrow><mo fence="true">)</mo></mrow><mo separator="true">,</mo><mn>0.75</mn></mrow><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">c\left( t \right) = mix\left( {c\left( {t - 1} \right),\max \left( {0.5,\frac{{\left| {vA&#x27;&#x27;\left( t \right)} \right|}}{{{{\left( {1 + vA&#x27;{{\left( t \right)}^2}} \right)}^{\frac{3}{2}}}}}} \right),0.75} \right)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">c</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathdefault">t</span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:4.383965em;vertical-align:-2.03394em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.3500249999999996em;"><span style="top:-1.9499950000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎝</span></span></span><span style="top:-3.1050050000000002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎜</span></span></span><span style="top:-4.350025em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎛</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.850025em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">c</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">max</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.3500249999999996em;"><span style="top:-1.9499950000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎝</span></span></span><span style="top:-3.1050050000000002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎜</span></span></span><span style="top:-4.350025em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎛</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.850025em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.428892em;"><span style="top:-2.1100000000000003em;"><span class="pstrut" style="height:3.49392em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord"><span class="mord"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6778919999999999em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord"><span class="mord"><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathdefault">t</span><span class="mclose delimcenter" style="top:0em;">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.954008em;"><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.49392em;"><span style="top:-3.9029em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443142857142858em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.72392em;"><span class="pstrut" style="height:3.49392em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-4.170920000000001em;"><span class="pstrut" style="height:3.49392em;"></span><span class="mord"><span class="mord"><span class="minner"><span class="mopen delimcenter" style="top:0em;">∣</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord mathdefault">t</span><span class="mclose delimcenter" style="top:0em;">)</span></span></span><span class="mclose delimcenter" style="top:0em;">∣</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.03394em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.3500249999999996em;"><span style="top:-1.9499950000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎠</span></span></span><span style="top:-3.1050050000000002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎟</span></span></span><span style="top:-4.350025em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.850025em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">7</span><span class="mord">5</span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.3500249999999996em;"><span style="top:-1.9499950000000004em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎠</span></span></span><span style="top:-3.1050050000000002em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎟</span></span></span><span style="top:-4.350025em;"><span class="pstrut" style="height:3.1550000000000002em;"></span><span class="delimsizinginner delim-size4"><span>⎞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.850025em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>其中<em>LipAnim(t)<em>为</em>t</em>时刻下的口型动画输出，<em>vA</em>为视频动捕口型动画曲线，<em>aA</em>为音频口型动画曲线；<em>c</em>为置信度，其主要考虑<em>vA</em>在<em>t</em>时刻下平整程度，如果平整度较低，说明此时视频动捕结果比较noisy，于是我们就在输出结果中更多地混合来自音频的动画曲线。</p>
+<figure data-type="image" tabindex="5"><img src="http://localhost:4000/post-images/1674212756128.gif" alt="" loading="lazy"></figure>
+<h4 id="e-3-细节增强-facial-animation-detail-enhancement">E-3 细节增强 / Facial Animation Detail Enhancement</h4>
+<p>MEPS的实现终于来到了最后一部分，last but not least，这部分细节增强的实现对最终输出的动画效果来说是至关重要的一部分。由于MEPS中使用的输入设备仅仅是没有深度信息的低分辨率单目RGB摄像头，所以学界现在比较流程的去重构3D Face Mesh[10-12, 16]得到皱纹纹理[13, 14]的流程是行不通的。通过单目RGB只能重构出非常粗糙且丢失了高频细节的面部网格，虽然可以直接基于RGB图像恢复面部法线，但质量是无法达到产品级需求的，更何况我们使用的还仅仅只是一个640P的摄像头。</p>
+<p>MEPS中我们另辟蹊径，采用的表情细节增强方法来自于Beeler T等人于14年在TOG上提出的Facial Performance Enhancement Using Dynamic Shape Space Analysis [18]一文。这篇Paper中将面部面部动捕流程和面部动画细节分离，建立一个高频细节数据库，在演员表演动捕得到粗糙表情动画的基础上，叠加高频细节，还原动捕演员的表演细节例如人脸在动态过程中产生的细小皱纹、面部不同部位之间由于动态的碰撞挤压产生的堆积效应等。整个系统流程如下图所示。</p>
+<figure data-type="image" tabindex="6"><img src="http://localhost:4000/post-images/1674212780060.png" alt="" loading="lazy"></figure>
+<p>整个流程可以划分为四个大步骤：<strong>Pre-Processing</strong>、<strong>Performance data input</strong>、<strong>Shape spatial enhancement</strong>以及<strong>Time spatial enhancement</strong>。</p>
+<p>Pre-Processing阶段基于多视角摄影机扫描演员面部得到高模，利用拉普拉斯平滑（Laplacian smoothing）算法分离高频细节，建立数据库。</p>
+<figure data-type="image" tabindex="7"><img src="http://localhost:4000/post-images/1674212804069.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="http://localhost:4000/post-images/1674212807157.png" alt="" loading="lazy"></figure>
+<p>由于扫描得到的数据库中的细节向量顶点非常密集，逐一计算性能压力太大，于是接着Beeler T等人会对面部mesh的顶点进行分簇，以每一个簇作为独立向量对数据库中的特征向量进行压缩。</p>
+<figure data-type="image" tabindex="9"><img src="http://localhost:4000/post-images/1674212813190.png" alt="" loading="lazy"></figure>
+<p>Performance data input阶段是常规的演员表演动捕阶段，得到一个毫无细节的动捕动画即可。重点是在Shape spatial enhancement阶段，我们要根据输入的动捕动画匹配数据库中的对应状态位置，然后将数据库中的静态表演细节映射到动捕动画上，得到高细节的表情动画输出。</p>
+<p>数据库中高频细节的匹配是基于最小二乘法（Least-Square Method）对特征向量做匹配实现的：</p>
+<center><img src="../../post-images/1674212822159.png" width="350" /></center>
+<p>当然了，由于每一个时刻下单帧表情中同一张脸上的不同簇可能会映射到不同的数据库细节数据上，如下图中眉心和额头混合了两组不同的细节数据：</p>
+<figure data-type="image" tabindex="10"><img src="http://localhost:4000/post-images/1674212854448.png" alt="" loading="lazy"></figure>
+<p>不同部位的高频数据直接叠加可能会出现接缝、不平整等一系列问题，于是Beeler T等人还会在输出最终的表情动画前对混合结果再做一次平滑处理。下图中间一列是直接混合高频细节的结果，可以看到嘴角部分十分明显的接缝；右侧一列是平滑后的混合结果。</p>
+<figure data-type="image" tabindex="11"><img src="http://localhost:4000/post-images/1674212869734.png" alt="" loading="lazy"></figure>
+<p>MEPS中借鉴了这篇Paper中的<strong>Shape spatial enhancement</strong>部分，我们首先也建立一个高频细节数据库，数据库中手动制作常用表情的高频细节blend mesh，然后使用和论文中一样的方法，根据视频动捕输入，寻找对应的各个部分的细节，进行动态叠加与平滑，得到最终的高质量动画输出。</p>
+<figure data-type="image" tabindex="12"><img src="http://localhost:4000/post-images/1674212892727.png" alt="" loading="lazy"></figure>
+<p>上图为MEPS测试中使用的角色模型绑定以及表情细节数据库，下图分别为细节增强前后的动捕动画输出以及增加纹理贴图之后的带表情动画角色渲染结果。</p>
+<figure data-type="image" tabindex="13"><img src="http://localhost:4000/post-images/1674212906961.gif" alt="" loading="lazy"></figure>
+<center>图中左侧为原始动捕结果，右侧为细节增强后的结果</center>
+<figure data-type="image" tabindex="14"><img src="http://localhost:4000/post-images/1674212937411.png" alt="" loading="lazy"></figure>
+<center>最后为模型添加纹理，得到最终的渲染输出</center>
+<h3 id="conclusion">Conclusion</h3>
+<p>MEPS是我个人近期做的一次自我感觉较好的业余实践，从CG到网络、从ML到视觉、从Web端到DCC端，是一个综合性很强的课题，对自己来说各个方面都是一次挑战与检验。本文记录一下MEPS实现过程中的一些方法领悟，希望能给读到本文的小伙伴一些启示。</p>
+<p>MEPS所需硬件成本极低，可扩展性强，能够快速接入各种DCC软件或游戏引擎，可以帮助小型工作室和个人开发者快速构建自己的表情动画工作流，提升开发效率，节约成本，并得到质量还算可以接受的表情动画。</p>
+<p>硬件方面，我们全程只使用了一个分辨率仅640p的网络摄像头，成本不到30元。以一顿饭钱的超低价格完成了中高质量的产品级表情动捕。</p>
+<p>最后感谢看到这里的小伙伴，祝你新年快乐！</p>
+
+							</article>
+						</div>
+
+
+						
+							<div class='entry-meta-bottom'>
+								<div class="entry-categories">
+									<p>
+										<span>Categories</span>
+										
+										
+										
+										<a href="http://localhost:4000/tag/itfB5m7XS/" title="View all posts in Essay">Essay</a>
+										
+										
+										
+										<a href="http://localhost:4000/tag/qi5SVakfq/" title="View all posts in Tools">Tools</a>
+										
+										
+										
+										<a href="http://localhost:4000/tag/R8pKVfB50/" title="View all posts in Static">Static</a>
+										
+										
+										
+										<a href="http://localhost:4000/tag/WSyUFaaTQ/" title="View all posts in Anime">Anime</a>
+										
+										
+									</p>
+								</div>
+								<div class="entry-tags">
+									<p>
+										<span>Tags</span>
+										
+										<span class="category">
+											<a href="http://localhost:4000/tag/itfB5m7XS/">Essay</a>
+										</span>
+										
+									</p>
+									</br>
+									<span>Home</span>
+									<span><a href="https://ripmr.github.io">Back to Home</a></span>
+								</div>
+							</div>
+							<div class="author-meta">
+								<span>
+									<img alt='' src="http://localhost:4000/images/avatar.png?v=1674214537347" class='avatar avatar-72 photo' height='72' width='72'>
+									<!--span>WRITTEN BY: </span-->
+								</span>
+								<span>
+								<p>
+									
+										<a>已经是第一篇啦</a>
+									
+								</p>
+								<br/>
+								<p>
+									
+										<a href="http://localhost:4000/post/TUTO-MEPS-P1/">下一篇->[Tuto] 无标记单目摄像头实时表情动捕 - 基础实现</a>
+									
+									
+								</p>
+								</span>
+								
+								<!--span>
+									<p></p>
+									
+									
+									<a class="github" target="_blank"
+									   href="https://github.com/RIPmr">
+										<i class="fab fa-github" title="github"></i>
+									</a>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</span-->
+
+							</div>
+						
+					</div>
+				</div>
+				<section id="comments" class="comments">
+					
+					
+					<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '99293e39ad48006e77cb',
+    clientSecret: '48d99f5e46f34d52cfdc2051dd531dd9e437936a',
+    repo: 'RIPmr.github.io',
+    owner: 'RIPmr',
+    admin: ['RIPmr'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+					
+
+					
+					
+				</section>
+			</div>
+		</div>
+		<footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="http://localhost:4000"> HU ANIME </a>
+    </h1>
+    <p class="site-description">会画画的程序猿</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/RIPmr" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="https://space.bilibili.com/7868260" data-animate-hover="pulse" class="film" target="_blank">
+                        <i class="fas fa-film" title="film"></i>
+                        <span class="screen-reader-text">film</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://www.artstation.com/huanime" data-animate-hover="pulse" class="image" target="_blank">
+                        <i class="fas fa-image" title="image"></i>
+                        <span class="screen-reader-text">image</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://www.youtube.com/channel/UCkvCi2G2Ay_AnC3NYthteag" data-animate-hover="pulse" class="youtube" target="_blank">
+                        <i class="fab fa-youtube" title="youtube"></i>
+                        <span class="screen-reader-text">youtube</span>
+                    </a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="https://assetstore.unity.com/publishers/34649" data-animate-hover="pulse" class="plug" target="_blank">
+                        <i class="fas fa-plug" title="plug"></i>
+                        <span class="screen-reader-text">plug</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>SEE THE WORLD</a></p>
+    </div>
+</footer>
+
+<!--script>hljs.highlightAll();</script-->
+<script>
+  var codeBlocks = document.getElementsByName("codeblock");
+  if (codeBlocks.length) {
+    for (var i = 0; i < codeBlocks.length; i++) {
+      hljs.highlightBlock(codeBlocks[i]);
+    }
+  }
+</script>
+
+<!--script src="http://localhost:4000/media/scripts/lib/lightbox-plus-jquery.min.js"></script>-->
+<script src="http://localhost:4000/media/scripts/lib/jquery.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/jquerymigrate.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/production.min.js"></script>
+<script src="http://localhost:4000/media/scripts/lib/lightbox.min.js"></script>
+	</div>
+</body>
+</html>
+
